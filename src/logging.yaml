@@ -1,0 +1,78 @@
+version: 1
+
+formatters:
+  simple:
+    format: "[%(asctime)s.%(msecs)03d] [pid %(process)d] [%(levelname)s]: %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+  extended:
+    format: "[%(asctime)s.%(msecs)03d] [pid %(process)d] [%(module)s:%(lineno)d] [%(levelname)s]: %(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: extended
+    stream: ext://sys.stderr
+
+  boing_file_handler:
+    class: logging.FileHandler
+    level: INFO
+    filename: ${LOGGING_ROOT}/hfa.log
+    formatter: extended
+
+  boing_file_handler_test:
+    class: logging.FileHandler
+    level: DEBUG
+    filename: ${TEST_LOGGING_ROOT}/hfa.log
+    formatter: extended
+
+  tasks_file_handler:
+    class: logging.FileHandler
+    level: DEBUG
+    filename: ${LOGGING_ROOT}/tasks.log
+    formatter: extended
+
+#  redlist_handler:
+#    class: boing.extensions.redlog.handlers.RedlogListHandler
+#    level: DEBUG
+#    formatter: extended
+#    REDLOG_HOST: "bml-redis"
+#    REDLOG_PORT: 6379
+#    REDLOG_KEY_PREFIX: "bml"
+#    REDLOG_KEY_TIMEFORMAT: "%Y:%m:%d"
+
+loggers:
+  hfa_development:
+    handlers:
+      [
+        console,
+        boing_file_handler,
+        # redlist_handler
+      ]
+
+  hfa_test:
+    handlers:
+      [
+          console,
+          boing_file_handler_test,
+        # redlist_handler
+      ]
+
+  celery_development:
+    handlers:
+      [
+        console,
+        tasks_file_handler,
+        # redlist_handler
+      ]
+
+root:
+  level: NOTSET
+  # handlers: [console]
+  propagate: yes
+
+coloredlogs:
+  level: INFO
+  format: "[%(asctime)s.%(msecs)03d] [pid %(process)d] [%(module)s:%(lineno)d] [%(levelname)s]: %(message)s"
+  datefmt: "%Y-%m-%d %H:%M:%S"
