@@ -10,3 +10,9 @@
 9. DB optimization
 10. Analytics
 11. Micro-controller package
+
+### Links:
+1. Pytorch: https://pytorch.org/get-started/locally/
+2. Flask: https://flask.palletsprojects.com/en/2.0.x/quickstart
+3. Django: https://www.djangoproject.com/start/ https://docs.djangoproject.com/en/3.2/intro/tutorial01/
+4. MicroPython: https://micropython.org/
