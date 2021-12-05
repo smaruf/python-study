@@ -26,3 +26,7 @@ def logout():
     # remove the username from the session if it's there
     session.pop('username', None)
     return redirect(url_for('index'))
+
+## Generate simple secret key
+## run: $ python -c 'import secrets; print(secrets.token_hex())'
+## output like: '192b9bdd22ab9ed4d12e236c78afcb9a393ec15f71bbf5dc987d54727823bcbf'
