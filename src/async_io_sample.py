@@ -1,24 +1,25 @@
 import asyncio
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 async def main():
-	# using future
-	future = asyncio.get_running_loop().create_future()
-	future.add_done_callback(lambda r: print("future done callback"))
-	future.set_result("done")
-	print("future processed")
-	await future
-	print("future awaited (1)")
-	await future
-	print("future awaited (2)")
-	
-	# using task
-	async def coroutine():
-		print("task processed")
-	task = asyncio.create_task(coroutine())
-	task.add_done_callback(lambda r: print("task done callback"))
-	await task
-	print("task awaited (1)")
-	await task
-	print("task awaited (2)")
+    """Main entry point for the asynchronous example."""
+
+    # Using future
+    future = asyncio.get_running_loop().create_future()
+    future.add_done_callback(lambda r: logging.info("Future done callback"))
+    future.set_result("done")
+    logging.info("Future processed")
+    await future
+    logging.info("Future awaited")
+
+    # Using task
+    async def coroutine():
+        logging.info("Task processed")
+    task = asyncio.create_task(coroutine())
+    task.add_done_callback(lambda r: logging.info("Task done callback"))
+    await task
+    logging.info("Task awaited")
 
 asyncio.run(main())
