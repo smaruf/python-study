@@ -10,24 +10,29 @@ public class Game {
     private static final String GSON_URL = "https://repo1.maven.org/maven2/com/google/code/gson/gson/" + GSON_VERSION + "/gson-" + GSON_VERSION + ".jar";
 
     public static void main(String[] args) {
-        checkAndDownloadGson();
-        ClassLoader cl = loadGsonWithClassLoader();
+        try {
+            checkAndDownloadGson();
+            ClassLoader cl = loadGsonWithClassLoader();
 
-        // Load story files and let the user choose
-        File[] storyFiles = loadStoryFiles("story_");
-        if (storyFiles == null || storyFiles.length == 0) {
-            System.out.println("No story files found!");
-            return;
+            // Load story files and let the user choose
+            File[] storyFiles = loadStoryFiles("story_");
+            if (storyFiles == null || storyFiles.length == 0) {
+                System.out.println("No story files found!");
+                return;
+            }
+
+            File selectedFile = getUserSelectedFile(storyFiles);
+            if (selectedFile == null) {
+                System.out.println("Invalid selection made!");
+                return;
+            }
+
+            System.out.println("Processing story from file: " + selectedFile.getName());
+            processJsonStory(selectedFile, cl);  // Process the story using Gson from the dynamically loaded classloader
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("An error occurred during the game execution.");
         }
-
-        File selectedFile = getUserSelectedFile(storyFiles);
-        if (selectedFile == null) {
-            System.out.println("Invalid selection made!");
-            return;
-        }
-
-        System.out.println("Processing story from file: " + selectedFile.getName());
-        processJsonStory(selectedFile, cl);  // Process the story using Gson from the dynamically loaded classloader
     }
 
     private static void checkAndDownloadGson() {
@@ -35,18 +40,19 @@ public class Game {
         if (Files.notExists(gsonPath)) {
             System.out.println("Downloading Gson...");
             try (InputStream in = new URL(GSON_URL).openStream()) {
-                Files.copy(in, gsonPath);
+                Files.copy(in, gsonPath, StandardCopyOption.REPLACE_EXISTING);
+                System.out.println("Gson downloaded successfully.");
             } catch (IOException e) {
                 e.printStackTrace();
+                System.out.println("Failed to download Gson.");
             }
-            System.out.println("Gson downloaded successfully.");
         }
     }
 
     private static ClassLoader loadGsonWithClassLoader() {
         try {
             URL gsonJarUrl = new File(GSON_PATH).toURI().toURL();
-            return new URLClassLoader(new URL[] {gsonJarUrl});
+            return new URLClassLoader(new URL[]{gsonJarUrl});
         } catch (MalformedURLException e) {
             throw new RuntimeException("Error loading Gson JAR", e);
         }
@@ -70,6 +76,7 @@ public class Game {
         if (choice >= 0 && choice < files.length) {
             return files[choice];
         }
+        System.out.println("Invalid selection. Please try again.");
         return null;
     }
 
@@ -86,6 +93,7 @@ public class Game {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Failed to process the story file.");
         }
     }
 }
