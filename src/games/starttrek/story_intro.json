@@ -1,0 +1,23 @@
+{
+  "title": "Intro Mission",
+  "opening": "Welcome to the Galaxy Exploration Mission, Captain!",
+  "planets": [
+    {
+      "name": "Alpha Centauri",
+      "description": "A mysterious planet ripe for exploration.",
+      "actions": [
+        {
+          "command": "scan",
+          "outcome": "You discovered a new mineral resource.",
+          "points": 10
+        },
+        {
+          "command": "contact",
+          "outcome": "You made contact with an alien species.",
+          "points": 20
+        }
+      ]
+    }
+  ],
+  "end": "Completed the Intro Mission. Ready for more adventures?"
+}
