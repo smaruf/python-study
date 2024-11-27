@@ -1,0 +1,33 @@
+{
+  "title": "Vulcan Ventures",
+  "opening": "Prepare your crew, Captain, as you set a course for Vulcan. Known for its logical inhabitants and stark landscapes, Vulcan presents unique challenges and opportunities.",
+  "planets": [
+    {
+      "name": "Vulcan",
+      "description": "The home planet of the Vulcan species, renowned for its advanced diplomatic relations and technological innovations.",
+      "actions": [
+        {
+          "command": "scan",
+          "outcome": "Your scans reveal a complex array of geological formations, possibly suitable for mining rare minerals.",
+          "points": 15
+        },
+        {
+          "command": "contact",
+          "outcome": "After establishing communication, the Vulcan High Command extends greetings and offers to share their knowledge of astrophysics.",
+          "points": 20
+        },
+        {
+          "command": "diplomatic_meeting",
+          "outcome": "You participated in a diplomatic meeting that enhanced interstellar relations and fostered new scientific collaborations.",
+          "points": 30
+        },
+        {
+          "command": "explore",
+          "outcome": "Your crew explores the ancient ruins on Vulcan, gaining valuable insights into Vulcan's history and culture.",
+          "points": 25
+        }
+      ]
+    }
+  ],
+  "end": "As your ship leaves the orbit of Vulcan, your crew is richer in knowledge and your federation's ties with Vulcan are stronger. Where will your journey take you next, Captain?"
+}
