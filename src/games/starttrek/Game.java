@@ -3,48 +3,64 @@ import java.lang.reflect.Method;
 import java.net.*;
 import java.nio.file.*;
 import java.util.Scanner;
+import java.util.logging.*;
 
 public class Game {
     private static final String GSON_VERSION = "2.8.9";
     private static final String GSON_PATH = "gson.jar";
     private static final String GSON_URL = "https://repo1.maven.org/maven2/com/google/code/gson/gson/" + GSON_VERSION + "/gson-" + GSON_VERSION + ".jar";
+    private static final Logger logger = Logger.getLogger(Game.class.getName());
 
     public static void main(String[] args) {
+        setupLogger();
         try {
             checkAndDownloadGson();
             ClassLoader cl = loadGsonWithClassLoader();
 
-            // Load story files and let the user choose
             File[] storyFiles = loadStoryFiles("story_");
             if (storyFiles == null || storyFiles.length == 0) {
-                System.out.println("No story files found!");
+                logger.warning("No story files found!");
                 return;
             }
 
             File selectedFile = getUserSelectedFile(storyFiles);
             if (selectedFile == null) {
-                System.out.println("Invalid selection made!");
+                logger.warning("Invalid selection made!");
                 return;
             }
 
-            System.out.println("Processing story from file: " + selectedFile.getName());
-            processJsonStory(selectedFile, cl);  // Process the story using Gson from the dynamically loaded classloader
+            logger.info("Processing story from file: " + selectedFile.getName());
+            processJsonStory(selectedFile, cl);
         } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("An error occurred during the game execution.");
+            logger.log(Level.SEVERE, "An error occurred during the game execution.", e);
+        }
+    }
+
+    private static void setupLogger() {
+        try {
+            LogManager.getLogManager().reset();
+            Logger rootLogger = Logger.getLogger("");
+            Handler consoleHandler = new ConsoleHandler();
+            consoleHandler.setLevel(Level.ALL);
+            rootLogger.addHandler(consoleHandler);
+
+            Handler fileHandler = new FileHandler("game.log", true);
+            fileHandler.setLevel(Level.ALL);
+            rootLogger.addHandler(fileHandler);
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "Failed to setup logger.", e);
         }
     }
 
     private static void checkAndDownloadGson() {
         Path gsonPath = Paths.get(GSON_PATH);
         if (Files.notExists(gsonPath)) {
-            System.out.println("Downloading Gson...");
+            logger.info("Downloading Gson...");
             try (InputStream in = new URL(GSON_URL).openStream()) {
                 Files.copy(in, gsonPath, StandardCopyOption.REPLACE_EXISTING);
-                System.out.println("Gson downloaded successfully.");
+                logger.info("Gson downloaded successfully.");
             } catch (IOException e) {
-                e.printStackTrace();
-                System.out.println("Failed to download Gson.");
+                logger.log(Level.SEVERE, "Failed to download Gson.", e);
             }
         }
     }
@@ -89,11 +105,10 @@ public class Game {
                 Method fromJson = gsonClass.getMethod("fromJson", Reader.class, Class.forName("java.lang.Object"));
                 Object storyObject = fromJson.invoke(gson, reader, Map.class);
 
-                System.out.println("Story loaded: " + storyObject);
+                logger.info("Story loaded: " + storyObject);
             }
         } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("Failed to process the story file.");
+            logger.log(Level.SEVERE, "Failed to process the story file.", e);
         }
     }
 }
