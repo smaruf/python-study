@@ -1,0 +1,14 @@
+{
+  "players": {
+    "player1": {
+      "username": "CaptainKirk",
+      "points": 1200,
+      "completed_missions": ["Mission1"]
+    },
+    "player2": {
+      "username": "MrSpock",
+      "points": 1500,
+      "completed_missions": ["Mission1"]
+    }
+  }
+}
