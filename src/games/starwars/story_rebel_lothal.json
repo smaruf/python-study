@@ -1,0 +1,109 @@
+{
+  "title": "Star Wars Rebels Tactical Missions",
+  "opening": "As a leader in the burgeoning Rebel Alliance, your task is to organize strikes against the Galactic Empire, gathering allies and resources on various planets to strengthen your cause.",
+  "episodes": [
+    {
+      "name": "Spark of Rebellion",
+      "description": "Start your journey on Lothal, a planet under the control of the Empire, and establish a base for Rebel operations.",
+      "missions": [
+        {
+          "mission": "Gather Intel",
+          "steps": [
+            {
+              "action": "Meet informant",
+              "outcome": "You meet with a local informant who provides key logistic details about the Empire’s operations.",
+              "points": 5
+            },
+            {
+              "action": "Avoid patrol",
+              "outcome": "You successfully avoid an Imperial patrol, ensuring the safety of your team.",
+              "points": 5
+            }
+          ]
+        },
+        {
+          "mission": "Recruit Locals",
+          "steps": [
+            {
+              "action": "Host meeting",
+              "outcome": "You host a secret meeting to inspire local residents to join the Rebel cause.",
+              "points": 10
+            },
+            {
+              "action": "Evade crackdown",
+              "outcome": "During the recruitment drive, you manage to evade an Imperial crackdown, saving many potential rebels.",
+              "points": 15
+            }
+          ]
+        },
+        {
+          "mission": "Steal Supplies",
+          "steps": [
+            {
+              "action": "Infiltrate depot",
+              "outcome": "Your team infiltrates an Imperial supply depot undetected.",
+              "points": 20
+            },
+            {
+              "action": "Extract supplies",
+              "outcome": "You successfully steal critical supplies, aiding the Rebel logistics.",
+              "points": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Droids in Distress",
+      "description": "Prevent the Empire from exploiting new droid technologies that could tip the balance in their favor.",
+      "missions": [
+        {
+          "mission": "Locate Droid Facility",
+          "steps": [
+            {
+              "action": "Scout location",
+              "outcome": "Your scouts locate the hidden droid facility used by the Empire for upgrades.",
+              "points": 10
+            },
+            {
+              "action": "Analyze defense",
+              "outcome": "Analysis reveals weak points in the facility’s defense system, planning for a less risky infiltration.",
+              "points": 15
+            }
+          ]
+        },
+        {
+          "mission": "Infiltrate and Sabotage",
+          "steps": [
+            {
+              "action": "Disable security",
+              "outcome": "Your team expertly disables the security system, allowing for safe entry.",
+              "points": 20
+            },
+            {
+              "action": "Sabotage equipment",
+              "outcome": "You sabotage the key equipment, rendering the droid upgrades useless to the Empire.",
+              "points": 30
+            }
+          ]
+        },
+        {
+          "mission": "Escape and Evade",
+          "steps": [
+            {
+              "action": "Evacuate facility",
+              "outcome": "Your team quickly evacuates the facility before the Empire can respond.",
+              "points": 20
+            },
+            {
+              "action": "Evade pursuit",
+              "outcome": "In a high-stakes chase, you successfully evade pursuing Imperial forces.",
+              "points": 25
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "end": "With your efforts on Lothal and thwarting the Empire's droid advancements, the Rebel Alliance grows stronger. The galaxy awaits your next moves, ready for more critical missions."
+}
