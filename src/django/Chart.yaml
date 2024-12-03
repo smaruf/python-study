@@ -1,0 +1,6 @@
+apiVersion: v2
+name: django-grpc-app
+description: A Helm chart for Kubernetes deployment of a Django and gRPC application
+type: application
+version: 0.1.0
+appVersion: "1.0"
