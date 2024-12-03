@@ -1,0 +1,4 @@
+Django>=3.2
+grpcio>=1.39.0
+grpcio-tools>=1.39.0
+djangorestframework>=3.12.4 # if using Django REST Framework
