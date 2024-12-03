@@ -1,0 +1,23 @@
+replicaCount: 1
+
+image:
+  repository: my-django-grpc-app
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+service:
+  type: ClusterIP
+  ports:
+    django:
+      port: 8000
+    grpc:
+      port: 50051
+
+ingress:
+  enabled: false
+
+resources: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}
