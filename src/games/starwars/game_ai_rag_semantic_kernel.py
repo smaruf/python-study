@@ -5,9 +5,13 @@ import torch
 import torch.nn as nn
 import random
 import json
+from semantic_kernel import Kernel
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
+
+# Initialize Semantic Kernel
+kernel = Kernel()
 
 # Game state
 game_state = {'players': {}}
@@ -50,6 +54,15 @@ def interact_with_chatgpt(prompt):
         print("Failed to contact ChatGPT:", e)
         return None
 
+# Semantic Kernel Interaction
+def interact_with_semantic_kernel(prompt):
+    try:
+        result = kernel.run(prompt)
+        return result
+    except Exception as e:
+        print("Failed to contact Semantic Kernel:", e)
+        return None
+
 # Track player actions and reactions
 def track_player_action(player_id, action):
     if player_id not in game_state['players']:
@@ -81,11 +94,14 @@ def post_action():
     # Try using ChatGPT
     response = interact_with_chatgpt(prompt)
     if response is None:
-        print("ChatGPT unavailable, falling back to custom model.")
-        response = predict([random.random() for _ in range(10)])  # Example input
+        print("ChatGPT unavailable, falling back to Semantic Kernel.")
+        response = interact_with_semantic_kernel(prompt)
         if response is None:
-            print("Custom model failed, using random action.")
-            response = random_action()
+            print("Semantic Kernel failed, using custom model.")
+            response = predict([random.random() for _ in range(10)])  # Example input
+            if response is None:
+                print("Custom model failed, using random action.")
+                response = random_action()
     
     track_player_action(player_id, action)
     track_opponent_reaction(player_id, response)
