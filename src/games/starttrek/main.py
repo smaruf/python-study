@@ -1,6 +1,9 @@
 import json
 import os
 import time
+import getpass
+import tkinter as tk
+from tkinter import simpledialog
 
 def load_json_data(filepath):
     """Load JSON data from a file."""
@@ -11,6 +14,30 @@ def save_json_data(filepath, data):
     """Save JSON data to a file."""
     with open(filepath, 'w') as file:
         json.dump(data, file, indent=4)
+
+def authenticate_player(players_db):
+    """Authenticate player by username and password."""
+    username = input("Enter your username: ").strip()
+    password = getpass.getpass("Enter your password: ").strip()
+    player = players_db['players'].get(username)
+    if player and player['password'] == password:
+        print("Authentication successful!")
+        return username
+    else:
+        print("Invalid username or password. Please try again.")
+        return authenticate_player(players_db)
+
+def register_player(players_db):
+    """Register a new player."""
+    username = input("Choose a username: ").strip()
+    if username in players_db['players']:
+        print("Username already exists. Please choose another one.")
+        return register_player(players_db)
+    password = getpass.getpass("Choose a password: ").strip()
+    players_db['players'][username] = {"username": username, "password": password, "points": 0, "completed_missions": []}
+    save_json_data('players.json', players_db)
+    print("Registration successful!")
+    return username
 
 def get_player_profile(players_db, username):
     """Retrieve player profile from the database."""
@@ -62,10 +89,30 @@ def select_story():
             print("Invalid input. Please enter a number.")
     return load_json_data(story_files[story_index])
 
+def display_leaderboard(players_db):
+    """Display the top players based on points."""
+    sorted_players = sorted(players_db['players'].values(), key=lambda x: x['points'], reverse=True)
+    print("Leaderboard:")
+    for idx, player in enumerate(sorted_players[:10], 1):  # Display top 10 players
+        print(f"{idx}. {player['username']} - {player['points']} points")
+
+def save_game_progress(players_db, username, story, points):
+    """Save game progress after completing a mission."""
+    player = players_db['players'][username]
+    player['points'] += points
+    player['completed_missions'].append(story['title'])
+    save_json_data('players.json', players_db)
+    print(f"Progress saved for {username}.")
+
 def main():
     """Main function to run the game."""
     players_db = load_json_data('players.json')
-    username = input("Enter your username: ").strip()
+    choice = input("Do you have an account? (yes/no): ").strip().lower()
+    if choice == 'yes':
+        username = authenticate_player(players_db)
+    else:
+        username = register_player(players_db)
+    display_leaderboard(players_db)
     while True:
         try:
             difficulty = int(input("Enter difficulty level (1-3): "))
@@ -77,7 +124,7 @@ def main():
             print("Invalid input. Please enter a number.")
     story = select_story()
     points = play_story(story, difficulty)
-    update_player_profile(players_db, username, points, story['title'])
+    save_game_progress(players_db, username, story, points)
 
 if __name__ == "__main__":
     main()
