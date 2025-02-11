@@ -58,6 +58,12 @@ Run the `setup_k8s.py` script for additional setup:
 python setup_k8s.py
 ```
 
+Run with advance options:
+
+```sh
+python k8s_management.py --install-istio --setup-jenkins --setup-monitoring
+```
+
 ## Summary
 The script provides a starting point for setting up CI/CD pipelines and managing scalability in your Kubernetes cluster. Follow the instructions for manual tasks and use the generated YAML files to automate deployments.
 
