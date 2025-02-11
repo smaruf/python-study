@@ -52,6 +52,11 @@ These files can then be applied to your Kubernetes cluster using `kubectl apply 
 kubectl apply -f jenkins-deployment.yaml
 kubectl apply -f api-gateway-hpa.yaml
 ```
+Run the `setup_k8s.py` script for additional setup:
+
+```sh
+python setup_k8s.py
+```
 
 ## Summary
 The script provides a starting point for setting up CI/CD pipelines and managing scalability in your Kubernetes cluster. Follow the instructions for manual tasks and use the generated YAML files to automate deployments.
@@ -67,3 +72,7 @@ For more information on the tools and concepts mentioned in this README, refer t
 - [Jenkins Documentation](https://www.jenkins.io/doc/)
 - [Kubernetes Horizontal Pod Autoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 - [YAML Language Reference](https://yaml.org/spec/1.2/spec.html)
+
+```code
+You can add this section to your `README.md` file in the `src/k8s` directory.
+```
