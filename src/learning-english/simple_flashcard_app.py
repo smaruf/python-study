@@ -2,10 +2,12 @@ import tkinter as tk
 from tkinter import simpledialog
 import json
 import random
-import requests  # For accessing Oxford Dictionary API
+import requests  # For accessing APIs
 from datetime import datetime, timedelta
 import pyttsx3
 import os
+import wikipediaapi  # For Wikipedia API
+import openai  # For ChatGPT API
 
 class FlashcardApp:
     def __init__(self, master):
@@ -100,15 +102,27 @@ class FlashcardApp:
         print("New flashcard added successfully.")
 
     def get_word_difficulty(self, word):
-        app_id = 'your_app_id'  # Replace with your APP ID
-        app_key = 'your_app_key'  # Replace with your APP KEY
-        url = f"https://od-api.oxforddictionaries.com:443/api/v2/entries/en-us/{word.lower()}"
-        response = requests.get(url, headers={"app_id": app_id, "app_key": app_key})
-        if response.status_code == 200:
-            data = response.json()
-            # Assuming the difficulty level can be inferred from some field in the response
-            return data.get('results', [{}])[0].get('lexicalEntries', [{}])[0].get('lexicalCategory', {}).get('id', 'unknown')
+        # Using Wikipedia API to fetch word difficulty
+        wiki_wiki = wikipediaapi.Wikipedia('en')
+        page = wiki_wiki.page(word)
+        if page.exists():
+            summary = page.summary[:60]  # Get the first 60 characters
+            return summary
         return 'unknown'
+
+    def get_chatgpt_response(self, prompt):
+        openai.api_key = 'your_openai_api_key'  # Replace with your OpenAI API key
+        response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt=prompt,
+            max_tokens=50
+        )
+        return response.choices[0].text.strip()
+
+    def fetch_flashcard_info(self, word):
+        wiki_info = self.get_word_difficulty(word)
+        chatgpt_info = self.get_chatgpt_response(f"Provide a summary for the word '{word}'")
+        return f"Wikipedia: {wiki_info}\nChatGPT: {chatgpt_info}"
 
 if __name__ == "__main__":
     root = tk.Tk()
