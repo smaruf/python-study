@@ -1,4 +1,4 @@
-# Terraform Directory
+# Managing Terraform Configurations
 
 ## Prerequisites
 
@@ -12,9 +12,7 @@ Navigate to the `terraform` directory and run the following command to initializ
 ```sh
 terraform init
 ```
-To add the next step:
 
-```markdown
 ## Step 2: Plan the Infrastructure
 
 Generate an execution plan to see what changes will be made to your infrastructure:
