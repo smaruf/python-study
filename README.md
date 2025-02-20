@@ -27,6 +27,11 @@ This repository contains a variety of Python modules and scripts for testing and
 5. [Py2neo](https://pypi.org/project/py2neo/) - [Py2neo Documentation](https://py2neo.org/2021.1/)
 6. [Neo4j](https://neo4j.com/)
 
+## English Learning
+
+1. [Learning English Flashcards App](https://github.com/smaruf/python-study/blob/main/src/learning-english/README.md)
+2. [Language Improvement Document](https://github.com/smaruf/python-study/blob/main/src/learning-english/language_improvement.md)
+
 ## Contribution Guidelines
 
 Feel free to contribute to this repository by submitting issues or pull requests. Please follow the standard coding conventions and include appropriate documentation for any new features or changes.
