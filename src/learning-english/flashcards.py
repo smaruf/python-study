@@ -1,4 +1,4 @@
-[
+flashcards = [
   {
     "category": "Professional Vocabulary",
     "question": "Define 'appraisal' in a business context.",
