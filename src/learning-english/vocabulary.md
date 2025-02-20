@@ -123,7 +123,7 @@
 - get full-time employment, offer/give full-time employment, be in full-time employment /ɡɛt ˈfʊltaɪm ɪmˈplɔɪmənt, ˈɒfə/ɡɪv ˈfʊltaɪm ɪmˈplɔɪmənt, biː ɪn ˈfʊltaɪm ɪmˈplɔɪmənt/
 - be made redundant, make a position redundant, face redundancy /biː meɪd rɪˈdʌndənt, meɪk ə pəˈzɪʃən rɪˈdʌndənt, feɪs rɪˈdʌndənsi/
 - get/receive retraining in programming, have retraining in smth, retrain as a programmer /ɡɛt/rɪˈsiːv rɪˈtreɪnɪŋ ɪn ˈprəʊɡræmɪŋ, hæv rɪˈtreɪnɪŋ ɪn sʌmθɪŋ, rɪˈtreɪn æz ə ˈprəʊɡræmə/
-- upgrade your skills, upgrade your IT skills, upgrade your skills in programming /ʌpˈɡreɪd jɔː skɪlz, ʌpˈɡreɪd jɔːr aɪˈtiː### Talking about Employment
+- upgrade your skills, upgrade your IT skills, upgrade your skills in programming /ʌpˈɡreɪd jɔː skɪlz, ʌpˈɡreɪd jɔːr aɪˈtiː skɪlz, ʌpˈɡreɪ
 - increase your employability, maintain your employability
 - begin/finish an internship at a small IT company, be in an internship, serve an internship
 - expand expertise, lack expertise, have the same level of expertise, have considerable expertise in Java, have relevant expertise, need/require expertise
