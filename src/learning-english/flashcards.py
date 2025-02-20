@@ -73,5 +73,125 @@
     "category": "Corporate Strategy",
     "question": "Explain 'balanced scorecard'.",
     "answer": "A strategic planning and management system used to align business activities to the vision and strategy of the organization, improve internal and external communications, and monitor organizational performance against strategic goals."
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'form an opinion of smb/about smth'?",
+    "answer": "fɔːm ən əˈpɪnjən əv sʌmbədi/əˈbaʊt sʌmθɪŋ"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'make a positive/good impression on smb'?",
+    "answer": "meɪk ə ˈpɒzətɪv/ɡʊd ɪmˈprɛʃən ɒn sʌmbədi"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'get/gain a positive/good impression of smb/smth'?",
+    "answer": "ɡɛt/ɡeɪn ə ˈpɒzətɪv/ɡʊd ɪmˈprɛʃən əv sʌmbədi/sʌmθɪŋ"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'project a positive image'?",
+    "answer": "prəˈdʒɛkt ə ˈpɒzətɪv ˈɪmɪdʒ"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'project an image of oneself as a supportive person'?",
+    "answer": "prəˈdʒɛkt ən ˈɪmɪdʒ əv wʌnˈsɛlf æz ə səˈpɔːtɪv ˈpɜːsən"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'come across as a supportive person'?",
+    "answer": "kʌm əˈkrɒs æz ə səˈpɔːtɪv ˈpɜːsən"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'prospective client'?",
+    "answer": "prəˈspɛktɪv ˈklaɪənt"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'match smb's online profile'?",
+    "answer": "mætʃ sʌmbədi's ˈɒnlaɪn ˈprəʊfaɪl"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'take an instant dislike to smb/smth'?",
+    "answer": "teɪk ən ˈɪnstənt dɪsˈlaɪk tuː sʌmbədi/sʌmθɪŋ"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'build a good relationship'?",
+    "answer": "bɪld ə ɡʊd rɪˈleɪʃənʃɪp"
+  },
+  {
+    "category": "First Impressions",
+    "question": "How do you say 'have a good reputation for'?",
+    "answer": "hæv ə ɡʊd ˌrɛpjʊˈteɪʃən fɔː"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'get fulfillment from, find fulfillment in'?",
+    "answer": "ɡɛt fʊlˈfɪlmənt frɒm, faɪnd fʊlˈfɪlmənt ɪn"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'autonomy'?",
+    "answer": "ɔːˈtɒnəmi"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'one of the main benefits'?",
+    "answer": "wʌn əv ðə meɪn ˈbɛnɪfɪts"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'one of the biggest perks'?",
+    "answer": "wʌn əv ðə ˈbɪɡɪst pɜːks"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'give/get a reward for'?",
+    "answer": "ɡɪv/ɡɛt ə rɪˈwɔːd fɔː"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'merchandise'?",
+    "answer": "ˈmɜːtʃəndaɪz"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'be acknowledged and recognized for my achievements'?",
+    "answer": "biː əkˈnɒlɪdʒd ænd ˈrɛkəɡnaɪzd fɔː maɪ əˈtʃiːvmənts"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'praise'?",
+    "answer": "preɪz"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'offer/give smb an incentive to do smth'?",
+    "answer": "ˈɒfə/ɡɪv sʌmbədi ən ɪnˈsɛntɪv tuː duː sʌmθɪŋ"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'feel valued'?",
+    "answer": "fiːl ˈvæljuːd"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'opportunities for training'?",
+    "answer": "ˌɒpəˈtjuːnɪtiz fɔː ˈtreɪnɪŋ"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'get appreciation, show/express appreciation of (smb's work)'?",
+    "answer": "ɡɛt əˌpriːʃiˈeɪʃən, ʃəʊ/ɪkˈsprɛs əˌpriːʃiˈeɪʃən əv (sʌmbədi's wɜːk)"
+  },
+  {
+    "category": "Motivation at Work",
+    "question": "How do you say 'give smb a sense of achievement'?",
+    "answer": "ɡɪv sʌmbədi ə sɛns əv əˈtʃiːvmənt"
   }
 ]
