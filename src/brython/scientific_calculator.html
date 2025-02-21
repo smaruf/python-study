@@ -46,7 +46,6 @@
     </style>
     <script type="text/python">
         from browser import document, window
-        from browser.widgets.dialog import InfoDialog, ErrorDialog
 
         def insert(value):
             display = document["display"]
@@ -66,20 +65,10 @@
                 display.value = "Error"
                 error_box.textContent = str(e)
 
-        def open_equation_dialog():
-            equation = window.prompt("Enter your equation:", "")
-            if equation:
-                try:
-                    result = eval(equation)
-                    InfoDialog("Result", f"The result of '{equation}' is: {result}", ok=True)
-                except Exception as e:
-                    ErrorDialog("Error", f"Invalid expression: {e}", ok=True)
-
         # Assign functions to the window object to make them accessible from JavaScript
         window.js_insert = insert
         window.js_clear_display = clear_display
         window.js_calculate = calculate
-        window.js_open_equation_dialog = open_equation_dialog
     </script>
 </head>
 <body onload="brython()">
@@ -105,7 +94,6 @@
             <button onclick="js_insert('(')">(</button>
             <button onclick="js_insert(')')">)</button>
             <button onclick="js_calculate()">=</button>
-            <button onclick="js_open_equation_dialog()">Add Equation</button>
         </div>
         <div id="error-box" style="color: red;"></div>
     </div>
