@@ -69,15 +69,37 @@
             <button onclick="js_insert(')')">)</button>
             <button onclick="js_calculate()">=</button>
             <button onclick="js_insert('**')">^</button>
-            <button onclick="js_insert('math.sin(')">sin</button>
-            <button onclick="js_insert('math.cos(')">cos</button>
-            <button onclick="js_insert('math.tan(')">tan</button>
-            <button onclick="js_insert('math.sqrt(')">√</button>
+            <button onclick="js_insert('sin(')">sin</button>
+            <button onclick="js_insert('cos(')">cos</button>
+            <button onclick="js_insert('tan(')">tan</button>
+            <button onclick="js_insert('sqrt(')">√</button>
         </div>
     </div>
     <script type="text/python">
         from browser import document, window
-        import math
+
+        # Define the math functions we need
+        def sin(x):
+            import math
+            return math.sin(x)
+
+        def cos(x):
+            import math
+            return math.cos(x)
+
+        def tan(x):
+            import math
+            return math.tan(x)
+
+        def sqrt(x):
+            import math
+            return math.sqrt(x)
+
+        # Make these functions available globally
+        window.sin = sin
+        window.cos = cos
+        window.tan = tan
+        window.sqrt = sqrt
 
         def insert(value):
             display = document["display"]
@@ -98,11 +120,11 @@
         function js_insert(value) {
             window.insert(value);
         }
-        
+
         function js_clear_display() {
             window.clear_display();
         }
-        
+
         function js_calculate() {
             window.calculate();
         }
