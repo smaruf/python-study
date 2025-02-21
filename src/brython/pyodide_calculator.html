@@ -69,6 +69,7 @@
             <button onclick="page.open_trig_function_dialog()">Trig Functions</button>
         </div>
         <div id="error-box" style="color: red;"></div>
+        <div id="test-result" style="margin-top: 20px; color: green;"></div>
     </div>
     <script type="text/javascript">
         async function loadPyodideAndPackages() {
@@ -131,28 +132,37 @@
         loadPyodideAndPackages().then(() => {
             // Ensure page variable is set after Pyodide has loaded
             window.page = pyodide.globals.get('page');
+            runTests();
         });
 
-        function waitForPageLoad() {
-            if (typeof window.page === 'undefined') {
-                setTimeout(waitForPageLoad, 100);
-            } else {
-                attachEventListeners();
+        function runTests() {
+            try {
+                // Test 1: Insert and calculate
+                page.insert('1');
+                page.insert('+');
+                page.insert('1');
+                page.calculate();
+                const display = document.getElementById('display').value;
+                if (display === '2') {
+                    document.getElementById('test-result').innerText = 'Test 1 Passed: Basic addition works.';
+                } else {
+                    document.getElementById('test-result').innerText = 'Test 1 Failed: Basic addition does not work.';
+                }
+
+                // Test 2: Clear display
+                page.clear_display();
+                if (document.getElementById('display').value === '') {
+                    document.getElementById('test-result').innerText += '\nTest 2 Passed: Clear display works.';
+                } else {
+                    document.getElementById('test-result').innerText += '\nTest 2 Failed: Clear display does not work.';
+                }
+
+                // Additional tests can be added here
+            } catch (error) {
+                document.getElementById('test-result').style.color = 'red';
+                document.getElementById('test-result').innerText = `Tests encountered an error: ${error.message}`;
             }
         }
-
-        function attachEventListeners() {
-            document.querySelectorAll('.buttons button').forEach(button => {
-                button.onclick = () => {
-                    const func = button.getAttribute('onclick').replace('page.', '');
-                    if (typeof window.page[func] === 'function') {
-                        window.page[func](button.innerText);
-                    }
-                };
-            });
-        }
-
-        waitForPageLoad();
     </script>
 </body>
 </html>
