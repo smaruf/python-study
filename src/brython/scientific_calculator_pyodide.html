@@ -80,46 +80,49 @@
                 import math
                 from js import document, window
 
-                def insert(value):
-                    display = document.getElementById("display")
-                    display.value += value
+                def setup():
+                    def insert(value):
+                        display = document.getElementById("display")
+                        display.value += value
 
-                def clear_display():
-                    display = document.getElementById("display")
-                    display.value = ""
+                    def clear_display():
+                        display = document.getElementById("display")
+                        display.value = ""
 
-                def calculate():
-                    display = document.getElementById("display")
-                    error_box = document.getElementById("error-box")
-                    try:
-                        display.value = str(eval(display.value))
-                        error_box.textContent = ""
-                    except Exception as e:
-                        display.value = "Error"
-                        error_box.textContent = str(e)
-
-                def open_trig_function_dialog():
-                    function = window.prompt("Enter the trigonometric function (sin, cos, tan):", "")
-                    angle = window.prompt("Enter the angle in degrees:", "")
-                    if function and angle:
+                    def calculate():
+                        display = document.getElementById("display")
+                        error_box = document.getElementById("error-box")
                         try:
-                            angle_rad = math.radians(float(angle))
-                            if function == "sin":
-                                result = math.sin(angle_rad)
-                            elif function == "cos":
-                                result = math.cos(angle_rad)
-                            elif function == "tan":
-                                result = math.tan(angle_rad)
-                            else:
-                                raise ValueError("Invalid function")
-                            window.alert(f"The result of {function}({angle}) is: {result}")
+                            display.value = str(eval(display.value))
+                            error_box.textContent = ""
                         except Exception as e:
-                            window.alert(f"Invalid input: {e}")
+                            display.value = "Error"
+                            error_box.textContent = str(e)
 
-                window.insert = insert
-                window.clearDisplay = clear_display
-                window.calculate = calculate
-                window.openTrigFunctionDialog = open_trig_function_dialog
+                    def open_trig_function_dialog():
+                        function = window.prompt("Enter the trigonometric function (sin, cos, tan):", "")
+                        angle = window.prompt("Enter the angle in degrees:", "")
+                        if function and angle:
+                            try:
+                                angle_rad = math.radians(float(angle))
+                                if function == "sin":
+                                    result = math.sin(angle_rad)
+                                elif function == "cos":
+                                    result = math.cos(angle_rad)
+                                elif function == "tan":
+                                    result = math.tan(angle_rad)
+                                else:
+                                    raise ValueError("Invalid function")
+                                window.alert(f"The result of {function}({angle}) is: {result}")
+                            except Exception as e:
+                                window.alert(f"Invalid input: {e}")
+
+                    window.insert = insert
+                    window.clearDisplay = clear_display
+                    window.calculate = calculate
+                    window.openTrigFunctionDialog = open_trig_function_dialog
+
+                setup()
             `);
         }
         loadPyodideAndPackages();
