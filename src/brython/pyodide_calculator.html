@@ -132,6 +132,27 @@
             // Ensure page variable is set after Pyodide has loaded
             window.page = pyodide.globals.get('page');
         });
+
+        function waitForPageLoad() {
+            if (typeof window.page === 'undefined') {
+                setTimeout(waitForPageLoad, 100);
+            } else {
+                attachEventListeners();
+            }
+        }
+
+        function attachEventListeners() {
+            document.querySelectorAll('.buttons button').forEach(button => {
+                button.onclick = () => {
+                    const func = button.getAttribute('onclick').replace('page.', '');
+                    if (typeof window.page[func] === 'function') {
+                        window.page[func](button.innerText);
+                    }
+                };
+            });
+        }
+
+        waitForPageLoad();
     </script>
 </body>
 </html>
