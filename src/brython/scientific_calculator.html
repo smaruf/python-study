@@ -132,32 +132,37 @@
 
         // Test before loading
         document.addEventListener("DOMContentLoaded", function() {
-            console.log('Testing if Brython functions are mapped correctly...');
-            try {
-                js_clear_display();
-                js_insert('Math.sin(30 * Math.PI / 180)');
-                js_calculate();
-                let sinResult = document.getElementById('display').value;
-                console.assert(sinResult === '0.5', 'Sin(30°) test failed');
+    console.log('Testing if Brython functions are mapped correctly...');
+    if (window.clear_display && window.insert && window.calculate) {
+        try {
+            js_clear_display();
+            js_insert('Math.sin(30 * Math.PI / 180)');
+            js_calculate();
+            let sinResult = document.getElementById('display').value;
+            console.assert(sinResult === '0.5', 'Sin(30°) test failed');
 
-                js_clear_display();
-                js_insert('Math.cos(60 * Math.PI / 180)');
-                js_calculate();
-                let cosResult = document.getElementById('display').value;
-                console.assert(cosResult === '0.5', 'Cos(60°) test failed');
+            js_clear_display();
+            js_insert('Math.cos(60 * Math.PI / 180)');
+            js_calculate();
+            let cosResult = document.getElementById('display').value;
+            console.assert(cosResult === '0.5', 'Cos(60°) test failed');
 
-                js_clear_display();
-                js_insert('Math.tan(45 * Math.PI / 180)');
-                js_calculate();
-                let tanResult = document.getElementById('display').value;
-                console.assert(tanResult === '1', 'Tan(45°) test failed');
+            js_clear_display();
+            js_insert('Math.tan(45 * Math.PI / 180)');
+            js_calculate();
+            let tanResult = document.getElementById('display').value;
+            console.assert(tanResult === '1', 'Tan(45°) test failed');
 
-                console.log('All tests passed: Calculator functions are working.');
-            } catch (error) {
-                console.error('Test failed:', error);
-                document.getElementById('error-box').textContent = 'Test failed: ' + error;
-            }
-        });
+            console.log('All tests passed: Calculator functions are working.');
+        } catch (error) {
+            console.error('Test failed:', error);
+            document.getElementById('error-box').textContent = 'Test failed: ' + error;
+        }
+    } else {
+        console.error('Brython functions are not mapped correctly');
+        document.getElementById('error-box').textContent = 'Brython functions are not mapped correctly';
+    }
+});
     </script>
 </body>
 </html>
