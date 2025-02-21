@@ -75,33 +75,35 @@
             <button onclick="insert('math.sqrt(')">√</button>
         </div>
     </div>
-    <script type="text/javascript">
-        async function loadPyodideAndPackages() {
-            window.pyodide = await loadPyodide();
-        }
-        loadPyodideAndPackages();
+   <script type="text/javascript">
+    async function loadPyodideAndPackages() {
+        window.pyodide = await loadPyodide({
+            indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/"
+        });
+    }
+    loadPyodideAndPackages();
 
-        function insert(value) {
-            document.getElementById('display').value += value;
-        }
+    function insert(value) {
+        document.getElementById('display').value += value;
+    }
 
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
 
-        async function calculate() {
-            const display = document.getElementById('display');
-            try {
-                await pyodide.loadPackage("numpy");
-                const result = pyodide.runPython(`
-                    import math
-                    eval("${display.value}")
-                `);
-                display.value = result;
-            } catch (error) {
-                display.value = 'Error';
-            }
+    async function calculate() {
+        const display = document.getElementById('display');
+        try {
+            await pyodide.loadPackage("numpy");
+            const result = pyodide.runPython(`
+                import math
+                eval("${display.value}")
+            `);
+            display.value = result;
+        } catch (error) {
+            display.value = 'Error';
         }
-    </script>
+    }
+</script>
 </body>
 </html>
