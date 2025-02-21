@@ -74,6 +74,8 @@
             <button onclick="js_insert('tan(')">tan</button>
             <button onclick="js_insert('sqrt(')">√</button>
         </div>
+        <!-- Add the error box here -->
+        <div id="error-box" style="color: red; margin-top: 10px;"></div>
     </div>
     <script type="text/python">
         from browser import document, window
@@ -118,10 +120,13 @@
 
         def calculate():
             display = document["display"]
+            error_box = document["error-box"]
             try:
                 display.value = str(eval(display.value))
+                error_box.textContent = ""  # Clear error box if calculation is successful
             except Exception as e:
                 display.value = "Error"
+                error_box.textContent = str(e)  # Display the error reason
 
         # Make the calculate function available globally
         window.calculate = calculate
