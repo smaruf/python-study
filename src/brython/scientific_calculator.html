@@ -65,35 +65,51 @@
                 display.value = "Error"
                 error_box.textContent = str(e)
 
-        # Assign functions to the window object to make them accessible from JavaScript
-        window.js_insert = insert
-        window.js_clear_display = clear_display
-        window.js_calculate = calculate
+        def open_equation_dialog():
+            equation = window.prompt("Enter your equation:", "")
+            if equation:
+                try:
+                    result = eval(equation)
+                    window.alert(f"The result of '{equation}' is: {result}")
+                except Exception as e:
+                    window.alert(f"Invalid expression: {e}")
+
+        # Assign functions to the page variable
+        page = {
+            "insert": insert,
+            "clear_display": clear_display,
+            "calculate": calculate,
+            "open_equation_dialog": open_equation_dialog
+        }
+
+        # Assign page variable to window
+        window.page = page
     </script>
 </head>
 <body onload="brython()">
     <div class="calculator">
         <input type="text" id="display" class="display" disabled>
         <div class="buttons">
-            <button onclick="js_insert('7')">7</button>
-            <button onclick="js_insert('8')">8</button>
-            <button onclick="js_insert('9')">9</button>
-            <button onclick="js_insert('/')">/</button>
-            <button onclick="js_insert('4')">4</button>
-            <button onclick="js_insert('5')">5</button>
-            <button onclick="js_insert('6')">6</button>
-            <button onclick="js_insert('*')">*</button>
-            <button onclick="js_insert('1')">1</button>
-            <button onclick="js_insert('2')">2</button>
-            <button onclick="js_insert('3')">3</button>
-            <button onclick="js_insert('-')">-</button>
-            <button onclick="js_insert('0')">0</button>
-            <button onclick="js_insert('.')">.</button>
-            <button onclick="js_clear_display()">C</button>
-            <button onclick="js_insert('+')">+</button>
-            <button onclick="js_insert('(')">(</button>
-            <button onclick="js_insert(')')">)</button>
-            <button onclick="js_calculate()">=</button>
+            <button onclick="page.insert('7')">7</button>
+            <button onclick="page.insert('8')">8</button>
+            <button onclick="page.insert('9')">9</button>
+            <button onclick="page.insert('/')">/</button>
+            <button onclick="page.insert('4')">4</button>
+            <button onclick="page.insert('5')">5</button>
+            <button onclick="page.insert('6')">6</button>
+            <button onclick="page.insert('*')">*</button>
+            <button onclick="page.insert('1')">1</button>
+            <button onclick="page.insert('2')">2</button>
+            <button onclick="page.insert('3')">3</button>
+            <button onclick="page.insert('-')">-</button>
+            <button onclick="page.insert('0')">0</button>
+            <button onclick="page.insert('.')">.</button>
+            <button onclick="page.clear_display()">C</button>
+            <button onclick="page.insert('+')">+</button>
+            <button onclick="page.insert('(')">(</button>
+            <button onclick="page.insert(')')">)</button>
+            <button onclick="page.calculate()">=</button>
+            <button onclick="page.open_equation_dialog()">Add Equation</button>
         </div>
         <div id="error-box" style="color: red;"></div>
     </div>
