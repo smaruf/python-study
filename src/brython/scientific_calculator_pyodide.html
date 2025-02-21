@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Scientific Calculator with Pyodide</title>
+    <title>WebAssembly Calculator with Pyodide</title>
     <style>
         .calculator {
             max-width: 400px;
@@ -65,45 +65,63 @@
             <button onclick="insert('.')">.</button>
             <button onclick="clearDisplay()">C</button>
             <button onclick="insert('+')">+</button>
-            <button onclick="insert('(')">(</button>
-            <button onclick="insert(')')">)</button>
             <button onclick="calculate()">=</button>
-            <button onclick="insert('**')">^</button>
-            <button onclick="insert('math.sin(')">sin</button>
-            <button onclick="insert('math.cos(')">cos</button>
-            <button onclick="insert('math.tan(')">tan</button>
-            <button onclick="insert('math.sqrt(')">√</button>
+            <button onclick="openTrigFunctionDialog()">Trig Functions</button>
         </div>
+        <div id="error-box" style="color: red;"></div>
     </div>
-   <script type="text/javascript">
-    async function loadPyodideAndPackages() {
-        window.pyodide = await loadPyodide({
-            indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/"
-        });
-    }
-    loadPyodideAndPackages();
-
-    function insert(value) {
-        document.getElementById('display').value += value;
-    }
-
-    function clearDisplay() {
-        document.getElementById('display').value = '';
-    }
-
-    async function calculate() {
-        const display = document.getElementById('display');
-        try {
-            await pyodide.loadPackage("numpy");
-            const result = pyodide.runPython(`
+    <script type="text/javascript">
+        async function loadPyodideAndPackages() {
+            window.pyodide = await loadPyodide({
+                indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/"
+            });
+            await window.pyodide.loadPackage(["micropip"]);
+            await pyodide.runPythonAsync(`
                 import math
-                eval("${display.value}")
+
+                def insert(value):
+                    display = js.document.getElementById("display")
+                    display.value += value
+
+                def clear_display():
+                    display = js.document.getElementById("display")
+                    display.value = ""
+
+                def calculate():
+                    display = js.document.getElementById("display")
+                    error_box = js.document.getElementById("error-box")
+                    try:
+                        display.value = str(eval(display.value))
+                        error_box.textContent = ""
+                    except Exception as e:
+                        display.value = "Error"
+                        error_box.textContent = str(e)
+
+                def open_trig_function_dialog():
+                    function = js.window.prompt("Enter the trigonometric function (sin, cos, tan):", "")
+                    angle = js.window.prompt("Enter the angle in degrees:", "")
+                    if function and angle:
+                        try:
+                            angle_rad = math.radians(float(angle))
+                            if function == "sin":
+                                result = math.sin(angle_rad)
+                            elif function == "cos":
+                                result = math.cos(angle_rad)
+                            elif function == "tan":
+                                result = math.tan(angle_rad)
+                            else:
+                                raise ValueError("Invalid function")
+                            js.window.alert(f"The result of {function}({angle}) is: {result}")
+                        except Exception as e:
+                            js.window.alert(f"Invalid input: {e}")
+
+                js.window.insert = insert
+                js.window.clearDisplay = clear_display
+                js.window.calculate = calculate
+                js.window.openTrigFunctionDialog = open_trig_function_dialog
             `);
-            display.value = result;
-        } catch (error) {
-            display.value = 'Error';
         }
-    }
-</script>
+        loadPyodideAndPackages();
+    </script>
 </body>
 </html>
