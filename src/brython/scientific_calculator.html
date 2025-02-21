@@ -65,7 +65,7 @@
             <button onclick="js_insert('.')">.</button>
             <button onclick="js_clear_display()">C</button>
             <button onclick="js_insert('+')">+</button>
-            <button onclick="js_insert('(')">()</button>
+            <button onclick="js_insert('(')">(</button>
             <button onclick="js_insert(')')">)</button>
             <button onclick="js_calculate()">=</button>
             <button onclick="js_insert('**')">^</button>
@@ -100,17 +100,21 @@
         window.cos = cos
         window.tan = tan
         window.sqrt = sqrt
-        window.insert = insert  # Add this line
-        window.clear_display = clear_display  # Add this line
-        window.calculate = calculate  # Add this line
 
+        # Define the insert function
         def insert(value):
             display = document["display"]
             display.value += value
 
+        # Make the insert function available globally
+        window.insert = insert
+
         def clear_display():
             display = document["display"]
             display.value = ""
+
+        # Make the clear_display function available globally
+        window.clear_display = clear_display
 
         def calculate():
             display = document["display"]
@@ -118,6 +122,18 @@
                 display.value = str(eval(display.value))
             except Exception as e:
                 display.value = "Error"
+
+        # Make the calculate function available globally
+        window.calculate = calculate
+
+        # Pre-test code to show Brython is fully loaded
+        def pretest():
+            if all([hasattr(window, func) for func in ['insert', 'clear_display', 'calculate', 'sin', 'cos', 'tan', 'sqrt']]):
+                document['display'].value = "Brython loaded and functions mapped"
+            else:
+                document['display'].value = "Error in function mapping"
+
+        pretest()
     </script>
     <script type="text/javascript">
         function js_insert(value) {
