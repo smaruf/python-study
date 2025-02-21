@@ -43,6 +43,13 @@
         .buttons button:active {
             background-color: #ccc;
         }
+        .scientific-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #aaa;
+        }
     </style>
 </head>
 <body onload="brython()">
@@ -68,14 +75,20 @@
             <button onclick="js_insert('(')">(</button>
             <button onclick="js_insert(')')">)</button>
             <button onclick="js_calculate()">=</button>
-            <button onclick="js_insert('**')">^</button>
-            <button onclick="js_insert('Math.sin(')">sin</button>
-            <button onclick="js_insert('Math.cos(')">cos</button>
-            <button onclick="js_insert('Math.tan(')">tan</button>
-            <button onclick="js_insert('Math.sqrt(')">√</button>
         </div>
         <!-- Add the error box here -->
         <div id="error-box" style="color: red; margin-top: 10px;"></div>
+    </div>
+    <!-- Separate box for scientific calculations -->
+    <div class="scientific-box">
+        <input type="text" id="scientific-display" class="display" disabled>
+        <div class="buttons">
+            <button onclick="js_insert_scientific('Math.sin(')">sin</button>
+            <button onclick="js_insert_scientific('Math.cos(')">cos</button>
+            <button onclick="js_insert_scientific('Math.tan(')">tan</button>
+            <button onclick="js_insert_scientific('Math.sqrt(')">√</button>
+        </div>
+        <button onclick="js_calculate_scientific()">Calculate</button>
     </div>
     <script type="text/python">
         from browser import document, window
@@ -108,9 +121,28 @@
         # Make the calculate function available globally
         window.calculate = calculate
 
+        # Scientific functions
+        def insert_scientific(value):
+            display = document["scientific-display"]
+            display.value += value
+
+        window.insert_scientific = insert_scientific
+
+        def calculate_scientific():
+            display = document["scientific-display"]
+            error_box = document["error-box"]
+            try:
+                display.value = str(eval(display.value))
+                error_box.textContent = ""  # Clear error box if calculation is successful
+            except Exception as e:
+                display.value = "Error"
+                error_box.textContent = str(e)  # Display the error reason
+
+        window.calculate_scientific = calculate_scientific
+
         # Pre-test code to show Brython is fully loaded
         def pretest():
-            if all([hasattr(window, func) for func in ['insert', 'clear_display', 'calculate']]):
+            if all([hasattr(window, func) for func in ['insert', 'clear_display', 'calculate', 'insert_scientific', 'calculate_scientific']]):
                 document['display'].value = "Brython loaded and functions mapped"
             else:
                 document['display'].value = "Error in function mapping"
@@ -130,39 +162,47 @@
             window.calculate();
         }
 
+        function js_insert_scientific(value) {
+            window.insert_scientific(value);
+        }
+
+        function js_calculate_scientific() {
+            window.calculate_scientific();
+        }
+
         // Test before loading
         document.addEventListener("DOMContentLoaded", function() {
-    console.log('Testing if Brython functions are mapped correctly...');
-    if (window.clear_display && window.insert && window.calculate) {
-        try {
-            js_clear_display();
-            js_insert('Math.sin(30 * Math.PI / 180)');
-            js_calculate();
-            let sinResult = document.getElementById('display').value;
-            console.assert(sinResult === '0.5', 'Sin(30°) test failed');
+            console.log('Testing if Brython functions are mapped correctly...');
+            if (window.clear_display && window.insert && window.calculate && window.insert_scientific && window.calculate_scientific) {
+                try {
+                    js_clear_display();
+                    js_insert_scientific('Math.sin(30 * Math.PI / 180)');
+                    js_calculate_scientific();
+                    let sinResult = document.getElementById('scientific-display').value;
+                    console.assert(sinResult === '0.5', 'Sin(30°) test failed');
 
-            js_clear_display();
-            js_insert('Math.cos(60 * Math.PI / 180)');
-            js_calculate();
-            let cosResult = document.getElementById('display').value;
-            console.assert(cosResult === '0.5', 'Cos(60°) test failed');
+                    js_clear_display();
+                    js_insert_scientific('Math.cos(60 * Math.PI / 180)');
+                    js_calculate_scientific();
+                    let cosResult = document.getElementById('scientific-display').value;
+                    console.assert(cosResult === '0.5', 'Cos(60°) test failed');
 
-            js_clear_display();
-            js_insert('Math.tan(45 * Math.PI / 180)');
-            js_calculate();
-            let tanResult = document.getElementById('display').value;
-            console.assert(tanResult === '1', 'Tan(45°) test failed');
+                    js_clear_display();
+                    js_insert_scientific('Math.tan(45 * Math.PI / 180)');
+                    js_calculate_scientific();
+                    let tanResult = document.getElementById('scientific-display').value;
+                    console.assert(tanResult === '1', 'Tan(45°) test failed');
 
-            console.log('All tests passed: Calculator functions are working.');
-        } catch (error) {
-            console.error('Test failed:', error);
-            document.getElementById('error-box').textContent = 'Test failed: ' + error;
-        }
-    } else {
-        console.error('Brython functions are not mapped correctly');
-        document.getElementById('error-box').textContent = 'Brython functions are not mapped correctly';
-    }
-});
+                    console.log('All tests passed: Calculator functions are working.');
+                } catch (error) {
+                    console.error('Test failed:', error);
+                    document.getElementById('error-box').textContent = 'Test failed: ' + error;
+                }
+            } else {
+                console.error('Brython functions are not mapped correctly');
+                document.getElementById('error-box').textContent = 'Brython functions are not mapped correctly';
+            }
+        });
     </script>
 </body>
 </html>
