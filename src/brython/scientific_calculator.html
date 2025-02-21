@@ -1,156 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Calculator</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"></script>
-    <style>
-        .calculator {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px #aaa;
-        }
-        .display {
-            width: 100%;
-            height: 50px;
-            margin-bottom: 10px;
-            text-align: right;
-            font-size: 24px;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        .buttons {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-        .buttons button {
-            width: 100%;
-            padding: 20px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            background-color: #f0f0f0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .buttons button:hover {
-            background-color: #ddd;
-        }
-        .buttons button:active {
-            background-color: #ccc;
-        }
-    </style>
-</head>
-<body onload="brython()">
-    <div class="calculator">
-        <input type="text" id="display" class="display" disabled>
-        <div class="buttons">
-            <button onclick="js_insert('7')">7</button>
-            <button onclick="js_insert('8')">8</button>
-            <button onclick="js_insert('9')">9</button>
-            <button onclick="js_insert('/')">/</button>
-            <button onclick="js_insert('4')">4</button>
-            <button onclick="js_insert('5')">5</button>
-            <button onclick="js_insert('6')">6</button>
-            <button onclick="js_insert('*')">*</button>
-            <button onclick="js_insert('1')">1</button>
-            <button onclick="js_insert('2')">2</button>
-            <button onclick="js_insert('3')">3</button>
-            <button onclick="js_insert('-')">-</button>
-            <button onclick="js_insert('0')">0</button>
-            <button onclick="js_insert('.')">.</button>
-            <button onclick="js_clear_display()">C</button>
-            <button onclick="js_insert('+')">+</button>
-            <button onclick="js_insert('(')">(</button>
-            <button onclick="js_insert(')')">)</button>
-            <button onclick="js_calculate()">=</button>
-        </div>
-        <!-- Add the error box here -->
-        <div id="error-box" style="color: red; margin-top: 10px;"></div>
-    </div>
-    <script type="text/python">
-        from browser import document, window
+<script type="text/javascript">
+    function js_insert(value) {
+        __BRYTHON__.page.insert(value);
+    }
 
-        # Define the insert function
-        def insert(value):
-            display = document["display"]
-            display.value += value
+    function js_clear_display() {
+        __BRYTHON__.page.clear_display();
+    }
 
-        # Make the insert function available globally
-        window.insert = insert
-        __BRYTHON__.page.insert = insert
+    function js_calculate() {
+        __BRYTHON__.page.calculate();
+    }
 
-        def clear_display():
-            display = document["display"]
-            display.value = ""
+    // Test before loading
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log('Testing if Brython functions are mapped correctly...');
+        if (__BRYTHON__.page.clear_display && __BRYTHON__.page.insert && __BRYTHON__.page.calculate) {
+            try {
+                js_clear_display();
+                js_insert('7');
+                js_insert('+');
+                js_insert('3');
+                js_calculate();
+                let result = document.getElementById('display').value;
+                console.assert(result === '10', '7 + 3 test failed');
 
-        # Make the clear_display function available globally
-        window.clear_display = clear_display
-        __BRYTHON__.page.clear_display = clear_display
-
-        def calculate():
-            display = document["display"]
-            error_box = document["error-box"]
-            try:
-                display.value = str(eval(display.value))
-                error_box.textContent = ""  # Clear error box if calculation is successful
-            except Exception as e:
-                display.value = "Error"
-                error_box.textContent = str(e)  # Display the error reason
-
-        # Make the calculate function available globally
-        window.calculate = calculate
-        __BRYTHON__.page.calculate = calculate
-
-        # Pre-test code to show Brython is fully loaded
-        def pretest():
-            if all([hasattr(window, func) for func in ['insert', 'clear_display', 'calculate']]):
-                document['display'].value = "Brython loaded and functions mapped"
-            else:
-                document['display'].value = "Error in function mapping"
-
-        pretest()
-    </script>
-    <script type="text/javascript">
-        function js_insert(value) {
-            window.insert(value);
-        }
-
-        function js_clear_display() {
-            window.clear_display();
-        }
-
-        function js_calculate() {
-            window.calculate();
-        }
-
-        // Test before loading
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log('Testing if Brython functions are mapped correctly...');
-            if (window.clear_display && window.insert && window.calculate) {
-                try {
-                    js_clear_display();
-                    js_insert('7');
-                    js_insert('+');
-                    js_insert('3');
-                    js_calculate();
-                    let result = document.getElementById('display').value;
-                    console.assert(result === '10', '7 + 3 test failed');
-
-                    console.log('All tests passed: Calculator functions are working.');
-                } catch (error) {
-                    console.error('Test failed:', error);
-                    document.getElementById('error-box').textContent = 'Test failed: ' + error;
-                }
-            } else {
-                console.error('Brython functions are not mapped correctly');
-                document.getElementById('error-box').textContent = 'Brython functions are not mapped correctly';
+                console.log('All tests passed: Calculator functions are working.');
+            } catch (error) {
+                console.error('Test failed:', error);
+                document.getElementById('error-box').textContent = 'Test failed: ' + error;
             }
-        });
-    </script>
-</body>
-</html>
+        } else {
+            console.error('Brython functions are not mapped correctly');
+            document.getElementById('error-box').textContent = 'Brython functions are not mapped correctly';
+        }
+    });
+</script>
