@@ -82,6 +82,7 @@
 
         # Make the insert function available globally
         window.insert = insert
+        __BRYTHON__.page.insert = insert
 
         def clear_display():
             display = document["display"]
@@ -89,6 +90,7 @@
 
         # Make the clear_display function available globally
         window.clear_display = clear_display
+        __BRYTHON__.page.clear_display = clear_display
 
         def calculate():
             display = document["display"]
@@ -102,6 +104,7 @@
 
         # Make the calculate function available globally
         window.calculate = calculate
+        __BRYTHON__.page.calculate = calculate
 
         # Pre-test code to show Brython is fully loaded
         def pretest():
