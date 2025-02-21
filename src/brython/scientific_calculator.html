@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calculator</title>
+    <title>Scientific Calculator</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"></script>
     <style>
         .calculator {
@@ -67,31 +67,22 @@
                 error_box.textContent = str(e)
 
         def open_equation_dialog():
-            def solve_equation(event):
-                equation = dialog_input.value
+            equation = window.prompt("Enter your equation:", "")
+            if equation:
                 try:
                     result = eval(equation)
                     InfoDialog("Result", f"The result of '{equation}' is: {result}", ok=True)
                 except Exception as e:
                     ErrorDialog("Error", f"Invalid expression: {e}", ok=True)
 
-            dialog = window.prompt("Enter your equation:", "")
-            if dialog:
-                solve_equation(None)
-
-        # Assign functions to page variable
-        page = {
-            "insert": insert,
-            "clear_display": clear_display,
-            "calculate": calculate,
-            "open_equation_dialog": open_equation_dialog
-        }
-
-        # Assign page variable to window
-        window.page = page
+        # Assign functions to the window object to make them accessible from JavaScript
+        window.js_insert = insert
+        window.js_clear_display = clear_display
+        window.js_calculate = calculate
+        window.js_open_equation_dialog = open_equation_dialog
     </script>
 </head>
-<body onload="Brython()">
+<body onload="brython()">
     <div class="calculator">
         <input type="text" id="display" class="display" disabled>
         <div class="buttons">
