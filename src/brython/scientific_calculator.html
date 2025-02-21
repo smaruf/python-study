@@ -69,39 +69,16 @@
             <button onclick="js_insert(')')">)</button>
             <button onclick="js_calculate()">=</button>
             <button onclick="js_insert('**')">^</button>
-            <button onclick="js_insert('sin(')">sin</button>
-            <button onclick="js_insert('cos(')">cos</button>
-            <button onclick="js_insert('tan(')">tan</button>
-            <button onclick="js_insert('sqrt(')">√</button>
+            <button onclick="js_insert('Math.sin(')">sin</button>
+            <button onclick="js_insert('Math.cos(')">cos</button>
+            <button onclick="js_insert('Math.tan(')">tan</button>
+            <button onclick="js_insert('Math.sqrt(')">√</button>
         </div>
         <!-- Add the error box here -->
         <div id="error-box" style="color: red; margin-top: 10px;"></div>
     </div>
     <script type="text/python">
         from browser import document, window
-
-        # Define the math functions we need
-        def sin(x):
-            import math
-            return math.sin(x)
-
-        def cos(x):
-            import math
-            return math.cos(x)
-
-        def tan(x):
-            import math
-            return math.tan(x)
-
-        def sqrt(x):
-            import math
-            return math.sqrt(x)
-
-        # Make these functions available globally
-        window.sin = sin
-        window.cos = cos
-        window.tan = tan
-        window.sqrt = sqrt
 
         # Define the insert function
         def insert(value):
@@ -133,7 +110,7 @@
 
         # Pre-test code to show Brython is fully loaded
         def pretest():
-            if all([hasattr(window, func) for func in ['insert', 'clear_display', 'calculate', 'sin', 'cos', 'tan', 'sqrt']]):
+            if all([hasattr(window, func) for func in ['insert', 'clear_display', 'calculate']]):
                 document['display'].value = "Brython loaded and functions mapped"
             else:
                 document['display'].value = "Error in function mapping"
