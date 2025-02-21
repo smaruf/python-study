@@ -50,15 +50,9 @@
         def insert(value):
             display = document["display"]
             display.value += value
-
-        window.insert = insert
-
         def clear_display():
             display = document["display"]
             display.value = ""
-
-        window.clear_display = clear_display
-
         def calculate():
             display = document["display"]
             error_box = document["error-box"]
@@ -69,15 +63,6 @@
                 display.value = "Error"
                 error_box.textContent = str(e)
 
-        window.calculate = calculate
-
-        def pretest():
-            if all([hasattr(window, func) for func in ['insert', 'clear_display', 'calculate']]):
-                document['display'].value = "Brython loaded and functions mapped"
-            else:
-                document['display'].value = "Error in function mapping"
-
-        pretest()
     </script>
 </head>
 <body onload="Bryton()">
@@ -106,7 +91,11 @@
         </div>
         <div id="error-box" style="color: red; margin-top: 10px;"></div>
     </div>
-    
+    <script type="text/python">
+        window.clear_display = clear_display
+        window.calculate = calculate
+        window.insert = insert
+    </script>
     <script type="text/javascript">
         function js_insert(value) {
             window.insert(value);
