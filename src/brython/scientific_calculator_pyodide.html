@@ -127,7 +127,10 @@
                 window.page = page
             `);
         }
-        loadPyodideAndPackages();
+        loadPyodideAndPackages().then(() => {
+            // Ensure page variable is set after Pyodide has loaded
+            window.page = pyodide.globals.get('page');
+        });
     </script>
 </body>
 </html>
