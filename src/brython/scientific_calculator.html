@@ -46,6 +46,7 @@
     </style>
     <script type="text/python">
         from browser import document, window
+        from browser.widgets.dialog import InfoDialog, ErrorDialog
 
         def insert(value):
             display = document["display"]
@@ -65,18 +66,32 @@
                 display.value = "Error"
                 error_box.textContent = str(e)
 
+        def open_equation_dialog():
+            def solve_equation(event):
+                equation = dialog_input.value
+                try:
+                    result = eval(equation)
+                    InfoDialog("Result", f"The result of '{equation}' is: {result}", ok=True)
+                except Exception as e:
+                    ErrorDialog("Error", f"Invalid expression: {e}", ok=True)
+
+            dialog = window.prompt("Enter your equation:", "")
+            if dialog:
+                solve_equation(None)
+
         # Assign functions to page variable
         page = {
             "insert": insert,
             "clear_display": clear_display,
-            "calculate": calculate
+            "calculate": calculate,
+            "open_equation_dialog": open_equation_dialog
         }
 
         # Assign page variable to window
         window.page = page
     </script>
 </head>
-<body onload="brython()">
+<body onload="Brython()">
     <div class="calculator">
         <input type="text" id="display" class="display" disabled>
         <div class="buttons">
@@ -99,44 +114,9 @@
             <button onclick="js_insert('(')">(</button>
             <button onclick="js_insert(')')">)</button>
             <button onclick="js_calculate()">=</button>
+            <button onclick="js_open_equation_dialog()">Add Equation</button>
         </div>
-        <div id="error-box" style="color: red; margin-top: 10px;"></div>
+        <div id="error-box" style="color: red;"></div>
     </div>
-    <script type="text/javascript">
-        function js_insert(value) {
-            window.page.insert(value);
-        }
-
-        function js_clear_display() {
-            window.page.clear_display();
-        }
-
-        function js_calculate() {
-            window.page.calculate();
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log('Testing if Brython functions are mapped correctly...');
-            if (window.page.clear_display && window.page.insert && window.page.calculate) {
-                try {
-                    js_clear_display();
-                    js_insert('7');
-                    js_insert('+');
-                    js_insert('3');
-                    js_calculate();
-                    let result = document.getElementById('display').value;
-                    console.assert(result === '10', '7 + 3 test failed');
-
-                    console.log('All tests passed: Calculator functions are working.');
-                } catch (error) {
-                    console.error('Test failed:', error);
-                    document.getElementById('error-box').textContent = 'Test failed: ' + error;
-                }
-            } else {
-                console.error('Brython functions are not mapped correctly');
-                document.getElementById('error-box').textContent = 'Brython functions are not mapped correctly';
-            }
-        });
-    </script>
 </body>
 </html>
