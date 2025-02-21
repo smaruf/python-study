@@ -45,7 +45,7 @@
         }
     </style>
 </head>
-<body onload="brython()">
+<body>
     <div class="calculator">
         <input type="text" id="display" class="display" disabled>
         <div class="buttons">
@@ -79,14 +79,12 @@
             display.value += value
 
         window.insert = insert
-        __BRYTHON__.page.insert = insert
 
         def clear_display():
             display = document["display"]
             display.value = ""
 
         window.clear_display = clear_display
-        __BRYTHON__.page.clear_display = clear_display
 
         def calculate():
             display = document["display"]
@@ -99,7 +97,6 @@
                 error_box.textContent = str(e)
 
         window.calculate = calculate
-        __BRYTHON__.page.calculate = calculate
 
         def pretest():
             if all([hasattr(window, func) for func in ['insert', 'clear_display', 'calculate']]):
@@ -111,20 +108,20 @@
     </script>
     <script type="text/javascript">
         function js_insert(value) {
-            __BRYTHON__.page.insert(value);
+            window.insert(value);
         }
 
         function js_clear_display() {
-            __BRYTHON__.page.clear_display();
+            window.clear_display();
         }
 
         function js_calculate() {
-            __BRYTHON__.page.calculate();
+            window.calculate();
         }
 
         document.addEventListener("DOMContentLoaded", function() {
             console.log('Testing if Brython functions are mapped correctly...');
-            if (__BRYTHON__.page.clear_display && __BRYTHON__.page.insert && __BRYTHON__.page.calculate) {
+            if (window.clear_display && window.insert && window.calculate) {
                 try {
                     js_clear_display();
                     js_insert('7');
