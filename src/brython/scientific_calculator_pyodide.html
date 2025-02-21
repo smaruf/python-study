@@ -76,7 +76,7 @@
                 indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/"
             });
             await window.pyodide.loadPackage(["micropip"]);
-            await pyodide.runPythonAsync(`
+            pyodide.runPython(`
                 import math
                 from js import document, window
 
@@ -127,6 +127,7 @@
                 window.page = page
             `);
         }
+
         loadPyodideAndPackages().then(() => {
             // Ensure page variable is set after Pyodide has loaded
             window.page = pyodide.globals.get('page');
