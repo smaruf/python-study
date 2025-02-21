@@ -44,33 +44,6 @@
             background-color: #ccc;
         }
     </style>
-</head>
-<body>
-    <div class="calculator">
-        <input type="text" id="display" class="display" disabled>
-        <div class="buttons">
-            <button onclick="js_insert('7')">7</button>
-            <button onclick="js_insert('8')">8</button>
-            <button onclick="js_insert('9')">9</button>
-            <button onclick="js_insert('/')">/</button>
-            <button onclick="js_insert('4')">4</button>
-            <button onclick="js_insert('5')">5</button>
-            <button onclick="js_insert('6')">6</button>
-            <button onclick="js_insert('*')">*</button>
-            <button onclick="js_insert('1')">1</button>
-            <button onclick="js_insert('2')">2</button>
-            <button onclick="js_insert('3')">3</button>
-            <button onclick="js_insert('-')">-</button>
-            <button onclick="js_insert('0')">0</button>
-            <button onclick="js_insert('.')">.</button>
-            <button onclick="js_clear_display()">C</button>
-            <button onclick="js_insert('+')">+</button>
-            <button onclick="js_insert('(')">(</button>
-            <button onclick="js_insert(')')">)</button>
-            <button onclick="js_calculate()">=</button>
-        </div>
-        <div id="error-box" style="color: red; margin-top: 10px;"></div>
-    </div>
     <script type="text/python">
         from browser import document, window
 
@@ -106,6 +79,34 @@
 
         pretest()
     </script>
+</head>
+<body onload="Bryton()">
+    <div class="calculator">
+        <input type="text" id="display" class="display" disabled>
+        <div class="buttons">
+            <button onclick="js_insert('7')">7</button>
+            <button onclick="js_insert('8')">8</button>
+            <button onclick="js_insert('9')">9</button>
+            <button onclick="js_insert('/')">/</button>
+            <button onclick="js_insert('4')">4</button>
+            <button onclick="js_insert('5')">5</button>
+            <button onclick="js_insert('6')">6</button>
+            <button onclick="js_insert('*')">*</button>
+            <button onclick="js_insert('1')">1</button>
+            <button onclick="js_insert('2')">2</button>
+            <button onclick="js_insert('3')">3</button>
+            <button onclick="js_insert('-')">-</button>
+            <button onclick="js_insert('0')">0</button>
+            <button onclick="js_insert('.')">.</button>
+            <button onclick="js_clear_display()">C</button>
+            <button onclick="js_insert('+')">+</button>
+            <button onclick="js_insert('(')">(</button>
+            <button onclick="js_insert(')')">)</button>
+            <button onclick="js_calculate()">=</button>
+        </div>
+        <div id="error-box" style="color: red; margin-top: 10px;"></div>
+    </div>
+    
     <script type="text/javascript">
         function js_insert(value) {
             window.insert(value);
