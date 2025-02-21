@@ -69,14 +69,15 @@
             <button onclick="insert(')')">)</button>
             <button onclick="calculate()">=</button>
             <button onclick="insert('**')">^</button>
-            <button onclick="insert('Math.sin(')">sin</button>
-            <button onclick="insert('Math.cos(')">cos</button>
-            <button onclick="insert('Math.tan(')">tan</button>
-            <button onclick="insert('Math.sqrt(')">√</button>
+            <button onclick="insert('math.sin(')">sin</button>
+            <button onclick="insert('math.cos(')">cos</button>
+            <button onclick="insert('math.tan(')">tan</button>
+            <button onclick="insert('math.sqrt(')">√</button>
         </div>
     </div>
     <script type="text/python">
         from browser import document, window
+        import math
         
         def insert(value):
             display = document["display"]
