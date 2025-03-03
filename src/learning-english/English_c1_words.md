@@ -1,6 +1,6 @@
 # Comprehensive C1 Level English Vocabulary Resource
 
-This document presents an extensive vocabulary list intended for professionals aiming to enhance communication across multiple domains, such as practical applications, official procedures, project management, reporting accuracy, probability assessment, narrative skills, planning, using phrasal verbs, and reacting to official decisions. Each section details verb-to-noun transformations, variations across different tenses, and examples in active, passive, and questions forms, including pronunciations in American English.
+This document presents an extensive vocabulary list intended for professionals aiming to enhance communication across multiple domains, such as practical applications, official procedures, project management, and reporting.
 
 ## Practical Use Words
 
@@ -384,42 +384,41 @@ This document presents an extensive vocabulary list intended for professionals a
    - **Passive:** "The financial transactions are documented by the auditor."
    - **Question:** "What transactions does the auditor document?"
 
-5. # Reporting Verbs
+5. **Report**
+   - **Noun:** Report
+   - **Simple:** report
+   - **Past:** reported
+   - **Continuous:** reporting
+   - **Perfect:** have reported
+   - **Pronunciation:** /rɪˈpɔrt/ (American English)
+   - **Active:** "The journalist reports the latest news accurately."
+   - **Passive:** "The latest news is reported accurately by the journalist."
+   - **Question:** "What kind of news does the journalist report?"
 
-## Report
-- **Noun:** Report
-- **Simple:** report
-- **Past:** reported
-- **Continuous:** reporting
-- **Perfect:** have reported
-- **Pronunciation:** /rɪˈpɔrt/ (American English)
-- **Active:** "The journalist reports the latest news accurately."
-- **Passive:** "The latest news is reported accurately by the journalist."
-- **Question:** "What kind of news does the journalist report?"
+6. **Review**
+   - **Noun:** Review
+   - **Simple:** review
+   - **Past:** reviewed
+   - **Continuous:** reviewing
+   - **Perfect:** have reviewed
+   - **Pronunciation:** /rɪˈvjuː/ (American English)
+   - **Active:** "The editor reviews the manuscript thoroughly."
+   - **Passive:** "The manuscript is thoroughly reviewed by the editor."
+   - **Question:** "What aspects does the editor focus on when reviewing the manuscript?"
 
-## Review
-- **Noun:** Review
-- **Simple:** review
-- **Past:** reviewed
-- **Continuous:** reviewing
-- **Perfect:** have reviewed
-- **Pronunciation:** /rɪˈvjuː/ (American English)
-- **Active:** "The editor reviews the manuscript thoroughly."
-- **Passive:** "The manuscript is thoroughly reviewed by the editor."
-- **Question:** "What aspects does the editor focus on when reviewing the manuscript?"
-
-## Summarize
-- **Noun:** Summary
-- **Simple:** summarize
-- **Past:** summarized
-- **Continuous:** summarizing
-- **Perfect:** have summarized
+7. **Summarize**
+   - **Noun:** Summary
+   - **Simple:** summarize
+   - **Past:** summarized
+   - **Continuous:** summarizing
+   - **Perfect:** have summarized
+   - **Pronunciation:** /
 - **Pronunciation:** /ˈsʌməˌraɪz/ (American English)
 - **Active:** "The researcher summarizes the study's findings."
 - **Passive:** "The study's findings are summarized by the researcher."
 - **Question:** "What methods does the researcher use to summarize the findings?"
 
-## Describe
+1. **Describe**
 - **Noun:** Description
 - **Simple:** describe
 - **Past:** described
@@ -430,7 +429,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The historical significance of the location is described by the guide."
 - **Question:** "How does the guide enhance the description of the location?"
 
-## Illustrate
+1. **Illustrate**
 - **Noun:** Illustration
 - **Simple:** illustrate
 - **Past:** illustrated
@@ -441,7 +440,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The problem is illustrated with clear examples by the speaker."
 - **Question:** "What examples does the speaker use to illustrate the problem?"
 
-## Detail
+1. **Detail**
 - **Noun:** Detail
 - **Simple:** detail
 - **Past:** detailed
@@ -452,7 +451,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The events leading up to the revolution are detailed by the author."
 - **Question:** "What events does the author detail in the book?"
 
-## Document
+1. **Document**
 - **Noun:** Documentation
 - **Simple:** document
 - **Past:** documented
@@ -463,7 +462,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The experimental procedures are documented by the researcher."
 - **Question:** "What procedures does the researcher document?"
 
-## Assert
+1. **Assert**
 - **Noun:** Assertion
 - **Simple:** assert
 - **Past:** asserted
@@ -474,7 +473,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The client's innocence is asserted by the lawyer in the courtroom."
 - **Question:** "On what grounds does the lawyer assert the client's innocence?"
 
-## Clarify
+1. **Clarify**
 - **Noun:** Clarification
 - **Simple:** clarify
 - **Past:** clarified
@@ -485,7 +484,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The concept is clarified to the students by the teacher."
 - **Question:** "What concept does the teacher clarify?"
 
-## Verify
+1. **Verify**
 - **Noun:** Verification
 - **Simple:** verify
 - **Past:** verified
@@ -496,9 +495,9 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The accuracy of the financial reports is verified by the auditor."
 - **Question:** "How does the auditor verify the accuracy of the financial reports?"
 
-# Storytelling and Planning Verbs
+## Storytelling and Planning Verbs
 
-## Narrate 
+1. **Narrate** 
 - **Noun:** Narration 
 - **Simple:** narrate 
 - **Past:** narrated 
@@ -509,7 +508,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "A compelling story is narrated by the author." 
 - **Question:** "What techniques does the author use to narrate the story?"
 
-## Plan 
+1. **Plan** 
 - **Noun:** Plan 
 - **Simple:** plan 
 - **Past:** planned 
@@ -520,7 +519,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The project is planned efficiently by the manager." 
 - **Question:** "What aspects does the manager consider when planning the project?"
 
-## Organize 
+1. **Organize** 
 - **Noun:** Organization 
 - **Simple:** organize 
 - **Past:** organized 
@@ -531,7 +530,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive: "The workflow is organized to increase efficiency by the manager." 
 - **Question:** "What methods does the manager use to organize the workflow?"
 
-## Prepare 
+1. **Prepare** 
 - **Noun:** Preparation 
 - **Simple:** prepare 
 - **Past:** prepared 
@@ -542,9 +541,9 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The meal is prepared with fresh ingredients by the chef." 
 - **Question:** "What dishes does the chef prepare for the event?"
 
-# Probability and Decision Making Verbs
+## Probability and Decision-Making Verbs
 
-## Estimate 
+1. **Estimate** 
 - **Noun:** Estimation 
 - **Simple:** estimate 
 - **Past:** estimated 
@@ -555,7 +554,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The cost of the project is estimated by them." 
 - **Question:** "What factors do they consider when estimating costs?"
 
-## Predict 
+1. **Predict** 
 - **Noun:** Prediction 
 - **Simple:** predict 
 - **Past:** predicted 
@@ -566,7 +565,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "A breakthrough in the research is predicted by the scientist." 
 - **Question:** "On what basis does the scientist predict a breakthrough?"
 
-## Calculate 
+1. **Calculate** 
 - **Noun:** Calculation 
 - **Simple:** calculate 
 - **Past:** calculated 
@@ -577,7 +576,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The load capacity of the bridge is calculated by the engineer." 
 - **Question:** "What parameters does the engineer consider when calculating the load capacity?"
 
-## Assume 
+1. **Assume** 
 - **Noun:** Assumption 
 - **Simple:** assume 
 - **Past:** assumed 
@@ -588,9 +587,9 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "Steady growth over the next year is assumed by the analyst." 
 - **Question:** "What evidence does the analyst have to support the assumption of steady growth?"
 
-# Analysis Verbs
+## Analysis Verbs
 
-## Analyze 
+1. **Analyze** 
 - **Noun:** Analysis 
 - **Simple:** analyze 
 - **Past:** analyzed 
@@ -601,7 +600,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The chemical composition is analyzed by the scientist." 
 - **Question:** "What does the scientist analyze in the composition?"
 
-## Examine 
+1. **Examine** 
 - **Noun:** Examination 
 - **Simple:** examine 
 - **Past:** examined 
@@ -612,7 +611,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The patient is thoroughly examined by the doctor." 
 - **Question:** "What methods does the doctor use to examine the patient?"
 
-## Investigate
+1. **Investigate**
 - **Noun:** Investigation 
 - **Simple:** investigate 
 - **Past:** investigated 
@@ -623,7 +622,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "The crime scene is carefully investigated by the police." 
 - **Question:** "What do the police look for at the crime scene?"
 
-## Research 
+1. **Research** 
 - **Noun:** Research 
 - **Simple:** research 
 - **Past:** researched 
@@ -634,7 +633,7 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Passive:** "Genetic markers are researched by the researcher." 
 - **Question:** "What kind of genetic markers are researched?"
 
-## Audit 
+1. **Audit** 
 - **Noun:** Audit 
 - **Simple:** audit 
 - **Past:** audited 
