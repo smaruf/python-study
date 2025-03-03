@@ -643,3 +643,170 @@ This document presents an extensive vocabulary list intended for professionals a
 - **Active:** "The accounting firm audits the company annually." 
 - **Passive:** "The company is audited annually by the accounting firm." 
 - **Question:** "What is the focus of the annual audit by the accounting firm?"
+
+# Advanced Phrasal Verbs for C1 Level (Official Use)
+
+## 1. Call off
+- **Noun:** Cancellation
+- **Simple:** call off
+- **Past:** called off
+- **Continuous:** calling off
+- **Perfect:** have called off
+- **Pronunciation:** /ˈkɔːl ˌɔf/ (American English)
+- **Active:** "The manager calls off the meeting due to unforeseen circumstances."
+- **Passive:** "The meeting is called off by the manager due to unforeseen circumstances."
+- **Question:** "Why does the manager call off the meeting?"
+
+## 2. Carry over
+- **Noun:** Carryover
+- **Simple:** carry over
+- **Past:** carried over
+- **Continuous:** carrying over
+- **Perfect:** have carried over
+- **Pronunciation:** /ˈkæri ˈoʊvər/ (American English)
+- **Active:** "The team carries over unused funds to the next fiscal year."
+- **Passive:** "Unused funds are carried over to the next fiscal year by the team."
+- **Question:** "What does the team carry over to the next fiscal year?"
+
+## 3. Break down
+- **Noun:** Breakdown
+- **Simple:** break down
+- **Past:** broke down
+- **Continuous:** breaking down
+- **Perfect:** have broken down
+- **Pronunciation:** /ˈbreɪk ˈdaʊn/ (American English)
+- **Active:** "The technician breaks down the process step by step."
+- **Passive:** "The process is broken down step by step by the technician."
+- **Question:** "How does the technician break down the process?"
+
+## 4. Build up
+- **Noun:** Buildup
+- **Simple:** build up
+- **Past:** built up
+- **Continuous:** building up
+- **Perfect:** have built up
+- **Pronunciation:** /ˈbɪld ˈʌp/ (American English)
+- **Active:** "The consultant builds up a strong case for the new strategy."
+- **Passive:** "A strong case for the new strategy is built up by the consultant."
+- **Question:** "What does the consultant build up?"
+
+## 5. Check into
+- **Noun:** Check-in
+- **Simple:** check into
+- **Past:** checked into
+- **Continuous:** checking into
+- **Perfect:** have checked into
+- **Pronunciation:** /ˈtʃɛk ˈɪntu/ (American English)
+- **Active:** "The auditor checks into the financial irregularities."
+- **Passive:** "The financial irregularities are checked into by the auditor."
+- **Question:** "What does the auditor check into?"
+
+## 6. Come across
+- **Noun:** Encounter
+- **Simple:** come across
+- **Past:** came across
+- **Continuous:** coming across
+- **Perfect:** have come across
+- **Pronunciation:** /kʌm əˈkrɔs/ (American English)
+- **Active:** "The manager comes across some confidential documents."
+- **Passive:** "Some confidential documents are come across by the manager."
+- **Question:** "What does the manager come across?"
+
+## 7. Cut back on
+- **Noun:** Cutback
+- **Simple:** cut back on
+- **Past:** cut back on
+- **Continuous:** cutting back on
+- **Perfect:** have cut back on
+- **Pronunciation:** /ˈkʌt ˌbæk ˈɑn/ (American English)
+- **Active:** "The company cuts back on expenses due to budget constraints."
+- **Passive:** "Expenses are cut back on by the company due to budget constraints."
+- **Question:** "What does the company cut back on?"
+
+## 8. Deal with
+- **Noun:** Dealing
+- **Simple:** deal with
+- **Past:** dealt with
+- **Continuous:** dealing with
+- **Perfect:** have dealt with
+- **Pronunciation:** /ˈdil wɪθ/ (American English)
+- **Active:** "The customer service agent deals with complaints efficiently."
+- **Passive:** "Complaints are dealt with efficiently by the customer service agent."
+- **Question:** "How does the customer service agent deal with complaints?"
+
+## 9. Draw up
+- **Noun:** Draft
+- **Simple:** draw up
+- **Past:** drew up
+- **Continuous:** drawing up
+- **Perfect:** have drawn up
+- **Pronunciation:** /ˈdrɔ ˈʌp/ (American English)
+- **Active:** "The lawyer draws up a new contract."
+- **Passive:** "A new contract is drawn up by the lawyer."
+- **Question:** "What does the lawyer draw up?"
+
+## 10. Follow through
+- **Noun:** Follow-through
+- **Simple:** follow through
+- **Past:** followed through
+- **Continuous:** following through
+- **Perfect:** have followed through
+- **Pronunciation:** /ˈfɑloʊ θru/ (American English)
+- **Active:** "The team follows through on its commitments."
+- **Passive:** "Commitments are followed through on by the team."
+- **Question:** "What commitments does the team follow through on?"
+
+## 11. Lay off
+- **Noun:** Layoff
+- **Simple:** lay off
+- **Past:** laid off
+- **Continuous:** laying off
+- **Perfect:** have laid off
+- **Pronunciation:** /ˈleɪ ˌɔf/ (American English)
+- **Active:** "The company lays off employees due to downsizing."
+- **Passive:** "Employees are laid off by the company due to downsizing."
+- **Question:** "Why does the company lay off employees?"
+
+## 12. Put forward
+- **Noun:** Proposal
+- **Simple:** put forward
+- **Past:** put forward
+- **Continuous:** putting forward
+- **Perfect:** have put forward
+- **Pronunciation:** /ˈpʊt ˈfɔrwərd/ (American English)
+- **Active:** "The committee puts forward a new initiative."
+- **Passive:** "A new initiative is put forward by the committee."
+- **Question:** "What initiative does the committee put forward?"
+
+## 13. Set up
+- **Noun:** Setup
+- **Simple:** set up
+- **Past:** set up
+- **Continuous:** setting up
+- **Perfect:** have set up
+- **Pronunciation:** /ˈsɛt ˈʌp/ (American English)
+- **Active:** "The IT department sets up the new software system."
+- **Passive:** "The new software system is set up by the IT department."
+- **Question:** "What does the IT department set up?"
+
+## 14. Take over
+- **Noun:** Takeover
+- **Simple:** take over
+- **Past:** took over
+- **Continuous:** taking over
+- **Perfect:** have taken over
+- **Pronunciation:** /ˈteɪk ˈoʊvər/ (American English)
+- **Active:** "The CFO takes over the financial operations."
+- **Passive:** "The financial operations are taken over by the CFO."
+- **Question:** "What operations does the CFO take over?"
+
+## 15. Work out
+- **Noun:** Workout
+- **Simple:** work out
+- **Past:** worked out
+- **Continuous:** working out
+- **Perfect:** have worked out
+- **Pronunciation:** /ˈwɜrk ˈaʊt/ (American English)
+- **Active:** "The team works out a solution to the problem."
+- **Passive:** "A solution to the problem is worked out by the team."
+- **Question:** "What solution does the team work out?"
