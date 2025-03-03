@@ -1,0 +1,646 @@
+# Comprehensive C1 Level English Vocabulary Resource
+
+This document presents an extensive vocabulary list intended for professionals aiming to enhance communication across multiple domains, such as practical applications, official procedures, project management, reporting accuracy, probability assessment, narrative skills, planning, using phrasal verbs, and reacting to official decisions. Each section details verb-to-noun transformations, variations across different tenses, and examples in active, passive, and questions forms, including pronunciations in American English.
+
+## Practical Use Words
+
+1. **Augment**
+   - **Noun:** Augmentation
+   - **Simple:** augment
+   - **Past:** augmented
+   - **Continuous:** augmenting
+   - **Perfect:** have augmented
+   - **Pronunciation:** /ɔːɡˈmɛnt/ (American English)
+   - **Active:** "The engineer augments the system's capabilities."
+   - **Passive:** "The system's capabilities are augmented by the engineer."
+   - **Question:** "How does the engineer augment the system's capabilities?"
+
+2. **Facilitate**
+   - **Noun:** Facilitation
+   - **Simple:** facilitate
+   - **Past:** facilitated
+   - **Continuous:** facilitating
+   - **Perfect:** have facilitated
+   - **Pronunciation:** /fəˈsɪlɪteɪt/ (American English)
+   - **Active:** "The manager facilitates smooth communication."
+   - **Passive:** "Smooth communication is facilitated by the manager."
+   - **Question:** "What strategies does the manager use to facilitate communication?"
+
+3. **Optimize**
+   - **Noun:** Optimization
+   - **Simple:** optimize
+   - **Past:** optimized
+   - **Continuous:** optimizing
+   - **Perfect:** have optimized
+   - **Pronunciation:** /ˈɑptɪmaɪz/ (American English)
+   - **Active:** "She optimizes the workflow regularly."
+   - **Passive:** "The workflow is optimized regularly by her."
+   - **Question:** "How often does she optimize the workflow?"
+
+4. **Integrate**
+   - **Noun:** Integration
+   - **Simple:** integrate
+   - **Past:** integrated
+   - **Continuous:** integrating
+   - **Perfect:** have integrated
+   - **Pronunciation:** /ˈɪntɪɡreɪt/ (American English)
+   - **Active:** "The software team integrates new features."
+   - **Passive:** "New features are integrated by the software team."
+   - **Question:** "What new features does the software team integrate?"
+
+5. **Expedite**
+   - **Noun:** Expedition
+   - **Simple:** expedite
+   - **Past:** expedited
+   - **Continuous:** expediting
+   - **Perfect:** have expedited
+   - **Pronunciation:** /ˈɛkspɪdaɪt/ (American English)
+   - **Active:** "The approval process was expedited by the committee."
+   - **Passive:** "The committee expedited the approval process."
+   - **Question:** "Why did the committee decide to expedite the process?"
+
+6. **Validate**
+   - **Noun:** Validation
+   - **Simple:** validate
+   - **Past:** validated
+   - **Continuous:** validating
+   - **Perfect:** have validated
+   - **Pronunciation:** /ˈvælɪdeɪt/ (American English)
+   - **Active:** "The scientist validates the experimental results."
+   - **Passive:** "The experimental results are validated by the scientist."
+   - **Question:** "What method does the scientist use to validate the results?"
+
+7. **Streamline**
+   - **Noun:** Streamlining
+   - **Simple:** streamline
+   - **Past:** streamlined
+   - **Continuous:** streamlining
+   - **Perfect:** have streamlined
+   - **Pronunciation:** /ˈstriːmlaɪn/ (American English)
+   - **Active:** "They streamline the manufacturing process."
+   - **Passive:** "The manufacturing process is streamlined by them."
+   - **Question:** "How do they streamline the manufacturing process?"
+
+8. **Calibrate**
+   - **Noun:** Calibration
+   - **Simple:** calibrate
+   - **Past:** calibrated
+   - **Continuous:** calibrating
+   - **Perfect:** have calibrated
+   - **Pronunciation:** /ˈkælɪbreɪt/ (American English)
+   - **Active:** "The technician calibrates the instruments annually."
+   - **Passive:** "The instruments are calibrated annually by the technician."
+   - **Question:** "What instruments does the technician calibrate?"
+
+9. **Innovate**
+   - **Noun:** Innovation
+   - **Simple:** innovate
+   - **Past:** innovated
+   - **Continuous:** innovating
+   - **Perfect:** have innovated
+   - **Pronunciation:** /ˈɪnəveɪt/ (American English)
+   - **Active:** "The company innovates to stay competitive."
+   - **Passive:** "To stay competitive, innovation is pursued by the company."
+   - **Question:** "How does the company innovate to stay competitive?"
+
+10. **Mitigate**
+    - **Noun:** Mitigation
+    - **Simple:** mitigate
+    - **Past:** mitigated
+    - **Continuous:** mitigating
+    - **Perfect:** have mitigated
+    - **Pronunciation:** /ˈmɪtɪɡeɪt/ (American English)
+    - **Active:** "She mitigates the risks involved in the project."
+    - **Passive:** "The risks involved in the project are mitigated by her."
+    - **Question:** "What measures does she take to mitigate risks?"
+
+## Official Use Words
+
+1. **Authorize**
+   - **Noun:** Authorization
+   - **Simple:** authorize
+   - **Past:** authorized
+   - **Continuous:** authorizing
+   - **Perfect:** have authorized
+   - **Pronunciation:** /ˈɔːθəraɪz/ (American English)
+   - **Active:** "The director authorizes the funding for the new project."
+   - **Passive:** "The funding for the new project is authorized by the director."
+   - **Question:** "Who authorizes the funding for projects in your organization?"
+
+2. **Legislate**
+   - **Noun:** Legislation
+   - **Simple:** legislate
+   - **Past:** legislated
+   - **Continuous:** legislating
+   - **Perfect:** have legislated
+   - **Pronunciation:** /ˈlɛdʒɪsleɪt/ (American English)
+   - **Active:** "The government legislates new environmental policies."
+   - **Passive:** "New environmental policies are legislated by the government."
+   - **Question:** "What new policies is the government currently legislating?"
+
+3. **Mandate**
+   - **Noun:** Mandate
+   - **Simple:** mandate
+   - **Past:** mandated
+   - **Continuous:** mandating
+   - **Perfect:** have mandated
+   - **Pronunciation:** /ˈmændeɪt/ (American English)
+   - **Active:** "The health department mandates regular inspections."
+   - **Passive:** "Regular inspections are mandated by the health department."
+   - **Question:** "What does the health department mandate?"
+
+4. **Certify**
+   - **Noun:** Certification
+   - **Simple:** certify
+   - **Past:** certified
+   - **Continuous:** certifying
+   - **Perfect:** have certified
+   - **Pronunciation:** /ˈsɜːrtɪfaɪ/ (American English)
+   - **Active:** "The board certifies professionals in this field."
+   - **Passive:** "Professionals in this field are certified by the board."
+   - **Question:** "What qualifications does the board certify?"
+
+5. **Regulate**
+   - **Noun:** Regulation
+   - **Simple:** regulate
+   - **Past:** regulated
+   - **Continuous:** regulating
+   - **Perfect:** have regulated
+   - **Pronunciation:** /ˈrɛɡjʊleɪt/ (American English)
+   - **Active:** "The agency regulates safety standards in the industry."
+   - **Passive:** "Safety standards in the industry are regulated by the agency."
+   - **Question:** "How does the agency regulate industry standards?"
+
+6. **Decree**
+   - **Noun:** Decree
+   - **Simple:** decree
+   - **Past:** decreed
+   - **Continuous:** decreeing
+   - **Perfect:** have decreed
+   - **Pronunciation:** /dɪˈkriː/ (American English)
+   - **Active:** "The president decrees the new economic policies."
+   - **Passive:** "The new economic policies are decreed by the president."
+   - **Question:** "What economic policies are decreed?"
+
+7. **Enact**
+   - **Noun:** Enactment
+   - **Simple:** enact
+   - **Past:** enacted
+   - **Continuous:** enacting
+   - **Perfect:** have enacted
+   - **Pronunciation:** /ɪˈnækt/ (American English)
+   - **Active:** "The legislature enacts the law."
+   - **Passive:** "The law is enacted by the legislature."
+   - **Question:** "What laws are being enacted currently?"
+
+8. **Veto**
+   - **Noun:** Veto
+   - **Simple:** veto
+   - **Past:** vetoed
+   - **Continuous:** vetoing
+   - **Perfect:** have vetoed
+   - **Pronunciation:** /ˈviːtoʊ/ (American English)
+   - **Active:** "The president vetoes the bill."
+   - **Passive:** "The bill is vetoed by the president."
+   - **Question:** "Under what circumstances can the president veto a bill?"
+
+9. **Repeal**
+   - **Noun:** Repeal
+   - **Simple:** repeal
+   - **Past:** repealed
+   - **Continuous:** repealing
+   - **Perfect:** have repealed
+   - **Pronunciation:** /rɪˈpiːl/ (American English)
+   - **Active:** "The government repeals outdated laws."
+   - **Passive:** "Outdated laws are repealed by the government."
+   - **Question:** "Why does the government repeal laws?"
+
+10. **Ratify**
+    - **Noun:** Ratification
+    - **Simple:** ratify
+    - **Past:** ratified
+    - **Continuous:** ratifying
+    - **Perfect:** have ratified
+    - **Pronunciation:** /ˈrætɪfaɪ/ (American English)
+    - **Active:** "The assembly ratifies the international agreement."
+    - **Passive:** "The international agreement is ratified by the assembly."
+    - **Question:** "What is required for an agreement to be ratified?"
+
+## Words About Projects
+
+1. **Initiate**
+   - **Noun:** Initiation
+   - **Simple:** initiate
+   - **Past:** initiated
+   - **Continuous:** initiating
+   - **Perfect:** have initiated
+   - **Pronunciation:** /ɪˈnɪʃieɪt/ (American English)
+   - **Active:** "The project manager initiates the new project phase."
+   - **Passive:** "The new project phase is initiated by the project manager."
+   - **Question:** "When is the new project phase initiated?"
+
+2. **Design**
+   - **Noun:** Design
+   - **Simple:** design
+   - **Past:** designed
+   - **Continuous:** designing
+   - **Perfect:** have designed
+   - **Pronunciation:** /dɪˈzaɪn/ (American English)
+   - **Active:** "The architect designs the new building."
+   - **Passive:** "The new building is designed by the architect."
+   - **Question:** "What features does the architect design into the new building?"
+
+3. **Develop**
+   - **Noun:** Development
+   - **Simple:** develop
+   - **Past:** developed
+   - **Continuous:** developing
+   - **Perfect:** have developed
+   - **Pronunciation:** /dɪˈvɛləp/ (American English)
+   - **Active:** "The software developer develops a new application."
+   - **Passive:** "A new application is developed by the software developer."
+   - **Question:** "How does the developer develop new applications?"
+
+4. **Implement**
+   - **Noun:** Implementation
+   - **Simple:** implement
+   - **Past:** implemented
+   - **Continuous:** implementing
+   - **Perfect:** have implemented
+   - **Pronunciation:** /ˈɪmplɪmɛnt/ (American English)
+   - **Active:** "The IT team implements the new system."
+   - **Passive:** "The new system is implemented by the IT team."
+   - **Question:** "What does the IT team need to implement the system?"
+
+5. **Scope**
+   - **Noun:** Scope
+   - **Simple:** scope
+   - **Past:** scoped
+   - **Continuous:** scoping
+   - **Perfect:** have scoped
+   - **Pronunciation:** /skoʊp/ (American English)
+   - **Active:** "The project leader scopes out the project requirements."
+   - **Passive:** "The project requirements are scoped out by the project leader."
+   - **Question:** "What requirements does the project leader scope out?"
+
+6. **Assess**
+   - **Noun:** Assessment
+   - **Simple:** assess
+   - **Past:** assessed
+   - **Continuous:** assessing
+   - **Perfect:** have assessed
+   - **Pronunciation:** /əˈsɛs/ (American English)
+   - **Active:** "The team assesses the project's progress."
+   - **Passive:** "The project's progress is assessed by the team."
+   - **Question:** "How frequently does the team assess progress?"
+
+7. **Plan**
+   - **Noun:** Plan
+   - **Simple:** plan
+   - **Past:** planned
+   - **Continuous:** planning
+   - **Perfect:** have planned
+   - **Pronunciation:** /plæn/ (American English)
+   - **Active:** "The manager plans the project timeline."
+   - **Passive:** "The project timeline is planned by the manager."
+   - **Question:** "What does the manager consider when planning the timeline?"
+
+8. **Schedule**
+   - **Noun:** Schedule
+   - **Simple:** schedule
+   - **Past:** scheduled
+   - **Continuous:** scheduling
+   - **Perfect:** have scheduled
+   - **Pronunciation:** /ˈskɛdʒul/ (American English)
+   - **Active:** "The coordinator schedules the meetings."
+   - **Passive:** "Meetings are scheduled by the coordinator."
+   - **Question:** "How does the coordinator schedule the meetings?"
+
+9. **Allocate**
+   - **Noun:** Allocation
+   - **Simple:** allocate
+   - **Past:** allocated
+   - **Continuous:** allocating
+   - **Perfect:** have allocated
+   - **Pronunciation:** /ˈæləkeɪt/ (American English)
+   - **Active:** "The department head allocates resources for the project."
+   - **Passive:** "Resources for the project are allocated by the department head."
+   - **Question:** "What factors influence how resources are allocated?"
+
+10. **Execute**
+    - **Noun:** Execution
+    - **Simple:** execute
+    - **Past:** executed
+    - **Continuous:** executing
+    - **Perfect:** have executed
+    - **Pronunciation:** /ˈɛksɪkjuːt/ (American English)
+    - **Active:** "The team executes the plan smoothly."
+    - **Passive:** "The plan is executed smoothly by the team."
+    - **Question:** "What is required to execute the plan effectively?"
+
+## Words About Reporting
+
+1. **Compile**
+   - **Noun:** Compilation
+   - **Simple:** compile
+   - **Past:** compiled
+   - **Continuous:** compiling
+   - **Perfect:** have compiled
+   - **Pronunciation:** /kəmˈpaɪl/ (American English)
+   - **Active:** "The analyst compiles the data into a report."
+   - **Passive:** "The data is compiled into a report by the analyst."
+   - **Question:** "What data does the analyst compile?"
+
+2. **Analyze**
+   - **Noun:** Analysis
+   - **Simple:** analyze
+   - **Past:** analyzed
+   - **Continuous:** analyzing
+   - **Perfect:** have analyzed
+   - **Pronunciation:** /ˈænəlaɪz/ (American English)
+   - **Active:** "She analyzes the market trends every quarter."
+   - **Passive:** "The market trends are analyzed every quarter by her."
+   - **Question:** "What trends does she analyze?"
+
+3. **Synthesize**
+   - **Noun:** Synthesis
+   - **Simple:** synthesize
+   - **Past:** synthesized
+   - **Continuous:** synthesizing
+   - **Perfect:** have synthesized
+   - **Pronunciation:** /ˈsɪnθəsaɪz/ (American English)
+   - **Active:** "The chemist synthesizes the compounds in the lab."
+   - **Passive:** "The compounds are synthesized in the lab by the chemist."
+   - **Question:** "What compounds does the chemist synthesize?"
+
+4. **Document**
+   - **Noun:** Documentation
+   - **Simple:** document
+   - **Past:** documented
+   - **Continuous:** documenting
+   - **Perfect:** have documented
+   - **Pronunciation:** /ˈdɑːkjʊmənt/ (American English)
+   - **Active:** "The auditor documents the financial transactions."
+   - **Passive:** "The financial transactions are documented by the auditor."
+   - **Question:** "What transactions does the auditor document?"
+
+5. # Reporting Verbs
+
+## Report
+- **Noun:** Report
+- **Simple:** report
+- **Past:** reported
+- **Continuous:** reporting
+- **Perfect:** have reported
+- **Pronunciation:** /rɪˈpɔrt/ (American English)
+- **Active:** "The journalist reports the latest news accurately."
+- **Passive:** "The latest news is reported accurately by the journalist."
+- **Question:** "What kind of news does the journalist report?"
+
+## Review
+- **Noun:** Review
+- **Simple:** review
+- **Past:** reviewed
+- **Continuous:** reviewing
+- **Perfect:** have reviewed
+- **Pronunciation:** /rɪˈvjuː/ (American English)
+- **Active:** "The editor reviews the manuscript thoroughly."
+- **Passive:** "The manuscript is thoroughly reviewed by the editor."
+- **Question:** "What aspects does the editor focus on when reviewing the manuscript?"
+
+## Summarize
+- **Noun:** Summary
+- **Simple:** summarize
+- **Past:** summarized
+- **Continuous:** summarizing
+- **Perfect:** have summarized
+- **Pronunciation:** /ˈsʌməˌraɪz/ (American English)
+- **Active:** "The researcher summarizes the study's findings."
+- **Passive:** "The study's findings are summarized by the researcher."
+- **Question:** "What methods does the researcher use to summarize the findings?"
+
+## Describe
+- **Noun:** Description
+- **Simple:** describe
+- **Past:** described
+- **Continuous:** describing
+- **Perfect:** have described
+- **Pronunciation:** /dɪˈskraɪb/ (American English)
+- **Active:** "The guide describes the historical significance of the location."
+- **Passive:** "The historical significance of the location is described by the guide."
+- **Question:** "How does the guide enhance the description of the location?"
+
+## Illustrate
+- **Noun:** Illustration
+- **Simple:** illustrate
+- **Past:** illustrated
+- **Continuous:** illustrating
+- **Perfect:** have illustrated
+- **Pronunciation:** /ˈɪləstreɪt/ (American English)
+- **Active:** "The speaker illustrates the problem with clear examples."
+- **Passive:** "The problem is illustrated with clear examples by the speaker."
+- **Question:** "What examples does the speaker use to illustrate the problem?"
+
+## Detail
+- **Noun:** Detail
+- **Simple:** detail
+- **Past:** detailed
+- **Continuous:** detailing
+- **Perfect:** have detailed
+- **Pronunciation:** /ˈdiːteɪl/ (American English)
+- **Active:** "The author details the events leading up to the revolution."
+- **Passive:** "The events leading up to the revolution are detailed by the author."
+- **Question:** "What events does the author detail in the book?"
+
+## Document
+- **Noun:** Documentation
+- **Simple:** document
+- **Past:** documented
+- **Continuous:** documenting
+- **Perfect:** have documented
+- **Pronunciation:** /ˈdɒkjʊmənt/ (American English)
+- **Active:** "The researcher documents the experimental procedures."
+- **Passive:** "The experimental procedures are documented by the researcher."
+- **Question:** "What procedures does the researcher document?"
+
+## Assert
+- **Noun:** Assertion
+- **Simple:** assert
+- **Past:** asserted
+- **Continuous:** asserting
+- **Perfect:** have asserted
+- **Pronunciation:** /əˈsɜːrt/ (American English)
+- **Active:** "The lawyer asserts the client's innocence in the courtroom."
+- **Passive:** "The client's innocence is asserted by the lawyer in the courtroom."
+- **Question:** "On what grounds does the lawyer assert the client's innocence?"
+
+## Clarify
+- **Noun:** Clarification
+- **Simple:** clarify
+- **Past:** clarified
+- **Continuous:** clarifying
+- **Perfect:** have clarified
+- **Pronunciation:** /ˈklærɪfaɪ/ (American English)
+- **Active:** "The teacher clarifies the concept to the students."
+- **Passive:** "The concept is clarified to the students by the teacher."
+- **Question:** "What concept does the teacher clarify?"
+
+## Verify
+- **Noun:** Verification
+- **Simple:** verify
+- **Past:** verified
+- **Continuous:** verifying
+- **Perfect:** have verified
+- **Pronunciation:** /ˈvɛrɪfaɪ/ (American English)
+- **Active:** "The auditor verifies the accuracy of the financial reports."
+- **Passive:** "The accuracy of the financial reports is verified by the auditor."
+- **Question:** "How does the auditor verify the accuracy of the financial reports?"
+
+# Storytelling and Planning Verbs
+
+## Narrate 
+- **Noun:** Narration 
+- **Simple:** narrate 
+- **Past:** narrated 
+- **Continuous:** narrating 
+- **Perfect:** have narrated 
+- **Pronunciation:** /nəˈreɪt/ (American English) 
+- **Active:** "The author narrates a compelling story." 
+- **Passive:** "A compelling story is narrated by the author." 
+- **Question:** "What techniques does the author use to narrate the story?"
+
+## Plan 
+- **Noun:** Plan 
+- **Simple:** plan 
+- **Past:** planned 
+- **Continuous:** planning 
+- **Perfect:** have planned 
+- **Pronunciation:** /plæn/ (American English) 
+- **Active:** "The manager plans the project efficiently." 
+- **Passive:** "The project is planned efficiently by the manager." 
+- **Question:** "What aspects does the manager consider when planning the project?"
+
+## Organize 
+- **Noun:** Organization 
+- **Simple:** organize 
+- **Past:** organized 
+- **Continuous:** organizing 
+- **Perfect:** have organized 
+- **Pronunciation:** /ˈɔːrgənaɪz/ (American English) 
+- **Active:** "The manager organizes the workflow to increase efficiency." 
+- **Passive: "The workflow is organized to increase efficiency by the manager." 
+- **Question:** "What methods does the manager use to organize the workflow?"
+
+## Prepare 
+- **Noun:** Preparation 
+- **Simple:** prepare 
+- **Past:** prepared 
+- **Continuous:** preparing 
+- **Perfect:** have prepared 
+- **Pronunciation:** /prɪˈpɛər/ (American English) 
+- **Active:** "The chef prepares the meal with fresh ingredients." 
+- **Passive:** "The meal is prepared with fresh ingredients by the chef." 
+- **Question:** "What dishes does the chef prepare for the event?"
+
+# Probability and Decision Making Verbs
+
+## Estimate 
+- **Noun:** Estimation 
+- **Simple:** estimate 
+- **Past:** estimated 
+- **Continuous:** estimating 
+- **Perfect:** have estimated 
+- **Pronunciation:** /ˈɛstɪmeɪt/ (American English) 
+- **Active:** "They estimate the cost of the project." 
+- **Passive:** "The cost of the project is estimated by them." 
+- **Question:** "What factors do they consider when estimating costs?"
+
+## Predict 
+- **Noun:** Prediction 
+- **Simple:** predict 
+- **Past:** predicted 
+- **Continuous:** predicting 
+- **Perfect:** have predicted 
+- **Pronunciation:** /prɪˈdɪkt/ (American English) 
+- **Active:** "The scientist predicts a breakthrough in the research." 
+- **Passive:** "A breakthrough in the research is predicted by the scientist." 
+- **Question:** "On what basis does the scientist predict a breakthrough?"
+
+## Calculate 
+- **Noun:** Calculation 
+- **Simple:** calculate 
+- **Past:** calculated 
+- **Continuous:** calculating 
+- **Perfect:** have calculated 
+- **Pronunciation:** /ˈkælkjʊleɪt/ (American English) 
+- **Active:** "The engineer calculates the load capacity of the bridge." 
+- **Passive:** "The load capacity of the bridge is calculated by the engineer." 
+- **Question:** "What parameters does the engineer consider when calculating the load capacity?"
+
+## Assume 
+- **Noun:** Assumption 
+- **Simple:** assume 
+- **Past:** assumed 
+- **Continuous:** assuming 
+- **Perfect:** have assumed 
+- **Pronunciation:** /əˈsjuːm/ (American English) 
+- **Active:** "The analyst assumes steady growth over the next year." 
+- **Passive:** "Steady growth over the next year is assumed by the analyst." 
+- **Question:** "What evidence does the analyst have to support the assumption of steady growth?"
+
+# Analysis Verbs
+
+## Analyze 
+- **Noun:** Analysis 
+- **Simple:** analyze 
+- **Past:** analyzed 
+- **Continuous:** analyzing 
+- **Perfect:** have analyzed 
+- **Pronunciation:** /ˈænəˌlaɪz/ (American English) 
+- **Active:** "The scientist analyzes the chemical composition." 
+- **Passive:** "The chemical composition is analyzed by the scientist." 
+- **Question:** "What does the scientist analyze in the composition?"
+
+## Examine 
+- **Noun:** Examination 
+- **Simple:** examine 
+- **Past:** examined 
+- **Continuous:** examining 
+- **Perfect:** have examined 
+- **Pronunciation:** /ɪɡˈzæmɪn/ (American English) 
+- **Active:** "The doctor examines the patient thoroughly." 
+- **Passive:** "The patient is thoroughly examined by the doctor." 
+- **Question:** "What methods does the doctor use to examine the patient?"
+
+## Investigate
+- **Noun:** Investigation 
+- **Simple:** investigate 
+- **Past:** investigated 
+- **Continuous:** investigating 
+- **Perfect:** have investigated 
+- **Pronunciation:** /ɪnˈvɛstɪˌɡeɪt/ (American English) 
+- **Active:** "The police investigate the crime scene carefully." 
+- **Passive:** "The crime scene is carefully investigated by the police." 
+- **Question:** "What do the police look for at the crime scene?"
+
+## Research 
+- **Noun:** Research 
+- **Simple:** research 
+- **Past:** researched 
+- **Continuous:** researching 
+- **Perfect:** have researched 
+- **Pronunciation:** /rɪˈsɜːrtʃ/ (American English) 
+- **Active:** "The researcher researches genetic markers." 
+- **Passive:** "Genetic markers are researched by the researcher." 
+- **Question:** "What kind of genetic markers are researched?"
+
+## Audit 
+- **Noun:** Audit 
+- **Simple:** audit 
+- **Past:** audited 
+- **Continuous:** auditing 
+- **Perfect:** have audited 
+- **Pronunciation:** /ˈɔːdɪt/ (American English) 
+- **Active:** "The accounting firm audits the company annually." 
+- **Passive:** "The company is audited annually by the accounting firm." 
+- **Question:** "What is the focus of the annual audit by the accounting firm?"
