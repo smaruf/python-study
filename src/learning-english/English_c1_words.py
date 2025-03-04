@@ -1,53 +1,45 @@
 import re
-import json
 import os
 from gtts import gTTS
 import tkinter as tk
 from tkinter import messagebox
 from playsound import playsound
 
-def extract_words(filename):
-    with open(filename, 'r') as file:
+def parse_md_to_dict(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read()
-
-    pattern = re.compile(r'\\d+\\.\\s\\*\\*(.*?)\\*\\*\\n\\s+-\\s\\*\\*Noun:\\*\\*\\s(.*?)\\n\\s+-\\s\\*\\*Forms:\\*\\*\\s(.*?)\\n\\s+-\\s\\*\\*Pronunciation:\\*\\*\\s(.*?)\\n\\s+-\\s\\*\\*Examples:\\*\\*\\s(.*?)\\n')
+    
+    pattern = re.compile(r"### (\w+)\n- \*\*Pronunciation:\*\* (.*?)\n- \*\*Definition:\*\* (.*?)\n- \*\*Synonym:\*\* (.*?)\n")
     matches = pattern.findall(content)
 
-    words = []
-    for match in matches:
-        word = {
-            "Word": match[0],
-            "Noun": match[1],
-            "Forms": match[2],
-            "Pronunciation": match[3],
-            "Examples": match[4]
-        }
-        words.append(word)
+    vocab_dict = {match[0]: {
+                    'Pronunciation': match[1],
+                    'Definition': match[2],
+                    'Synonym': match[3].split(', ')
+                  } for match in matches}
+
+    return vocab_dict
+
+def extract_words(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    pattern = re.compile(r"\*\*(.*?)\*\*")
+    matches = pattern.findall(content)
+    
+    words = [match.strip() for match in matches]
     return words
 
-def create_flashcards(words):
+def create_flashcards(words, dictionary):
     flashcards = []
     for word in words:
-        card = {
-            "word": word["Word"],
-            "details": {
-                "Noun": word["Noun"],
-                "Forms": word["Forms"],
-                "Pronunciation": word["Pronunciation"],
-                "Examples": word["Examples"],
-                "Definition": get_meaning(word["Word"])
+        if word in dictionary:
+            card = {
+                "word": word,
+                "details": dictionary[word]
             }
-        }
-        flashcards.append(card)
+            flashcards.append(card)
     return flashcards
-
-def get_meaning(word):
-    dictionary = {
-        "Augment": "To make something greater by adding to it; increase. Synonym: Enhance, Amplify",
-        "Facilitate": "Make (an action or process) easy or easier. Synonym: Ease, Enable"
-        # Add more words and their meanings here...
-    }
-    return dictionary.get(word, "Meaning not found")
 
 def generate_speech(word, text):
     tts = gTTS(text=text, lang='en')
@@ -56,7 +48,7 @@ def generate_speech(word, text):
     return filename
 
 def on_flashcard_click(word, details):
-    msg = f"Word: {word}\n\nNoun: {details['Noun']}\nForms: {details['Forms']}\nPronunciation: {details['Pronunciation']}\nExamples: {details['Examples']}\nDefinition: {details['Definition']}"
+    msg = f"Word: {word}\n\nPronunciation: {details['Pronunciation']}\nDefinition: {details['Definition']}\nSynonym: {', '.join(details['Synonym'])}"
     messagebox.showinfo("Word Details", msg)
     filename = generate_speech(word, word)
     playsound(filename)
@@ -73,9 +65,13 @@ def create_gui(flashcards):
     root.mainloop()
 
 def main():
-    filename = 'English_c1_words.md'
-    words = extract_words(filename)
-    flashcards = create_flashcards(words)
+    words_file = 'src/learning-english/English_c1_words.md'
+    dict_file = 'src/learning-english/English_c1_dictionary.md'
+
+    words = extract_words(words_file)
+    dictionary = parse_md_to_dict(dict_file)
+
+    flashcards = create_flashcards(words, dictionary)
     create_gui(flashcards)
 
 if __name__ == "__main__":
