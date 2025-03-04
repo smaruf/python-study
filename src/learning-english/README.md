@@ -53,6 +53,7 @@ This project provides a set of Python scripts to generate flashcards for learnin
 - [**performance_vocab_flashcard.py**](performance_vocab_flashcard.py): Generates flashcards for performance-related vocabulary.
 - [**professional_dev_vocab_flashcard.py**](professional_dev_vocab_flashcard.py): Generates flashcards for professional development vocabulary.
 - [**simple_flashcard_app.py**](simple_flashcard_app.py): A simpler version of the flashcard application.
+- [**English_c1_words.py**](English_c1_words.py): Generates flashcards from `English_c1_words.md` and `English_c1_dictionary.md`.
 
 ## Markdown Files
 
@@ -60,6 +61,8 @@ This project provides a set of Python scripts to generate flashcards for learnin
 - [**cheat_sheet.md**](cheat_sheet.md): Cheat sheet for quick reference.
 - [**language_improvement.md**](language_improvement.md): Tips and techniques for language improvement.
 - [**vocabulary.md**](vocabulary.md): Vocabulary list with definitions.
+- [**English_c1_words.md**](English_c1_words.md): Words for the C1 level flashcards.
+- [**English_c1_dictionary.md**](English_c1_dictionary.md): Dictionary containing meanings and synonyms of C1 level words.
 
 ## Contributing
 
