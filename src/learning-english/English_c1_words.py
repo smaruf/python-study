@@ -10,7 +10,7 @@ def extract_words(filename):
     with open(filename, 'r') as file:
         content = file.read()
 
-    pattern = re.compile(r'\d+\.\s\*\*(.*?)\*\*\n\s+-\s\*\*Noun:\*\*\s(.*?)\n\s+-\s\*\*Simple:\*\*\s(.*?)\n\s+-\s\*\*Past:\*\*\s(.*?)\n\s+-\s\*\*Continuous:\*\*\s(.*?)\n\s+-\s\*\*Perfect:\*\*\s(.*?)\n\s+-\s\*\*Pronunciation:\*\*\s(.*?)\n\s+-\s\*\*Active:\*\*\s"(.*?)"\n\s+-\s\*\*Passive:\*\*\s"(.*?)"\n\s+-\s\*\*Question:\*\*\s"(.*?)"', re.DOTALL)
+    pattern = re.compile(r'\\d+\\.\\s\\*\\*(.*?)\\*\\*\\n\\s+-\\s\\*\\*Noun:\\*\\*\\s(.*?)\\n\\s+-\\s\\*\\*Forms:\\*\\*\\s(.*?)\\n\\s+-\\s\\*\\*Pronunciation:\\*\\*\\s(.*?)\\n\\s+-\\s\\*\\*Examples:\\*\\*\\s(.*?)\\n')
     matches = pattern.findall(content)
 
     words = []
@@ -18,14 +18,9 @@ def extract_words(filename):
         word = {
             "Word": match[0],
             "Noun": match[1],
-            "Simple": match[2],
-            "Past": match[3],
-            "Continuous": match[4],
-            "Perfect": match[5],
-            "Pronunciation": match[6],
-            "Active": match[7],
-            "Passive": match[8],
-            "Question": match[9]
+            "Forms": match[2],
+            "Pronunciation": match[3],
+            "Examples": match[4]
         }
         words.append(word)
     return words
@@ -37,18 +32,22 @@ def create_flashcards(words):
             "word": word["Word"],
             "details": {
                 "Noun": word["Noun"],
-                "Simple": word["Simple"],
-                "Past": word["Past"],
-                "Continuous": word["Continuous"],
-                "Perfect": word["Perfect"],
+                "Forms": word["Forms"],
                 "Pronunciation": word["Pronunciation"],
-                "Active": word["Active"],
-                "Passive": word["Passive"],
-                "Question": word["Question"]
+                "Examples": word["Examples"],
+                "Definition": get_meaning(word["Word"])
             }
         }
         flashcards.append(card)
     return flashcards
+
+def get_meaning(word):
+    dictionary = {
+        "Augment": "To make something greater by adding to it; increase. Synonym: Enhance, Amplify",
+        "Facilitate": "Make (an action or process) easy or easier. Synonym: Ease, Enable"
+        # Add more words and their meanings here...
+    }
+    return dictionary.get(word, "Meaning not found")
 
 def generate_speech(word, text):
     tts = gTTS(text=text, lang='en')
@@ -57,7 +56,7 @@ def generate_speech(word, text):
     return filename
 
 def on_flashcard_click(word, details):
-    msg = f"Word: {word}\n\nNoun: {details['Noun']}\nSimple: {details['Simple']}\nPast: {details['Past']}\nContinuous: {details['Continuous']}\nPerfect: {details['Perfect']}\nPronunciation: {details['Pronunciation']}\nActive: {details['Active']}\nPassive: {details['Passive']}\nQuestion: {details['Question']}"
+    msg = f"Word: {word}\n\nNoun: {details['Noun']}\nForms: {details['Forms']}\nPronunciation: {details['Pronunciation']}\nExamples: {details['Examples']}\nDefinition: {details['Definition']}"
     messagebox.showinfo("Word Details", msg)
     filename = generate_speech(word, word)
     playsound(filename)
