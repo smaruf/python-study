@@ -2,8 +2,6 @@
 
 This document presents an extensive vocabulary list intended for professionals aiming to enhance communication across multiple domains, such as practical applications, official procedures, project management, and reporting.
 
-# Comprehensive C1 Level English Vocabulary Resource
-
 ## Practical Use Words
 1. **Augment**
    - Noun: Augmentation
