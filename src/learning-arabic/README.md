@@ -467,5 +467,79 @@ Arabic conjunctions connect words, phrases, or clauses while maintaining logical
 | Conjunction  | لكن (lākinn)  | لكن لا يفهم = But he does not understand      | لكن البابان مغلقان = But the two doors are closed | لكن الأبواب مغلقة = But the doors are closed|
 
 
-## Final Notes  
+### Final Notes  
 This expanded dictionary helps learners understand the **prepositions and conjunctions** in Arabic with **examples across persons (1st, 2nd, 3rd)** and **number (singular, dual, plural)**. Translations into **English**, **Polish**, **Turkic (Turkish)**, and **Bangla** offer broader accessibility.
+
+---
+
+## Arabic Questions and Replies with Examples:
+
+This dictionary provides a structured overview of **Arabic questions and responses**, along with translations in **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**. Each section includes potential **examples for replies**.
+
+---
+
+### **1. Yes-No Questions**
+
+| **Arabic Question**      | **English**             | **Polish**             | **Turkic (Turkish)**        | **Bangla**                 | **Example Question in Arabic**              | **Example Replies in Arabic**                                  |
+|---------------------------|-------------------------|-------------------------|-----------------------------|-----------------------------|-----------------------------------------------|---------------------------------------------------------------|
+| هل تحب القهوة؟            | Do you like coffee?     | Czy lubisz kawę?        | Kahveyi sever misin?        | তুমি কি কফি পছন্দ করো?        | هل تحب القهوة؟ (hal tuḥib al-qahwa?)          | 1. نعم، أحب القهوة. (naʿam, uḥib al-qahwa) = Yes, I like coffee.<br>2. لا، لا أحب القهوة. (lā, lā uḥib al-qahwa) = No, I don’t like coffee. |
+| هل هذا كتابك؟             | Is this your book?      | Czy to jest twoja książka? | Bu senin kitabın mı?        | এটা কি তোমার বই?             | هل هذا كتابك؟ (hal hādhā kitābuka?)          | 1. نعم، هذا كتابي. (naʿam, hādhā kitābī) = Yes, this is my book.<br>2. لا، هذا ليس كتابي. (lā, hādhā laysa kitābī) = No, this is not my book. |
+| هل أنت طالب؟              | Are you a student?      | Czy jesteś uczniem?     | Öğrenci misin?              | তুমি কি ছাত্র?                | هل أنت طالب؟ (hal anta ṭālib?)               | 1. نعم، أنا طالب. (naʿam, anā ṭālib) = Yes, I am a student.<br>2. لا، أنا لست طالباً. (lā, anā lastu ṭāliban) = No, I am not a student. |
+
+
+### **2. WH- Questions (من | ماذا | متى | أين | لماذا)**
+
+| **Arabic Question**      | **English**             | **Polish**              | **Turkic (Turkish)**         | **Bangla**                 | **Example Question in Arabic**               | **Example Replies in Arabic**                                |
+|---------------------------|-------------------------|--------------------------|------------------------------|-----------------------------|------------------------------------------------|-------------------------------------------------------------|
+| من هذا؟                   | Who is this?           | Kto to jest?            | Bu kim?                      | তিনি কে?                     | من هذا؟ (man hādhā?)                            | هذا أحمد. (hādhā aḥmad) = This is Ahmed.                    |
+| ماذا تفعل؟                | What are you doing?    | Co robisz?              | Ne yapıyorsun?               | তুমি কি করছো?                | ماذا تفعل؟ (mādhā tafʿal?)                      | أقرأ كتاباً. (aqraʾ kitāban) = I am reading a book.          |
+| متى تبدأ الدرس؟           | When does the lesson start? | Kiedy zaczyna się lekcja? | Ders ne zaman başlıyor?       | ক্লাস কখন শুরু হয়?          | متى تبدأ الدرس؟ (matā tabdaʾ al-dars?)          | يبدأ في الساعة العاشرة. (yabdaʾ fī al-sāʿa al-ʿāshira) = It starts at 10 o'clock. |
+| أين تسكن؟                | Where do you live?     | Gdzie mieszkasz?         | Nerede yaşıyorsun?            | তুমি কোথায় থাকো?              | أين تسكن؟ (ayna taskun?)                       | أسكن في القاهرة. (askun fī al-qāhira) = I live in Cairo.     |
+
+
+### **3. Asking About Possession**
+
+| **Arabic Question**      | **English**                  | **Polish**               | **Turkic (Turkish)**        | **Bangla**                  | **Example Question in Arabic**              | **Example Replies in Arabic**                                  |
+|---------------------------|-----------------------------|---------------------------|-----------------------------|-----------------------------|-----------------------------------------------|---------------------------------------------------------------|
+| لمن هذا القلم؟            | Whose pen is this?         | Czyj to jest długopis?   | Bu kalem kimin?             | এটা কার কলম?                 | لمن هذا القلم؟ (li-man hādhā al-qalam?)       | 1. هذا قلمي. (hādhā qalamī) = This is my pen.<br>2. هذا قلم صديقي. (hādhā qalam ṣadīqī) = This is my friend's pen. |
+| هل لديك سيارة؟            | Do you have a car?         | Czy masz samochód?       | Araban var mı?              | তোমার কি গাড়ি আছে?          | هل لديك سيارة؟ (hal ladayka sayyārah?)        | نعم، لدي سيارة. (naʿam, laday sayyārah) = Yes, I have a car. |
+
+
+### **4. Asking About Reason**
+
+| **Arabic Question**      | **English**                 | **Polish**                | **Turkic (Turkish)**        | **Bangla**                  | **Example Question in Arabic**              | **Example Replies in Arabic**                                  |
+|---------------------------|-----------------------------|---------------------------|-----------------------------|-----------------------------|-----------------------------------------------|---------------------------------------------------------------|
+| لماذا تذهب إلى السوق؟     | Why are you going to the market? | Dlaczego idziesz na rynek? | Neden pazara gidiyorsun?    | তুমি কেন বাজারে যাচ্ছো?      | لماذا تذهب إلى السوق؟ (limādhā tadhhab ilā al-sūq?) | أذهب لشراء الفاكهة. (adhhab li-shirāʾ al-fākiha) = I am going to buy fruit. |
+
+
+### **5. Asking About Quantity**
+
+| **Arabic Question**      | **English**                | **Polish**               | **Turkic (Turkish)**         | **Bangla**                 | **Example Question in Arabic**               | **Example Replies in Arabic**                                  |
+|---------------------------|---------------------------|---------------------------|------------------------------|-----------------------------|------------------------------------------------|---------------------------------------------------------------|
+| كم حقيبة معك؟             | How many bags do you have? | Ile masz toreb?          | Kaç çantan var?              | তোমার সঙ্গে কতগুলো ব্যাগ আছে?   | كم حقيبة معك؟ (kam ḥaqībah maʿak?)              | معي حقيبتان. (maʿī ḥaqībatān) = I have two bags.               |
+| كم تحتاج؟                | How much do you need?     | Ile potrzebujesz?         | Ne kadar lazım?              | তোমার কত প্রয়োজন?            | كم تحتاج؟ (kam taḥtāj?)                       | أحتاج خمس دولارات. (aḥtāj khamsa dolārāt) = I need five dollars. |
+
+
+### **6. Asking About Preference**
+
+| **Arabic Question**      | **English**                | **Polish**               | **Turkic (Turkish)**         | **Bangla**                 | **Example Question in Arabic**              | **Example Replies in Arabic**                                  |
+|---------------------------|---------------------------|---------------------------|------------------------------|-----------------------------|-----------------------------------------------|---------------------------------------------------------------|
+| أي طعام تحب أكثر؟         | Which food do you like most? | Jakie jedzenie lubisz najbardziej? | Hangi yemeği daha çok seversin? | তুমি কোন খাবার সবচেয়ে পছন্দ করো? | أي طعام تحب أكثر؟ (ayyu ṭaʿām tuḥib akthar?) | أحب الفاكهة. (uḥibbu al-fākiha) = I like fruit.<br>أحب الخبز. (uḥibb al-khubz) = I like bread. |
+
+
+
+### **7. Asking About State or Condition**
+
+| **Arabic Question**      | **English**               | **Polish**               | **Turkic (Turkish)**         | **Bangla**                 | **Example Question in Arabic**              | **Example Replies in Arabic**                                  |
+|---------------------------|--------------------------|---------------------------|------------------------------|-----------------------------|-----------------------------------------------|---------------------------------------------------------------|
+| كيف حالك؟                | How are you?             | Jak się masz?            | Nasılsın?                   | তুমি কেমন আছো?              | كيف حالك؟ (kayfa ḥāluk?)                     | 1. أنا بخير. (anā bikhayr) = I’m fine.<br>2. لست جيداً. (lastu jayyidan) = I am not well. |
+
+### **8. Asking About Time**
+
+| **Arabic Question**      | **English**              | **Polish**                | **Turkic (Turkish)**        | **Bangla**                  | **Example Question in Arabic**              | **Example Replies in Arabic**                                  |
+|---------------------------|--------------------------|---------------------------|-----------------------------|-----------------------------|-----------------------------------------------|---------------------------------------------------------------|
+| متى ولدت؟                | When were you born?      | Kiedy się urodziłeś?      | Ne zaman doğdun?            | তুমি কখন জন্ম নিয়েছো?       | متى ولدت؟ (matā wulidta?)                    | ولدت في عام 1990. (wulidtu fī ʿām 1990) = I was born in 1990. |
+| كم الساعة الآن؟          | What time is it now?     | Która jest teraz godzina? | Şimdi saat kaç?             | এখন কটা বাজে?                | كم الساعة الآن؟ (kam al-sāʿa al-ān?)         | الساعة الآن الواحدة. (al-sāʿa al-ān al-wāḥida) = It’s 1 o'clock. |
+
+---
+## Links:
