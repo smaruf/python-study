@@ -98,7 +98,6 @@
 ---
 
 ### Notes:
-
 ### 1. **Arabic Context**:
    - **هذا (Hatha)** is used for singular masculine nouns ("this"), while **هذه (Hadhihi)** is for singular feminine nouns.
    - **ذاك (Thalika)** is used for singular masculine nouns ("that"), and **تلك (Tilka)** is used for singular feminine nouns.
@@ -122,7 +121,8 @@
 This extended dictionary serves as a quick and comprehensive guide for understanding **"this"**, **"these"**, and **"that"**, with their respective plural forms across **Arabic**, **English**, **Polish**, and **Bangla** languages.
 
 ---
-## Arabic Sun and Moon Letters Dictionary  
+### Notes:
+### Arabic Sun and Moon Letters: 
 A compact guide to Arabic **Sun Letters (حروف شمسية)** and **Moon Letters (حروف قمرية)** with meanings in **Arabic**, **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**.
 
 ---
@@ -167,7 +167,7 @@ Moon letters are the 14 letters where the definite article **'al-' (ال)** is f
 | ه (Ha)           | الهواء (al-Hawā')       | The air             | Powietrze              | Hava (Air)                | বাতাস (Bātās)             |
 | و (Waw)          | الوعد (al-Wa‘d)         | The promise         | Obietnica              | Söz (Promise)             | প্রতিশ্রুতি (Prôtishruti)  |
 | ي (Ya)           | اليوم (al-Yawm)         | The day             | Dzień                  | Gün (Day)                 | দিন (Din)                 |
-
+### Notes:
 ### **Summary of Sun vs. Moon Letters**
 
 - **Sun Letters (حروف شمسية)**: The **ل** in **ال** (the definite article) is **not pronounced**. Instead, it assimilates with the following letter.  
@@ -177,3 +177,62 @@ Moon letters are the 14 letters where the definite article **'al-' (ال)** is f
   Example: **القمر** → _al-qamar_ ("The moon").  
 
 This table provides a compact reference for understanding **Sun** and **Moon letters** in Arabic, with meanings translated into **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**.
+
+---
+## Arabic Definite and Indefinite Articles:
+
+Arabic does not have a dedicated word for the **indefinite article** ("a/an" in English), but it makes a noun indefinite by **omitting the definite article** and often adding **tanween** (nunation).  
+The **definite article** in Arabic is **ال‎ (al-)**, meaning "the."
+
+---
+
+### **Definite Article (ال‎ | al-)**
+
+The **definite article** **ال‎ (al-)** is attached to a noun to make it definite, meaning **"the"** in English.
+
+| Arabic Word           | English Meaning       | Polish Meaning      | Turkic (Turkish) Meaning | Bangla Meaning        |
+|------------------------|-----------------------|---------------------|---------------------------|-----------------------|
+| الكتاب (al-kitāb)      | The book             | Ta książka          | Kitap ("The book")       | বইটি (Boiṭi)          |
+| البيت (al-bayt)        | The house            | Ten dom             | Ev ("The house")         | বাড়িটি (Bāṛiṭi)       |
+| القلم (al-qalam)       | The pen              | Ten długopis        | Kalem ("The pen")        | কলমটি (Kolômṭi)       |
+| الشمس (ash-shams)      | The sun              | Słońce              | Güneş ("The sun")        | সূর্য (Sūrjô)          |
+| الطالب (at-tālib)      | The student          | Ten uczeń           | Öğrenci ("The student")  | ছাত্রটি (Chātrôṭi)     |
+
+
+### **Indefinite (No ال | "A/An")**
+
+Arabic nouns are left in their **base form** (without the **ال** definite article) to indicate indefiniteness. Tanween (nunation) is often added to show this.
+
+| Arabic Word           | English Meaning       | Polish Meaning      | Turkic (Turkish) Meaning | Bangla Meaning        |
+|------------------------|-----------------------|---------------------|---------------------------|-----------------------|
+| كتابٌ (kitābun)        | A book               | Jakaś książka       | Bir kitap ("A book")      | একটি বই (Ekṭi boi)    |
+| بيتٌ (baytun)          | A house              | Jakiś dom           | Bir ev ("A house")        | একটি বাড়ি (Ekṭi bāṛi) |
+| قلمٌ (qalamun)         | A pen                | Jakiś długopis      | Bir kalem ("A pen")       | একটি কলম (Ekṭi kolôm) |
+| شمسٌ (shamsun)         | A sun (generic)      | Jakieś słońce       | Bir güneş ("A sun")       | একটি সূর্য (Ekṭi Sūrjô)|
+| طالبٌ (ṭālibun)        | A student            | Jakiś uczeń         | Bir öğrenci ("A student") | একজন ছাত্র (Ekjon chātrô)|
+
+
+### **Side-by-Side Comparison**
+| Arabic (Definite/Indefinite)       | English               | Polish                  | Turkic (Turkish)       | Bangla                            |
+|------------------------------------|-----------------------|-------------------------|------------------------|------------------------------------|
+| الكتاب (al-kitāb) / كتابٌ (kitābun)| The book / A book     | Ta książka / Jakaś książka | Kitap / Bir kitap       | বইটি / একটি বই (Boiṭi / Ekṭi boi) |
+| البيت (al-bayt) / بيتٌ (baytun)    | The house / A house   | Ten dom / Jakiś dom     | Ev / Bir ev            | বাড়িটি / একটি বাড়ি (Bāṛiṭi / Ekṭi bāṛi) |
+| القلم (al-qalam) / قلمٌ (qalamun)  | The pen / A pen       | Ten długopis / Jakiś długopis | Kalem / Bir kalem       | কলমটি / একটি কলম (Kolômṭi / Ekṭi kolôm) |
+| الشمس (ash-shams) / شمسٌ (shamsun)| The sun / A sun       | Słońce / Jakieś słońce  | Güneş / Bir güneş      | সূর্যটি / একটি সূর্য (Sūrjyôṭi / Ekṭi Sūrjô) |
+| الطالب (at-tālib) / طالبٌ (ṭālibun)| The student / A student| Ten uczeń / Jakiś uczeń | Öğrenci / Bir öğrenci  | ছাত্রটি / একজন ছাত্র (Chātrôṭi / Ekjon chātrô)|
+
+### **Explanation**
+
+1. **Definite Article (ال‎)**:  
+   - **Arabic**: Use **ال‎ (al-)** prefix and follow regular pronunciation rules for sun and moon letters.
+   - **Example**: **الكتاب (al-kitāb)** = "The book."
+
+2. **Indefinite Article (No ال)**:  
+   - **Arabic**: Omit **ال‎** from the noun and optionally add **-ٌ (-un)** for formal writing. Spoken Arabic often skips **tanween**.  
+   - **Example**: **كتاب (kitābun)** = "A book."
+
+3. **Comparison**:  
+   - The **definite noun** applies to specific, identified objects (e.g., "the pen you gave me").  
+   - The **indefinite noun** applies to non-specific, general references (e.g., "a pen, any pen").
+
+This table is a **quick and compact guide** to understanding the usage of definite and indefinite articles in **Arabic** along with their equivalents in **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**.
