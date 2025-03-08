@@ -85,3 +85,50 @@ This dictionary provides Arabic words with their meanings and variations in **En
 ---
 
 This compact dictionary provides a **reference for Arabic words**, alongside translations in **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**. It aids in understanding Quranic Arabic while offering cultural and linguistic insights.
+
+---
+## Translation of five suras/chapters:
+
+### Surah Al-Fatiha (الفاتحة)
+
+| Arabic | English | Polish | Turkic | Bangla |
+|---------|---------|--------|--------|--------|
+| بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ | In the name of Allah, the Most Gracious, the Most Merciful. | W imię Allaha, Najłaskawszego, Najmiłosierniejszego. | Allah'ın adıyla, Rahman ve Rahim olan. | আল্লাহর নামে, পরম দয়ালু, পরম দয়াময়। |
+| الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ | All praise is due to Allah, Lord of all the worlds. | Chwała Allahowi, Panu wszystkich światów. | Hamd, âlemlerin Rabbi olan Allah'a aittir. | সমস্ত প্রশংসা আল্লাহর, যিনি সকল বিশ্বের পালনকর্তা। |
+| الرَّحْمَٰنِ الرَّحِيمِ | The Most Gracious, the Most Merciful. | Najłaskawszy, Najmiłosierniejszy. | O, Rahman ve Rahim'dir. | পরম দয়ালু, পরম দয়াময়। |
+| مَالِكِ يَوْمِ الدِّينِ | Master of the Day of Judgment. | Władca Dnia Sądu. | O, hesap gününün sahibidir. | বিচার দিনের মালিক। |
+| إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ | You alone we worship, and You alone we ask for help. | Tylko Ciebie czcimy i tylko Ciebie prosimy o pomoc. | Yalnız Sana ibadet ederiz ve yalnız Senden yardım dileriz. | আমরা শুধুমাত্র তোমারই ইবাদত করি এবং কেবল তোমারই সাহায্য চাই। |
+| اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ | Guide us on the Straight Path. | Prowadź nas prostą drogą. | Bizi doğru yola ilet. | আমাদেরকে সরল পথ দেখাও। |
+| صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ | The path of those who have received Your grace, not those who have gone astray or earned Your anger. | Drogą tych, którym dałeś swoje łaski, nie tych, którzy zbłądzili lub zasłużyli na Twój gniew. | Kendilerine nimet verdiklerinin yoluna, gazaba uğrayanların ve sapıtanların yoluna değil. | তাদের পথ, যাদের প্রতি তুমি অনুগ্রহ করেছ, যারা পথভ্রষ্ট নয় এবং তোমার ক্রোধের সম্মুখীন হয়নি। |
+
+### Surah Al-Ikhlas (الإخلاص)
+
+| Arabic | English | Polish | Turkic | Bangla |
+|---------|---------|--------|--------|--------|
+| قُلْ هُوَ اللَّهُ أَحَدٌ | Say: He is Allah, the One. | Powiedz: On jest Allahem, Jedynym. | De ki: O, Allah’tır, bir tektir. | বল: তিনিই আল্লাহ, এক। |
+| اللَّهُ الصَّمَدُ | Allah, the Absolute. | Allah jest wieczny. | Allah Sameddir. | আল্লাহ অমুখাপেক্ষী। |
+| لَمْ يَلِدْ وَلَمْ يُولَدْ | He begets not, nor was He begotten. | Nie zrodził i nie został zrodzony. | O, doğurmamış ve doğmamıştır. | তিনি জন্ম দেননি, জন্মগ্রহণও করেননি। |
+| وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ | And there is none like unto Him. | I nie ma nikogo równego Jemu. | Ve O’na hiçbir şey denk değildir. | এবং তার সমতুল্য কেউ নেই। |
+
+### Surah Al-Falaq (الفلق)
+
+| Arabic | English | Polish | Turkic | Bangla |
+|---------|---------|--------|--------|--------|
+| قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ | Say: I seek refuge with the Lord of the daybreak. | Powiedz: Szukam schronienia u Pana świtu. | De ki: Felek (şafak) Rabbine sığınırım. | বল: আমি আশ্রয় চাই ভোরের প্রতিপালকের। |
+| مِن شَرِّ مَا خَلَقَ | From the evil of what He created. | Od zła tego, co stworzył. | Yarattığı şeylerin şerrinden. | তার সৃষ্টির অনিষ্ট থেকে। |
+| وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ | And from the evil of darkness when it spreads. | I od zła ciemności, gdy się rozpościera. | Çöken karanlığın şerrinden. | এবং অন্ধকার রাত্রির অনিষ্ট থেকে। |
+| وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ | And from the evil of those who blow on knots. | I od zła tych, którzy dmuchają na węzły. | Düğümlere üfleyen büyücülerin şerrinden. | এবং গিঁটের ওপর ফুঁৎকার দানকারীদের অনিষ্ট থেকে। |
+| وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ | And from the evil of the envious when they envy. | I od zła zazdrosnego, gdy zazdrości. | Haset edenin şerrinden. | এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে। |
+
+### Surah At-Takathur (التكاثر)
+
+| Arabic | English | Polish | Turkic | Bangla |
+|---------|---------|--------|--------|--------|
+| أَلْهَاكُمُ التَّكَاثُرُ | The rivalry for worldly increase diverts you. | Dążenie do bogactwa was pochłania. | Çokluk yarışı sizi oyaladı. | প্রাচুর্যের প্রতিযোগিতা তোমাদেরকে ব্যস্ত রাখে। |
+| حَتَّى زُرْتُمُ الْمَقَابِرَ | Until you visit the graves. | Aż odwiedzicie groby. | Ta ki kabirlere varıncaya kadar. | যতক্ষণ না তোমরা কবরস্থানে পৌঁছাও। |
+| كَلَّا سَوْفَ تَعْلَمُونَ | Nay! You shall soon know. | Nie! Wkrótce się dowiecie. | Hayır! Yakında bileceksiniz. | না! শীঘ্রই তোমরা জানতে পারবে। |
+| ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ | Again, nay! You shall soon know. | I ponownie, nie! Wkrótce się dowiecie. | Yine hayır! Yakında bileceksiniz. | এবং আবারও না! শীঘ্রই তোমরা জানতে পারবে। |
+
+---
+
+### Notes:
