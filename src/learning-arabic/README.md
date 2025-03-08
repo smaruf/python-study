@@ -13,6 +13,8 @@ Breakdown:
 ### Links:
    - [Dictionary for Surah Al-Fatiha, Al-Ikhlas, An-Naas, Al-Falaq, and At-Takathur](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_fatiha_ahad_naas_falaq_taqasur.md)
    - [Ar Rahman Dictionary](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Ar_Rahman_dictionary.md)
+   - [Overview on Surah Al-Bakara](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/overview_on_surah_bakara.md)
+
 
 ### Pronouns:
 ### Arabic Pronouns Dictionary (1st, 2nd, 3rd Persons)
