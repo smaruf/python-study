@@ -543,3 +543,5 @@ This dictionary provides a structured overview of **Arabic questions and respons
 
 ---
 ## Links:
+   - [Dictionary for Surah Al-Fatiha, Al-Ikhlas, An-Naas, Al-Falaq, and At-Takathur](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_fatiha_ahad_naas_falaq_taqasur.md)
+
