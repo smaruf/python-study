@@ -1,6 +1,6 @@
 ## Learning Arabic for understand quran
-## Pronouns:
-# Arabic Pronouns Dictionary (1st, 2nd, 3rd Persons)
+### Pronouns:
+### Arabic Pronouns Dictionary (1st, 2nd, 3rd Persons)
 
 ## 1st Person Pronouns (Speaker)
 | **Arabic** | **English**       | **Polish**         | **Bangla**          |
