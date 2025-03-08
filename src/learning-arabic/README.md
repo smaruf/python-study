@@ -322,3 +322,150 @@ Arabic nouns change their endings based on grammatical **case**:
 5. **Case Markings**: Use **-ٌ / -ُ (nom.)**, **-ً / -َ (acc.)**, **-ٍ / -ِ (gen.)** endings.
 
 This compact dictionary provides a multilingual explanation of Arabic noun variations for **English**, **Polish**, **Turkic (Turkish)**, and **Bangla** learners.
+
+---
+
+## Arabic Prepositions and Conjunctions:  
+A guide to common **Arabic prepositions** and **conjunctions** with meanings in **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**.
+
+
+### **Arabic Prepositions (حروف الجر)**  
+
+Prepositions are used to link nouns, pronouns, and phrases to other elements in a sentence. Arabic prepositions often govern the **genitive case** (مجرور | majrūr).
+
+| Arabic Preposition | English Meaning   | Polish Meaning      | Turkic (Turkish) Meaning   | Bangla Meaning         | Example in Arabic                          |
+|---------------------|------------------|---------------------|----------------------------|------------------------|--------------------------------------------|
+| في (fī)             | In              | W                  | İçinde ("In")             | মধ্যে (Moddhe)         | في البيت (fī al-bayt) = In the house       |
+| على (ʿalā)          | On              | Na                 | Üzerinde ("On")           | ওপরে (Ōpore)           | على الطاولة (ʿalā al-ṭāwilah) = On the table |
+| تحت (taḥt)          | Under           | Pod                | Altında ("Under")          | নিচে (Niçe)            | تحت السرير (taḥt al-sarīr) = Under the bed|
+| من (min)            | From            | Z                  | -Den ("From")             | থেকে (Theke)           | من المدرسة (min al-madrasa) = From the school |
+| إلى (ilā)           | To              | Do                 | -E ("To")                | দিকে (Dike)            | إلى السوق (ilā al-sūq) = To the market    |
+| مع (maʿa)           | With            | Z                  | İle ("With")              | সঙ্গে (Sôngge)          | مع الأصدقاء (maʿa al-asdiqāʾ) = With friends|
+| عن (ʿan)            | About/From      | O                  | Hakkında ("About") / -Den ("From")| সম্পর্কে (Sômproke) / থেকে (Theke)| عن الموضوع (ʿan al-mawḍūʿ) = About the topic / From the topic|
+| في داخل (fī dākhil) | Inside          | Wewnątrz           | İçinde ("Inside")          | ভিতরে (Bhitorē)        | في داخل الغرفة (fī dākhil al-ghurfa) = Inside the room |
+| فوق (fawqa)         | Above           | Powyżej            | Üstünde ("Above")          | উপরে (Ūpore)           | فوق الجبل (fawqa al-jabal) = Above the mountain |
+
+
+### **Arabic Conjunctions (حروف العطف)**  
+
+Conjunctions in Arabic are used to connect words, phrases, or clauses. Many are simple and commonly appear in sentence structures.
+
+| Arabic Conjunction   | English Meaning       | Polish Meaning       | Turkic (Turkish) Meaning | Bangla Meaning           | Example in Arabic                          |
+|-----------------------|-----------------------|----------------------|---------------------------|--------------------------|--------------------------------------------|
+| و (wa)               | And                  | I                   | Ve ("And")               | এবং (Ebong)             | أنا وأنت (anā wa anta) = Me and you        |
+| أو (aw)              | Or                   | Lub                 | Veya ("Or")              | অথবা (Orthobā)          | طعام أو شراب (ṭaʿām aw sharāb) = Food or drink |
+| لكن (lākinn)         | But                  | Ale                  | Fakat ("But")            | কিন্তু (Kintu)          | نحن هنا لكن ليسوا هنا (naḥnu hunā lākinn laysū hunā) = We are here, but they are not |
+| لأن (liʿanna)        | Because              | Bo                   | Çünkü ("Because")         | কারণ (Kāraṇ)            | أحب القراءة لأنني أحب العلم (uḥibbu al-qirāʾa liʿanna uḥibbu al-ʿilm) = I love reading because I love knowledge |
+| ثم (thumma)          | Then/Next            | Następnie           | Sonra ("Then/Next")       | তারপর (Tāpor)           | ذهب إلى المدرسة ثم إلى الحديقة (dhahaba ilā al-madrasa thumma ilā al-ḥadīqah) = He went to the school, then to the park |
+| إذا (idhā)           | If                   | Jeżeli               | Eğer ("If")              | যদি (Jodi)             | إذا درست تنجح (idhā darasta tanjaḥ) = If you study, you will succeed |
+| حيث (ḥaythu)         | Where/When           | Gdzie/Kiedy          | Nerede ("Where") / -ince ("When")| যেখানে (Jekhānē)            | حيث وجدتني سأساعدك (ḥaythu wajadtanī saʾusāʿiduka) = Wherever you find me, I will help you |
+| حتى (ḥattā)          | Until                | Dopóki              | Kadar ("Until")           | পর্যন্ত (Pôṛjônto)       | انتظرته حتى جاء (intaẓartahu ḥattā jāʾa) = I waited for him until he came |
+| لأن هذا السبب (liʿanna hādhā al-sabab) | For this reason     | Z tego powodu           | Bu yüzden ("For this reason") | এই কারণে (Ei kāraṇē) | درست كثيراً لأن هذا السبب (darastu kathīran liʿanna hādhā al-sabab) = I studied a lot for this reason |
+
+
+### **Compact Comparison Table**  
+Here's a summary of the most commonly used **prepositions/conjunctions** in Arabic along with meanings in different languages:
+
+| Type             | Arabic               | English     | Polish           | Turkic (Turkish)       | Bangla                 |
+|-------------------|----------------------|-------------|------------------|------------------------|------------------------|
+| Preposition       | في (fī)             | In          | W                | İçinde                | মধ্যে (Moddhe)         |
+| Preposition       | على (ʿalā)          | On          | Na               | Üzerinde              | ওপরে (Ōpore)           |
+| Preposition       | تحت (taḥt)          | Under       | Pod              | Altında               | নিচে (Niče)            |
+| Preposition       | إلى (ilā)           | To          | Do               | -E ("To")            | দিকে (Dike)            |
+| Conjunction       | و (wa)              | And         | I                | Ve                    | এবং (Ebong)            |
+| Conjunction       | أو (aw)             | Or          | Lub              | Veya                  | অথবা (Orthobā)         |
+| Conjunction       | لكن (lākinn)        | But         | Ale              | Fakat                 | কিন্তু (Kintu)          |
+| Conjunction       | لأن (liʿanna)       | Because     | Bo               | Çünkü                 | কারণ (Kāraṇ)            |
+| Conjunction       | ثم (thumma)         | Then/Next   | Następnie        | Sonra                 | তারপর (Tāpor)           |
+
+
+### **Key Notes**
+1. **Prepositions**: Govern the **genitive case (مجرور)** in Arabic; often indicate location, direction, or relationship.
+2. **Conjunctions**: Connect sentences or clauses; help in logical transitions.
+3. Learning **examples** along with meaning helps in understanding usage across contexts.
+
+This compact dictionary serves as a multilingual reference for **prepositions** and **conjunctions** in Arabic, **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**.
+
+---
+
+# Arabic Prepositions and Conjunctions: Examples  
+A multilingual guide to **Arabic prepositions** and **conjunctions** with examples using **1st, 2nd, and 3rd person**, **singular**, **dual**, and **plural forms**.
+
+---
+
+### **Arabic Prepositions (حروف الجر)**  
+
+Arabic prepositions govern the **genitive case** (مجرور | majrūr) and can refer to **1st, 2nd**, or **3rd person**, **singular**, **dual**, or **plural**.
+
+### **Singular Examples**
+
+| Arabic Preposition | Example in Arabic                     | English Meaning           | Polish Meaning        | Turkic (Turkish) Meaning | Bangla Meaning           |
+|---------------------|---------------------------------------|---------------------------|-----------------------|--------------------------|--------------------------|
+| في (fī)             | أنا في الغرفة (anā fī al-ghurfa)      | I am in the room          | Jestem w pokoju       | Ben odadayım             | আমি ঘরে আছি (Āmi ghôrē āchi)|
+| على (ʿalā)          | الكتاب على الطاولة (al-kitāb ʿalā al-ṭāwilah) | The book is on the table | Książka jest na stole | Kitap masanın üstünde     | বইটি টেবিলের ওপরে আছে (Boiṭi ṭēbil-er ōpōrē āchē)|
+| تحت (taḥt)          | الكلب تحت السرير (al-kalb taḥt al-sarīr) | The dog is under the bed | Pies jest pod łóżkiem | Köpek yatağın altında     | কুকুরটি বিছানার নিচে আছে (Kukurṭi bichānār niçē āchē)|
+
+
+### **Dual Examples**
+
+| Arabic Preposition | Example in Arabic                      | English Meaning           | Polish Meaning         | Turkic (Turkish) Meaning | Bangla Meaning           |
+|---------------------|----------------------------------------|---------------------------|------------------------|--------------------------|--------------------------|
+| في (fī)             | نحن في المنزلين (naḥnu fī al-manzilayn)| We are in the two houses  | Jesteśmy w dwóch domach| İki evdeyiz               | আমরা দুটি বাড়িতে আছি (Āmra duṭi bāṛitē āchi)|
+| على (ʿalā)          | الكتابان على الطاولة (al-kitābān ʿalā al-ṭāwilah) | The two books are on the table | Dwie książki są na stole | İki kitap masanın üstünde | দুটি বই টেবিলের ওপরে আছে (Duṭi boi ṭēbil-er ōpōrē āchē)|
+| تحت (taḥt)          | القطتان تحت السرير (al-qiṭṭatān taḥt al-sarīr) | The two cats are under the bed | Dwa koty są pod łóżkiem | İki kedi yatağın altında  | দুটি বিড়াল বিছানার নিচে আছে (Duṭi biṛāl bichānār niçē āchē)|
+
+
+### **Plural Examples**
+
+| Arabic Preposition | Example in Arabic                      | English Meaning              | Polish Meaning             | Turkic (Turkish) Meaning | Bangla Meaning                |
+|---------------------|----------------------------------------|------------------------------|----------------------------|--------------------------|-------------------------------|
+| في (fī)             | نحن في الغرف (naḥnu fī al-ghuraf)      | We are in the rooms          | Jesteśmy w pokojach        | Biz odalardayız          | আমরা ঘরগুলোতে আছি (Āmra ghor-gulōtē āchi)|
+| على (ʿalā)          | الكتب على الطاولات (al-kutub ʿalā al-ṭāwilāt) | The books are on the tables | Książki są na stołach      | Kitaplar masaların üstünde| বইগুলো টেবিলের ওপরে আছে (Boi-gulō ṭēbil-er ōpōrē āchē)|
+| تحت (taḥt)          | الكلاب تحت الأسرة (al-kilāb taḥt al-asirrah) | The dogs are under the beds | Psy są pod łóżkami         | Köpekler yatakların altında| কুকুরগুলো বিছানার নিচে আছে (Kukur-gulō bichānār niçē āchē)|
+
+---
+
+## **Arabic Conjunctions (حروف العطف)**  
+
+Arabic conjunctions connect words, phrases, or clauses while maintaining logical relationships. Below are **examples** for **1st, 2nd**, and **3rd person**, **singular**, **dual**, and **plural**.
+
+
+### **Singular Examples**
+
+| Arabic Conjunction   | Example in Arabic                                      | English Meaning         | Polish Meaning     | Turkic (Turkish) Meaning | Bangla Meaning            |
+|-----------------------|-------------------------------------------------------|-------------------------|-------------------|--------------------------|---------------------------|
+| و (wa)               | أنا وأنت أصدقاء (anā wa anta aṣdiqāʾ)                  | I and you are friends   | Ja i ty jesteśmy przyjaciółmi | Ben ve sen arkadaşız    | আমি এবং তুমি বন্ধু (Āmi ēbông tumi bondhu)|
+| أو (aw)              | تريد ماء أو قهوة؟ (turīd māʾ aw qahwa?)                | Do you want water or coffee? | Chcesz wodę czy kawę? | Su mu yoksa kahve mi?    | তুমি পানি অথবা কফি চাও? (Tumi pāni orthobā kôphi chāo?)|
+| لكن (lākinn)         | هو يدرس لكن لا يفهم (huwa yadrus lākinn lā yafham)      | He studies but does not understand | On się uczy, ale nie rozumie | O çalışıyor ama anlamıyor | সে পড়াশোনা করে কিন্তু বুঝেনা (Sē pôṛāshônā kôre kintu bujhēnā)|
+
+
+### **Dual Examples**
+
+| Arabic Conjunction   | Example in Arabic                                          | English Meaning               | Polish Meaning                   | Turkic (Turkish) Meaning   | Bangla Meaning                         |
+|-----------------------|-----------------------------------------------------------|-------------------------------|-----------------------------------|--------------------------|----------------------------------------|
+| و (wa)               | البابان واسعان و جميلان (al-bābān wāsiʿān wa jamīlān)       | The two doors are wide and beautiful | Dwa drzwi są szerokie i piękne | İki kapı geniş ve güzel      | দুটি দরজা প্রশস্ত এবং সুন্দর (Duṭi dôrajā prôśôsto ēbông sundôr)|
+| أو (aw)              | تريدان الماء أو العصير؟ (turīdān al-māʾ aw al-ʿaṣīr?)      | Do you two want water or juice? | Chcecie wodę czy sok?            | Su mu yoksa meyve suyu mu? | তোমরা দুজন পানি অথবা রস চাও? (Tômrā dujon pāni orthobā rôsh chāo?)|
+| لكن (lākinn)         | البابان مغلقان لكن الشباك مفتوح (al-bābān mughlaqān lākinn al-shubbāk maftūḥ) | The two doors are closed, but the window is open | Dwa drzwi są zamknięte, ale okno jest otwarte | İki kapı kapalı, ama pencere açık | দুটি দরজা বন্ধ কিন্তু জানালাটি খোলা (Duṭi dôrajā bondhô kintu jānālāṭi khōlā)|
+
+
+### **Plural Examples**
+
+| Arabic Conjunction   | Example in Arabic                                              | English Meaning                   | Polish Meaning                   | Turkic (Turkish) Meaning   | Bangla Meaning                |
+|-----------------------|---------------------------------------------------------------|-----------------------------------|----------------------------------|--------------------------|-------------------------------|
+| و (wa)               | نحن وأنتما أصدقاء (naḥnu wa antumā aṣdiqāʾ)                   | We and you two are friends        | My i wy dwaj jesteśmy przyjaciółmi | Biz ve siz ikiniz arkadaşız | আমরা এবং তোমরা বন্ধু (Āmra ēbông tômrā bondhu)|
+| أو (aw)              | تريدون ماء أو قهوة؟ (turīdūna māʾ aw qahwa?)                  | Do you all want water or coffee?  | Chcecie wodę czy kawę?           | Su mu yoksa kahve mi?      | তোমরা সবাই পানি অথবা কফি চাও? (Tômrā sôbāi pāni orthobā kôphi chāo?)|
+| لكن (lākinn)         | أنتم تدرسون لكن لا تفهمون (antum tadrusūn lākinn lā tafhamūn)   | You all study but do not understand | Uczycie się, ale nie rozumiecie   | Siz çalışıyorsunuz ama anlamıyorsunuz | তোমরা পড়াশোনা করছ কিন্তু কিছুই বুঝছ না (Tômrā pôṛāshônā kôrcho kintu kichui bujcho nā)|
+
+
+### **Compact Comparison Table of Preposition and Conjunction Usages**
+
+| Type         | Arabic Word   | Singular Example                              | Dual Example                                    | Plural Example                           |
+|--------------|---------------|-----------------------------------------------|------------------------------------------------|------------------------------------------|
+| Preposition  | في (fī)       | أنا في الغرفة = I am in the room              | نحن في المنزلين = We are in the two houses     | نحن في الغرف = We are in the rooms        |
+| Preposition  | على (ʿalā)    | الكتاب على الطاولة = The book is on the table | الكتابان على الطاولة = The two books are on the table | الكتب على الطاولات = The books are on the tables|
+| Conjunction  | و (wa)        | أنا وأنت = I and you                         | نحن وأنتما = We and you two                   | نحن وأنتم = We and you all               |
+| Conjunction  | لكن (lākinn)  | لكن لا يفهم = But he does not understand      | لكن البابان مغلقان = But the two doors are closed | لكن الأبواب مغلقة = But the doors are closed|
+
+
+## Final Notes  
+This expanded dictionary helps learners understand the **prepositions and conjunctions** in Arabic with **examples across persons (1st, 2nd, 3rd)** and **number (singular, dual, plural)**. Translations into **English**, **Polish**, **Turkic (Turkish)**, and **Bangla** offer broader accessibility.
