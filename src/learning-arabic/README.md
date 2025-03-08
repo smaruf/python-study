@@ -236,3 +236,89 @@ Arabic nouns are left in their **base form** (without the **ال** definite arti
    - The **indefinite noun** applies to non-specific, general references (e.g., "a pen, any pen").
 
 This table is a **quick and compact guide** to understanding the usage of definite and indefinite articles in **Arabic** along with their equivalents in **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**.
+
+---
+## Arabic Nouns Variations:  
+
+A compact guide to **Arabic noun variations** based on **definiteness**, **gender**, **number**, **rationality**, and **inflection**, with meanings translated into **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**.
+
+
+### **Definiteness (Definite/Indefinite)**  
+
+| Arabic Word           | English Meaning      | Polish Meaning         | Turkic (Turkish) Meaning | Bangla Meaning       |
+|------------------------|----------------------|-------------------------|---------------------------|-----------------------|
+| الكتاب (al-kitāb)      | The book (definite) | Ta książka             | Kitap ("The book")        | বইটি (Boiṭi)         |
+| كتابٌ (kitābun)        | A book (indefinite) | Jakaś książka          | Bir kitap ("A book")      | একটি বই (Ekṭi boi)   |
+
+- **Definite**: Prefix **ال (al-)** for definiteness.  
+- **Indefinite**: Remove **ال** and optionally use **tanween (-un)** for indefiniteness.
+
+
+### **Gender (Masculine/Feminine)**  
+
+Arabic nouns are **gendered**: masculine (**مذكر | mudhakkar**) or feminine (**مؤنث | mu'annath**). Feminine nouns often end in **ة (-ah)**.
+
+| Gender          | Arabic               | English Meaning     | Polish Meaning       | Turkic (Turkish) Meaning | Bangla Meaning        |
+|------------------|----------------------|---------------------|----------------------|---------------------------|-----------------------|
+| Masculine (مذكر) | طالبٌ (ṭālibun)      | A male student      | Uczeń                | Bir erkek öğrenci         | একজন ছাত্র (Ekjon chātrô)|
+| Feminine (مؤنث)  | طالبةٌ (ṭālibatun)   | A female student    | Uczennica            | Bir kadın öğrenci         | একজন ছাত্রী (Ekjon chātrī)|
+
+
+### **Number (Singular/Dual/Plural)**  
+
+Arabic nouns inflect for **number**: **singular, dual**, or **plural**. Dual is formed by adding **-انِ (-ān)** or **-ينِ (-ayn)**. Plurals can be **sound plurals** or **broken plurals**.
+
+| Number          | Arabic               | English Meaning     | Polish Meaning       | Turkic (Turkish) Meaning | Bangla Meaning        |
+|------------------|----------------------|---------------------|----------------------|---------------------------|-----------------------|
+| Singular         | كتابٌ (kitābun)     | A book             | Książka             | Bir kitap                | একটি বই (Ekṭi boi)   |
+| Dual             | كتابانِ (kitābān)   | Two books          | Dwie książki        | İki kitap                | দুটি বই (Duṭi boi)   |
+| Plural (Sound)   | كتبٌ (kutubun)      | Books              | Książki             | Kitaplar                 | বইগুলো (Boi-gulo)    |
+
+### **Rationality (Rational/Non-Rational)**
+
+In Arabic, **rational nouns** refer to humans or beings with intellect, while **non-rational nouns** refer to objects or animals. This distinction affects plural agreement.
+
+| Rationality      | Arabic               | English Meaning     | Polish Meaning         | Turkic (Turkish) Meaning | Bangla Meaning          |
+|-------------------|----------------------|---------------------|------------------------|---------------------------|-------------------------|
+| Rational (عاقل)  | طلابٌ (ṭullābun)     | Male students       | Uczniowie             | Öğrenciler               | ছাত্ররা (Chātrôra)     |
+| Non-Rational (غير عاقل)| كتبٌ (kutubun)  | Books              | Książki               | Kitaplar                 | বইগুলো (Boi-gulo)      |
+
+- **Note**: Non-rational plurals are grammatically treated as feminine singular in verb/adjective agreement.
+
+
+### **Inflection for Case (Nominative/Accusative/Genitive)**
+
+Arabic nouns change their endings based on grammatical **case**:  
+- **Nominative (مرفوع | marfū‘)**: Used for subjects → Ends in **-ٌ (-un)** or **-ُ (-u)**.  
+- **Accusative (منصوب | manṣūb)**: Used for objects → Ends in **-ً (-an)** or **-َ (-a)**.  
+- **Genitive (مجرور | majrūr)**: Used after prepositions → Ends in **-ٍ (-in)** or **-ِ (-i)**.
+
+| Case            | Arabic               | English Meaning     | Polish Meaning         | Turkic (Turkish) Usage | Bangla Meaning            |
+|------------------|----------------------|---------------------|------------------------|-------------------------|-------------------------|
+| Nominative       | كتابٌ (kitābun)     | A book             | Książka               | Bir kitap burada       | একটি বই (Ekṭi boi)       |
+| Accusative       | كتابًا (kitāban)    | A book             | Książkę               | Bir kitap okudum       | একটি বই (Ekṭi boi)       |
+| Genitive         | كتابٍ (kitābin)     | Of a book          | Książki               | Bir kitabın            | একটি বইয়ের (Ekṭi boiyer)|
+
+
+### **Compact Examples: All Variations**
+
+| Aspect          | Arabic                    | English           | Polish                  | Turkic (Turkish)       | Bangla                  |
+|------------------|---------------------------|-------------------|-------------------------|------------------------|-------------------------|
+| Definiteness     | الكتاب / كتابٌ           | The book / A book | Ta książka / Jakaś książka | Kitap / Bir kitap       | বইটি / একটি বই         |
+| Gender           | طالبٌ / طالبةٌ          | Male/Female Student| Uczeń / Uczennica       | Erkek/Kadın Öğrenci    | ছাত্র / ছাত্রী          |
+| Number           | كتابٌ / كتابانِ / كتبٌ  | A book / Two books / Books | Książka / Dwie książki / Książki | Bir kitap / İki kitap / Kitaplar | একটি বই / দুটি বই / বইগুলো |
+| Rationality      | طلابٌ / كتبٌ            | Students / Books   | Uczniowie / Książki     | Öğrenciler / Kitaplar  | ছাত্ররা / বইগুলো       |
+| Case (Nominative)| كتابٌ                   | A book (subject)  | Książka (dopełnienie)   | Bir kitap (özne)       | একটি বই (বিষয়)         |
+| Case (Accusative)| كتابًا                  | A book (object)   | Książkę (bierność)      | Bir kitap (nesne)      | একটি বই (বস্তু)         |
+| Case (Genitive)  | كتابٍ                   | Of a book         | Książki (genitiv)       | Bir kitabın            | একটি বইয়ের             |
+
+
+### **Key Notes**
+
+1. **Definiteness**: Use **ال (al-)** for definite articles, omit for indefinite.
+2. **Gender**: Feminine nouns often add **ة** for derivation.
+3. **Number**: Singular, dual (**-انِ / -ينِ**), and plural (can be regular or irregular "broken").
+4. **Rationality**: Affects plural verb/adjective agreement.
+5. **Case Markings**: Use **-ٌ / -ُ (nom.)**, **-ً / -َ (acc.)**, **-ٍ / -ِ (gen.)** endings.
+
+This compact dictionary provides a multilingual explanation of Arabic noun variations for **English**, **Polish**, **Turkic (Turkish)**, and **Bangla** learners.
