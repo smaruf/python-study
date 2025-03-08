@@ -120,3 +120,60 @@
 ---
 
 This extended dictionary serves as a quick and comprehensive guide for understanding **"this"**, **"these"**, and **"that"**, with their respective plural forms across **Arabic**, **English**, **Polish**, and **Bangla** languages.
+
+---
+## Arabic Sun and Moon Letters Dictionary  
+A compact guide to Arabic **Sun Letters (حروف شمسية)** and **Moon Letters (حروف قمرية)** with meanings in **Arabic**, **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**.
+
+---
+
+### **Sun Letters (حروف شمسية)**  
+Sun letters are the 14 letters where the definite article **'al-' (ال)** is assimilated into the following letter (the **ل** is not pronounced).  
+
+| Sun Letter       | Arabic Example         | English Meaning      | Polish Meaning         | Turkic (Turkish) Meaning   | Bangla Meaning             |
+|-------------------|------------------------|----------------------|------------------------|----------------------------|----------------------------|
+| ت (Ta)           | التمر (at-Tamr)         | The dates           | Daktyle                | Hurma (Dates)             | খেজুর (Khejūr)             |
+| ث (Tha)          | الثعلب (ath-Tha‘lab)    | The fox             | Lis                    | Tilki (Fox)               | শিয়াল (Shiāl)              |
+| د (Dal)          | الدجاجة (ad-Dajājah)    | The chicken         | Kurczak                | Tavuk (Chicken)           | মুরগি (Murgi)              |
+| ذ (Dhal)         | الذئب (adh-Dhi'b)       | The wolf            | Wilk                   | Kurt (Wolf)               | নেকড়ে (Nekṛe)             |
+| ر (Ra)           | الرجل (ar-Rajul)        | The man             | Mężczyzna              | Adam (Man)                | মানুষ (Mānush)             |
+| ز (Zay)          | الزرافة (az-Zarāfah)    | The giraffe         | Żyrafa                 | Zürafa (Giraffe)          | জিরাফ (Jirāf)              |
+| س (Sin)          | السماء (as-Samā')       | The sky             | Niebo                  | Gökyüzü (Sky)             | আকাশ (Ākāsh)              |
+| ش (Shin)         | الشمس (ash-Shams)       | The sun             | Słońce                 | Güneş (Sun)               | সূর্য (Sūrjyô)              |
+| ص (Sad)          | الصبر (as-Sabr)         | The patience        | Cierpliwość            | Sabır (Patience)          | ধৈর্য (Dhoirjô)            |
+| ض (Dad)          | الضيف (ad-Dayf)         | The guest           | Gość                   | Misafir (Guest)           | অতিথি (Othithi)            |
+| ط (Ta)           | الطالب (at-Tālib)       | The student         | Uczeń                  | Öğrenci (Student)         | ছাত্র (Chātrô)             |
+| ظ (Zah)          | الظل (az-Zill)          | The shadow          | Cień                   | Gölge (Shadow)            | ছায়া (Chāyā)              |
+| ل (Lam)          | الليل (al-Layl)         | The night           | Noc                    | Gece (Night)              | রাত (Rāt)                 |
+| ن (Nun)          | النور (an-Nūr)          | The light           | Światło                | Işık (Light)              | আলো (Ālō)                 |
+
+
+### **Moon Letters (حروف قمرية)**  
+Moon letters are the 14 letters where the definite article **'al-' (ال)** is fully pronounced (the **ل** is pronounced).  
+
+| Moon Letter      | Arabic Example         | English Meaning      | Polish Meaning         | Turkic (Turkish) Meaning   | Bangla Meaning             |
+|-------------------|------------------------|----------------------|------------------------|----------------------------|----------------------------|
+| أ (Alif)         | الأسد (al-Asad)         | The lion            | Lew                    | Aslan (Lion)              | সিংহ (Singhô)              |
+| ب (Ba)           | الباب (al-Bāb)          | The door            | Drzwi                  | Kapı (Door)               | দরজা (Dorjā)               |
+| ج (Jim)          | الجمل (al-Jamal)        | The camel           | Wielbłąd               | Deve (Camel)              | উট (Uṭ)                   |
+| ح (Ha)           | الحمار (al-Himār)       | The donkey          | Osioł                  | Eşek (Donkey)             | গাধা (Gādhā)               |
+| خ (Kha)          | الخروف (al-Kharūf)      | The sheep           | Owca                   | Kuzu (Sheep)              | ভেড়া (Bherā)              |
+| ع (‘Ain)         | العنب (al-‘Inab)        | The grapes          | Winogrona              | Üzüm (Grapes)             | আঙুর (Āṅgur)               |
+| غ (Ghain)        | الغرب (al-Gharb)        | The west            | Zachód                 | Batı (West)               | পশ্চিম (Poshchim)          |
+| ف (Fa)           | الفيل (al-Fīl)          | The elephant        | Słoń                   | Fil (Elephant)            | হাতি (Hātī)                |
+| ق (Qaf)          | القلم (al-Qalam)        | The pen             | Długopis               | Kalem (Pen)               | কলম (Kolôm)               |
+| ك (Kaf)          | الكلب (al-Kalb)         | The dog             | Pies                   | Köpek (Dog)               | কুকুর (Kukur)              |
+| م (Mim)          | المسجد (al-Masjid)      | The mosque          | Meczet                 | Cami (Mosque)             | মসজিদ (Mosjid)            |
+| ه (Ha)           | الهواء (al-Hawā')       | The air             | Powietrze              | Hava (Air)                | বাতাস (Bātās)             |
+| و (Waw)          | الوعد (al-Wa‘d)         | The promise         | Obietnica              | Söz (Promise)             | প্রতিশ্রুতি (Prôtishruti)  |
+| ي (Ya)           | اليوم (al-Yawm)         | The day             | Dzień                  | Gün (Day)                 | দিন (Din)                 |
+
+### **Summary of Sun vs. Moon Letters**
+
+- **Sun Letters (حروف شمسية)**: The **ل** in **ال** (the definite article) is **not pronounced**. Instead, it assimilates with the following letter.  
+  Example: **الشمس** → _ash-shams_ ("The sun").  
+
+- **Moon Letters (حروف قمرية)**: The **ل** in **ال** is **fully pronounced**.  
+  Example: **القمر** → _al-qamar_ ("The moon").  
+
+This table provides a compact reference for understanding **Sun** and **Moon letters** in Arabic, with meanings translated into **English**, **Polish**, **Turkic (Turkish)**, and **Bangla**.
