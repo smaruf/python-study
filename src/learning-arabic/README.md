@@ -1,4 +1,19 @@
-## Learning Arabic for understand quran
+## Learning Arabic to understand the Quran
+
+```
+تعليم اللغة العربية لفهم القرآن
+
+Breakdown:
+تعليم (Ta'leem) = Learning or teaching.
+اللغة العربية (Al-Lughah Al-'Arabiyyah) = The Arabic language.
+لفهم (Li Fahm) = To understand.
+القرآن (Al-Qur'an) = The Quran.
+```
+
+### Links:
+   - [Dictionary for Surah Al-Fatiha, Al-Ikhlas, An-Naas, Al-Falaq, and At-Takathur](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_fatiha_ahad_naas_falaq_taqasur.md)
+   - [Ar Rahman Dictionary](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Ar_Rahman_dictionary.md)
+
 ### Pronouns:
 ### Arabic Pronouns Dictionary (1st, 2nd, 3rd Persons)
 
@@ -542,6 +557,4 @@ This dictionary provides a structured overview of **Arabic questions and respons
 | كم الساعة الآن؟          | What time is it now?     | Która jest teraz godzina? | Şimdi saat kaç?             | এখন কটা বাজে?                | كم الساعة الآن؟ (kam al-sāʿa al-ān?)         | الساعة الآن الواحدة. (al-sāʿa al-ān al-wāḥida) = It’s 1 o'clock. |
 
 ---
-## Links:
-   - [Dictionary for Surah Al-Fatiha, Al-Ikhlas, An-Naas, Al-Falaq, and At-Takathur](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_fatiha_ahad_naas_falaq_taqasur.md)
 
