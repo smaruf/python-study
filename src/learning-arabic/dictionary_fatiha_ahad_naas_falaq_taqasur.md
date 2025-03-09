@@ -114,6 +114,7 @@ Surah **Al-Ikhlas (Ahad)** is a short but profound chapter consisting of **4 ver
 
 ---
 
+
 ## **3. From Surah An-Naas (الناس)**
 ### Unique Words from Surah An-Naas (Chapter 114)
 
