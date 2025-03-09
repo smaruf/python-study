@@ -26,7 +26,7 @@ Breakdown:
    - [Ar Rahman Dictionary](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Ar_Rahman_dictionary.md)
    - [Overview on Surah Al-Bakara](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/overview_on_surah_bakara.md)
    - [Dictionary of Surah Al-Alaq](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Alaq_Dictionary.md)
-   - [Dictionary of Surah Al-Asr](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Asr_Dictionary.md))
+   - [Dictionary of Surah Al-Asr](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Asr_Dictionary.md)
    - [Dictionary of Surah Al_Humaza](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Humaza_Dictionary.md)
    - [Dictionary of Surah Al-Kafirun](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Kafirun_Dictionary.md)
    - [Dictionary of Surah Al-Kawthar](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Kawthar_Dictionary.md)
