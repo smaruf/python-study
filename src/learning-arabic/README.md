@@ -12,6 +12,7 @@ Breakdown:
 ---
 ## Table of Contents
 - [Pronouns](#pronouns)
+- [Joined Pronouns](#arabic-joined-pronouns)
 - [Dictionary of "This" and "These"](#dictionary-of-this-and-these)
 - [Dictionary of "This", "These", and "That"](#dictionary-of-this-these-and-that)
 - [Arabic Sun and Moon Letters](#arabic-sun-and-moon-letters)
@@ -105,6 +106,75 @@ Breakdown:
 
 3. **Bangla Context**:
    - Bangla does not strongly differentiate between genders for **this** or **these**. **এটা (Eṭa)** or **এটি (Eṭi)** can refer to singular "this," while **এরা (Era)** or **এগুলো (Egulo)** can refer to plural "these."
+
+---
+## Arabic Joined Pronouns:
+
+#### What are Joined Pronouns?
+Joined pronouns (ضمائر متصلة) in Arabic are pronouns that are **attached** to verbs, nouns, or prepositions to show possession, the subject, or the object. These pronouns are critical for indicating relationships between the action, speaker, and entities described in a sentence.
+
+#### Usage of Joined Pronouns:
+#### 1. Attached to **Nouns** (Possession):
+A joined pronoun shows ownership, such as:
+- كتاب **+ ـهِ** = كتابهُ (His book)
+- بيت **+ ـنا** = بيتنا (Our house)
+
+#### 2. Attached to **Verbs** (Object):
+A joined pronoun indicates the object of the verb, such as:
+- أكرم **+ ـهم** = أكرمهم (He honored them)
+- رأيت **+ ـها** = رأيتها (I saw her)
+
+#### 3. Attached to **Prepositions**:
+A joined pronoun implies the object of a preposition, such as:
+- مع **+ ـي** = معي (With me)
+- ل **+ ـنا** = لنا (For us)
+
+---
+
+#### Compact Dictionary of Arabic Joined Pronouns:
+
+| **Arabic Joined Pronoun** | **English**             | **Polish**            | **Turkic**               | **Bangla**                     |
+|---------------------------|-------------------------|-----------------------|--------------------------|---------------------------------|
+| ـِي / ـي                 | My                     | Mój                   | Benim                   | আমার                          |
+| ـكَ                     | Your (masc. singular)  | Twój                  | Senin                   | তোমার (পু.)                  |
+| ـكِ                     | Your (fem. singular)   | Twoja                 | Senin (kadın)           | তোমার (মি.)                  |
+| ـهُ                     | His                    | Jego                  | Onun                    | তার (পু.)                   |
+| ـهَا                   | Her                    | Jej                   | Onun (kadın)            | তার (মি.)                   |
+| ـنَا                   | Our                   | Nasz                  | Bizim                   | আমাদের                        |
+| ـكُم                   | Your (masc. plural)    | Wasz                  | Sizin                   | তোমাদের (পু.)                |
+| ـكُنَّ                 | Your (fem. plural)     | Wasze                 | Sizin (kadın)           | তোমাদের (মি.)                |
+| ـهُم                   | Their (masc.)         | Ich                   | Onların (erkek)         | তাদের (পু.)                 |
+| ـهُنَّ                 | Their (fem.)          | Ich                   | Onların (kadın)         | তাদের (মি.)                 |
+| ـنِي / ـني              | Me                     | Mnie                  | Beni                    | আমাকে                          |
+| ـكَ                     | You (masc. singular)  | Ciebie                | Seni (erkek)            | তোমাকে (পু.)                |
+| ـكِ                     | You (fem. singular)   | Ciebie                | Seni (kadın)            | তোমাকে (মি.)                |
+| ـهُ                     | Him                   | Jego                  | Onu (erkek)             | তাকে (পু.)                  |
+| ـهَا                   | Her                   | Ją                    | Onu (kadın)             | তাকে (মি.)                  |
+| ـنَا                   | Us                    | Nas                   | Bizi                    | আমাদের                        |
+| ـكُم                   | You (masc. plural)    | Was                   | Sizleri (erkek)         | তোমাদের (পু.)                |
+| ـكُنَّ                 | You (fem. plural)     | Was                   | Sizleri (kadın)         | তোমাদের (মি.)                |
+| ـهُم                   | Them (masc.]          | Ich                   | Onları (erkek)          | তাদের (পু.)                 |
+| ـهُنَّ                 | Them (fem.]           | Ich                   | Onları (kadın)          | তাদের (মি.)                 |
+| لِي                     | For me                | Dla mnie              | Benim için              | আমার জন্য                     |
+| لَكَ                     | For you (masc.)       | Dla ciebie            | Senin için (erkek)      | তোমার জন্য (পু.)              |
+| لَكِ                     | For you (fem.)        | Dla ciebie            | Senin için (kadın)      | তোমার জন্য (মি.)              |
+| لَهُ                     | For him              | Dla niego             | Onun için               | তার জন্য (পু.)               |
+| لَهَا                   | For her              | Dla niej              | Onun için (kadın)       | তার জন্য (মি.)               |
+| لَنَا                   | For us               | Dla nas               | Bizim için              | আমাদের জন্য                  |
+| لَكُم                   | For you (masc. plural)| Dla was               | Sizin için (erkek)      | তোমাদের জন্য (পু.)            |
+| لَكُنَّ                 | For you (fem. plural) | Dla was               | Sizin için (kadın)      | তোমাদের জন্য (মি.)            |
+| لَهُم                   | For them (masc.)     | Dla nich              | Onlar için (erkek)      | তাদের জন্য (পু.)              |
+| لَهُنَّ                 | For them (fem.)      | Dla nich              | Onlar için (kadın)      | তাদের জন্য (মি.)              |
+| مَعِي                   | With me              | Ze mną                | Benimle                 | আমার সাথে                    |
+| مَعَكَ                   | With you (masc.)     | Z tobą                | Seninle (erkek)         | তোমার সাথে (পু.)             |
+| مَعَكِ                   | With you (fem.)      | Z tobą                | Seninle (kadın)         | তোমার সাথে (মি.)             |
+| مَعَهُ                   | With him            | Z nim                 | Onunla                  | তার সাথে (পু.)               |
+| مَعَهَا                 | With her            | Z nią                 | Onunla (kadın)          | তার সাথে (মি.)               |
+| مَعَنَا                 | With us             | Z nami                | Bizimle                 | আমাদের সাথে                 |
+| مَعَكُم                 | With you (masc. plural) | Z wami               | Sizlerle (erkek)        | তোমাদের সাথে (পু.)           |
+| مَعَكُنَّ               | With you (fem. plural) | Z wami               | Sizlerle (kadın)        | তোমাদের সাথে (মি.)           |
+| مَعَهُم                 | With them (masc.)   | Z nimi                | Onlarla (erkek)         | তাদের সাথে (পু.)             |
+| مَعَهُنَّ               | With them (fem.)    | Z nimi                | Onlarla (kadın)         | তাদের সাথে (মি.)             |
 
 ---
 
