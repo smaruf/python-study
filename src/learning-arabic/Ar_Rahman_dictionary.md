@@ -1,6 +1,23 @@
-# Words and meaning from Surah Ar-Rahman
-## Surah Ar-Rahman - سورة الرحمن
-**Chapter 55 | Verses: 1-20**
+# Table of Contents
+
+1. [Words and meaning from Surah Ar-Rahman](#words-and-meaning-from-surah-ar-rahman)
+   - [Surah Ar-Rahman - سورة الرحمن (Chapter 55 | Verses: 1-20)](#surah-ar-rahman---سورة-الرحمن-chapter-55--verses-1-20)
+   - [Surah Ar-Rahman - سورة الرحمن (Chapter 55 | Verses: 21-40)](#surah-ar-rahman---سورة-الرحمن-chapter-55--verses-21-40)
+   - [Surah Ar-Rahman - سورة الرحمن (Chapter 55 | Verses: 41-60)](#surah-ar-rahman---سورة-الرحمن-chapter-55--verses-41-60)
+   - [Surah Ar-Rahman - سورة الرحمن (Chapter 55 | Verses: 61-78)](#surah-ar-rahman---سورة-الرحمن-chapter-55--verses-61-78)
+2. [Words from Surah Ar-Rahman](#words-from-surah-ar-rahman)
+   - [First 50 Words from Surah Ar-Rahman in Dictionary Format](#first-50-words-from-surah-ar-rahman-in-dictionary-format)
+   - [Next 50 Words from Surah Ar-Rahman (51-100)](#next-50-words-from-surah-ar-rahman-51-100)
+   - [Next 50 Words from Surah Ar-Rahman (101-150)](#next-50-words-from-surah-ar-rahman-101-150)
+   - [Next 50 Words from Surah Ar-Rahman (151-200)](#next-50-words-from-surah-ar-rahman-151-200)
+   - [Next 50 Words from Surah Ar-Rahman (201-250)](#next-50-words-from-surah-ar-rahman-201-250)
+
+---
+## Detailed Sections
+
+
+### Words and meaning from Surah Ar-Rahman
+#### Surah Ar-Rahman - سورة الرحمن (Chapter 55 | Verses: 1-20)
 
 | **Ayah** | **Arabic**                          | **English**                              | **Polish**                                 | **Turkish**                              | **Bangla**                                |
 |----------|-------------------------------------|------------------------------------------|-------------------------------------------|------------------------------------------|------------------------------------------|
@@ -27,8 +44,7 @@
 
 ---
 
-## Surah Ar-Rahman - سورة الرحمن
-**Chapter 55 | Verses: 21-40**
+#### Surah Ar-Rahman - سورة الرحمن (Chapter 55 | Verses: 21-40)
 
 | **Ayah** | **Arabic**                          | **English**                              | **Polish**                                 | **Turkish**                              | **Bangla**                                |
 |----------|-------------------------------------|------------------------------------------|-------------------------------------------|------------------------------------------|------------------------------------------|
@@ -55,8 +71,7 @@
 
 ---
 
-## Surah Ar-Rahman - سورة الرحمن
-**Chapter 55 | Verses: 41-60**
+#### Surah Ar-Rahman - سورة الرحمن (Chapter 55 | Verses: 41-60)
 
 | **Ayah** | **Arabic**                          | **English**                              | **Polish**                                 | **Turkish**                              | **Bangla**                                |
 |----------|-------------------------------------|------------------------------------------|-------------------------------------------|------------------------------------------|------------------------------------------|
@@ -83,8 +98,7 @@
 
 
 ---
-## Surah Ar-Rahman - سورة الرحمن
-**Chapter 55 | Verses: 61-78**
+#### Surah Ar-Rahman - سورة الرحمن (Chapter 55 | Verses: 61-78)
 
 | **Ayah** | **Arabic**                          | **English**                              | **Polish**                                 | **Turkish**                              | **Bangla**                                |
 |----------|-------------------------------------|------------------------------------------|-------------------------------------------|------------------------------------------|------------------------------------------|
