@@ -3,8 +3,23 @@ This dictionary provides Arabic words with their meanings and variations in **En
 
 ---
 
-## **1. From Surah Al-Fatiha (الفاتحة)**
+## Table of Contents
+1. [From Surah Al-Fatiha (الفاتحة)](#1-from-surah-al-fatiha-الفاتحة)
+2. [From Surah Al-Ikhlas (الإخلاص | Ahad)](#2-from-surah-al-ikhlas-الإخلاص--ahad)
+3. [From Surah An-Naas (الناس)](#3-from-surah-an-naas-الناس)
+4. [From Surah Al-Falaq (الفلق)](#4-from-surah-al-falaq-الفلق)
+5. [From Surah At-Takathur (التكاثر)](#5-from-surah-at-takathur-التكاثر)
+6. [Compact Variations](#compact-variations)
+7. [Translation of five suras/chapters](#translation-of-five-suraschapters)
+    - [Surah Al-Fatiha (الفاتحة)](#surah-al-fatiha-الفاتحة)
+    - [Surah Al-Ikhlas (الإخلاص)](#surah-al-ikhlas-الإخلاص)
+    - [Surah Al-Falaq (الفلق)](#surah-al-falaq-الفلق)
+    - [Surah An-Naas (النَّاسِ)](#surah-an-naas-النَّاسِ)
+    - [Surah At-Takathur (التكاثر)](#surah-at-takathur-التكاثر)
 
+---
+
+## **1. From Surah Al-Fatiha (الفاتحة)**
 ### Unique Words from Surah Al-Fatiha (Chapter 1)
 
 Surah **Al-Fatiha** consists of **7 verses** and is one of the most recited chapters of the Quran. Below are the unique words in **Surah Al-Fatiha** along with their translations.
@@ -57,7 +72,6 @@ Surah **Al-Fatiha** consists of **7 verses** and is one of the most recited chap
 
 
 ## **2. From Surah Al-Ikhlas (الإخلاص | Ahad)**
-
 ### Unique Words from Surah Al-Ikhlas (Surah Ahad, Chapter 112)
 
 Surah **Al-Ikhlas (Ahad)** is a short but profound chapter consisting of **4 verses** and a total of **15 words**. Below are the unique words of this surah along with their respective translations:
@@ -101,7 +115,6 @@ Surah **Al-Ikhlas (Ahad)** is a short but profound chapter consisting of **4 ver
 ---
 
 ## **3. From Surah An-Nas (الناس)**
-
 ### Unique Words from Surah An-Naas (Chapter 114)
 
 Surah **An-Naas** is a short chapter consisting of **6 verses**. Below is the list of **unique words in the surah**, along with their respective translations:
@@ -144,7 +157,6 @@ Surah **An-Naas** is a short chapter consisting of **6 verses**. Below is the li
 ---
 
 ## **4. From Surah Al-Falaq (الفلق)**
-
 ### Unique Words from Surah Al-Falaq (Chapter 113)
 
 Surah **Al-Falaq** is a short chapter consisting of **5 verses**. Below is the list of **unique words in the surah**, along with their respective translations:
@@ -187,7 +199,6 @@ Surah **Al-Falaq** is a short chapter consisting of **5 verses**. Below is the l
 ---
 
 ## **5. From Surah At-Takathur (التكاثر)**
-
 ### Unique Words from Surah At-Takathur (Chapter 102)
 
 Surah **At-Takathur** is a short chapter consisting of **8 verses**. Below is the list of **unique words in the surah** with their respective translations:
