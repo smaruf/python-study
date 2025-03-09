@@ -27,7 +27,7 @@
 
 ---
 
-# Surah Ar-Rahman - سورة الرحمن
+## Surah Ar-Rahman - سورة الرحمن
 **Chapter 55 | Verses: 21-40**
 
 | **Ayah** | **Arabic**                          | **English**                              | **Polish**                                 | **Turkish**                              | **Bangla**                                |
@@ -55,7 +55,7 @@
 
 ---
 
-# Surah Ar-Rahman - سورة الرحمن
+## Surah Ar-Rahman - سورة الرحمن
 **Chapter 55 | Verses: 41-60**
 
 | **Ayah** | **Arabic**                          | **English**                              | **Polish**                                 | **Turkish**                              | **Bangla**                                |
@@ -83,7 +83,7 @@
 
 
 ---
-# Surah Ar-Rahman - سورة الرحمن
+## Surah Ar-Rahman - سورة الرحمن
 **Chapter 55 | Verses: 61-78**
 
 | **Ayah** | **Arabic**                          | **English**                              | **Polish**                                 | **Turkish**                              | **Bangla**                                |
@@ -219,7 +219,7 @@
 | 98  | كَرِيمٌۭ    | Generous         | Hojny               | Cömert          | মহান           |
 | 99  | سَبِيلٌۭ     | Path             | Ścieżka             | Yol             | পথ             |
 |100 | إِبْلٌۭ     | Camels           | Wielbłądy           | Develer         | উট            |
-# Next 50 Words from Surah Ar-Rahman (101-150)
+### Next 50 Words from Surah Ar-Rahman (101-150)
 
 | #    | Arabic       | English           | Polish              | Turkish           | Bangla         |
 |------|--------------|-------------------|---------------------|-------------------|----------------|
@@ -273,7 +273,7 @@
 | 148  | عُقُودٌۭ   | Contracts         | Umowy               | Anlaşmalar        | চুক্তি          |
 | 149  | أَبْرَارٌۭ  | The Righteous     | Cnotliwi            | İyiler            | সৎকর্মশীল      |
 | 150  | وُسْعٌۭ     | Capacity          | Pojemność           | Kapasite          | ক্ষমতা          |
-# Next 50 Words from Surah Ar-Rahman (151-200)
+### Next 50 Words from Surah Ar-Rahman (151-200)
 
 | #    | Arabic       | English           | Polish              | Turkish           | Bangla         |
 |------|--------------|-------------------|---------------------|-------------------|----------------|
@@ -327,7 +327,7 @@
 | 198  | نُهْرٌۭ    | River             | Rzeka               | Nehir             | নদী            |
 | 199  | ذَٰتٌۭ      | Possessor         | Posiadacz           | Sahip            | যা অধিকারী      |
 | 200  | جَزِيلٌۭ  | Abundant          | Obfity              | Bol               | প্রচুর          |
-# Next 50 Words from Surah Ar-Rahman (201-250)
+### Next 50 Words from Surah Ar-Rahman (201-250)
 
 | #    | Arabic       | English           | Polish              | Turkish           | Bangla         |
 |------|--------------|-------------------|---------------------|-------------------|----------------|
