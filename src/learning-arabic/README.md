@@ -20,15 +20,17 @@ Breakdown:
 - [Arabic Prepositions and Conjunctions](#arabic-prepositions-and-conjunctions)
 - [Arabic Questions and Replies with Examples](#arabic-questions-and-replies-with-examples)
 ---
+
 ### Links:
    - [Dictionary for Surah Al-Fatiha, Al-Ikhlas, An-Naas, Al-Falaq, and At-Takathur](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_fatiha_ahad_naas_falaq_taqasur.md)
    - [Ar Rahman Dictionary](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Ar_Rahman_dictionary.md)
    - [Overview on Surah Al-Bakara](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/overview_on_surah_bakara.md)
-   - [Dictionary of Surah Al-Fatiha](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_fatiha.md)
-   - [Dictionary of Surah Al-Ikhlas](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_ikhlas.md)
-   - [Dictionary of Surah An-Naas](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_naas.md)
-   - [Dictionary of Surah Al-Falaq](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_falaq.md)
-   - [Dictionary of Surah At-Takathur](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_takathur.md)
+   - [Dictionary of Surah Al-Alaq](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Alaq_Dictionary.md)
+   - [Dictionary of Surah Al-Asr](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Asr_Dictionary.md))
+   - [Dictionary of Surah Al_Humaza](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Humaza_Dictionary.md)
+   - [Dictionary of Surah Al-Kafirun](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Kafirun_Dictionary.md)
+   - [Dictionary of Surah Al-Kawthar](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Kawthar_Dictionary.md)
+   - [Dictionary of Surah Al-Maun](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Maun_Dictionary.md)
 
 
 ---
