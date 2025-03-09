@@ -12,8 +12,8 @@ Breakdown:
 ---
 ## Table of Contents
 - [Pronouns](#pronouns)
-- [Dictionary of "This" and "These"](##dictionary-of-this-and-these-arabic-english-polish-bangla)
-- [Dictionary of "This", "These", and "That"](##dictionary-of-this-these-and-that-arabic-english-polish-bangla)
+- [Dictionary of "This" and "These"](#dictionary-of-this-and-these)
+- [Dictionary of "This", "These", and "That"](#dictionary-of-this-these-and-that)
 - [Arabic Sun and Moon Letters](#arabic-sun-and-moon-letters)
 - [Arabic Definite and Indefinite Articles](#arabic-definite-and-indefinite-articles)
 - [Arabic Nouns Variations](#arabic-nouns-variations)
@@ -64,8 +64,8 @@ Breakdown:
 2. **Context Sensitivity**: In Bangla, "তুমি" or "তোমরা" is often used for informal settings, while "আপনি" and "আপনারা" are used for formal or respectful contexts, which parallels some aspects of Arabic pronoun sensitivity.
 3. **Gender Specificity**: Arabic pronouns distinguish genders in both singular and plural forms, whereas Polish and Bangla genders may be inferred from context or verb conjugation.
 
-## Dictionary of "This" and "These" (Arabic-English-Polish-Bangla)
 
+### Dictionary of This and These
 ### Singular Demonstratives (This)
 
 | **Arabic**     | **English**        | **Polish**          | **Bangla**                |
@@ -100,8 +100,7 @@ Breakdown:
 
 ---
 
-## Dictionary of "This", "These", and "That" (Arabic-English-Polish-Bangla)
-
+### Dictionary of This, These and That
 ### Singular Demonstratives ("This" and "That")
 
 | **Arabic**       | **English**        | **Polish**            | **Bangla**                 |
