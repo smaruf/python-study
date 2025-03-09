@@ -24,6 +24,12 @@ Breakdown:
    - [Dictionary for Surah Al-Fatiha, Al-Ikhlas, An-Naas, Al-Falaq, and At-Takathur](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_fatiha_ahad_naas_falaq_taqasur.md)
    - [Ar Rahman Dictionary](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Ar_Rahman_dictionary.md)
    - [Overview on Surah Al-Bakara](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/overview_on_surah_bakara.md)
+   - [Dictionary of Surah Al-Fatiha](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_fatiha.md)
+   - [Dictionary of Surah Al-Ikhlas](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_ikhlas.md)
+   - [Dictionary of Surah An-Naas](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_naas.md)
+   - [Dictionary of Surah Al-Falaq](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_falaq.md)
+   - [Dictionary of Surah At-Takathur](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_takathur.md)
+
 
 ---
 ### Pronouns:
