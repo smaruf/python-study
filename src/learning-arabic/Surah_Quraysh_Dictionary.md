@@ -7,6 +7,7 @@
 | **3**     | فَلۡيَعۡبُدُواْ رَبَّ هَٰذَا ٱلۡبَيۡتِ   | Let them worship the Lord of this House,     | Niech czczą Pana tego Domu,              | O halde bu Ev'in Rabbine kulluk etsinler,| সুতরাং তারা এই গৃহের প্রতিপালকের ইবাদত করুক, |
 | **4**     | ٱلَّذِيٓ أَطۡعَمَهُم مِّن جُوعٖ وَءَامَنَهُم مِّنۡ خَوۡفِۭ | Who has fed them, [saving them] from hunger and made them safe, [saving them] from fear. | Który ich nakarmił wybawiając od głodu i uczynił ich bezpiecznymi wybawiając od strachu. | Onları açlıktan doyuran ve korkudan emin kılan, | যিনি তাদের ক্ষুধা থেকে মুক্তি দিয়ে খাদ্য দিয়েছেন এবং ভয় থেকে মুক্তি দিয়ে নিরাপত্তা দিয়েছেন। |
 
+#Unique words from Surah Quraysh:
 
 | **Arabic**         | **English**             | **Polish**                | **Turkic**             | **Bangla**               |
 |---------------------|-------------------------|---------------------------|-------------------------|--------------------------|
