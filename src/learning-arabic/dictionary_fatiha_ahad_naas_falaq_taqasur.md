@@ -255,6 +255,7 @@ This compact dictionary provides a **reference for Arabic words**, alongside tra
 | اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ | Guide us on the Straight Path. | Prowadź nas prostą drogą. | Bizi doğru yola ilet. | আমাদেরকে সরল পথ দেখাও। |
 | صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ | The path of those who have received Your grace, not those who have gone astray or earned Your anger. | Drogą tych, którym dałeś swoje łaski, nie tych, którzy zbłądzili lub zasłużyli na Twój gniew. | Kendilerine nimet verdiklerinin yoluna, gazaba uğrayanların ve sapıtanların yoluna değil. | তাদের পথ, যাদের প্রতি তুমি অনুগ্রহ করেছ, যারা পথভ্রষ্ট নয় এবং তোমার ক্রোধের সম্মুখীন হয়নি। |
 
+---
 ### Surah Al-Ikhlas (الإخلاص)
 
 | Arabic | English | Polish | Turkic | Bangla |
@@ -264,6 +265,7 @@ This compact dictionary provides a **reference for Arabic words**, alongside tra
 | لَمْ يَلِدْ وَلَمْ يُولَدْ | He begets not, nor was He begotten. | Nie zrodził i nie został zrodzony. | O, doğurmamış ve doğmamıştır. | তিনি জন্ম দেননি, জন্মগ্রহণও করেননি। |
 | وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ | And there is none like unto Him. | I nie ma nikogo równego Jemu. | Ve O’na hiçbir şey denk değildir. | এবং তার সমতুল্য কেউ নেই। |
 
+---
 ### Surah Al-Falaq (الفلق)
 
 | Arabic | English | Polish | Turkic | Bangla |
@@ -274,9 +276,32 @@ This compact dictionary provides a **reference for Arabic words**, alongside tra
 | وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ | And from the evil of those who blow on knots. | I od zła tych, którzy dmuchają na węzły. | Düğümlere üfleyen büyücülerin şerrinden. | এবং গিঁটের ওপর ফুঁৎকার দানকারীদের অনিষ্ট থেকে। |
 | وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ | And from the evil of the envious when they envy. | I od zła zazdrosnego, gdy zazdrości. | Haset edenin şerrinden. | এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে। |
 
+---
+### Surah An-Naas (النَّاسِ)
+
+| **Verse** | **Arabic**                          | **English**                              | **Polish**                                 | **Turkish**                              | **Bangla**                                |
+|-----------|-------------------------------------|------------------------------------------|-------------------------------------------|------------------------------------------|------------------------------------------|
+| 1         | قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ       | Say, "I seek refuge in the Lord of mankind" | Powiedz: Szukam schronienia u Pana ludzi   | De ki: İnsanların Rabbine sığınırım       | বলুন, আমি আশ্রয় চাই মানুষের রবের কাছে     |
+| 2         | مَلِكِ ٱلنَّاسِ                     | The Sovereign of mankind                 | Królu ludzi                               | İnsanların melikine                      | মানুষের বাদশাহের কাছে                    |
+| 3         | إِلَـٰهِ ٱلنَّاسِ                   | The God of mankind                       | Bogu ludzi                                | İnsanların ilahına                       | মানুষের উপাস্যের কাছে                    |
+| 4         | مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ   | From the evil of the retreating whisperer | Od zła wycofującego się złowrogiego szeptu | Sinsice sokulan vesvesecinin şerrinden    | কুমন্ত্রণা দানকারী পশ্চাৎপসরকারী শয়তানের অনিষ্ট থেকে |
+| 5         | ٱلَّذِى يُوَسۡوِسُ فِى صُدُورِ ٱلنَّاسِ | Who whispers [evil] into the breasts of mankind | Który szepcze zło w serce ludzi            | İnsanların göğüslerine vesvese veren      | যে মানুষের অন্তরে কুমন্ত্রণা দেয়         |
+| 6         | مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ           | From among jinn and mankind              | Od dżinnów i ludzi                        | Cinlerden ve insanlardan                 | জিন এবং মানুষের মধ্য থেকে               |
+
+### **Summary of Themes**
+- **Verses 1-3**: A plea for refuge in **Allah**, identified as the **Lord**, **King**, and **God** of mankind.
+- **Verse 4**: Seeking protection specifically from the evil of the whisperer (Satan), who retreats after planting thoughts of evil.
+- **Verse 5**: Describes how this evil penetrates into the **hearts** of mankind.
+- **Verse 6**: Specifies that this whisperer may be from **jinn** or humans.
+
+### Notes:
+- **Spiritual Focus**: Surah An-Naas emphasizes seeking protection from subtle, internal forms of harm, namely whispering, doubts, and temptations that affect one's thoughts.
+- This chapter, coupled with **Surah Al-Falaq**, is frequently recited for protection from harm.
+
+---
+
 ### Surah At-Takathur (التكاثر)
 
-# Translation of Surah At-Takathur (Chapter 102)
 
 | **Verse** | **Arabic**                          | **English**                              | **Polish**                                 | **Turkish**                              | **Bangla**                                |
 |-----------|-------------------------------------|------------------------------------------|-------------------------------------------|------------------------------------------|------------------------------------------|
