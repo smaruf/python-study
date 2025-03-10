@@ -30,8 +30,9 @@ Install the required Python libraries for AI, machine learning, and knowledge ba
 - FAISS for vector similarity search
 
 #### Installation Command:
+```sh
 pip install numpy pandas scikit-learn tensorflow keras nltk spacy gensim openai langchain pinecone-client sentence-transformers
-
+```
 ## Step 2: Define Your AI Application
 Determine what you want to accomplish:
 - **NLP Applications:** Text summarization, sentiment analysis, language translation.
