@@ -1,0 +1,72 @@
+{
+  "definite_indefinite": {
+    "definitions": {
+      "definite": {
+        "description": "In Arabic, a definite noun (المعرفة) refers to a specific entity. It is made definite by adding the definite article 'ال-' (al-) or context-specific words like demonstratives (e.g., 'هذه - this') or possessives (e.g., 'كتابي - my book').",
+        "rule": "Add 'ال-' to the beginning of an indefinite noun to make it definite.",
+        "example": {
+          "indefinite": "كتاب (Kitab - a book)",
+          "definite": "الكتاب (Al-Kitab - the book)",
+          "note": "Adding 'ال-' makes the noun refer to a specific book."
+        }
+      },
+      "indefinite": {
+        "description": "In Arabic, an indefinite noun (النكرة) refers to a non-specific entity. Indefinite nouns often have a tanween (double diacritical mark) at the end, such as 'ـٌ' or 'ـٍ'.",
+        "rule": "Indefinite nouns lack the definite article 'ال-' and usually carry tanween to signify indefiniteness.",
+        "example": {
+          "indefinite": "قلمٌ (Qalamun - a pen)",
+          "note": "The tanween at the end represents indefiniteness."
+        }
+      }
+    },
+    "categories": [
+      {
+        "category": "Common Examples",
+        "examples": [
+          {"indefinite": "بابٌ", "definite": "الباب", "meaning": "Door"},
+          {"indefinite": "بيتٌ", "definite": "البيت", "meaning": "House"},
+          {"indefinite": "سيارةٌ", "definite": "السيارة", "meaning": "Car"},
+          {"indefinite": "ولدٌ", "definite": "الولد", "meaning": "Boy"},
+          {"indefinite": "كتابٌ", "definite": "الكتاب", "meaning": "Book"}
+        ]
+      },
+      {
+        "category": "Human Nouns",
+        "examples": [
+          {"indefinite": "أستاذٌ", "definite": "الأستاذ", "meaning": "Teacher (Male)"},
+          {"indefinite": "معلمةٌ", "definite": "المعلمة", "meaning": "Teacher (Female)"},
+          {"indefinite": "طالبٌ", "definite": "الطالب", "meaning": "Student (Male)"},
+          {"indefinite": "طالبةٌ", "definite": "الطالبة", "meaning": "Student (Female)"},
+          {"indefinite": "رجلٌ", "definite": "الرجل", "meaning": "Man"},
+          {"indefinite": "امرأةٌ", "definite": "المرأة", "meaning": "Woman"}
+        ]
+      },
+      {
+        "category": "Abstract Nouns",
+        "examples": [
+          {"indefinite": "حبٌ", "definite": "الحب", "meaning": "Love"},
+          {"indefinite": "سلامٌ", "definite": "السلام", "meaning": "Peace"},
+          {"indefinite": "حريةٌ", "definite": "الحرية", "meaning": "Freedom"},
+          {"indefinite": "علمٌ", "definite": "العلم", "meaning": "Knowledge"},
+          {"indefinite": "جمالٌ", "definite": "الجمال", "meaning": "Beauty"}
+        ]
+      }
+    ],
+    "special_cases": {
+      "demonstratives": {
+        "description": "Words like 'هذا' (this) and 'تلك' (that) automatically make nouns definite, without adding 'ال'.",
+        "examples": [
+          {"sentence": "هذا كتابٌ.", "translation": "This is a book."},
+          {"sentence": "تلك السيارة جميلة.", "translation": "That car is beautiful."}
+        ]
+      },
+      "possessives": {
+        "description": "Possessive phrases (e.g., my, your) make nouns definite without 'ال'.",
+        "examples": [
+          {"possessive": "كتابٌ", "possessive_form": "كتابي", "translation": "My book"},
+          {"possessive": "بيتٌ", "possessive_form": "بيتك", "translation": "Your house"}
+        ]
+      }
+    }
+  }
+}
