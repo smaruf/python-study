@@ -1,0 +1,57 @@
+{
+  "pronouns": {
+    "singular": {
+      "أنا": "I (First-Person)",
+      "أنتَ": "You (Masculine Second-Person)",
+      "أنتِ": "You (Feminine Second-Person)",
+      "هو": "He (Masculine Third-Person)",
+      "هي": "She (Feminine Third-Person)"
+    },
+    "plural": {
+      "نحن": "We (First-Person)",
+      "أنتم": "You (Masculine Plural Second-Person)",
+      "أنتن": "You (Feminine Plural Second-Person)",
+      "هم": "They (Masculine Third-Person)",
+      "هن": "They (Feminine Third-Person)"
+    },
+    "dual": {
+      "أنتما": "You Both (Masculine/Feminine, Second-Person)",
+      "هما (M)": "They Both (Masculine Third-Person)",
+      "هما (F)": "They Both (Feminine Third-Person)"
+    },
+    "possessive_pronouns": {
+      "ـي": "My (e.g., كتابي - My book)",
+      "ـكَ": "Your (Masculine, e.g., كتابكَ - Your book)",
+      "ـكِ": "Your (Feminine, e.g., كتابكِ - Your book)",
+      "ـهُ": "His (e.g., كتابهُ - His book)",
+      "ـهَا": "Her (e.g., كتابها - Her book)",
+      "ـنَا": "Our (e.g., كتابنا - Our book)",
+      "ـكُم": "Your (Masculine Plural, e.g., كتابكم - Your book)",
+      "ـكُنَّ": "Your (Feminine Plural, e.g., كتابكنّ - Your book)",
+      "ـهُم": "Their (Masculine, e.g., كتابهم - Their book)",
+      "ـهُنَّ": "Their (Feminine, e.g., كتابهنّ - Their book)"
+    },
+    "examples": [
+      {
+        "sentence": "أنا أكتب رسالة.",
+        "translation": "I am writing a letter."
+      },
+      {
+        "sentence": "هو يقرأ الكتاب.",
+        "translation": "He is reading the book."
+      },
+      {
+        "sentence": "نحن نذهب إلى المدرسة.",
+        "translation": "We are going to the school."
+      },
+      {
+        "sentence": "أنتِ تشربين الماء.",
+        "translation": "You (feminine) are drinking water."
+      },
+      {
+        "sentence": "هم يشاهدون التلفاز.",
+        "translation": "They (masculine) are watching TV."
+      }
+    ]
+  }
+}
