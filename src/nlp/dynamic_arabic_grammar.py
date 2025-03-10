@@ -19,7 +19,7 @@ def load_knowledge_base(prefix="arabic_grammar_"):
     """
     Dynamically load and merge knowledge base from multiple JSON files matching the prefix.
     """
-    knowledge_base = {"alphabet": {}, "nouns": {}, "pronouns": {}, "adjectives": {}, "sentence_construction": {}, "grammar_rules": {}}
+    knowledge_base = {"alphabet": {}, "nouns": {}, "pronouns": {}, "adjectives": {}, "sentence_creation": {}, "grammar_rules": {}}
     json_files = glob(f"{prefix}*.json")
 
     if not json_files:
