@@ -1,0 +1,76 @@
+{
+  "nouns": {
+    "common": [
+      {"word": "كتاب", "meaning": "Book", "gender": "Masculine"},
+      {"word": "كرسي", "meaning": "Chair", "gender": "Masculine"},
+      {"word": "باب", "meaning": "Door", "gender": "Masculine"},
+      {"word": "نافذة", "meaning": "Window", "gender": "Feminine"},
+      {"word": "منزل", "meaning": "House", "gender": "Masculine"},
+      {"word": "سيارة", "meaning": "Car", "gender": "Feminine"},
+      {"word": "شجرة", "meaning": "Tree", "gender": "Feminine"},
+      {"word": "قلم", "meaning": "Pen", "gender": "Masculine"},
+      {"word": "ورقة", "meaning": "Paper", "gender": "Feminine"},
+      {"word": "حديقة", "meaning": "Garden", "gender": "Feminine"}
+    ],
+    "animals": [
+      {"word": "أسد", "meaning": "Lion", "gender": "Masculine"},
+      {"word": "قطة", "meaning": "Cat", "gender": "Feminine"},
+      {"word": "كلب", "meaning": "Dog", "gender": "Masculine"},
+      {"word": "فيل", "meaning": "Elephant", "gender": "Masculine"},
+      {"word": "حصان", "meaning": "Horse", "gender": "Masculine"},
+      {"word": "عصفور", "meaning": "Bird", "gender": "Masculine"},
+      {"word": "بقرة", "meaning": "Cow", "gender": "Feminine"},
+      {"word": "غنم", "meaning": "Sheep", "gender": "Masculine"},
+      {"word": "ذئب", "meaning": "Wolf", "gender": "Masculine"},
+      {"word": "ثعلب", "meaning": "Fox", "gender": "Masculine"}
+    ],
+    "objects": [
+      {"word": "هاتف", "meaning": "Phone", "gender": "Masculine"},
+      {"word": "كمبيوتر", "meaning": "Computer", "gender": "Masculine"},
+      {"word": "مفتاح", "meaning": "Key", "gender": "Masculine"},
+      {"word": "ساعة", "meaning": "Clock", "gender": "Feminine"},
+      {"word": "سرير", "meaning": "Bed", "gender": "Masculine"},
+      {"word": "كتاب", "meaning": "Book", "gender": "Masculine"},
+      {"word": "كوب", "meaning": "Cup", "gender": "Masculine"},
+      {"word": "طاولة", "meaning": "Table", "gender": "Feminine"},
+      {"word": "لوحة", "meaning": "Painting / Board", "gender": "Feminine"},
+      {"word": "حقيبة", "meaning": "Bag", "gender": "Feminine"}
+    ],
+    "places": [
+      {"word": "مدرسة", "meaning": "School", "gender": "Feminine"},
+      {"word": "جامعة", "meaning": "University", "gender": "Feminine"},
+      {"word": "مطعم", "meaning": "Restaurant", "gender": "Masculine"},
+      {"word": "سوق", "meaning": "Market", "gender": "Masculine"},
+      {"word": "مسجد", "meaning": "Mosque", "gender": "Masculine"},
+      {"word": "كنيسة", "meaning": "Church", "gender": "Feminine"},
+      {"word": "مكتبة", "meaning": "Library", "gender": "Feminine"},
+      {"word": "مستشفى", "meaning": "Hospital", "gender": "Masculine"},
+      {"word": "فندق", "meaning": "Hotel", "gender": "Masculine"},
+      {"word": "مدينة", "meaning": "City", "gender": "Feminine"}
+    ],
+    "professions": [
+      {"word": "طبيب", "meaning": "Doctor (Male)", "gender": "Masculine"},
+      {"word": "طبيبة", "meaning": "Doctor (Female)", "gender": "Feminine"},
+      {"word": "معلم", "meaning": "Teacher (Male)", "gender": "Masculine"},
+      {"word": "معلمة", "meaning": "Teacher (Female)", "gender": "Feminine"},
+      {"word": "مهندس", "meaning": "Engineer (Male)", "gender": "Masculine"},
+      {"word": "مهندسة", "meaning": "Engineer (Female)", "gender": "Feminine"},
+      {"word": "مزارع", "meaning": "Farmer (Male)", "gender": "Masculine"},
+      {"word": "ممرضة", "meaning": "Nurse (Female)", "gender": "Feminine"},
+      {"word": "شرطي", "meaning": "Police Officer", "gender": "Masculine"},
+      {"word": "كاتب", "meaning": "Writer", "gender": "Masculine"}
+    ],
+    "abstract_concepts": [
+      {"word": "حب", "meaning": "Love", "gender": "Masculine"},
+      {"word": "سلام", "meaning": "Peace", "gender": "Masculine"},
+      {"word": "حرية", "meaning": "Freedom", "gender": "Feminine"},
+      {"word": "علم", "meaning": "Knowledge", "gender": "Masculine"},
+      {"word": "صداقة", "meaning": "Friendship", "gender": "Feminine"},
+      {"word": "حقيقة", "meaning": "Truth", "gender": "Feminine"},
+      {"word": "فكر", "meaning": "Thought", "gender": "Masculine"},
+      {"word": "نجاح", "meaning": "Success", "gender": "Masculine"},
+      {"word": "جمال", "meaning": "Beauty", "gender": "Masculine"},
+      {"word": "حزن", "meaning": "Sadness", "gender": "Masculine"}
+    ]
+  }
+}
