@@ -1,0 +1,50 @@
+{
+  "sun_letters": {
+    "description": "Sun letters (حروف شمسية) are letters where the 'ل' sound of the definite article 'ال' is assimilated into the following letter when pronounced.",
+    "letters": [
+      {"letter": "ت", "name": "Ta"},
+      {"letter": "ث", "name": "Tha"},
+      {"letter": "د", "name": "Dal"},
+      {"letter": "ذ", "name": "Dhal"},
+      {"letter": "ر", "name": "Ra"},
+      {"letter": "ز", "name": "Zay"},
+      {"letter": "س", "name": "Seen"},
+      {"letter": "ش", "name": "Sheen"},
+      {"letter": "ص", "name": "Sad"},
+      {"letter": "ض", "name": "Dad"},
+      {"letter": "ط", "name": "Ta"},
+      {"letter": "ظ", "name": "Za"},
+      {"letter": "ل", "name": "Lam"},
+      {"letter": "ن", "name": "Noon"}
+    ],
+    "example": {
+      "sentence": "الشمس تشرق من الشرق.",
+      "translation": "The sun rises from the east.",
+      "rule": "Note how 'الشمس' is pronounced as 'ash-shams', where the 'ل' in 'ال-' is assimilated into the sun letter 'ش'."
+    }
+  },
+  "moon_letters": {
+    "description": "Moon letters (حروف قمرية) are letters where the 'ل' sound of the definite article 'ال' is pronounced distinctly.",
+    "letters": [
+      {"letter": "أ", "name": "Alif"},
+      {"letter": "ب", "name": "Ba"},
+      {"letter": "ج", "name": "Jeem"},
+      {"letter": "ح", "name": "Ha"},
+      {"letter": "خ", "name": "Kha"},
+      {"letter": "ع", "name": "Ain"},
+      {"letter": "غ", "name": "Ghayn"},
+      {"letter": "ف", "name": "Fa"},
+      {"letter": "ق", "name": "Qaf"},
+      {"letter": "ك", "name": "Kaf"},
+      {"letter": "م", "name": "Meem"},
+      {"letter": "ه", "name": "Ha"},
+      {"letter": "و", "name": "Waw"},
+      {"letter": "ي", "name": "Ya"}
+    ],
+    "example": {
+      "sentence": "القمر ينير السماء.",
+      "translation": "The moon lights up the sky.",
+      "rule": "Note how 'القمر' retains the 'ل' sound of 'ال-', as the moon letter 'ق' allows the 'ل' to be pronounced clearly."
+    }
+  }
+}
