@@ -173,17 +173,5 @@ def main():
 
     print("System is ready! Start asking questions.")
 
-    # Interactive Question-Answer Loop
-    while True:
-        user_query = input("\nAsk a question (or type 'exit' to quit): ").strip()
-        if user_query.lower() == "exit":
-            print("Goodbye!")
-            break
-        try:
-            response = query_system(user_query, model, vectorizer, label_encoder)
-            print(f"Response: {response}")
-        except Exception as e:
-            print(f"Error: {e}")
-
 if __name__ == "__main__":
     main()
