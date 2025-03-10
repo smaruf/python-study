@@ -1,0 +1,92 @@
+{
+  "alphabet": {
+    "ا": {"name": "Alif", "sound": "A", "example": "أسد (Asad - Lion)"},
+    "ب": {"name": "Ba", "sound": "B", "example": "بيت (Bayt - House)"},
+    "ت": {"name": "Ta", "sound": "T", "example": "تفاح (Tufah - Apple)"},
+    "ث": {"name": "Tha", "sound": "Th", "example": "ثعبان (Thu'ban - Snake)"},
+    "ج": {"name": "Jeem", "sound": "J", "example": "جمل (Jamal - Camel)"},
+    "ح": {"name": "Ha", "sound": "H", "example": "حصان (Hisan - Horse)"},
+    "خ": {"name": "Kha", "sound": "Kh", "example": "خبز (Khubz - Bread)"},
+    "د": {"name": "Dal", "sound": "D", "example": "دب (Dub - Bear)"},
+    "ذ": {"name": "Dhal", "sound": "Dh", "example": "ذهب (Dhahab - Gold)"},
+    "ر": {"name": "Ra", "sound": "R", "example": "رجل (Rajul - Man)"},
+    "ز": {"name": "Zay", "sound": "Z", "example": "زهر (Zahr - Flower)"},
+    "س": {"name": "Seen", "sound": "S", "example": "سمك (Samak - Fish)"},
+    "ش": {"name": "Sheen", "sound": "Sh", "example": "شمس (Shams - Sun)"},
+    "ص": {"name": "Sad", "sound": "S'", "example": "صندوق (Sundooq - Box)"},
+    "ض": {"name": "Dad", "sound": "D'", "example": "ضوء (Daw' - Light)"},
+    "ط": {"name": "Ta", "sound": "T'", "example": "طفل (Tifl - Child)"},
+    "ظ": {"name": "Za", "sound": "Z'", "example": "ظلام (Zalam - Darkness)"},
+    "ع": {"name": "Ain", "sound": "ʿA", "example": "عين (Ayn - Eye)"},
+    "غ": {"name": "Ghayn", "sound": "Gha", "example": "غزال (Ghizal - Deer)"},
+    "ف": {"name": "Fa", "sound": "F", "example": "فيل (Feel - Elephant)"},
+    "ق": {"name": "Qaf", "sound": "Q", "example": "قلب (Qalb - Heart)"},
+    "ك": {"name": "Kaf", "sound": "K", "example": "كتاب (Kitab - Book)"},
+    "ل": {"name": "Lam", "sound": "L", "example": "لبن (Laban - Milk)"},
+    "م": {"name": "Meem", "sound": "M", "example": "ماء (Maa' - Water)"},
+    "ن": {"name": "Noon", "sound": "N", "example": "نار (Nar - Fire)"},
+    "ه": {"name": "Ha", "sound": "H", "example": "هوا (Hawa - Air)"},
+    "و": {"name": "Waw", "sound": "W", "example": "وردة (Warda - Rose)"},
+    "ي": {"name": "Ya", "sound": "Y", "example": "يوم (Yawm - Day)"}
+  },
+  "nouns": {
+    "singular": [
+      {"word": "كتاب", "meaning": "Book"},
+      {"word": "بنت", "meaning": "Girl"},
+      {"word": "ولد", "meaning": "Boy"},
+      {"word": "سيارة", "meaning": "Car"},
+      {"word": "منزل", "meaning": "House"},
+      {"word": "حديقة", "meaning": "Garden"}
+    ],
+    "plural": [
+      {"word": "كتب", "meaning": "Books"},
+      {"word": "بنات", "meaning": "Girls"},
+      {"word": "أولاد", "meaning": "Boys"},
+      {"word": "سيارات", "meaning": "Cars"},
+      {"word": "منازل", "meaning": "Houses"},
+      {"word": "حدائق", "meaning": "Gardens"}
+    ]
+  },
+  "pronouns": {
+    "singular": {
+      "I": "أنا",
+      "You (masc)": "أنتَ",
+      "You (fem)": "أنتِ",
+      "He": "هو",
+      "She": "هي"
+    },
+    "plural": {
+      "We": "نحن",
+      "You (masc)": "أنتم",
+      "You (fem)": "أنتن",
+      "They (masc)": "هم",
+      "They (fem)": "هن"
+    }
+  },
+  "adjectives": {
+    "basic": [
+      {"word": "جميل", "meaning": "Beautiful"},
+      {"word": "كبير", "meaning": "Big"},
+      {"word": "صغير", "meaning": "Small"},
+      {"word": "سريع", "meaning": "Fast"},
+      {"word": "بطيء", "meaning": "Slow"},
+      {"word": "نظيف", "meaning": "Clean"},
+      {"word": "قذر", "meaning": "Dirty"}
+    ]
+  },
+  "sentence_construction": {
+    "examples": [
+      {"sentence": "هذا كتاب جميل.", "translation": "This is a beautiful book."},
+      {"sentence": "السيارة كبيرة.", "translation": "The car is big."},
+      {"sentence": "الولد سريع.", "translation": "The boy is fast."},
+      {"sentence": "هذا منزل جديد.", "translation": "This is a new house."},
+      {"sentence": "هذه حديقة صغيرة.", "translation": "This is a small garden."},
+      {"sentence": "أنا ذاهب إلى المدرسة.", "translation": "I am going to school."}
+    ]
+  },
+  "grammar_rules": {
+    "Definite Article": "Adding 'ال' to a noun makes it definite. Example: بيت (a house) -> البيت (the house).",
+    "Gender Agreement": "Adjectives agree with nouns in gender. Example: ولد جميل (a beautiful boy), بنت جميلة (a beautiful girl).",
+    "Plural Rules": "Use 'ـون' for masculine plural and 'ـات' for feminine plural. Example: معلم -> معلمون, مدرسة -> مدارس."
+  }
+}
