@@ -21,7 +21,7 @@ def load_knowledge_base(prefix="arabic_grammar_"):
     """
     knowledge_base = {"alphabet": {}, "nouns": {}, "pronouns": {}, "adjectives": {}, "sentence_construction": {}, "grammar_rules": {}}
     json_files = glob(f"{prefix}*.json")
-    
+
     if not json_files:
         print(f"No JSON files found with prefix '{prefix}'")
         return None
