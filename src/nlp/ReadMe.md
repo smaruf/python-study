@@ -22,7 +22,7 @@ Ensure all required dependencies are installed. You can install them using:
 pip install numpy tensorflow scikit-learn joblib
 ```
 
-For detailed processing steps, refer to [process.md](process.md).
+For detailed processing steps, refer to [process.md](process.md), [nlp_tensorflow_steps.md](nlp_tensorflow_steps.md)
 
 ## License
 
