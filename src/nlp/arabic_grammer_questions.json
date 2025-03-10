@@ -1,0 +1,104 @@
+{
+  "questions_answers": [
+    {
+      "question": "What does 'كتاب' mean?",
+      "answer": "'كتاب' (Kitab) means 'Book'."
+    },
+    {
+      "question": "What is the Arabic pronoun for 'I'?",
+      "answer": "The Arabic pronoun for 'I' is 'أنا' (Ana)."
+    },
+    {
+      "question": "What does 'جميل' mean?",
+      "answer": "'جميل' (Jameel) means 'Beautiful (Masculine)'."
+    },
+    {
+      "question": "What is the feminine form of 'جميل'?",
+      "answer": "The feminine form of 'جميل' is 'جميلة' (Jameela)."
+    },
+    {
+      "question": "How do you write 'the house' in Arabic?",
+      "answer": "'The house' in Arabic is 'البيت' (Al-Bayt)."
+    },
+    {
+      "question": "What is the definite article in Arabic?",
+      "answer": "The definite article in Arabic is 'ال-' (al-). It makes a noun definite, as in 'البيت' (the house)."
+    },
+    {
+      "question": "What are Sun Letters in Arabic?",
+      "answer": "Sun letters (حروف شمسية) are letters where the 'ل' sound of 'ال-' is assimilated with the next letter, like in 'الشمس' (ash-shams). Examples: ت, ث, د, ذ, ر, ز, س, ش, ص, ض, ط, ظ, ل, ن."
+    },
+    {
+      "question": "What are Moon Letters in Arabic?",
+      "answer": "Moon letters (حروف قمرية) are letters where the 'ل' sound of 'ال-' is pronounced clearly, like in 'القمر' (al-qamar). Examples: أ, ب, ج, ح, خ, ع, غ, ف, ق, ك, م, ه, و, ي."
+    },
+    {
+      "question": "How do you write 'Twenty-Five' in Arabic?",
+      "answer": "'Twenty-Five' in Arabic is 'خمسة وعشرون' (Khamsa wa Ishroun)."
+    },
+    {
+      "question": "What does 'ذهب' mean?",
+      "answer": "'ذهب' (Dhahaba) means 'Went'. Example: 'أنا ذهبت إلى المدرسة' means 'I went to school.'"
+    },
+    {
+      "question": "What is the Arabic word for 'Nine'?",
+      "answer": "The Arabic word for 'Nine' is 'تسعة' (Tis'a)."
+    },
+    {
+      "question": "How do you pronounce 'الشمس'?",
+      "answer": "'الشمس' is pronounced as 'ash-shams', where the 'ل' is assimilated into the Sun letter 'ش'."
+    },
+    {
+      "question": "What does 'الطالب يقرأ الكتاب' mean?",
+      "answer": "'الطالب يقرأ الكتاب' means 'The student is reading the book.'"
+    },
+    {
+      "question": "What are Arabic dual pronouns?",
+      "answer": "Arabic dual pronouns include 'أنتما' (You both), 'هما' (They both, Masculine), and 'هما' (They both, Feminine)."
+    },
+    {
+      "question": "What does 'سلام' mean?",
+      "answer": "'سلام' (Salaam) means 'Peace'."
+    },
+    {
+      "question": "Give an example of a Moon Letter.",
+      "answer": "An example of a Moon Letter is 'ق' (Qaf). Example: 'القمر' is pronounced 'al-qamar', where the 'ل' is pronounced clearly."
+    },
+    {
+      "question": "Give an example of a Sun Letter.",
+      "answer": "An example of a Sun Letter is 'ش' (Sheen). Example: 'الشمس' is pronounced 'ash-shams', where the 'ل' is assimilated."
+    },
+    {
+      "question": "What is the singular pronoun for 'She' in Arabic?",
+      "answer": "The singular pronoun for 'She' in Arabic is 'هي' (Hiya)."
+    },
+    {
+      "question": "How do you say 'This is a book' in Arabic?",
+      "answer": "'This is a book' in Arabic is 'هذا كتاب' (Hatha Kitab)."
+    },
+    {
+      "question": "What does 'مائة' mean?",
+      "answer": "'مائة' (Mi'a) means 'One Hundred'."
+    },
+    {
+      "question": "What is the possessive pronoun for 'My' in Arabic?",
+      "answer": "The possessive pronoun for 'My' in Arabic is '-ي'. For example, 'كتابي' means 'My book.'"
+    },
+    {
+      "question": "How do you write 'The door is open' in Arabic?",
+      "answer": "'The door is open' is written in Arabic as 'الباب مفتوح' (Al-Bab Maftooh)."
+    },
+    {
+      "question": "What does 'كتب' mean?",
+      "answer": "'كتب' (Kataba) means 'Wrote'. Example: 'كتب الطالب الدرس' means 'The student wrote the lesson.'"
+    },
+    {
+      "question": "Translate 'السيارة جميلة'.",
+      "answer": "'السيارة جميلة' means 'The car is beautiful.'"
+    },
+    {
+      "question": "What does 'جمال' mean?",
+      "answer": "'جمال' (Jamal) means 'Beauty'."
+    }
+  ]
+}
