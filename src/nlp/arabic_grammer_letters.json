@@ -1,0 +1,32 @@
+{
+  "alphabet": {
+    "ا": {"name": "Alif", "sound": "A", "example": "أسد (Asad - Lion)"},
+    "ب": {"name": "Ba", "sound": "B", "example": "بيت (Bayt - House)"},
+    "ت": {"name": "Ta", "sound": "T", "example": "تفاح (Tufah - Apple)"},
+    "ث": {"name": "Tha", "sound": "Th", "example": "ثعبان (Thu'ban - Snake)"},
+    "ج": {"name": "Jeem", "sound": "J", "example": "جمل (Jamal - Camel)"},
+    "ح": {"name": "Ha", "sound": "H", "example": "حصان (Hisan - Horse)"},
+    "خ": {"name": "Kha", "sound": "Kh", "example": "خبز (Khubz - Bread)"},
+    "د": {"name": "Dal", "sound": "D", "example": "دب (Dub - Bear)"},
+    "ذ": {"name": "Dhal", "sound": "Dh", "example": "ذهب (Dhahab - Gold)"},
+    "ر": {"name": "Ra", "sound": "R", "example": "رجل (Rajul - Man)"},
+    "ز": {"name": "Zay", "sound": "Z", "example": "زهر (Zahr - Flower)"},
+    "س": {"name": "Seen", "sound": "S", "example": "سمك (Samak - Fish)"},
+    "ش": {"name": "Sheen", "sound": "Sh", "example": "شمس (Shams - Sun)"},
+    "ص": {"name": "Sad", "sound": "S'", "example": "صندوق (Sundooq - Box)"},
+    "ض": {"name": "Dad", "sound": "D'", "example": "ضوء (Daw' - Light)"},
+    "ط": {"name": "Ta", "sound": "T'", "example": "طفل (Tifl - Child)"},
+    "ظ": {"name": "Za", "sound": "Z'", "example": "ظلام (Zalam - Darkness)"},
+    "ع": {"name": "Ain", "sound": "ʿA", "example": "عين (Ayn - Eye)"},
+    "غ": {"name": "Ghayn", "sound": "Gha", "example": "غزال (Ghizal - Deer)"},
+    "ف": {"name": "Fa", "sound": "F", "example": "فيل (Feel - Elephant)"},
+    "ق": {"name": "Qaf", "sound": "Q", "example": "قلب (Qalb - Heart)"},
+    "ك": {"name": "Kaf", "sound": "K", "example": "كتاب (Kitab - Book)"},
+    "ل": {"name": "Lam", "sound": "L", "example": "لبن (Laban - Milk)"},
+    "م": {"name": "Meem", "sound": "M", "example": "ماء (Maa' - Water)"},
+    "ن": {"name": "Noon", "sound": "N", "example": "نار (Nar - Fire)"},
+    "ه": {"name": "Ha", "sound": "H", "example": "هوا (Hawa - Air)"},
+    "و": {"name": "Waw", "sound": "W", "example": "وردة (Warda - Rose)"},
+    "ي": {"name": "Ya", "sound": "Y", "example": "يوم (Yawm - Day)"}
+  }
+}
