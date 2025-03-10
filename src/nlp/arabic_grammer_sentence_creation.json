@@ -1,0 +1,124 @@
+{
+  "sentence_creation": [
+    {
+      "type": "noun-based",
+      "examples": [
+        {
+          "sentence": "البيت كبير.",
+          "translation": "The house is big.",
+          "note": "A definite noun ('البيت') followed by an adjective ('كبير'), agreeing in gender and definiteness."
+        },
+        {
+          "sentence": "السيارة جميلة.",
+          "translation": "The car is beautiful.",
+          "note": "A definite noun ('السيارة') followed by an adjective ('جميلة'), agreeing in gender."
+        },
+        {
+          "sentence": "هذا كتاب جديد.",
+          "translation": "This is a new book.",
+          "note": "A demonstrative ('هذا') followed by an indefinite noun ('كتاب') and an adjective ('جديد')."
+        },
+        {
+          "sentence": "الولد طويل.",
+          "translation": "The boy is tall.",
+          "note": "A definite noun followed by a masculine adjective ('طويل')."
+        },
+        {
+          "sentence": "الفتاة قصيرة.",
+          "translation": "The girl is short.",
+          "note": "A definite feminine noun followed by a feminine adjective ('قصيرة')."
+        }
+      ]
+    },
+    {
+      "type": "verb-based",
+      "examples": [
+        {
+          "sentence": "الطالب يقرأ الكتاب.",
+          "translation": "The student is reading the book.",
+          "note": "A subject ('الطالب') followed by a verb ('يقرأ') and an object ('الكتاب')."
+        },
+        {
+          "sentence": "الفتاة كتبَت القصة.",
+          "translation": "The girl wrote the story.",
+          "note": "A subject ('الفتاة') followed by a verb ('كتبَت') and an object ('القصة')."
+        },
+        {
+          "sentence": "أنا شربت الماء.",
+          "translation": "I drank the water.",
+          "note": "A pronoun ('أنا') followed by a verb ('شربت') and an object ('الماء')."
+        },
+        {
+          "sentence": "الرجل فتح الباب.",
+          "translation": "The man opened the door.",
+          "note": "A subject ('الرجل') followed by a verb ('فتح') and an object ('الباب')."
+        },
+        {
+          "sentence": "الأم طبخت الطعام.",
+          "translation": "The mother cooked the food.",
+          "note": "A subject ('الأم') followed by a verb ('طبخت') and an object ('الطعام')."
+        }
+      ]
+    },
+    {
+      "type": "adjective-based",
+      "examples": [
+        {
+          "sentence": "الولد ذكي.",
+          "translation": "The boy is smart.",
+          "note": "A definite noun ('الولد') followed by a masculine adjective ('ذكي')."
+        },
+        {
+          "sentence": "البنت سعيدة.",
+          "translation": "The girl is happy.",
+          "note": "A definite noun ('البنت') followed by a feminine adjective ('سعيدة')."
+        },
+        {
+          "sentence": "السيارة جديدة.",
+          "translation": "The car is new.",
+          "note": "A definite noun ('السيارة') followed by a feminine adjective ('جديدة')."
+        },
+        {
+          "sentence": "الرجل قوي.",
+          "translation": "The man is strong.",
+          "note": "A definite noun ('الرجل') followed by a masculine adjective ('قوي')."
+        },
+        {
+          "sentence": "العصفور صغير.",
+          "translation": "The bird is small.",
+          "note": "A definite noun ('العصفور') followed by a masculine adjective ('صغير')."
+        }
+      ]
+    },
+    {
+      "type": "question-based",
+      "examples": [
+        {
+          "sentence": "ما اسمك؟",
+          "translation": "What is your name?",
+          "note": "Interrogative ('ما') followed by a possessive pronoun ('اسمك')."
+        },
+        {
+          "sentence": "كيف حالك؟",
+          "translation": "How are you?",
+          "note": "Interrogative ('كيف') followed by a possessive pronoun ('حالك')."
+        },
+        {
+          "sentence": "أين الكتاب؟",
+          "translation": "Where is the book?",
+          "note": "Interrogative ('أين') followed by a definite noun ('الكتاب')."
+        },
+        {
+          "sentence": "ماذا تفعل؟",
+          "translation": "What are you doing?",
+          "note": "Interrogative ('ماذا') followed by a verb ('تفعل')."
+        },
+        {
+          "sentence": "هل تحب القهوة؟",
+          "translation": "Do you like coffee?",
+          "note": "Interrogative particle ('هل') followed by a verb ('تحب') and an object ('القهوة')."
+        }
+      ]
+    }
+  ]
+}
