@@ -1,0 +1,41 @@
+@startuml
+|Player|
+start
+:Open Game;
+:Submit Login Credentials;
+
+|Player Management Service|
+if (Valid Credentials?) then (Yes)
+    :Generate Auth Token;
+    :Return Token;
+else (No)
+    :Deny Access;
+    stop
+endif
+
+|Matchmaking Service|
+:Join Match;
+if (Match Found?) then (Yes)
+    :Allocate Match Session;
+    :Send Match Details;
+else (No)
+    :Wait in Queue;
+endif
+
+|Game State Service|
+:Start Game Session;
+while (Player Action Loop) is (Active)
+    :Update Player State (Move, Shoot, etc.);
+    :Sync Player State;
+    |Analytics Service|
+    :Log Player Actions;
+    |Leaderboard Service|
+    :Calculate Score;
+    :Update Leaderboard;
+endwhile
+
+|Player|
+:View Leaderboard;
+:Game Over;
+stop
+@enduml
