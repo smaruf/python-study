@@ -49,3 +49,8 @@ For creating diagrams with PlantUML, you can refer to the following link:
 
 - [action_diagram.puml](action_diagram.puml)
 - [flowcharts_diagram.puml](flowcharts_diagram.puml)
+- [state_diagram.puml](state_diagram.puml)
+- [class_diagram.puml](class_diagram.puml)
+- [component_diagram.puml](component_diagram.puml)
+- [deployment_diagram.puml](deployment_diagram.puml)
+
