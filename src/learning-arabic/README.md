@@ -32,6 +32,10 @@ Breakdown:
    - [Dictionary of Surah Al-Kafirun](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Kafirun_Dictionary.md)
    - [Dictionary of Surah Al-Kawthar](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Kawthar_Dictionary.md)
    - [Dictionary of Surah Al-Maun](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Maun_Dictionary.md)
+   - [Dictionary of Surah An-Nasr](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_An_Nasr_Dictionary.md)
+   - [Dictionary of Surah At-Tin](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_At_Tin_Dictionary.md)
+   - [Dictionary of Surah Fil](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Fil_Dictionary.md)
+   - [Dictionary of Surah Quraysh](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Quraysh_Dictionary.md)
 
 
 ---
