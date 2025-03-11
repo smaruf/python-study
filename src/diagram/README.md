@@ -40,4 +40,12 @@ To install the `diagrams` library, you can use the following command:
 
 For more detailed examples and usage, please visit the [official documentation](https://diagrams.mingrammer.com/docs/getting-started/examples).
 
-Feel free to contribute by adding more examples or improving the existing ones.
+## Additional Resources
+
+For creating diagrams with PlantUML, you can refer to the following link:
+[PlantUML Documentation](https://plantuml.com/documentation)
+
+### PlantUML Files in this Folder
+
+- [action_diagram.puml](action_diagram.puml)
+- [flowcharts_diagram.puml](flowcharts_diagram.puml)
