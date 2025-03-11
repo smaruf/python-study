@@ -1,0 +1,37 @@
+@startuml
+title Class Diagram for Gaming System
+
+class Player {
+    - id: Long
+    - username: String
+    - email: String
+    - rank: String
+    + login(): void
+    + logout(): void
+}
+
+class GameSession {
+    - sessionId: Long
+    - startTime: Date
+    - endTime: Date
+    - players: List<Player>
+    + startSession(): void
+    + endSession(): void
+}
+
+class Matchmaking {
+    - playerQueue: Queue<Player>
+    + findMatch(): GameSession
+}
+
+class Leaderboard {
+    - rankings: Map<Long, Integer> // Player ID to score
+    + updateScore(player: Player, score: int): void
+    + getTopPlayers(count: int): List<Player>
+}
+
+Player --> "1..*" GameSession : "participates in"
+GameSession --> Matchmaking : "created by"
+Leaderboard <-- Player : "updates score"
+
+@enduml
