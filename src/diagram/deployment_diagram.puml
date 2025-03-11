@@ -1,0 +1,39 @@
+@startuml
+title Deployment Diagram for Gaming System
+
+node "Player's Device" {
+    [Game Client]
+}
+
+node "API Gateway" {
+    [REST API Gateway] 
+}
+
+node "Backend Services" {
+    [Player Management Service]  
+    [Matchmaking Service] 
+    [Game State Service]
+    [Leaderboard Service]
+    [Analytics Service]
+}
+
+node "Database Cluster" {
+    [Player Database]
+    [Game State Cache]
+    [Leaderboard Database]
+    [Analytics Cluster]
+}
+
+[Game Client] --> [REST API Gateway] : "HTTP/HTTPS Requests"
+[REST API Gateway] --> [Player Management Service]
+[REST API Gateway] --> [Matchmaking Service]
+[REST API Gateway] --> [Game State Service]
+[REST API Gateway] --> [Leaderboard Service]
+[REST API Gateway] --> [Analytics Service]
+
+[Player Management Service] --> [Player Database]
+[Game State Service] --> [Game State Cache]
+[Leaderboard Service] --> [Leaderboard Database]
+[Analytics Service] --> [Analytics Cluster]
+
+@enduml
