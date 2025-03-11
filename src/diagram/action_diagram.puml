@@ -1,0 +1,34 @@
+@startuml
+title Action Diagram for High-Intensity Gaming Microservices
+
+actor Player as "Player"
+entity GameClient as "Game Client"
+control PlayerManagement as "Player Management Service"
+control GameStateManagement as "Game State Service"
+control Matchmaking as "Matchmaking Service"
+control Leaderboard as "Leaderboard Service"
+control Analytics as "Analytics Service"
+
+' Player logs in
+Player -> GameClient: Open Game
+GameClient -> PlayerManagement: Authenticate (Credentials)
+PlayerManagement --> GameClient: Auth Token
+
+' Player wants to join a match
+Player -> GameClient: Join Match
+GameClient -> Matchmaking: Find Match for Player
+Matchmaking --> GameClient: Match Found (Session ID)
+
+' Game starts and state management begins
+GameClient -> GameStateManagement: Sync Player State (Start Position)
+GameClient -> GameStateManagement: Update Player Actions (e.g., Move, Shoot)
+GameStateManagement -> Analytics: Log Player Actions
+GameStateManagement -> Leaderboard: Update Scores
+
+' Player views leaderboard
+Player -> GameClient: View Leaderboard
+GameClient -> Leaderboard: Fetch Top Scores
+Leaderboard --> GameClient: Return Top Scores
+GameClient --> Player: Display Leaderboard
+
+@enduml
