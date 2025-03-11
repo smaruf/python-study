@@ -1,0 +1,25 @@
+@startuml
+title Player Lifecycle State Diagram
+
+[*] --> LoggedOut
+
+state LoggedOut {
+  [*] --> EnterCredentials
+  EnterCredentials --> LoggedOut : Invalid Login
+  EnterCredentials --> LoggedIn : Valid Login
+}
+
+state LoggedIn {
+  [*] --> Browsing
+  Browsing --> Matchmaking : Join Match
+  Browsing --> LoggedOut : Logout
+  Matchmaking --> InGameSession : Match Found
+}
+
+state InGameSession {
+  [*] --> Playing
+  Playing --> MatchComplete : End Game
+  MatchComplete --> Browsing
+}
+
+@enduml
