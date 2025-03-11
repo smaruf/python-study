@@ -1,0 +1,29 @@
+@startuml
+title Component Diagram for High-Intensity Gaming System
+
+package "Frontend" {
+    [Game Client] --> [REST API Gateway]
+}
+
+package "Backend Microservices" {
+    [Player Management Service]
+    [Matchmaking Service]
+    [Game State Service]
+    [Leaderboard Service]
+    [Analytics Service]
+
+    [REST API Gateway] --> [Player Management Service]
+    [REST API Gateway] --> [Matchmaking Service]
+    [REST API Gateway] --> [Game State Service]
+    [REST API Gateway] --> [Leaderboard Service]
+    [REST API Gateway] --> [Analytics Service]
+}
+
+package "Data Storage" {
+    [Player Database] --> [Player Management Service]
+    [Game State Cache] --> [Game State Service]
+    [Leaderboard Database] --> [Leaderboard Service]
+    [Analytics Cluster] --> [Analytics Service]
+}
+
+@enduml
