@@ -3,6 +3,7 @@
 ## Examples
 - [AWS Component Diagram](aws_diagram_output.md)
 - [Azure Component Diagram](azure_diagram_output.md)
+- [GCP Component Diagram](gcp_diagram_output.md)
 
 ## What is Data Fabric?
 
