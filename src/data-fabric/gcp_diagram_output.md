@@ -20,3 +20,4 @@
                  | Apps, Models         |  +----------------------+
                  +----------------------+
 ```
+![GCP Component Diagram](data-fabric-gcp-1.png)
