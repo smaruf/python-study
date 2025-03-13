@@ -21,3 +21,4 @@
          | Sentinel, Mon)|            | Models             |
          +---------------+            +--------------------+
 ```
+![Azure Diagram](data-fabric-azure-1.png)
