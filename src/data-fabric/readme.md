@@ -1,10 +1,13 @@
 # Data Fabric: A Comprehensive Overview
 
+## Examples
+- [AWS Component Diagram](aws_diagram_txt_output.md)
+
 ## What is Data Fabric?
 
-Data fabric is an architectural framework and design concept that enables organizations to integrate, manage, and utilize data seamlessly across distributed sources and environments. It provides a unified approach to connect structured, semi-structured, and unstructured data across on-premises systems, hybrid environments, and multiple cloud platforms. The data fabric architecture leverages capabilities like automation, intelligence, and metadata-driven decision-making to ensure data is accessible, discoverable, secure, and usable in real time.
+Data fabric is an architectural framework and design concept that enables organizations to integrate, manage, and utilize data seamlessly across distributed sources and environments. It provides a unified approach to connect structured, semi-structured, and unstructured data across on-premises systems, hybrid environments, and multiple cloud platforms. The data fabric architecture leverages capabilities like automation, intelligence, and metadata-driven decision-making to ensure data is accessible, discoverable, secure, and usable in real-time.
 
-By weaving together heterogenous data sources, data fabric forms the foundation for organizations to get value from their data, empowering analytics, AI/ML processes, and business-critical decisions.
+By weaving together heterogeneous data sources, data fabric forms the foundation for organizations to get value from their data, empowering analytics, AI/ML processes, and business-critical decisions.
 
 ---
 
