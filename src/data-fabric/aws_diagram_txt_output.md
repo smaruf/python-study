@@ -1,4 +1,5 @@
 ## Generated components:
+
 ```
 +------------------+
 | Data Sources     |
@@ -31,3 +32,5 @@
 | Dashboards, Apps, Models|
 +------------------------+
 ```
+
+![AWS Diagram](data-fabric-aws-1.png)
