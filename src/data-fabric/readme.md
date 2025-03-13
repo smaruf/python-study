@@ -1,7 +1,7 @@
 # Data Fabric: A Comprehensive Overview
 
 ## Examples
-- [AWS Component Diagram](aws_diagram_txt_output.md)
+- [AWS Component Diagram](aws_diagram_output.md)
 
 ## What is Data Fabric?
 
