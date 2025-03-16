@@ -47,7 +47,7 @@ In Arabic, long vowels are represented by **three Madd letters**:
 | Type                  | Name                   | Function                                                                                   | Duration                 | Example                   |
 |-----------------------|------------------------|-------------------------------------------------------------------------------------------|-------------------------|--------------------------|
 | **ٓ (lying sign)**     | **Madd Asli (Original Madd)** | Simple elongation of a Madd letter.                                                        | 2 counts.               | **قَالَ** → **Qaa-la**   |
-| **ٓ with ~**          | **Madd Muttasil**      | Long vowel directly followed by a Hamzah (ء) within the same word. Obligatory elongation.     | 4-5 counts.             | **جَاءَ** → **Jaaa’**    |
+| **ٓ with** **~**          | **Madd Muttasil**      | Long vowel directly followed by a Hamzah (ء) within the same word. Obligatory elongation.     | 4-5 counts.             | **جَاءَ** → **Jaaa’**    |
 | **ٓ ~ across words**   | **Madd Munfasil**      | Long vowel followed by a Hamzah (ء) in the next word. Optional elongation.                 | 2-5 counts.             | **فِي أَنْفُسِهِمْ** → **Fiii Anfusihim** |
 | **ٓ with a Sukoon**    | **Madd Lazim**         | Long vowel followed by a Sukoon ( ◌ْ ) or static letter. This is an obligatory Madd.         | 6 counts.               | **والطُّور** → **Waaa-tuuur** |
 | **ٰ (Superscript Alif)** | **Madd Badal**         | Occurs when a Madd letter replaces a Hamzah (ء); must be elongated.                         | 2 counts.               | **ءَامَنُوا** → **Aa-ma-noo**  |
