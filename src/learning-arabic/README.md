@@ -23,19 +23,21 @@ Breakdown:
 ---
 
 ### Links:
-   - [Dictionary for Surah Al-Fatiha, Al-Ikhlas, An-Naas, Al-Falaq, and At-Takathur](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/dictionary_fatiha_ahad_naas_falaq_taqasur.md)
-   - [Ar Rahman Dictionary](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Ar_Rahman_dictionary.md)
-   - [Overview on Surah Al-Bakara](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/overview_on_surah_bakara.md)
-   - [Dictionary of Surah Al-Alaq](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Alaq_Dictionary.md)
-   - [Dictionary of Surah Al-Asr](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Asr_Dictionary.md)
-   - [Dictionary of Surah Al_Humaza](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Humaza_Dictionary.md)
-   - [Dictionary of Surah Al-Kafirun](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Kafirun_Dictionary.md)
-   - [Dictionary of Surah Al-Kawthar](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Kawthar_Dictionary.md)
-   - [Dictionary of Surah Al-Maun](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Al_Maun_Dictionary.md)
-   - [Dictionary of Surah An-Nasr](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_An_Nasr_Dictionary.md)
-   - [Dictionary of Surah At-Tin](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_At_Tin_Dictionary.md)
-   - [Dictionary of Surah Fil](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Fil_Dictionary.md)
-   - [Dictionary of Surah Quraysh](https://github.com/smaruf/python-study/blob/main/src/learning-arabic/Surah_Quraysh_Dictionary.md)
+   - [Dictionary for Surah Al-Fatiha, Al-Ikhlas, An-Naas, Al-Falaq, and At-Takathur](dictionary_fatiha_ahad_naas_falaq_taqasur.md)
+   - [Ar Rahman Dictionary](Ar_Rahman_dictionary.md)
+   - [Overview on Surah Al-Bakara](overview_on_surah_bakara.md)
+   - [Dictionary of Surah Al-Alaq](Surah_Al_Alaq_Dictionary.md)
+   - [Dictionary of Surah Al-Asr](Surah_Al_Asr_Dictionary.md)
+   - [Dictionary of Surah Al_Humaza](Surah_Al_Humaza_Dictionary.md)
+   - [Dictionary of Surah Al-Kafirun](Surah_Al_Kafirun_Dictionary.md)
+   - [Dictionary of Surah Al-Kawthar](Surah_Al_Kawthar_Dictionary.md)
+   - [Dictionary of Surah Al-Maun](Surah_Al_Maun_Dictionary.md)
+   - [Dictionary of Surah An-Nasr](Surah_An_Nasr_Dictionary.md)
+   - [Dictionary of Surah At-Tin](Surah_At_Tin_Dictionary.md)
+   - [Dictionary of Surah Fil](Surah_Fil_Dictionary.md)
+   - [Dictionary of Surah Quraysh](Surah_Quraysh_Dictionary.md)
+   - [Tawjid Rules of Reading Al-Quran](Al_Quran_Tawjid_Rules.md)
+   - [Guidelines as PDF from Book](Quran%20Reading%20Rules.pdf)
 
 
 ---
