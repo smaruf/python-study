@@ -3,6 +3,7 @@
 Correct pronunciation and application of **Tajweed** rules are essential when reciting the Quran. Printed copies of the Quran contain **symbols** to help guide proper recitation. These symbols provide clarity on elongation, pauses, and articulation, ensuring the beauty and accuracy of Quranic recitation.
 
 - #### [Symbols on Letters](symbols_used_to_guide.md)
+- #### [Symbols on Letters Dictionary](symbols_with_dictionary.md)
 
 ---
 
