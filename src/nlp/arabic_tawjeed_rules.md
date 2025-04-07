@@ -1,0 +1,1 @@
+## Arabic tawjeed rule
