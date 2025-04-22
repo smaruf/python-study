@@ -1,0 +1,9 @@
+[ ITCH Encoder ]
+      ↓
+[ Kafka Producer ] → "itch_topic"
+      ↓
+[ Kafka Consumer + Decoder ]
+      ↓
+[ Flask + SocketIO Server ]
+      ↓
+[ Web UI → Live Feed Viewer ]
