@@ -1,0 +1,9 @@
+[ FIX Encoder ]
+      ↓
+[ Kafka Producer ] → "fix_topic"
+      ↓
+[ Kafka Consumer + FIX Decoder ]
+      ↓
+[ Flask + SocketIO Server ]
+      ↓
+[ Web UI → Live Feed Viewer ]
