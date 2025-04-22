@@ -1,0 +1,10 @@
+    [ Encoder ]
+        |
+        v
+[ Kafka Producer ] → "fast_topic"
+        |
+        v
+[ Kafka Consumer / Decoder ]
+        |
+        v
+[ Flask + SocketIO Server ] → Web UI (Live Feed)
