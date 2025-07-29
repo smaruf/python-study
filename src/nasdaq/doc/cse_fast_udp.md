@@ -298,4 +298,220 @@ All messages sent by the server are transfer encoded in terms of the FAST protoc
 
 While a Replay channel is available from the backup site, it will only be activated in the unlikely event of an outage at the main site.
 
+### 3.2 Message Overview
+
+The market data feed utilises the FIX application messages described below to disseminate instruments, market data, RFQs and market announcements.
+
+| Message | Description | Usage (By Channel) |
+|---------|-------------|-------------------|
+| | | **Real-Time** | **Snapshot** | **Replay** |
+| **Security Definition** | Used to disseminate details (e.g. status, ISIN, etc.) on all active instruments. Each message will only contain the details of one instrument. | ✓ | ✓ | ✓ |
+| **Security Status** | Used to communicate the trading status (e.g. Pre-Open, Regular Trading, Halt, etc.) of instruments. | ✓ | ✗ | ✓ |
+| **Market Data Incremental Refresh** | Used to provide:<br/>- An update to the order book<br/>- Information on an executed on or off-book trade<br/>- Indicative auction information (e.g. price, imbalance, etc.)<br/>- Book-level statistics (e.g. low, high, volume, VWAP, etc.)<br/>- Index values<br/>- Market and sector level statistics (e.g. volume, turnover, etc.)<br/><br/>A single message may contain multiple market data entries which may cover one or more instruments. | ✓ | ✓ | ✓ |
+| **Market Data Snapshot** | Used to disseminate a full snapshot of the order book and statistics for an instrument. | ✓ | ✓ | ✓ |
+| **News** | Used to publish market announcements. | ✓ | ✗ | ✓ |
+
+### 3.3 Overview of a Trading Day
+
+#### 3.3.1 Trading on the Order Book
+
+The regular day for on-book trading will consist of four scheduled sessions: Pre-Open, Opening, Regular Trading and Post-Close. The start time for each of these sessions may vary from one set of instruments to another. A Security Status message will be published on the Real-Time channel to indicate when a particular session has commenced for a sub book of an instrument. An overview of the trading day is given below.
+
+| Time | Session | Description |
+|------|---------|-------------|
+| `<HH:MM:SS>` | **Market Open** | The market data feed begins. Recipients should aim to join the feed at this time.<br/><br/>Two minutes after the market opens, a Security Definition message will be broadcast for each instrument on the Real-Time channel. The closing value of each index at the end of the previous trading day will also be published at this time.<br/><br/>No new orders, cancel requests and cancel/replace requests will be accepted until the Pre-Open session. |
+| `<HH:MM:SS>` | **Pre-Trading** | A Security Status message will be broadcast for each tradable instrument with Pre-Trading (101) as the SecurityTradingStatus (326).<br/><br/>Participants may not submit, cancel or modify orders during this session. Market operations may cancel or modify orders.<br/><br/>The details of GTD/GTC orders carried over from the previous trading day will be disseminated at the start of this session. Order book updates will be disseminated. |
+| `<HH:MM:SS>` | **Pre-Open** | The trading day begins.<br/><br/>A Security Status message will be broadcast for the regular order book of each tradable instrument with Pre-Open (21) as the SecurityTradingStatus (326).<br/><br/>New orders, cancel requests and modification requests for the regular order book will be accepted during this session. Details of the order book will be broadcast. Indicative opening information will be disseminated.<br/><br/>No executions will take place during this session. No new orders, cancel requests and modification requests will be accepted for the odd lot order book until the Regular Trading session. |
+| `<HH:MM:SS>` | **Opening Price Publication** | A Security Status message will be broadcast for the regular order book of each tradable instrument with Opening Price Publication (126) as the SecurityTradingStatus (326).<br/><br/>New orders, cancel requests and modification requests for the regular order book will not be accepted during this session. The opening auction price will be disseminated during this session although the trades executed in the auction will be published only at the start of the Regular Trading session. |
+| `<HH:MM:SS>` | **Opening** | Orders in the regular order book will be executed in a volume maximizing auction during this session. The trades executed in the auction will, for each instrument, be reported as a single trade. |
+| `<HH:MM:SS>` | **Regular Trading** | Continuous trading begins for the regular and odd lot order books.<br/><br/>A Security Status message will be broadcast for each sub book of each tradable instrument with Regular Trading (17) as the SecurityTradingStatus (326).<br/><br/>Order book updates, trades, statistics and index updates will be disseminated. |
+| `<HH:MM:SS>` | **Closing Price Publication** | A Security Status message will be broadcast for the regular order book of each tradable instrument with Closing Price Publication (125) as the SecurityTradingStatus (326).<br/><br/>New orders, cancel requests and modification requests for the regular order book will not be accepted during this session. The closing price will be disseminated during this session. |
+| `<HH:MM:SS>` | **Closing Price Cross** | This is a continuous trading session where participants may trade on the closing price.<br/><br/>A Security Status message will be broadcast for each sub book of each tradable instrument with Closing Price Cross (120) as the SecurityTradingStatus (326).<br/><br/>Order book updates, trades, and statistics updates will be disseminated. |
+| `<HH:MM:SS>` | **Post-Close** | A Security Status message will be broadcast for each sub book of each tradable instrument with Post-Close (26) as the SecurityTradingStatus (326).<br/><br/>While order cancel requests will be accepted, no new orders and order cancel/replace requests may be submitted during this session. Order book updates will be disseminated.<br/><br/>At the end of this session a Security Status message will be broadcast for each tradable instrument with End of Post-Close (103) as the SecurityTradingStatus (326). |
+| `<HH:MM:SS>` | **Market Close** | The end of the trading day.<br/><br/>A Security Status message will be broadcast for each sub book of each active instrument with Market Close (18) as the SecurityTradingStatus (326). |
+| `<HH:MM:SS>` | **End of Day** | The feed will stop broadcasting messages at this time. |
+
+### 3.8 Statistics
+
+#### 3.8.1 Book-Level Statistics
+
+The market data feed provides recipients with the statistics listed below for the sub books of each instrument. Each statistic applies only to the current day and to the specified sub book.
+
+| Statistics | Regular | Odd Lot | Block Trade | Relevant Fields |
+|------------|---------|---------|-------------|-----------------|
+| Opening price | ✓ | ✗ | ✗ | MDEntryType (269) = 4<br/>MDEntryPx (270) |
+| Closing price | ✓ | ✗ | ✗ | MDEntryType (269) = 5<br/>MDEntryPx (270) |
+| Highest traded price | ✓ | ✓ | ✓ | MDEntryType (269) = 7<br/>MDEntryPx (270) |
+| Lowest traded price | ✓ | ✓ | ✓ | MDEntryType (269) = 8<br/>MDEntryPx (270) |
+| VWAP | ✓ | ✓ | ✓ | MDEntryType (269) = 9<br/>MDEntryPx (270) |
+| Volume | ✓ | ✓ | ✓ | MDEntryType (269) = B<br/>MDEntrySize (271) |
+| Turnover | ✓ | ✓ | ✓ | MDEntryType (269) = x<br/>MDEntryPx (270) |
+| Number of trades | ✓ | ✓ | ✓ | MDEntryType (269) = y<br/>MDEntrySize (271) |
+| Highest bid price | ✓ | ✓ | ✗ | MDEntryType (269) = N<br/>MDEntryPx (270) |
+| Lowest offer price | ✓ | ✓ | ✗ | MDEntryType (269) = O<br/>MDEntryPx (270) |
+| Buy Order VWAP | ✓ | ✓ | ✓ | MDEntryType (269) = s<br/>MDEntryPx (270) |
+| Sell Order VWAP | ✓ | ✓ | ✓ | MDEntryType (269) = t<br/>MDEntryPx (270) |
+
+#### 3.8.2 Market and Sector Statistics
+
+The feed also provides recipients with the market and sector statistics listed below. The MDStatType (31001) field will be used to indicate whether the statistic being published relates to a market or sector (it will not be present in the case of a statistic for a sub-book of an instrument). The market or sector will be identified via the Symbol (55) field.
+
+| Statistics | Market | Sector | Relevant Fields |
+|------------|--------|--------|-----------------|
+| Volume for the day | ✓ | ✓ | MDEntryType (269) = B<br/>MDEntrySize (271) |
+| Turnover for the day | ✓ | ✓ | MDEntryType (269) = x<br/>MDEntryPx (270) |
+| Number of trades for the day | ✓ | ✓ | MDEntryType (269) = y<br/>MDEntrySize (271) |
+
+#### 3.8.3 Mode of Dissemination
+
+##### 3.8.3.1 Incremental Update
+
+Incremental updates of statistics will be disseminated via the Market Data Incremental Refresh message. The MDEntryType (269) and MDSubBookType (1173) of each entry in such a message will indicate the statistic that is being updated and the sub book to which it applies. The MDUpdate Action (279) of all entries will be New (0).
+
+In the event a statistic (e.g. closing price) needs to be corrected, a Market Data Incremental Refresh message will be transmitted with the corrected value. The entry will not include an MDEntryPx (270) or MDEntrySize (271) in the unlikely event a previously published statistic is withdrawn (e.g. closing price).
+
+##### 3.8.3.2 Snapshot
+
+Snapshots of statistics will be disseminated via the Market Data Snapshot (Full Refresh) message. The MDEntryType (269) and MDSubBookType (1173) of each entry in such a message will indicate the statistic that is being updated and the sub book to which it applies.
+
+A snapshot will be published even if there are no statistics for an instrument. In such a case, the Market Data Snapshot (Full Refresh) message will include an MDEntryType (269) of No Statistics (z).
+
+While the vast majority of snapshot messages are disseminated via the Snapshot channel, in certain scenarios (e.g. recovery after a server failure), they may also be included in the Real-Time channel. Snapshots on the Real-Time channel should be processed by recipients.
+
+## 6. Message Formats and Templates
+
+### 6.3 Administrative Messages
+
+#### 6.3.1 Logon
+
+##### 6.3.1.1 FIX Message
+
+| Tag | Field Name | Req | Description |
+|-----|------------|-----|-------------|
+| Header | | | |
+| 1180 | ApplID | N | Identifier of the server sending the message. Required if the message is generated by the server. |
+| 108 | HeartBtInt | Y | Indicates the heartbeat interval in seconds. |
+| 553 | Username | N | CompID of the client. Required if the message is generated by the client. |
+| 554 | Password | N | Password assigned to the CompID. Required if the message is generated by the client. |
+| 925 | NewPassword | N | New password for the CompID. |
+| 1409 | SessionStatus | N | Status of session. Required if message is generated by server.<br/><br/>**Values:**<br/>0 = Session Active<br/>2 = Password Due to Expire |
+
+##### 6.3.1.2 FAST Template
+
+| Tag | Field Name | Field Type | Field Encoding | Description |
+|-----|------------|------------|----------------|-------------|
+| Header | | | | |
+| 1180 | ApplID | ASCII String | None | |
+| 108 | HeartBtInt | Unsigned Integer | None | |
+| 553 | Username | ASCII String | None | |
+| 554 | Password | ASCII String | None | |
+| 925 | NewPassword | ASCII String | None | |
+| 1409 | SessionStatus | Unsigned Integer | None | |
+
+#### 6.3.2 Logout
+
+##### 6.3.2.1 FIX Message
+
+| Tag | Field Name | Req | Description |
+|-----|------------|-----|-------------|
+| Header | | | |
+| 1180 | ApplID | N | Identifier of the server sending the message. Required if the message is generated by the server. |
+| 1409 | SessionStatus | N | Status of the session. Required if the message is generated by the server.<br/><br/>**Values:**<br/>4 = Session Logout Complete<br/>6 = Account Locked<br/>7 = Logons Not Allowed<br/>8 = Password Expired<br/>100 = Other |
+| 58 | Text | N | Reason for the logout. |
+
+##### 6.3.2.2 FAST Template
+
+| Tag | Field Name | Field Type | Field Encoding | Description |
+|-----|------------|------------|----------------|-------------|
+| Header | | | | |
+| 1180 | ApplID | ASCII String | None | |
+| 1409 | SessionStatus | Unsigned Integer | None | |
+| 58 | Text | ASCII String | None | |
+
+## 7. Instrument Classification
+
+### 7.1 Segment
+
+| Segment | Description |
+|---------|-------------|
+| A | Category 'A' |
+| B | Category 'B' |
+| G | Category 'G' |
+| N | Category 'N' |
+| Z | Category 'Z' |
+
+### 7.2 CFI Codes
+
+| CFI Code | Description |
+|----------|-------------|
+| E | Equity |
+| `<Specify>` | `<Specify>` |
+
+### 7.3 Security Types
+
+| Security Type | Description |
+|---------------|-------------|
+| CS | Common Stock |
+| `<Specify>` | `<Specify>` |
+
 ---
+
+## 8. Off-Book Trade Types
+
+| TrdSubType | Description |
+|------------|-------------|
+| 16 | Block Trade |
+| 20 | Not to Mark |
+| 37 | Crossed Trade |
+| 39 | Large in Scale |
+| `<Specify>` | `<Specify>` |
+
+---
+
+## 9. Trading Halt Reason Codes
+
+| Code | Reason |
+|------|--------|
+| 100 | Reason not available |
+| 101 | Instrument-level circuit breaker tripped |
+| 102 | `<Specify>` |
+| 103 | `<Specify>` |
+| 104 | `<Specify>` |
+| 105 | `<Specify>` |
+| 106 | `<Specify>` |
+| 107 | `<Specify>` |
+| 9998 | Matching partition suspended |
+| 9999 | System suspended |
+
+---
+
+## 10. Reject Codes
+
+### 10.1 Market Data Request Reject
+
+| MDReqRejReason | Text | Reason |
+|----------------|------|--------|
+| 0 | - | Unknown instrument |
+| 4 | - | Unsupported SubscriptionRequestType |
+| 8 | - | Unsupported MDEntryType |
+| Z | - | Other |
+| Z | 101 | Unknown segment |
+| Z | 102 | Requested market data unavailable |
+
+### 10.2 Business Message Reject
+
+| BusinessRejectReason | Text | Reason |
+|---------------------|------|--------|
+| 0 | 400 | Other |
+| 0 | 403 | Incorrect data format for this tag |
+| 0 | 404 | Value is invalid for this tag |
+| 0 | 404 | Required tag missing |
+| 0 | 449 | Concurrent request limit reached |
+| 0 | 450 | Request limit for day reached |
+| 1 | - | Unknown ID |
+| 3 | - | Unsupported message type |
+| 5 | - | Conditionally required field missing |
+
+---
+
+*End of Document*
