@@ -1,3 +1,4 @@
+//// running in bash: c3c decode_fast_log_extended.c3 -o decode_log 
 import std.io;
 import std.fs;
 import std.time;
