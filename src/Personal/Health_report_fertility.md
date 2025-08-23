@@ -93,3 +93,54 @@ Blood report essentially normal.
 - With proper treatment, **high chance of successful conception**.  
 
 ---
+
+## 📋 Comparative Summary of Fertility Reports
+
+This section provides a formal comparative analysis between previous medical reports and the current fertility assessment summary, with supporting evidence from referenced diagnostic images.
+
+### 👨 Husband (MS Maruf) - Comparative Analysis
+
+**Current Assessment vs. Previous Reports:**
+- **Current Semen Analysis (23/08/2025):** Demonstrates excellent fertility parameters with sperm count of 80 million/ml, 40% active motility, and 40% normal morphology.
+- **Previous Semen Analysis:** ![image1](image1) - Comparison with historical semen analysis results shows consistent normozoospermia patterns.
+- **Conclusion:** No significant changes in fertility status. Husband continues to maintain optimal reproductive health with no treatment required.
+
+### 👩 Wife (Fatema, Age 33) - Comparative Analysis
+
+**Current Assessment vs. Previous Reports:**
+
+**Thyroid Function:**
+- **Current Status:** Thyroid function requires confirmation through TSH and Free T4 testing as recommended in the action plan.
+- **Previous Thyroid Results:** ![image2](image2) - Historical thyroid function test (TSH) provides baseline comparison for current evaluation.
+- **Clinical Significance:** Thyroid dysfunction can contribute to elevated prolactin levels, making historical comparison essential for treatment planning.
+
+**Ovarian and Reproductive Health:**
+- **Current Findings:** Elevated prolactin (48.0 ng/ml) affecting ovulation and menstrual regularity.
+- **Previous Fertility Scan:** ![image3](image3) - Historical assessment of ovarian follicles and endometrial thickness demonstrates baseline reproductive anatomy.
+- **Previous Ovarian Imaging:** ![image4](image4) - Ultrasound images of ovaries show structural normalcy, indicating that current fertility challenges are hormonal rather than anatomical.
+- **Comparative Analysis:** Previous imaging confirms normal ovarian reserve and uterine structure, supporting the assessment that hyperprolactinemia is the primary fertility barrier.
+
+**Hematological Parameters:**
+- **Current Status:** Hemoglobin 12.7 g/dL and other parameters within normal ranges, with only slightly elevated ESR (25 mm/hr).
+- **Trend Analysis:** Blood parameters remain stable and within acceptable ranges for reproductive health.
+
+### 🔍 Overall Comparative Clinical Assessment
+
+**Key Findings:**
+1. **Husband's Fertility Status:** Consistently normal across all parameters with no deterioration over time.
+2. **Wife's Primary Issue:** Hyperprolactinemia (48.0 ng/ml) represents the sole treatable fertility barrier.
+3. **Structural Integrity:** Previous imaging confirms normal ovarian morphology and uterine environment.
+4. **Systemic Health:** Overall health parameters remain stable and conducive to conception.
+
+**Clinical Conclusion:**
+The comparative analysis definitively establishes that **elevated prolactin in the wife is the only current fertility barrier requiring treatment**. All other fertility-related parameters for both partners remain within normal ranges:
+
+- ✅ **Husband:** Normal sperm parameters (count, motility, morphology)
+- ✅ **Wife:** Normal ovarian reserve and uterine structure  
+- ✅ **Wife:** Normal hematological parameters
+- ✅ **Wife:** Thyroid function to be confirmed but historically normal
+- ⚠️ **Wife:** Elevated prolactin (treatable with dopamine agonists)
+
+**Prognosis:** With appropriate medical management of hyperprolactinemia through dopamine agonist therapy (Cabergoline or Bromocriptine), normal ovulation should resume, significantly improving conception prospects. The favorable baseline reproductive health of both partners supports an excellent prognosis for successful conception following treatment.
+
+---
