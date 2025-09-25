@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASDAQ Simulator Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f5f5f5; }
+        .header { background-color: #1f2937; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .metric-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .metric-value { font-size: 2em; font-weight: bold; color: #059669; }
+        .metric-label { color: #6b7280; margin-top: 5px; }
+        .chart-container { margin-top: 20px; background: white; padding: 20px; border-radius: 8px; }
+        .status-indicator { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+        .status-healthy { background-color: #10b981; }
+        .status-warning { background-color: #f59e0b; }
+        .status-error { background-color: #ef4444; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏢 NASDAQ Stock Market Simulator Dashboard</h1>
+        <p>Phase 4: Advanced Features & Analytics</p>
+    </div>
+    
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-value" id="total-orders">--</div>
+            <div class="metric-label">Total Orders Today</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-value" id="fill-rate">--%</div>
+            <div class="metric-label">Fill Rate</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-value" id="total-volume">--</div>
+            <div class="metric-label">Total Volume</div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-value" id="active-symbols">--</div>
+            <div class="metric-label">Active Symbols</div>
+        </div>
+    </div>
+    
+    <div class="chart-container">
+        <h3>System Status</h3>
+        <div>
+            <span class="status-indicator status-healthy"></span>
+            <span>OMS Service: Running</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <span class="status-indicator status-healthy"></span>
+            <span>Market Data Engine: Active</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <span class="status-indicator status-healthy"></span>
+            <span>Risk Engine: Monitoring</span>
+        </div>
+        <div style="margin-top: 10px;">
+            <span class="status-indicator status-healthy"></span>
+            <span>Settlement Engine: Processing</span>
+        </div>
+    </div>
+    
+    <div class="chart-container">
+        <h3>Market Summary</h3>
+        <div id="market-summary">
+            <p>Loading market data...</p>
+        </div>
+    </div>
+    
+    <script>
+        // Simple dashboard data fetching
+        async function updateDashboard() {
+            try {
+                const response = await fetch('/analytics/summary');
+                const data = await response.json();
+                
+                document.getElementById('total-orders').textContent = data.total_orders || '--';
+                document.getElementById('fill-rate').textContent = (data.fill_rate || 0).toFixed(1) + '%';
+                document.getElementById('total-volume').textContent = (data.total_volume || 0).toLocaleString();
+                document.getElementById('active-symbols').textContent = data.active_symbols || '--';
+                
+            } catch (error) {
+                console.error('Error updating dashboard:', error);
+            }
+            
+            try {
+                const marketResponse = await fetch('/market-data');
+                const marketData = await marketResponse.json();
+                
+                const marketSummary = document.getElementById('market-summary');
+                let html = '<table style="width: 100%; border-collapse: collapse;">';
+                html += '<tr style="background-color: #f9fafb;"><th style="padding: 10px; text-align: left;">Symbol</th><th style="padding: 10px; text-align: right;">Last Price</th><th style="padding: 10px; text-align: right;">Bid</th><th style="padding: 10px; text-align: right;">Ask</th></tr>';
+                
+                Object.entries(marketData).forEach(([symbol, data]) => {
+                    html += `<tr style="border-top: 1px solid #e5e7eb;">
+                        <td style="padding: 10px; font-weight: bold;">${symbol}</td>
+                        <td style="padding: 10px; text-align: right;">$${data.last_price.toFixed(2)}</td>
+                        <td style="padding: 10px; text-align: right;">$${data.bid_price.toFixed(2)}</td>
+                        <td style="padding: 10px; text-align: right;">$${data.ask_price.toFixed(2)}</td>
+                    </tr>`;
+                });
+                
+                html += '</table>';
+                marketSummary.innerHTML = html;
+                
+            } catch (error) {
+                console.error('Error updating market data:', error);
+            }
+        }
+        
+        // Update dashboard every 5 seconds
+        updateDashboard();
+        setInterval(updateDashboard, 5000);
+    </script>
+</body>
+</html>
