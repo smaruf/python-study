@@ -2153,9 +2153,9 @@ def main():
     if len(sys.argv) > 1:
         base_path = sys.argv[1]
     else:
-        base_path = input("Enter the base path for phase directories (default: ./nasdaq_phases): ").strip()
+        base_path = input("Enter the base path for phase directories (default: ./nasdaq/learning-phases): ").strip()
         if not base_path:
-            base_path = "./nasdaq_phases"
+            base_path = "./nasdaq/learning-phases"
     
     base_path = os.path.abspath(base_path)
     print(f"📁 Base path: {base_path}")

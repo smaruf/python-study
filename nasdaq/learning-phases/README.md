@@ -1,6 +1,8 @@
 # NASDAQ Stock Market Simulator - Phased Development
 
-This directory contains the phased implementation of the NASDAQ Stock Market Simulator project.
+> 📚 **Learning Path**: This directory contains the **step-by-step, educational** implementation of the NASDAQ Stock Market Simulator project. For the complete, production-ready version, see [`../prod-app/`](../prod-app/).
+
+This directory guides you through building the NASDAQ simulator incrementally across 4 phases, perfect for understanding the architecture and learning each component.
 
 ## Phase Structure
 
@@ -39,39 +41,12 @@ python main.py
 ```
 
 ### Phase 3: Market Data and Risk (Weeks 9-12)
-**Directory**: `phase_3/`
+**Directory**: `phase_3/` (Coming Soon)
 **Focus**: Real-time market data and risk management
 
-**Key Components**:
-- Real-time Market Data Engine
-- Risk Management Engine with pre-trade checks
-- Position tracking and monitoring
-- Risk alerts and limit management
-
-**Run Phase 3**:
-```bash
-cd phase_3
-pip install -r requirements.txt
-python main.py
-```
-
 ### Phase 4: Advanced Features (Weeks 13-16)  
-**Directory**: `phase_4/`
+**Directory**: `phase_4/` (Coming Soon)
 **Focus**: Settlement, analytics, and production readiness
-
-**Key Components**:
-- Settlement Engine with T+2 processing
-- Analytics Engine with performance reporting
-- Web-based dashboard with real-time monitoring
-- Production-ready infrastructure
-
-**Run Phase 4**:
-```bash
-cd phase_4
-pip install -r requirements.txt
-python main.py
-# Open http://localhost:8000 for dashboard
-```
 
 ## Development Workflow
 
