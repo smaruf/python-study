@@ -1,0 +1,56 @@
+# FastAPI and ASGI server
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+asyncpg==0.29.0  # PostgreSQL async driver
+psycopg2-binary==2.9.9  # PostgreSQL sync driver
+aiosqlite==0.19.0  # SQLite async driver (for development)
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+bcrypt==4.1.1
+
+# HTTP client
+httpx==0.25.1
+aiohttp==3.9.0
+
+# Data validation and serialization
+email-validator==2.1.0
+python-dateutil==2.8.2
+
+# Environment configuration
+python-dotenv==1.0.0
+
+# Logging and monitoring
+loguru==0.7.2
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+httpx==0.25.1  # For testing HTTP requests
+
+# Code quality
+black==23.11.0
+flake8==6.1.0
+isort==5.12.0
+mypy==1.7.0
+
+# Documentation
+mkdocs==1.5.3
+mkdocs-material==9.4.14
+
+# Development tools
+pre-commit==3.5.0
+ipython==8.17.2
+
+# Async support
+asyncio==3.4.3
