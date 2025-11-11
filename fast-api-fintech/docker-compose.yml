@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: fintech_postgres
+    environment:
+      POSTGRES_USER: fintech
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
+      POSTGRES_DB: fintech_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fintech"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - fintech_network
+
+  app:
+    build: .
+    container_name: fintech_app
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://fintech:${DB_PASSWORD:-changeme}@db:5432/fintech_db
+      SECRET_KEY: ${SECRET_KEY:-change-this-secret-key-in-production}
+      DEBUG: ${DEBUG:-False}
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - fintech_network
+    volumes:
+      - ./logs:/app/logs
+
+  redis:
+    image: redis:7-alpine
+    container_name: fintech_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - fintech_network
+    restart: unless-stopped
+
+networks:
+  fintech_network:
+    driver: bridge
+
+volumes:
+  postgres_data:

@@ -22,7 +22,7 @@ httpx==0.25.1
 aiohttp==3.9.0
 
 # Data validation and serialization
-email-validator==2.1.0
+email-validator==2.1.1
 python-dateutil==2.8.2
 
 # Environment configuration
