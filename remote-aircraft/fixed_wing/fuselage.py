@@ -5,7 +5,11 @@ Modular fuselage sections for fixed-wing aircraft.
 Semi-monocoque shell construction optimized for 3D printing.
 """
 
-import cadquery as cq
+try:
+    import cadquery as cq
+    HAS_CADQUERY = True
+except ImportError:
+    HAS_CADQUERY = False
 
 
 def fuselage_section(
@@ -30,7 +34,16 @@ def fuselage_section(
         - Semi-monocoque design: shell carries loads
         - Reinforced sections for wing/motor mounts
         - Modular for easy printing and assembly
+    
+    Raises:
+        ImportError: If CadQuery is not installed
     """
+    
+    if not HAS_CADQUERY:
+        raise ImportError(
+            "CadQuery is required for STL generation. "
+            "Install with: conda install -c conda-forge -c cadquery cadquery"
+        )
     
     # Create outer cylinder
     outer = (
@@ -85,7 +98,16 @@ def fuselage_bulkhead(
         - Wing attachment points
         - Motor mount reinforcement
         - Landing gear attachment
+    
+    Raises:
+        ImportError: If CadQuery is not installed
     """
+    
+    if not HAS_CADQUERY:
+        raise ImportError(
+            "CadQuery is required for STL generation. "
+            "Install with: conda install -c conda-forge -c cadquery cadquery"
+        )
     
     bulkhead = (
         cq.Workplane("XY")
@@ -125,7 +147,16 @@ def wing_mount_plate(
     Critical Zone:
         90% of fixed-wing failures occur at wing-fuselage connection.
         Use double wall thickness and proper fasteners.
+    
+    Raises:
+        ImportError: If CadQuery is not installed
     """
+    
+    if not HAS_CADQUERY:
+        raise ImportError(
+            "CadQuery is required for STL generation. "
+            "Install with: conda install -c conda-forge -c cadquery cadquery"
+        )
     
     plate = (
         cq.Workplane("XY")

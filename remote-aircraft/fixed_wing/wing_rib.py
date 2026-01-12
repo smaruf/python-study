@@ -5,7 +5,11 @@ Parametric wing rib design for fixed-wing aircraft.
 Ribs define the airfoil shape and provide structure for the wing.
 """
 
-import cadquery as cq
+try:
+    import cadquery as cq
+    HAS_CADQUERY = True
+except ImportError:
+    HAS_CADQUERY = False
 
 
 def wing_rib(
@@ -30,7 +34,16 @@ def wing_rib(
         - Clark-Y is a popular airfoil for small UAVs
         - Spar slot provides structural connection
         - Simplified airfoil for printability
+    
+    Raises:
+        ImportError: If CadQuery is not installed
     """
+    
+    if not HAS_CADQUERY:
+        raise ImportError(
+            "CadQuery is required for STL generation. "
+            "Install with: conda install -c conda-forge -c cadquery cadquery"
+        )
     
     # Clark-Y simplified airfoil coordinates (relative to chord)
     # Upper surface
@@ -99,7 +112,16 @@ def wing_rib_simple(
     
     Returns:
         CadQuery workplane with the rib geometry
+    
+    Raises:
+        ImportError: If CadQuery is not installed
     """
+    
+    if not HAS_CADQUERY:
+        raise ImportError(
+            "CadQuery is required for STL generation. "
+            "Install with: conda install -c conda-forge -c cadquery cadquery"
+        )
     
     # Simplified symmetric airfoil
     rib = (

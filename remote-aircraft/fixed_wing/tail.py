@@ -5,7 +5,11 @@ Horizontal and vertical stabilizers for fixed-wing aircraft.
 Light but stiff construction is critical.
 """
 
-import cadquery as cq
+try:
+    import cadquery as cq
+    HAS_CADQUERY = True
+except ImportError:
+    HAS_CADQUERY = False
 
 
 def horizontal_stabilizer(
@@ -30,7 +34,16 @@ def horizontal_stabilizer(
         - Symmetric airfoil for neutral pitch
         - Lightweight construction critical
         - Usually 20-30% of wing area
+    
+    Raises:
+        ImportError: If CadQuery is not installed
     """
+    
+    if not HAS_CADQUERY:
+        raise ImportError(
+            "CadQuery is required for STL generation. "
+            "Install with: conda install -c conda-forge -c cadquery cadquery"
+        )
     
     max_thickness = chord * airfoil_thickness_ratio
     
@@ -81,7 +94,16 @@ def vertical_stabilizer(
         - Provides directional stability
         - Usually smaller than horizontal stabilizer
         - Symmetric airfoil section
+    
+    Raises:
+        ImportError: If CadQuery is not installed
     """
+    
+    if not HAS_CADQUERY:
+        raise ImportError(
+            "CadQuery is required for STL generation. "
+            "Install with: conda install -c conda-forge -c cadquery cadquery"
+        )
     
     # Simplified vertical stabilizer profile
     stabilizer = (
@@ -121,7 +143,16 @@ def tail_boom_mount(
         - Secures tail to fuselage
         - Must be strong and lightweight
         - Use Nylon or CF-Nylon material
+    
+    Raises:
+        ImportError: If CadQuery is not installed
     """
+    
+    if not HAS_CADQUERY:
+        raise ImportError(
+            "CadQuery is required for STL generation. "
+            "Install with: conda install -c conda-forge -c cadquery cadquery"
+        )
     
     outer_radius = (boom_diameter / 2) + wall_thickness
     
