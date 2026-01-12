@@ -15,17 +15,15 @@ except ImportError:
 def wing_rib(
     chord=180,
     thickness=6,
-    spar_slot=10,
-    airfoil_type="clark-y"
+    spar_slot=10
 ):
     """
-    Generate a parametric wing rib.
+    Generate a parametric wing rib with Clark-Y airfoil.
     
     Args:
         chord: Wing chord length in mm (default: 180mm)
         thickness: Rib thickness in mm (default: 6mm)
         spar_slot: Width of spar slot in mm (default: 10mm)
-        airfoil_type: Airfoil profile type (default: "clark-y")
     
     Returns:
         CadQuery workplane with the rib geometry
@@ -123,7 +121,11 @@ def wing_rib_simple(
             "Install with: conda install -c conda-forge -c cadquery cadquery"
         )
     
-    # Simplified symmetric airfoil
+    # Simplified symmetric airfoil coordinates (relative to chord)
+    # These create a teardrop shape suitable for basic UAVs:
+    # - Leading edge at 0% chord
+    # - Maximum thickness (15%) at 60% chord
+    # - Trailing edge at 100% chord
     rib = (
         cq.Workplane("XY")
         .polyline([

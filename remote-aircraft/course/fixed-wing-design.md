@@ -286,7 +286,7 @@ section = fuselage_section(
     radius=35,
     length=80,
     wall=2,
-    reinforced=True  # ← Critical!
+    reinforced=True  # Critical!
 )
 
 # Plus dedicated wing mount plate

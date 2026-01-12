@@ -117,9 +117,9 @@ def main():
     
     print("\n⚠ CRITICAL: Tail weight heavily affects CG position")
     print("   - Keep tail components as light as possible")
-    print("   - Use carbon tube for tail boom (not printed)")
+    print("   - Use carbon tube for tail boom - not printed")
     print("   - Print ribs only, use foam/film covering")
-    print("   - Excessive tail weight moves CG backward (unstable)")
+    print("   - Excessive tail weight moves CG backward - unstable")
     
     # Build recommendations
     print("\n" + "=" * 70)
