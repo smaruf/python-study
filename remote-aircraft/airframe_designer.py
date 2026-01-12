@@ -15,6 +15,11 @@ sys.path.insert(0, os.path.dirname(__file__))
 
 from materials import PLA, PETG, NYLON, CF_NYLON
 
+# Design constants for calculations
+TYPICAL_FIXED_WING_WEIGHT_G = 200  # Typical weight for small fixed wing aircraft in grams
+TYPICAL_GLIDER_WEIGHT_G = 150      # Typical weight for small glider in grams
+GLIDE_RATIO_EFFICIENCY = 0.8       # Aerodynamic efficiency factor for glide ratio calculation
+
 
 class AirframeDesignerApp:
     """Main application for airframe design"""
@@ -349,8 +354,8 @@ class FixedWingDesigner:
         summary += f"3D Print Material: {material}\n\n"
         
         summary += "--- Performance Estimates ---\n"
-        wing_loading = 200 / (params['wing_span'] * params['wing_chord'] / 10000)  # Assuming 200g weight
-        summary += f"Estimated Wing Loading: {wing_loading:.2f} g/dm²\n"
+        wing_loading = TYPICAL_FIXED_WING_WEIGHT_G / (params['wing_span'] * params['wing_chord'] / 10000)
+        summary += f"Estimated Wing Loading: {wing_loading:.2f} g/dm² (assuming {TYPICAL_FIXED_WING_WEIGHT_G}g weight)\n"
         
         summary += "\n" + "=" * 60 + "\n"
         
@@ -710,9 +715,9 @@ class GliderDesigner:
         summary += f"3D Print Material: {material}\n\n"
         
         summary += "--- Performance Estimates ---\n"
-        wing_loading = 150 / wing_area  # Assuming 150g weight for glider
-        summary += f"Estimated Wing Loading: {wing_loading:.2f} g/dm²\n"
-        summary += f"Estimated Glide Ratio: {aspect_ratio * 0.8:.1f}:1 (typical)\n"
+        wing_loading = TYPICAL_GLIDER_WEIGHT_G / wing_area
+        summary += f"Estimated Wing Loading: {wing_loading:.2f} g/dm² (assuming {TYPICAL_GLIDER_WEIGHT_G}g weight)\n"
+        summary += f"Estimated Glide Ratio: {aspect_ratio * GLIDE_RATIO_EFFICIENCY:.1f}:1 (typical)\n"
         summary += f"Stall Speed (estimated): {(wing_loading * 2)**0.5:.1f} m/s\n"
         
         summary += "\n" + "=" * 60 + "\n"
