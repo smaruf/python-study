@@ -1,13 +1,13 @@
-# Remote Aircraft: FPV Drone & Glider Design System
+# Remote Aircraft: FPV Drone & Fixed-Wing Design System
 
-**Professional parametric CAD system + comprehensive 1-week practical course for designing, building, and flying FPV drones and gliders.**
+**Professional parametric CAD system + comprehensive course for designing, building, and flying FPV drones and fixed-wing aircraft.**
 
 This is a complete, production-ready repository combining:
 - 🐍 Python-based parametric CAD (CadQuery)
-- 🎓 1-week hands-on FPV course
-- 📐 Engineering analysis tools
-- 🖨️ 3D printing + foam-board construction
-- ✈️ Flight-ready designs
+- 🎓 Hands-on multirotor and fixed-wing courses
+- 📐 Engineering analysis tools (structural & aerodynamic)
+- 🖨️ 3D printing + hybrid construction methods
+- ✈️ Flight-ready designs for multirotors and fixed-wing UAVs
 
 ---
 
@@ -34,6 +34,9 @@ python export_all.py
 # Or run analysis examples (no CadQuery required)
 PYTHONPATH=. python examples/weight_calc.py
 PYTHONPATH=. python examples/stress_analysis.py
+
+# Fixed-wing aircraft analysis
+PYTHONPATH=. python examples/fixed_wing_analysis.py
 ```
 
 ### 3. Start the Course
@@ -66,16 +69,26 @@ remote-aircraft/
 │   ├── cg.py                   # Center of gravity
 │   └── stress.py               # Stress analysis
 │
-├── course/                     # 1-Week Practical Course
+├── fixed_wing/                 # Fixed-Wing Aircraft Design
+│   ├── wing_rib.py            # Parametric wing ribs
+│   ├── spar.py                # Spar design & load calcs
+│   ├── fuselage.py            # Fuselage sections
+│   ├── tail.py                # Tail components
+│   └── loads.py               # Aerodynamic loads
+│
+├── course/                     # Practical Courses
 │   ├── README.md               # Complete 7-day curriculum
 │   ├── foam-board-templates.md # Build templates
 │   ├── 3d-printing-guide.md    # Print settings & materials
-│   └── electronics-wiring-guide.md # Wiring & configuration
+│   ├── electronics-wiring-guide.md # Wiring & configuration
+│   └── fixed-wing-design.md    # Fixed-wing design guide
 │
 ├── examples/                   # Runnable examples
 │   ├── weight_calc.py          # Weight & CG calculator
 │   ├── stress_analysis.py      # Stress analysis
-│   └── generate_motor_mounts.py # Custom motor mounts
+│   ├── generate_motor_mounts.py # Custom motor mounts
+│   ├── fixed_wing_analysis.py  # Fixed-wing load analysis
+│   └── generate_fixed_wing.py  # Generate fixed-wing STLs
 │
 └── output/                     # Generated STL files
     └── *.stl
@@ -86,17 +99,36 @@ remote-aircraft/
 ## ✨ Features
 
 ### Parametric CAD Design
+
+#### Multirotor Components
 - **Motor Mounts**: Customizable for any motor size (1507 to 2810+)
 - **Quadcopter Arms**: Various lengths and cross-sections
 - **Camera Mounts**: Adjustable tilt angles
 - **Battery Trays**: Sized for different battery capacities
 - **Complete Frames**: Full quadcopter assemblies
 
+#### Fixed-Wing Components (NEW! ✈️)
+- **Wing Ribs**: Parametric airfoil profiles (Clark-Y, symmetric)
+- **Fuselage Sections**: Modular semi-monocoque shells
+- **Wing Mount Plates**: Reinforced connection components
+- **Tail Components**: Horizontal & vertical stabilizers
+- **Tail Boom Mounts**: Carbon tube integration
+- **Complete UAV Design**: 1200mm wingspan electric aircraft
+
 ### Engineering Analysis
+
+#### Structural Analysis
 - **Weight Calculator**: Compute part weights with different materials
 - **Center of Gravity**: Find CG position for stability
 - **Stress Analysis**: Calculate bending stress under load
 - **Material Comparison**: Compare PLA, PETG, Nylon, CF-Nylon
+
+#### Aerodynamic Analysis (NEW! ✈️)
+- **Lift Calculations**: Wing loading and lift distribution
+- **Flight Loads**: Bending moments and safety factors
+- **Cruise Speed**: Performance estimation
+- **Tail Sizing**: Stability analysis and recommendations
+- **Spar Selection**: Structural requirements and recommendations
 
 ### 1-Week Practical Course
 
@@ -139,9 +171,30 @@ A complete hands-on curriculum covering:
 
 See [`course/README.md`](course/README.md) for full details.
 
+### Fixed-Wing Aircraft Design (NEW! ✈️)
+
+A comprehensive guide to designing real fixed-wing UAVs with Python and 3D printing.
+
+**Key Topics:**
+- **Wing Structure**: Ribs, spars, and airfoil design
+- **Load Analysis**: Aerodynamic forces and structural requirements
+- **Fuselage Design**: Semi-monocoque shell construction
+- **Tail Design**: Stability and control surfaces
+- **Hybrid Construction**: Combining 3D printing with traditional materials
+
+**Design Target:**
+- 1200mm wingspan electric UAV
+- 1.2-1.5kg takeoff weight
+- Clark-Y airfoil profile
+- 15-20 m/s cruise speed
+
+See [`course/fixed-wing-design.md`](course/fixed-wing-design.md) for the complete guide.
+
 ---
 
 ## 💡 Usage Examples
+
+### Multirotor Examples
 
 ### Example 1: Generate Custom Motor Mount
 
@@ -193,26 +246,94 @@ stress = bending_stress(force, length, inertia)
 print(f"Bending stress: {stress:.2f} g/mm²")
 ```
 
+### Fixed-Wing Examples (NEW! ✈️)
+
+### Example 4: Fixed-Wing Load Analysis
+
+```python
+from fixed_wing.loads import calculate_flight_loads
+
+# Analyze a 1200mm wingspan UAV
+loads = calculate_flight_loads(
+    weight=1400,      # grams
+    wingspan=1200,    # mm
+    chord=180         # mm
+)
+
+print(f"Cruise speed: {loads['estimated_cruise_speed_ms']:.1f} m/s")
+print(f"Wing loading: {loads['wing_loading_g_cm2']:.4f} g/cm²")
+print(f"Lift per wing: {loads['lift_per_wing_g']:.1f} g")
+```
+
+### Example 5: Generate Wing Ribs
+
+```python
+import cadquery as cq
+from fixed_wing.wing_rib import wing_rib
+
+# Clark-Y airfoil rib
+rib = wing_rib(
+    chord=180,        # mm
+    thickness=6,      # mm
+    spar_slot=10      # mm
+)
+
+cq.exporters.export(rib, "output/wing_rib.stl")
+```
+
+### Example 6: Spar Recommendation
+
+```python
+from fixed_wing.spar import recommend_spar_type, wing_bending_load
+
+# Calculate bending load
+load = wing_bending_load(weight=1400, span=1200)
+print(f"Bending moment: {load:.1f} g·mm")
+
+# Get recommendation
+spar = recommend_spar_type(wingspan=1200, weight=1400)
+print(f"Recommended: {spar['type']}")
+# Output: "Carbon tube (6-8mm OD)"
+```
+
 See [USAGE.md](USAGE.md) for more examples.
 
 ---
 
 ## 🎯 What You Can Build
 
-### Beginner Builds
-- **Chuck Glider**: Simple hand-launch glider (Day 1)
-- **FPV Glider**: 800mm foam-board with FPV system (Day 2)
-- **5" Quad**: Standard freestyle/racing quad (Days 3-6)
+### Multirotor Builds
 
-### Intermediate Builds
+#### Beginner
+- **5" Quad**: Standard freestyle/racing quad
+- **3" Micro**: Indoor/outdoor fun
+- **FPV Glider**: 800mm foam-board with FPV system
+
+#### Intermediate
 - **7" Long-Range**: Extended flight time, GPS
 - **Stretch-X Frame**: Better camera view
-- **Hybrid Wing**: Multirotor with wings
-
-### Advanced Builds
-- **Flying Wing**: High-speed FPV platform
 - **Custom Designs**: Fully parametric, your specs
+
+#### Advanced
 - **Competition Builds**: Racing or freestyle optimized
+- **Hybrid Designs**: Custom geometries and materials
+
+### Fixed-Wing Builds (NEW! ✈️)
+
+#### Beginner
+- **Chuck Glider**: Simple hand-launch glider
+- **Small Sport Plane**: 800mm wingspan, basic trainer
+- **FPV Glider**: Long flight times, stable platform
+
+#### Intermediate
+- **Electric UAV**: 1200mm wingspan (design target)
+- **Camera Platform**: Aerial photography/FPV
+- **Long-Range Explorer**: GPS navigation, extended range
+
+#### Advanced
+- **Flying Wing**: High-speed FPV platform
+- **Custom Airframes**: Fully parametric designs
+- **Competition Models**: Optimized for performance
 
 ---
 
@@ -241,33 +362,86 @@ Enclosure: Recommended
 
 See [`course/3d-printing-guide.md`](course/3d-printing-guide.md) for complete material guide.
 
+### Fixed-Wing Construction (Hybrid Approach) ✈️
+
+**❌ Don't do this:**
+- Full printed wings (too heavy and flexible)
+- Printed spars for large aircraft (will fail)
+- Heavy tail components (CG problems)
+
+**✅ Best practice (Hybrid Construction):**
+
+**Wings:**
+```
+1. Print ribs only (PLA/PETG, 30% infill)
+2. Use carbon tube spar (6-8mm OD)
+3. Cover with foam/balsa + heat-shrink film
+```
+
+**Fuselage:**
+```
+Material: Nylon/PETG
+Wall thickness: 2mm
+Infill: 30%
+Reinforcement: Double thickness at wing mount
+```
+
+**Tail:**
+```
+Boom: Carbon tube (8mm) - NOT printed
+Mounts: Print brackets only (Nylon)
+Stabilizers: Foam core + film covering
+```
+
+See [`course/fixed-wing-design.md`](course/fixed-wing-design.md) for complete build guide.
+
 ---
 
 ## 🎓 Course Materials
 
 All course materials are included:
 
-- **[Main Course](course/README.md)**: Complete 7-day curriculum
+- **[Main Course](course/README.md)**: Complete 7-day FPV curriculum
 - **[Foam-Board Templates](course/foam-board-templates.md)**: Cut patterns and assembly
 - **[3D Printing Guide](course/3d-printing-guide.md)**: Materials, settings, troubleshooting
 - **[Electronics Wiring](course/electronics-wiring-guide.md)**: Complete wiring diagrams
+- **[Fixed-Wing Design](course/fixed-wing-design.md)**: Complete fixed-wing UAV design guide
 
 ---
 
 ## 📊 Technical Specifications
 
-### Supported Motor Sizes
+### Multirotor Specs
+
+#### Supported Motor Sizes
 - 1507 (Tiny Whoop)
 - 2204 (4" racing)
 - 2306 (5" freestyle)
 - 2806 (7" long range)
 - Custom sizes via parameters
 
-### Frame Sizes
+#### Frame Sizes
 - 120mm arms (3" micro)
 - 150mm arms (5" standard)
 - 180mm arms (7" long range)
 - Custom sizes programmable
+
+### Fixed-Wing Specs (NEW! ✈️)
+
+#### Design Target UAV
+- Wingspan: 800-1500mm (parametric)
+- Wing chord: 150-200mm
+- Airfoil: Clark-Y (simplified for printing)
+- Cruise speed: 15-20 m/s
+- Takeoff weight: 1.0-2.0 kg
+
+#### Supported Components
+- Wing ribs (multiple chord sizes)
+- Fuselage sections (modular)
+- Wing mount plates (reinforced)
+- Horizontal stabilizers
+- Vertical stabilizers
+- Tail boom mounts (for carbon tube)
 
 ### Materials Database
 - PLA: 1.24 g/cm³
@@ -336,21 +510,30 @@ This project is open source. Feel free to use, modify, and share.
 
 This repository provides:
 
-✅ **Complete parametric CAD system** for drone/glider design
-✅ **Production-ready parts** that actually fly
-✅ **Engineering analysis** for safe, optimized builds
-✅ **Comprehensive course** from zero to flight
-✅ **Both 3D printing and foam-board** construction methods
+✅ **Complete parametric CAD system** for multirotors and fixed-wing aircraft  
+✅ **Production-ready parts** that actually fly  
+✅ **Engineering analysis** for safe, optimized builds (structural + aerodynamic)  
+✅ **Comprehensive courses** from zero to flight (FPV + fixed-wing)  
+✅ **Multiple construction methods** (3D printing, foam-board, hybrid)  
+✅ **Real aerospace engineering** adapted for solo builders  
 ✅ **Real-world tested** designs and techniques
 
 ---
 
 ## 🚁 Ready to Build?
 
+### For Multirotors:
 1. **Start the course**: [`course/README.md`](course/README.md)
 2. **Generate parts**: `python export_all.py`
 3. **Run examples**: `PYTHONPATH=. python examples/weight_calc.py`
 4. **Build and fly!**
+
+### For Fixed-Wing: ✈️
+1. **Read the guide**: [`course/fixed-wing-design.md`](course/fixed-wing-design.md)
+2. **Analyze your design**: `PYTHONPATH=. python examples/fixed_wing_analysis.py`
+3. **Generate components**: `PYTHONPATH=. python examples/generate_fixed_wing.py`
+4. **Build hybrid** (3D print + carbon + foam/film)
+5. **Test and fly!**
 
 Happy building! ✈️
 
