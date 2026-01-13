@@ -25,7 +25,22 @@ pip install -r requirements.txt
 
 **Note:** CadQuery installation can be tricky. See [USAGE.md](USAGE.md) for detailed installation instructions.
 
-### 2. Generate Your First Parts
+### 2. Use the GUI Designer (New!)
+
+```bash
+# Launch the Airframe Designer GUI
+python airframe_designer.py
+```
+
+This opens a graphical interface where you can:
+- Design Fixed Wing Aircraft or Gliders
+- Enter custom parameters
+- Generate foamboard cutting templates
+- Create 3D print specifications
+
+See [AIRFRAME_DESIGNER_README.md](AIRFRAME_DESIGNER_README.md) for complete GUI documentation.
+
+### 3. Generate Parts Programmatically
 
 ```bash
 # Generate all default parts (if CadQuery installed)
@@ -39,7 +54,7 @@ PYTHONPATH=. python examples/stress_analysis.py
 PYTHONPATH=. python examples/fixed_wing_analysis.py
 ```
 
-### 3. Start the Course
+### 4. Start the Course
 
 See [`course/README.md`](course/README.md) for the complete 1-week practical course.
 
@@ -51,6 +66,8 @@ See [`course/README.md`](course/README.md) for the complete 1-week practical cou
 remote-aircraft/
 ├── README.md                    # This file
 ├── USAGE.md                     # Detailed usage examples
+├── AIRFRAME_DESIGNER_README.md  # GUI Designer documentation
+├── airframe_designer.py         # GUI application for aircraft design
 ├── requirements.txt             # Python dependencies
 ├── materials.py                 # Material properties database
 ├── export_all.py               # Generate all default parts
@@ -97,6 +114,15 @@ remote-aircraft/
 ---
 
 ## ✨ Features
+
+### 🖥️ GUI Airframe Designer (New!)
+- **Interactive Design**: User-friendly graphical interface
+- **Fixed Wing Aircraft**: Complete parametric design with motor
+- **Gliders**: Optimized for unpowered flight performance
+- **Dual Output**: Generate both foamboard templates and 3D print specs
+- **Material Selection**: Choose from PLA, PETG, Nylon, or CF-Nylon
+- **Design Summary**: Automatic performance calculations and recommendations
+- **No Dependencies**: Uses standard Python Tkinter (no extra install needed)
 
 ### Parametric CAD Design
 
