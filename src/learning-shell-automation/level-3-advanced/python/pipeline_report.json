@@ -1,0 +1,73 @@
+{
+  "pipeline": "My Application",
+  "version": "20260119.045712",
+  "start_time": "2026-01-19T04:57:12.846294",
+  "end_time": "2026-01-19T04:57:12.853350",
+  "duration": 0.007056,
+  "stages": [
+    {
+      "name": "Checkout",
+      "status": "success",
+      "start_time": "2026-01-19T04:57:12.846304",
+      "end_time": "2026-01-19T04:57:12.847299",
+      "duration": 0.000995
+    },
+    {
+      "name": "Build",
+      "status": "success",
+      "start_time": "2026-01-19T04:57:12.847308",
+      "end_time": "2026-01-19T04:57:12.848098",
+      "duration": 0.00079
+    },
+    {
+      "name": "Unit Tests",
+      "status": "success",
+      "start_time": "2026-01-19T04:57:12.848105",
+      "end_time": "2026-01-19T04:57:12.848867",
+      "duration": 0.000762
+    },
+    {
+      "name": "Code Quality",
+      "status": "success",
+      "start_time": "2026-01-19T04:57:12.848873",
+      "end_time": "2026-01-19T04:57:12.849637",
+      "duration": 0.000764
+    },
+    {
+      "name": "Security Scan",
+      "status": "success",
+      "start_time": "2026-01-19T04:57:12.849644",
+      "end_time": "2026-01-19T04:57:12.850386",
+      "duration": 0.000742
+    },
+    {
+      "name": "Docker Build",
+      "status": "success",
+      "start_time": "2026-01-19T04:57:12.850391",
+      "end_time": "2026-01-19T04:57:12.851124",
+      "duration": 0.000733
+    },
+    {
+      "name": "Deploy to Staging",
+      "status": "success",
+      "start_time": "2026-01-19T04:57:12.851129",
+      "end_time": "2026-01-19T04:57:12.851866",
+      "duration": 0.000737
+    },
+    {
+      "name": "Integration Tests",
+      "status": "success",
+      "start_time": "2026-01-19T04:57:12.851871",
+      "end_time": "2026-01-19T04:57:12.852608",
+      "duration": 0.000737
+    },
+    {
+      "name": "Health Check",
+      "status": "success",
+      "start_time": "2026-01-19T04:57:12.852613",
+      "end_time": "2026-01-19T04:57:12.853345",
+      "duration": 0.000732
+    }
+  ],
+  "success": true
+}
