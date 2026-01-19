@@ -103,6 +103,10 @@ Complete NASDAQ stock market simulator with two implementations:
 ### Games
 - **[Games](./src/games/)**: Game implementations including Star Trek and Star Wars
 
+### Engineering & Physics
+- **[Basic Aerodynamics](./src/basic_aerodynamics.py)**: Fundamental aerodynamic calculations for aircraft design including lift, drag, wing loading, Reynolds numbers, and flight performance analysis
+- **[Basic Thermodynamics](./src/basic_thermodynamics.py)**: Core thermodynamic principles covering ideal gas law, heat transfer (conduction, convection, radiation), engine efficiency, and thermodynamic cycles
+
 ### Other Resources
 - **[Books](./src/books/)**: Collection of eBooks
 - **[Personal Samples](./src/zz-personal-sample/)**: Personal code examples
