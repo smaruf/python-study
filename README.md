@@ -25,6 +25,7 @@ python-study/
     ├── comfyUI/               # ComfyUI integration
     ├── dall-e/                # DALL-E experiments
     ├── data-fabric/           # Data fabric patterns
+    ├── deep-learning/         # Deep Learning from basics to expert (6 levels)
     ├── diagram/               # Diagram generation
     ├── django/                # Django web framework
     ├── es/                    # Elasticsearch examples
@@ -72,6 +73,7 @@ Complete NASDAQ stock market simulator with two implementations:
 - **[Shell Automation - Zero to Expert](./src/learning-shell-automation/README.md)**: Comprehensive learning path for shell scripting (Bash, PowerShell, Batch, Python), automation, DevOps, and CI/CD across 6 progressive levels from beginner to master
 
 ### AI & Machine Learning
+- **[Deep Learning - Zero to Expert](./src/deep-learning/README.md)**: Comprehensive deep learning learning path from fundamentals to production deployment across 6 progressive levels (NumPy/PyTorch basics, Neural Networks, CNNs, RNNs/LSTMs, GANs/Transformers, MLOps)
 - **[OpenAI](./src/openai/README.md)**: OpenAI API examples, grammar correction, ML algorithms
 - **[JAX](./src/jax/)**: JAX machine learning experiments
 - **[NLP](./src/nlp/)**: Natural Language Processing projects
