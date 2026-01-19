@@ -36,6 +36,7 @@ python-study/
     ├── k8s/                   # Kubernetes configurations
     ├── learning-arabic/       # Arabic learning tools
     ├── learning-english/      # English learning flashcards
+    ├── learning-shell-automation/ # Shell scripting and DevOps learning
     ├── micro/                 # Microcontroller projects
     ├── nasdaq/                # NASDAQ-related scripts
     ├── nlp/                   # Natural Language Processing
@@ -66,6 +67,9 @@ Complete NASDAQ stock market simulator with two implementations:
 ### Language Learning
 - **[English Learning](./src/learning-english/README.md)**: Flashcard application for vocabulary building
 - **[Arabic Learning](./src/learning-arabic/README.md)**: Arabic language learning tools
+
+### Automation & DevOps Learning
+- **[Shell Automation - Zero to Expert](./src/learning-shell-automation/README.md)**: Comprehensive learning path for shell scripting (Bash, PowerShell, Batch, Python), automation, DevOps, and CI/CD across 6 progressive levels from beginner to master
 
 ### AI & Machine Learning
 - **[OpenAI](./src/openai/README.md)**: OpenAI API examples, grammar correction, ML algorithms
