@@ -1,0 +1,74 @@
+# Deep Learning .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Datasets
+data/
+datasets/mnist/
+datasets/cifar/
+datasets/imagenet/
+*.tar
+*.tar.gz
+*.zip
+
+# Model files
+*.pth
+*.pt
+*.onnx
+*.pb
+*.h5
+checkpoints/
+models/
+saved_models/
+
+# Logs and outputs
+logs/
+runs/
+outputs/
+wandb/
+mlruns/
+tensorboard/
+*.log
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
