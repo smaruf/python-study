@@ -89,5 +89,4 @@ def query_knowledge_base(query):
         predicted_class = np.argmax(prediction)
         return label_encoder.inverse_transform([predicted_class])[0]
     except Exception as e:
-        print("Error",f Cannot run UI or fail """
-``
+        return f"Error: Cannot process query - {str(e)}"
