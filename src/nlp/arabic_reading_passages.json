@@ -1,0 +1,265 @@
+{
+  "reading_passages": [
+    {
+      "id": "story_1",
+      "title": "في المدرسة (At School)",
+      "difficulty": "beginner",
+      "level": 1,
+      "text_arabic": "أنا طالب. أذهب إلى المدرسة كل يوم. مدرستي كبيرة وجميلة. معلمي طيب. أحب اللغة العربية والرياضيات. لي صديق اسمه أحمد. نلعب معاً في الفسحة.",
+      "text_english": "I am a student. I go to school every day. My school is big and beautiful. My teacher is kind. I love Arabic language and mathematics. I have a friend named Ahmad. We play together during break time.",
+      "text_transliteration": "Ana talib. Adh-habu ila al-madrasah kull yawm. Madrasati kabirah wa jamilah. Mu'allimi tayyib. Uhibb al-lughah al-'arabiyyah wa ar-riyadiyyat. Li sadiq ismuhu Ahmad. Nal'ab ma'an fi al-fushshah.",
+      "vocabulary": [
+        {"word": "طالب", "meaning": "student", "type": "noun"},
+        {"word": "مدرسة", "meaning": "school", "type": "noun"},
+        {"word": "كل يوم", "meaning": "every day", "type": "phrase"},
+        {"word": "كبير", "meaning": "big", "type": "adjective"},
+        {"word": "جميل", "meaning": "beautiful", "type": "adjective"},
+        {"word": "معلم", "meaning": "teacher", "type": "noun"},
+        {"word": "طيب", "meaning": "kind", "type": "adjective"},
+        {"word": "أحب", "meaning": "I love", "type": "verb"},
+        {"word": "صديق", "meaning": "friend", "type": "noun"},
+        {"word": "نلعب", "meaning": "we play", "type": "verb"}
+      ],
+      "comprehension_questions": [
+        {
+          "question": "Where does the student go every day?",
+          "answer": "To school",
+          "arabic_question": "أين يذهب الطالب كل يوم؟"
+        },
+        {
+          "question": "What subjects does the student love?",
+          "answer": "Arabic language and mathematics",
+          "arabic_question": "ما هي المواد التي يحبها الطالب؟"
+        },
+        {
+          "question": "What is the friend's name?",
+          "answer": "Ahmad",
+          "arabic_question": "ما اسم صديق الطالب؟"
+        }
+      ],
+      "grammar_notes": [
+        "أنا (ana) = I (first person singular pronoun)",
+        "أذهب (adh-habu) = I go (present tense verb)",
+        "كبيرة (kabirah) = big (feminine form, agrees with مدرسة)",
+        "معلمي (mu'allimi) = my teacher (possessive form)"
+      ]
+    },
+    {
+      "id": "story_2",
+      "title": "عائلة كريم (Karim's Family)",
+      "difficulty": "beginner",
+      "level": 1,
+      "text_arabic": "اسمي كريم. عائلتي صغيرة. أبي يعمل في مستشفى. هو طبيب. أمي معلمة في مدرسة. لي أخت صغيرة اسمها فاطمة. عمرها خمس سنوات. نسكن في بيت جميل. عندنا حديقة كبيرة.",
+      "text_english": "My name is Karim. My family is small. My father works in a hospital. He is a doctor. My mother is a teacher in a school. I have a little sister named Fatima. She is five years old. We live in a beautiful house. We have a big garden.",
+      "text_transliteration": "Ismi Karim. 'A'ilati saghirah. Abi ya'mal fi mustashfa. Huwa tabib. Ummi mu'allimah fi madrasah. Li ukht saghirah ismuha Fatimah. 'Umruha khams sanawat. Naskun fi bayt jamil. 'Indana hadiqah kabirah.",
+      "vocabulary": [
+        {"word": "عائلة", "meaning": "family", "type": "noun"},
+        {"word": "صغير", "meaning": "small/little", "type": "adjective"},
+        {"word": "يعمل", "meaning": "he works", "type": "verb"},
+        {"word": "مستشفى", "meaning": "hospital", "type": "noun"},
+        {"word": "طبيب", "meaning": "doctor", "type": "noun"},
+        {"word": "معلمة", "meaning": "female teacher", "type": "noun"},
+        {"word": "أخت", "meaning": "sister", "type": "noun"},
+        {"word": "عمر", "meaning": "age", "type": "noun"},
+        {"word": "نسكن", "meaning": "we live", "type": "verb"},
+        {"word": "حديقة", "meaning": "garden", "type": "noun"}
+      ],
+      "comprehension_questions": [
+        {
+          "question": "What does Karim's father do?",
+          "answer": "He is a doctor who works in a hospital",
+          "arabic_question": "ماذا يعمل أب كريم؟"
+        },
+        {
+          "question": "How old is Fatima?",
+          "answer": "Five years old",
+          "arabic_question": "كم عمر فاطمة؟"
+        },
+        {
+          "question": "Where does Karim's mother work?",
+          "answer": "In a school as a teacher",
+          "arabic_question": "أين تعمل أم كريم؟"
+        }
+      ],
+      "grammar_notes": [
+        "معلمة (mu'allimah) = female teacher (feminine form of معلم)",
+        "صغيرة (saghirah) = small (feminine, agrees with أخت and عائلة)",
+        "نسكن (naskun) = we live (first person plural verb)",
+        "عندنا (indana) = we have (literally 'with us')"
+      ]
+    },
+    {
+      "id": "story_3",
+      "title": "يوم في الحديقة (A Day in the Park)",
+      "difficulty": "intermediate",
+      "level": 2,
+      "text_arabic": "في يوم الجمعة، ذهبت مع عائلتي إلى الحديقة العامة. الطقس كان جميلاً والشمس مشرقة. رأيت أطفالاً يلعبون كرة القدم. جلست تحت شجرة كبيرة وقرأت كتاباً. أختي الصغيرة لعبت على الأرجوحة. أبي وأمي مشيا في الحديقة. في المساء، أكلنا السندويشات وشربنا العصير. كان يوماً ممتعاً جداً.",
+      "text_english": "On Friday, I went with my family to the public park. The weather was beautiful and the sun was shining. I saw children playing soccer. I sat under a big tree and read a book. My little sister played on the swing. My father and mother walked in the park. In the evening, we ate sandwiches and drank juice. It was a very enjoyable day.",
+      "text_transliteration": "Fi yawm al-jumu'ah, dhahabtu ma'a 'a'ilati ila al-hadiqah al-'ammah. At-taqs kana jamilan wash-shams mushriqah. Ra'aytu atfalan yal'abun kurat al-qadam. Jalastu tahta shajarah kabirah wa qara'tu kitaban. Ukhti as-saghirah la'ibat ala al-urjuhah. Abi wa ummi mashiya fi al-hadiqah. Fi al-masa', akalna as-sandwishat wa sharibna al-'asir. Kana yawman mumti'an jiddan.",
+      "vocabulary": [
+        {"word": "يوم الجمعة", "meaning": "Friday", "type": "phrase"},
+        {"word": "حديقة عامة", "meaning": "public park", "type": "phrase"},
+        {"word": "طقس", "meaning": "weather", "type": "noun"},
+        {"word": "شمس", "meaning": "sun", "type": "noun"},
+        {"word": "مشرق", "meaning": "shining", "type": "adjective"},
+        {"word": "رأيت", "meaning": "I saw", "type": "verb"},
+        {"word": "شجرة", "meaning": "tree", "type": "noun"},
+        {"word": "أرجوحة", "meaning": "swing", "type": "noun"},
+        {"word": "مساء", "meaning": "evening", "type": "noun"},
+        {"word": "ممتع", "meaning": "enjoyable", "type": "adjective"}
+      ],
+      "comprehension_questions": [
+        {
+          "question": "What day did they go to the park?",
+          "answer": "Friday",
+          "arabic_question": "في أي يوم ذهبوا إلى الحديقة؟"
+        },
+        {
+          "question": "What did the narrator do under the tree?",
+          "answer": "Read a book",
+          "arabic_question": "ماذا فعل الراوي تحت الشجرة؟"
+        },
+        {
+          "question": "What did they eat in the evening?",
+          "answer": "Sandwiches and juice",
+          "arabic_question": "ماذا أكلوا في المساء؟"
+        }
+      ],
+      "grammar_notes": [
+        "ذهبت (dhahabtu) = I went (past tense, first person singular)",
+        "كان (kana) = was (past tense of 'to be')",
+        "يلعبون (yal'abun) = they are playing (present tense, plural masculine)",
+        "كان يوماً (kana yawman) = it was a day (accusative case after كان)"
+      ]
+    },
+    {
+      "id": "story_4",
+      "title": "في السوق (At the Market)",
+      "difficulty": "intermediate",
+      "level": 2,
+      "text_arabic": "صباح اليوم ذهبت إلى السوق مع أمي. السوق كان مزدحماً بالناس. اشترينا فواكه طازجة: تفاح، وبرتقال، وموز. البائع كان لطيفاً وأعطانا خصماً. ثم ذهبنا إلى محل الخضروات. اشترينا طماطم وخيار وجزر. الأسعار كانت معقولة. بعد ذلك، زرنا محل الخبز واشترينا خبزاً ساخناً. رجعنا إلى البيت محملين بالأغراض.",
+      "text_english": "This morning I went to the market with my mother. The market was crowded with people. We bought fresh fruits: apples, oranges, and bananas. The seller was nice and gave us a discount. Then we went to the vegetable shop. We bought tomatoes, cucumbers, and carrots. The prices were reasonable. After that, we visited the bakery and bought hot bread. We returned home loaded with groceries.",
+      "text_transliteration": "Sabah al-yawm dhahabtu ila as-suq ma'a ummi. As-suq kana muzdahiman bin-nas. Ishtarayna fawaki tazajah: tuffah, wa burtuqal, wa mawz. Al-ba'i' kana latifan wa a'tana khasman. Thumma dhahabna ila mahal al-khadrawat. Ishtarayna tamatim wa khiyar wa jazar. Al-as'ar kanat ma'qulah. Ba'da dhalika, zurna mahal al-khubz wa ishtarayna khubzan sakhinan. Raja'na ila al-bayt muhammlin bil-aghrad.",
+      "vocabulary": [
+        {"word": "صباح", "meaning": "morning", "type": "noun"},
+        {"word": "سوق", "meaning": "market", "type": "noun"},
+        {"word": "مزدحم", "meaning": "crowded", "type": "adjective"},
+        {"word": "فواكه", "meaning": "fruits", "type": "noun"},
+        {"word": "طازج", "meaning": "fresh", "type": "adjective"},
+        {"word": "بائع", "meaning": "seller", "type": "noun"},
+        {"word": "خصم", "meaning": "discount", "type": "noun"},
+        {"word": "خضروات", "meaning": "vegetables", "type": "noun"},
+        {"word": "أسعار", "meaning": "prices", "type": "noun"},
+        {"word": "معقول", "meaning": "reasonable", "type": "adjective"}
+      ],
+      "comprehension_questions": [
+        {
+          "question": "Who did the narrator go to the market with?",
+          "answer": "With their mother",
+          "arabic_question": "مع من ذهب الراوي إلى السوق؟"
+        },
+        {
+          "question": "What fruits did they buy?",
+          "answer": "Apples, oranges, and bananas",
+          "arabic_question": "ما هي الفواكه التي اشتروها؟"
+        },
+        {
+          "question": "How were the prices?",
+          "answer": "Reasonable",
+          "arabic_question": "كيف كانت الأسعار؟"
+        }
+      ],
+      "grammar_notes": [
+        "اشترينا (ishtarayna) = we bought (past tense, first person plural)",
+        "محملين (muhammlin) = loaded (plural form, accusative case)",
+        "ساخناً (sakhinan) = hot (accusative case after indefinite noun)",
+        "كانت (kanat) = was/were (feminine form of كان)"
+      ]
+    },
+    {
+      "id": "story_5",
+      "title": "رحلة إلى الشاطئ (Trip to the Beach)",
+      "difficulty": "advanced",
+      "level": 3,
+      "text_arabic": "قررت العائلة قضاء عطلة نهاية الأسبوع على شاطئ البحر. استيقظنا مبكراً وحزمنا حقائبنا بكل ما نحتاجه: مناشف، واقي شمس، وملابس سباحة. الرحلة استغرقت ساعتين بالسيارة. عندما وصلنا، كان المنظر خلاباً. البحر أزرق صافٍ والرمال ذهبية ناعمة. قضى الأطفال وقتاً رائعاً في بناء قلاع رملية واللعب بالأمواج. الكبار جلسوا تحت المظلات يتحدثون ويستمتعون بالمنظر الجميل. في وقت الغداء، تناولنا السمك المشوي الطازج في مطعم قريب. كانت التجربة لا تُنسى، وعدنا إلى المنزل مساءً ونحن سعداء ومتعبون.",
+      "text_english": "The family decided to spend the weekend at the beach. We woke up early and packed our bags with everything we needed: towels, sunscreen, and swimsuits. The trip took two hours by car. When we arrived, the view was breathtaking. The sea was clear blue and the sand was soft golden. The children spent a wonderful time building sand castles and playing with the waves. The adults sat under umbrellas talking and enjoying the beautiful view. At lunch time, we had fresh grilled fish at a nearby restaurant. The experience was unforgettable, and we returned home in the evening happy and tired.",
+      "text_transliteration": "Qarrarati al-'a'ilah qada' 'utlat nihayat al-usbu' ala shati' al-bahr. Istayqazna mubakkiran wa hazamna haqa'ibana bi-kulli ma nahtajuh: manashif, waqi shams, wa malabis sibahah. Ar-rihlah istaghraqqat sa'atayn bis-sayyarah. 'Indama wasalna, kana al-manzar khallaban. Al-bahr azraq safin war-rimal dhahabiyyah na'imah. Qada al-atfal waqtan ra'i'an fi bina' qila' ramliyyah wal-la'ib bil-amwaj. Al-kibar jalasu tahta al-mizallat yatahadathun wa yastamti'un bil-manzar al-jamil. Fi waqt al-ghada', tanawalna as-samak al-mashwi at-tazaj fi mat'am qarib. Kanati at-tajribah la tunsa, wa 'udna ila al-manzil masa'an wa nahnu su'ada' wa muta'bun.",
+      "vocabulary": [
+        {"word": "قرر", "meaning": "decided", "type": "verb"},
+        {"word": "عطلة نهاية الأسبوع", "meaning": "weekend", "type": "phrase"},
+        {"word": "شاطئ", "meaning": "beach", "type": "noun"},
+        {"word": "حزم", "meaning": "packed", "type": "verb"},
+        {"word": "واقي شمس", "meaning": "sunscreen", "type": "phrase"},
+        {"word": "منظر", "meaning": "view", "type": "noun"},
+        {"word": "خلاب", "meaning": "breathtaking", "type": "adjective"},
+        {"word": "أمواج", "meaning": "waves", "type": "noun"},
+        {"word": "مظلة", "meaning": "umbrella", "type": "noun"},
+        {"word": "لا تُنسى", "meaning": "unforgettable", "type": "phrase"}
+      ],
+      "comprehension_questions": [
+        {
+          "question": "How long did the trip take?",
+          "answer": "Two hours by car",
+          "arabic_question": "كم استغرقت الرحلة؟"
+        },
+        {
+          "question": "What did the children do at the beach?",
+          "answer": "Built sand castles and played with the waves",
+          "arabic_question": "ماذا فعل الأطفال على الشاطئ؟"
+        },
+        {
+          "question": "What did they eat for lunch?",
+          "answer": "Fresh grilled fish",
+          "arabic_question": "ماذا تناولوا على الغداء؟"
+        },
+        {
+          "question": "How did they feel when they returned home?",
+          "answer": "Happy and tired",
+          "arabic_question": "كيف كان شعورهم عند العودة إلى المنزل؟"
+        }
+      ],
+      "grammar_notes": [
+        "قررت العائلة (qarrarati al-'a'ilah) = the family decided (feminine verb with feminine subject)",
+        "استيقظنا (istayqazna) = we woke up (reflexive verb in past tense)",
+        "استغرقت (istaghraqqat) = it took (feminine past tense verb)",
+        "لا تُنسى (la tunsa) = unforgettable (passive voice, literally 'not forgotten')",
+        "مبكراً (mubakkiran) = early (accusative adverb)"
+      ]
+    }
+  ],
+  "difficulty_guidelines": {
+    "beginner": {
+      "level": 1,
+      "characteristics": [
+        "Simple present tense verbs",
+        "Basic vocabulary (family, school, daily objects)",
+        "Short sentences (5-8 words)",
+        "Clear subject-verb-object structure",
+        "Minimal use of conjunctions"
+      ],
+      "estimated_words": "50-100"
+    },
+    "intermediate": {
+      "level": 2,
+      "characteristics": [
+        "Past and present tense verbs",
+        "Expanded vocabulary (activities, places, descriptions)",
+        "Medium sentences (8-12 words)",
+        "Use of conjunctions (و، ثم، لكن)",
+        "Some complex sentence structures"
+      ],
+      "estimated_words": "100-200"
+    },
+    "advanced": {
+      "level": 3,
+      "characteristics": [
+        "All tenses including future and conditional",
+        "Rich vocabulary with idioms and expressions",
+        "Long sentences (12+ words)",
+        "Complex sentence structures with subordinate clauses",
+        "Literary and descriptive language"
+      ],
+      "estimated_words": "200-300"
+    }
+  }
+}

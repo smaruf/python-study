@@ -1,0 +1,469 @@
+{
+  "daily_conversations": {
+    "greetings": [
+      {
+        "arabic": "السلام عليكم",
+        "english": "Peace be upon you (Hello)",
+        "transliteration": "As-salamu alaykum",
+        "context": "Standard Islamic greeting, used at any time"
+      },
+      {
+        "arabic": "وعليكم السلام",
+        "english": "And upon you peace",
+        "transliteration": "Wa alaykum as-salam",
+        "context": "Response to السلام عليكم"
+      },
+      {
+        "arabic": "صباح الخير",
+        "english": "Good morning",
+        "transliteration": "Sabah al-khayr",
+        "context": "Morning greeting"
+      },
+      {
+        "arabic": "صباح النور",
+        "english": "Morning of light",
+        "transliteration": "Sabah an-noor",
+        "context": "Response to صباح الخير"
+      },
+      {
+        "arabic": "مساء الخير",
+        "english": "Good evening",
+        "transliteration": "Masa' al-khayr",
+        "context": "Evening greeting"
+      },
+      {
+        "arabic": "مساء النور",
+        "english": "Evening of light",
+        "transliteration": "Masa' an-noor",
+        "context": "Response to مساء الخير"
+      }
+    ],
+    "how_are_you": [
+      {
+        "arabic": "كيف حالك؟",
+        "english": "How are you? (masculine)",
+        "transliteration": "Kayfa haluka?",
+        "context": "Asking a male"
+      },
+      {
+        "arabic": "كيف حالكِ؟",
+        "english": "How are you? (feminine)",
+        "transliteration": "Kayfa haluki?",
+        "context": "Asking a female"
+      },
+      {
+        "arabic": "بخير، الحمد لله",
+        "english": "Fine, praise be to God",
+        "transliteration": "Bi-khayr, alhamdulillah",
+        "context": "Standard positive response"
+      },
+      {
+        "arabic": "كويس",
+        "english": "Good/Fine",
+        "transliteration": "Kuwayyis",
+        "context": "Informal response (Egyptian dialect)"
+      },
+      {
+        "arabic": "تمام",
+        "english": "Perfect/Great",
+        "transliteration": "Tamam",
+        "context": "Informal positive response"
+      }
+    ],
+    "polite_phrases": [
+      {
+        "arabic": "من فضلك",
+        "english": "Please",
+        "transliteration": "Min fadlak/fadlik",
+        "context": "Polite request"
+      },
+      {
+        "arabic": "شكراً",
+        "english": "Thank you",
+        "transliteration": "Shukran",
+        "context": "Expressing gratitude"
+      },
+      {
+        "arabic": "شكراً جزيلاً",
+        "english": "Thank you very much",
+        "transliteration": "Shukran jazilan",
+        "context": "Strong gratitude"
+      },
+      {
+        "arabic": "جزاك الله خيراً",
+        "english": "May God reward you with good",
+        "transliteration": "Jazaka Allahu khayran",
+        "context": "Islamic way to thank"
+      },
+      {
+        "arabic": "عفواً",
+        "english": "You're welcome",
+        "transliteration": "Afwan",
+        "context": "Response to thanks"
+      },
+      {
+        "arabic": "لا شكر على واجب",
+        "english": "No need to thank for a duty",
+        "transliteration": "La shukr ala wajib",
+        "context": "It was my pleasure"
+      },
+      {
+        "arabic": "آسف",
+        "english": "Sorry (masculine)",
+        "transliteration": "Asif",
+        "context": "Apologizing"
+      },
+      {
+        "arabic": "آسفة",
+        "english": "Sorry (feminine)",
+        "transliteration": "Asifa",
+        "context": "Female apologizing"
+      },
+      {
+        "arabic": "لا بأس",
+        "english": "No problem/It's okay",
+        "transliteration": "La ba's",
+        "context": "Accepting apology"
+      }
+    ],
+    "introductions": [
+      {
+        "arabic": "ما اسمك؟",
+        "english": "What is your name? (masculine)",
+        "transliteration": "Ma ismuka?",
+        "context": "Asking a male"
+      },
+      {
+        "arabic": "ما اسمكِ؟",
+        "english": "What is your name? (feminine)",
+        "transliteration": "Ma ismuki?",
+        "context": "Asking a female"
+      },
+      {
+        "arabic": "اسمي...",
+        "english": "My name is...",
+        "transliteration": "Ismi...",
+        "context": "Introducing yourself"
+      },
+      {
+        "arabic": "تشرفنا",
+        "english": "Nice to meet you",
+        "transliteration": "Tasharrafna",
+        "context": "After introduction"
+      },
+      {
+        "arabic": "من أين أنت؟",
+        "english": "Where are you from? (masculine)",
+        "transliteration": "Min ayna anta?",
+        "context": "Asking origin"
+      },
+      {
+        "arabic": "أنا من...",
+        "english": "I am from...",
+        "transliteration": "Ana min...",
+        "context": "Stating origin"
+      }
+    ],
+    "farewells": [
+      {
+        "arabic": "مع السلامة",
+        "english": "Goodbye",
+        "transliteration": "Ma'a as-salamah",
+        "context": "Standard goodbye"
+      },
+      {
+        "arabic": "إلى اللقاء",
+        "english": "See you later",
+        "transliteration": "Ila al-liqa'",
+        "context": "Until we meet again"
+      },
+      {
+        "arabic": "باي",
+        "english": "Bye",
+        "transliteration": "Bay",
+        "context": "Informal (borrowed from English)"
+      },
+      {
+        "arabic": "في أمان الله",
+        "english": "In God's protection",
+        "transliteration": "Fi aman Allah",
+        "context": "May God protect you"
+      },
+      {
+        "arabic": "أراك غداً",
+        "english": "See you tomorrow",
+        "transliteration": "Araka ghadan",
+        "context": "Planning to meet tomorrow"
+      },
+      {
+        "arabic": "تصبح على خير",
+        "english": "Good night",
+        "transliteration": "Tusbih ala khayr",
+        "context": "Before sleeping"
+      }
+    ]
+  },
+  "practical_situations": {
+    "at_restaurant": [
+      {
+        "arabic": "القائمة من فضلك",
+        "english": "The menu please",
+        "transliteration": "Al-qa'imah min fadlak",
+        "context": "Requesting menu"
+      },
+      {
+        "arabic": "ما هو الطبق المميز؟",
+        "english": "What is the special dish?",
+        "transliteration": "Ma huwa at-tabaq al-mumayyaz?",
+        "context": "Asking for recommendation"
+      },
+      {
+        "arabic": "أريد...",
+        "english": "I want...",
+        "transliteration": "Uridu...",
+        "context": "Ordering"
+      },
+      {
+        "arabic": "الحساب من فضلك",
+        "english": "The bill please",
+        "transliteration": "Al-hisab min fadlak",
+        "context": "Asking for check"
+      },
+      {
+        "arabic": "هل يمكنني دفع ببطاقة؟",
+        "english": "Can I pay by card?",
+        "transliteration": "Hal yumkinuni daf' bi-bitaqah?",
+        "context": "Payment method"
+      }
+    ],
+    "shopping": [
+      {
+        "arabic": "كم الثمن؟",
+        "english": "How much is it?",
+        "transliteration": "Kam ath-thaman?",
+        "context": "Asking price"
+      },
+      {
+        "arabic": "غالي جداً",
+        "english": "Very expensive",
+        "transliteration": "Ghali jiddan",
+        "context": "Complaining about price"
+      },
+      {
+        "arabic": "هل عندك خصم؟",
+        "english": "Do you have a discount?",
+        "transliteration": "Hal 'indaka khasm?",
+        "context": "Asking for discount"
+      },
+      {
+        "arabic": "سآخذه",
+        "english": "I'll take it",
+        "transliteration": "Sa-akhudhuh",
+        "context": "Agreeing to purchase"
+      },
+      {
+        "arabic": "هل يمكنني تجربته؟",
+        "english": "Can I try it?",
+        "transliteration": "Hal yumkinuni tajribatuh?",
+        "context": "Trying clothes/items"
+      }
+    ],
+    "directions": [
+      {
+        "arabic": "أين الحمام؟",
+        "english": "Where is the bathroom?",
+        "transliteration": "Ayna al-hammam?",
+        "context": "Looking for bathroom"
+      },
+      {
+        "arabic": "على اليمين",
+        "english": "On the right",
+        "transliteration": "Ala al-yamin",
+        "context": "Giving directions"
+      },
+      {
+        "arabic": "على اليسار",
+        "english": "On the left",
+        "transliteration": "Ala al-yasar",
+        "context": "Giving directions"
+      },
+      {
+        "arabic": "على طول",
+        "english": "Straight ahead",
+        "transliteration": "Ala tool",
+        "context": "Giving directions"
+      },
+      {
+        "arabic": "قريب",
+        "english": "Near/Close",
+        "transliteration": "Qarib",
+        "context": "Distance"
+      },
+      {
+        "arabic": "بعيد",
+        "english": "Far",
+        "transliteration": "Ba'id",
+        "context": "Distance"
+      }
+    ],
+    "emergency": [
+      {
+        "arabic": "ساعدني!",
+        "english": "Help me!",
+        "transliteration": "Sa'idni!",
+        "context": "Emergency call"
+      },
+      {
+        "arabic": "أنا مريض",
+        "english": "I am sick (masculine)",
+        "transliteration": "Ana marid",
+        "context": "Health emergency"
+      },
+      {
+        "arabic": "أنا مريضة",
+        "english": "I am sick (feminine)",
+        "transliteration": "Ana marida",
+        "context": "Health emergency"
+      },
+      {
+        "arabic": "اتصل بالشرطة",
+        "english": "Call the police",
+        "transliteration": "Ittasil bi-ash-shurtah",
+        "context": "Emergency situation"
+      },
+      {
+        "arabic": "أحتاج طبيب",
+        "english": "I need a doctor",
+        "transliteration": "Ahtaju tabib",
+        "context": "Medical need"
+      }
+    ]
+  },
+  "time_expressions": {
+    "days_of_week": [
+      {"arabic": "الأحد", "english": "Sunday", "transliteration": "Al-Ahad"},
+      {"arabic": "الإثنين", "english": "Monday", "transliteration": "Al-Ithnayn"},
+      {"arabic": "الثلاثاء", "english": "Tuesday", "transliteration": "Ath-Thulatha'"},
+      {"arabic": "الأربعاء", "english": "Wednesday", "transliteration": "Al-Arbi'a'"},
+      {"arabic": "الخميس", "english": "Thursday", "transliteration": "Al-Khamis"},
+      {"arabic": "الجمعة", "english": "Friday", "transliteration": "Al-Jumu'ah"},
+      {"arabic": "السبت", "english": "Saturday", "transliteration": "As-Sabt"}
+    ],
+    "time_questions": [
+      {
+        "arabic": "كم الساعة؟",
+        "english": "What time is it?",
+        "transliteration": "Kam as-sa'ah?",
+        "context": "Asking the time"
+      },
+      {
+        "arabic": "الآن",
+        "english": "Now",
+        "transliteration": "Al-an",
+        "context": "Current moment"
+      },
+      {
+        "arabic": "اليوم",
+        "english": "Today",
+        "transliteration": "Al-yawm",
+        "context": "This day"
+      },
+      {
+        "arabic": "غداً",
+        "english": "Tomorrow",
+        "transliteration": "Ghadan",
+        "context": "Next day"
+      },
+      {
+        "arabic": "أمس",
+        "english": "Yesterday",
+        "transliteration": "Ams",
+        "context": "Previous day"
+      }
+    ]
+  },
+  "religious_phrases": {
+    "common_expressions": [
+      {
+        "arabic": "بسم الله",
+        "english": "In the name of God",
+        "transliteration": "Bismillah",
+        "context": "Before starting any action"
+      },
+      {
+        "arabic": "الحمد لله",
+        "english": "Praise be to God",
+        "transliteration": "Alhamdulillah",
+        "context": "Expressing gratitude"
+      },
+      {
+        "arabic": "إن شاء الله",
+        "english": "If God wills",
+        "transliteration": "In sha Allah",
+        "context": "Speaking about future"
+      },
+      {
+        "arabic": "ماشاء الله",
+        "english": "What God has willed",
+        "transliteration": "Ma sha Allah",
+        "context": "Admiring something"
+      },
+      {
+        "arabic": "سبحان الله",
+        "english": "Glory be to God",
+        "transliteration": "Subhan Allah",
+        "context": "Amazement or surprise"
+      },
+      {
+        "arabic": "استغفر الله",
+        "english": "I seek forgiveness from God",
+        "transliteration": "Astaghfirullah",
+        "context": "Seeking forgiveness"
+      },
+      {
+        "arabic": "لا إله إلا الله",
+        "english": "There is no god but God",
+        "transliteration": "La ilaha illa Allah",
+        "context": "Declaration of faith"
+      },
+      {
+        "arabic": "الله أكبر",
+        "english": "God is the greatest",
+        "transliteration": "Allahu Akbar",
+        "context": "Expressing greatness of God"
+      }
+    ],
+    "prayers_time": [
+      {
+        "arabic": "صلاة الفجر",
+        "english": "Fajr prayer (Dawn)",
+        "transliteration": "Salat al-Fajr",
+        "context": "First prayer of the day"
+      },
+      {
+        "arabic": "صلاة الظهر",
+        "english": "Dhuhr prayer (Noon)",
+        "transliteration": "Salat adh-Dhuhr",
+        "context": "Midday prayer"
+      },
+      {
+        "arabic": "صلاة العصر",
+        "english": "Asr prayer (Afternoon)",
+        "transliteration": "Salat al-'Asr",
+        "context": "Afternoon prayer"
+      },
+      {
+        "arabic": "صلاة المغرب",
+        "english": "Maghrib prayer (Sunset)",
+        "transliteration": "Salat al-Maghrib",
+        "context": "Sunset prayer"
+      },
+      {
+        "arabic": "صلاة العشاء",
+        "english": "Isha prayer (Night)",
+        "transliteration": "Salat al-'Isha",
+        "context": "Night prayer"
+      }
+    ]
+  }
+}
