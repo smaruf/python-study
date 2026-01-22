@@ -50,9 +50,11 @@ app = FastAPI(
 )
 
 # Enable CORS for web and mobile applications
+# SECURITY NOTE: In production, replace "*" with specific allowed origins
+# Example: allow_origins=["https://yourapp.com", "https://mobile.yourapp.com"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure appropriately for production
+    allow_origins=["*"],  # ⚠️ Change this in production! Use specific domains.
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
