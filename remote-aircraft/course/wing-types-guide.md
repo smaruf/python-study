@@ -1,19 +1,389 @@
-# Advanced Wing Types - Design Guide
+# Wing Types - Complete Design Guide
 
 ## Overview
 
-This guide covers advanced wing configurations beyond conventional designs. Each configuration offers unique advantages and challenges, suitable for different applications and builder experience levels.
+This comprehensive guide covers traditional and advanced wing configurations. Each configuration offers unique advantages and challenges, suitable for different applications and builder experience levels.
 
-**Wing Types Covered:**
-1. Delta Wing
-2. Flying Wing (Tailless)
-3. Canard Configuration
-4. Oblique Wing (Variable Sweep)
-5. Flying Pancake (Circular Wing)
+**Traditional Wing Types:**
+1. Straight Wing (Rectangular/Tapered)
+2. Backward Swept Wing
+3. Forward Swept Wing
+
+**Advanced Wing Types:**
+4. Delta Wing
+5. Flying Wing (Tailless)
+6. Canard Configuration
+7. Oblique Wing (Variable Sweep)
+8. Flying Pancake (Circular Wing)
 
 ---
 
-## 1. Delta Wing
+## PART I: TRADITIONAL WING TYPES
+
+---
+
+## 1. Straight Wing
+
+### Description
+
+Straight wings are the most common and traditional wing configuration, used in the vast majority of general aviation aircraft, trainers, and sport planes. The wing is perpendicular to the fuselage with zero sweep.
+
+### Theoretical Background
+
+**Geometry:**
+- Zero sweep angle (perpendicular to fuselage)
+- Can be rectangular (constant chord) or tapered
+- Typical taper ratio: 0.6-0.8 for tapered wings
+- Dihedral angle: 2-4° for lateral stability
+
+**Aerodynamics:**
+- Maximum lift coefficient at subsonic speeds
+- Linear lift curve (predictable behavior)
+- Most efficient configuration for low-speed flight
+- Simple stall characteristics (predictable)
+- Moderate induced drag
+
+### Design Parameters
+
+```python
+from fixed_wing.wing_types import straight_wing_design
+
+design = straight_wing_design(
+    wingspan=1200,       # Total span in mm
+    chord=200,          # Root chord in mm
+    taper_ratio=0.7,    # Tip/root ratio (1.0 = rectangular)
+    dihedral=3,         # Dihedral angle in degrees
+    thickness_ratio=0.12 # Airfoil thickness ratio
+)
+```
+
+**Key Parameters:**
+- **Wingspan**: 800-1500mm for small UAVs
+- **Taper Ratio**: 1.0 (rectangular), 0.6-0.8 (tapered), 0.4 (elliptical)
+- **Dihedral**: 2-4° typical (more = more stable, less maneuverable)
+- **Aspect Ratio**: 6-10 for efficient designs
+
+### Stability & Control
+
+**Advantages:**
+- Wide CG range (25-35% MAC)
+- Predictable and forgiving
+- Linear flight characteristics
+- Excellent low-speed handling
+
+**Control Surfaces:**
+- Ailerons on outer wing (30-40% span per side)
+- Conventional tail with elevator and rudder
+- Simple control mixing
+
+### Construction Principles
+
+**Option 1: Foam Core**
+```
+1. Hot-wire cut foam wing cores
+2. Main spar at 25-30% chord
+3. Rear spar at 60-70% chord (optional)
+4. Cover with film or light composite
+```
+
+**Option 2: Balsa Build-Up**
+```
+1. Laser-cut ribs every 40-60mm
+2. Box spar or I-beam spar
+3. Leading and trailing edge stock
+4. Sheeting or film covering
+```
+
+**Option 3: 3D Printed Ribs**
+```
+1. Print ribs with spar slots
+2. Carbon fiber tube spar
+3. Foam or balsa sheeting
+4. Film covering
+```
+
+### Performance Characteristics
+
+**Advantages:**
+- ✅ Easiest to design and build
+- ✅ Best low-speed performance
+- ✅ Most stable and forgiving
+- ✅ Wide CG range
+- ✅ Simple construction
+- ✅ Lowest cost
+
+**Disadvantages:**
+- ❌ Not optimized for high speed
+- ❌ Higher drag than swept wings at speed
+- ❌ Less interesting visually
+
+**Typical Performance:**
+- Stall speed: Baseline (best)
+- Cruise efficiency: 100% (reference)
+- L/D ratio: 10-14 (excellent)
+- Best for: Trainers, sport flying, general aviation
+
+### Build Tips
+
+1. **Taper vs Rectangular**: Tapered is more efficient, rectangular is easier
+2. **Dihedral**: 3° is a good starting point for stability
+3. **CG Location**: 25-30% MAC is typical, test with glide
+4. **Washout**: Not required but 1-2° helps stall characteristics
+5. **Spar Selection**: Carbon tube 8-10mm for 1200mm span
+
+### Example Aircraft
+
+**Sport Trainer Specifications:**
+- Wingspan: 1200mm
+- Root chord: 200mm
+- Tip chord: 140mm (taper 0.7)
+- Dihedral: 3°
+- Weight: 800-1000g
+- Wing loading: 35-45 g/dm²
+- Power: 200-300W
+
+---
+
+## 2. Backward Swept Wing
+
+### Description
+
+Backward (aft) swept wings have leading edges angled backward from root to tip. This configuration delays shock wave formation and reduces drag at high speeds, commonly used in jets and high-speed aircraft.
+
+### Theoretical Background
+
+**Geometry:**
+- Leading edge swept backward (toward tail)
+- Typical sweep: 20-30° for models (40-45° for jets)
+- Usually combined with taper
+- Quarter-chord sweep is the aerodynamic reference
+
+**Aerodynamics:**
+- Reduces effective Mach number on wing
+- Delays shock wave formation (transonic flight)
+- Spanwise flow component (toward tips)
+- Lower lift curve slope than straight wing
+- **Critical**: Tendency for tip stalling
+
+### Design Parameters
+
+```python
+from fixed_wing.wing_types import backward_swept_wing_design
+
+design = backward_swept_wing_design(
+    wingspan=1200,       # Total span in mm
+    chord=200,          # Root chord in mm
+    sweep_angle=25,     # Sweep angle in degrees
+    taper_ratio=0.6,    # Tip/root ratio
+    thickness_ratio=0.10 # Thinner for speed
+)
+```
+
+**Key Parameters:**
+- **Sweep Angle**: 20-30° for models (more = higher speed)
+- **Washout**: -2° to -3° REQUIRED (tips at lower angle)
+- **Taper Ratio**: 0.5-0.7 typical
+- **Thickness**: 8-10% (thinner than straight wing)
+
+### Stability & Control
+
+**Critical Design Point:**
+- **MUST have washout** to prevent tip stalling
+- Washout ensures root stalls before tip
+- Tip stall on swept wing is dangerous (pitch-up)
+
+**Characteristics:**
+- CG at 30-35% MAC (aft of straight wing)
+- Natural pitch-up tendency at stall
+- Dutch roll mode possible
+- Requires wing fences or vortex generators
+
+### Construction Principles
+
+**Washout Construction:**
+```
+1. Build root ribs at designed angle
+2. Build tip ribs 2-3° lower incidence
+3. Use twist jig to maintain angles
+4. OR CNC cut ribs at different angles
+5. Critical: Washout must be built in!
+```
+
+**Structural Requirements:**
+- Spar perpendicular to fuselage (not wing)
+- Strong wing-fuselage joint
+- Torsion box for stiffness
+- Wing fences at 50-60% span
+
+### Performance Characteristics
+
+**Advantages:**
+- ✅ 15% higher speed than straight wing
+- ✅ Excellent high-speed performance
+- ✅ Reduced drag at cruise
+- ✅ Sleek appearance
+
+**Disadvantages:**
+- ❌ Tip stall danger (must have washout)
+- ❌ More complex to build accurately
+- ❌ 8% higher stall speed
+- ❌ Requires wing fences
+- ❌ Not for beginners
+
+**Typical Performance:**
+- High-speed advantage: 1.15× vs straight wing
+- Stall speed: 1.08× (8% higher)
+- Best for: High-speed sport, scale jets
+
+### Build Tips
+
+1. **Washout is CRITICAL**: -2.5° typical, test before covering
+2. **Accuracy Matters**: Alignment and twist must be precise
+3. **Wing Fences**: Add at 50-60% span to prevent tip flow
+4. **Vortex Generators**: Alternative to fences
+5. **Test Stall**: Should stall root first (inboard)
+
+### Example Aircraft
+
+**High-Speed Sport Plane:**
+- Wingspan: 1200mm
+- Root chord: 200mm
+- Sweep: 25°
+- Washout: -2.5° (required)
+- Weight: 900-1100g
+- Wing loading: 40-50 g/dm²
+- Power: 300-400W
+
+---
+
+## 3. Forward Swept Wing
+
+### Description
+
+Forward swept wings have leading edges angled forward from root to tip. This unusual configuration promotes safe root stalling and superior maneuverability but requires extremely stiff structure.
+
+### Theoretical Background
+
+**Geometry:**
+- Leading edge swept forward (toward nose)
+- Typical sweep: 20-30° for models
+- Spanwise flow toward root (beneficial)
+- Natural washout effect from geometry
+
+**Aerodynamics:**
+- Root stalls first (SAFE)
+- Spanwise flow toward root prevents tip stall
+- Excellent maneuverability
+- Vortex lift available at high angles
+- Superior roll rate vs backward sweep
+
+**Critical Issue: Aeroelastic Divergence**
+- Wing tends to twist under load
+- Twisting increases angle → more lift → more twist
+- Can lead to catastrophic failure
+- Requires 2-3× stiffer than backward sweep
+
+### Design Parameters
+
+```python
+from fixed_wing.wing_types import forward_swept_wing_design
+
+design = forward_swept_wing_design(
+    wingspan=1200,       # Total span in mm
+    chord=200,          # Root chord in mm
+    sweep_angle=25,     # Forward sweep angle
+    taper_ratio=0.6,    # Tip/root ratio
+    thickness_ratio=0.10 # Airfoil thickness
+)
+```
+
+**Key Parameters:**
+- **Sweep Angle**: 20-30° forward
+- **Stiffness**: 2.5× normal requirement
+- **Materials**: Carbon fiber REQUIRED
+- **Torsion Box**: 70% of chord (vs 60% normal)
+
+### Stability & Control
+
+**Advantages:**
+- Root stalls first (excellent safety)
+- No washout required (geometry provides it)
+- Superior maneuverability (25% better roll rate)
+- Good low-speed handling
+
+**Structural Requirements:**
+- **CRITICAL**: Very stiff wing required
+- Carbon fiber spar mandatory
+- No aluminum or wood spars!
+- Double spar or D-box structure
+- Carbon fiber skin recommended
+
+### Construction Principles
+
+**Required Materials:**
+```
+Spar: Carbon fiber tube (NOT aluminum/wood)
+Ribs: Carbon fiber or high-strength composite
+Skin: Carbon fiber cloth or CF/glass hybrid
+Torsion box: Leading edge to 70% chord
+```
+
+**Construction Method:**
+```
+1. Composite layup with CF spar
+2. Vacuum bagging for strength
+3. Multiple spar or D-box torsion structure
+4. Extensive structural testing before flight
+5. Wing flex test: Should be very rigid
+```
+
+### Performance Characteristics
+
+**Advantages:**
+- ✅ Safest stall (root first)
+- ✅ 25% better maneuverability
+- ✅ Superior roll rate
+- ✅ Unique and striking appearance
+- ✅ Excellent handling
+
+**Disadvantages:**
+- ❌ Very expensive (carbon fiber)
+- ❌ Difficult to build stiff enough
+- ❌ Structural testing essential
+- ❌ Risk of catastrophic failure if too flexible
+- ❌ **NOT for beginners or budget builds**
+
+**Typical Performance:**
+- Maneuverability: 1.25× vs backward sweep
+- Stall safety: Excellent (root first)
+- Best for: Advanced aerobatics, demonstrations
+
+### Build Tips
+
+1. **Stiffness Testing**: Wing should barely flex under load
+2. **Materials**: Don't compromise - use carbon fiber
+3. **Testing**: Structural test before first flight
+4. **Budget**: 2-3× cost of normal wing
+5. **Experience**: Advanced builders only
+
+### Example Aircraft
+
+**Advanced Aerobatic Platform:**
+- Wingspan: 1200mm
+- Root chord: 200mm
+- Forward sweep: 25°
+- Weight: 1000-1200g (heavier due to CF)
+- Wing loading: 45-55 g/dm²
+- Power: 350-500W
+- **WARNING**: Requires carbon fiber construction
+
+---
+
+## PART II: ADVANCED WING TYPES
+
+---
+
+## 4. Delta Wing
 
 ### Description
 
@@ -856,6 +1226,9 @@ design = flying_pancake_design(
 
 | Wing Type | Complexity | Stability | Speed | Efficiency | Build Difficulty | Best For |
 |-----------|------------|-----------|-------|------------|------------------|----------|
+| **Straight Wing** | Low | Excellent | Medium | Good | Easy | Trainers, sport aircraft |
+| **Backward Swept** | Medium | Good | High | Medium-Good | Medium | High-speed sport, jets |
+| **Forward Swept** | High | Excellent | Med-High | Good | Very High | Advanced aerobatics |
 | **Delta Wing** | Medium | Good | High | Medium | Medium | Speed, aerobatics |
 | **Flying Wing** | High | Medium | Med-High | Excellent | High | Efficiency, FPV long-range |
 | **Canard** | Medium | Excellent | Medium | Good | Medium | General flying, trainers |
@@ -867,7 +1240,22 @@ design = flying_pancake_design(
 ## Recommendations by Experience Level
 
 ### Beginner
-**Start with**: Canard or simple Delta Wing
+**Start with**: Straight Wing (Rectangular or Tapered)
+- Easiest to build
+- Most forgiving
+- Wide CG range
+- Best low-speed characteristics
+- Simple construction
+
+### Intermediate - Traditional
+**Try**: Backward Swept Wing or Tapered Straight Wing
+- Inherently stable
+- Forgiving flight characteristics
+- Good learning platforms
+- Conventional control
+
+### Intermediate - Advanced
+**Try**: Delta Wing or Canard
 - Inherently stable
 - Forgiving flight characteristics
 - Good learning platforms

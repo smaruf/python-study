@@ -11,6 +11,9 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from fixed_wing.wing_types import (
+    straight_wing_design,
+    backward_swept_wing_design,
+    forward_swept_wing_design,
     delta_wing_design,
     flying_wing_design,
     canard_design,
@@ -18,6 +21,75 @@ from fixed_wing.wing_types import (
     flying_pancake_design,
     compare_wing_types
 )
+
+
+def test_straight_wing():
+    """Test straight wing design function"""
+    print("Testing Straight Wing Design...")
+    
+    design = straight_wing_design(
+        wingspan=1200,
+        chord=200,
+        taper_ratio=0.7,
+        dihedral=3
+    )
+    
+    # Basic validation
+    assert design['type'] == 'Straight Wing', "Type mismatch"
+    assert design['geometry']['wingspan_mm'] == 1200, "Wingspan mismatch"
+    assert design['geometry']['aspect_ratio'] > 0, "Invalid aspect ratio"
+    assert design['geometry']['taper_ratio'] == 0.7, "Taper ratio mismatch"
+    
+    print("  ✓ Straight wing design generation successful")
+    print(f"  - Aspect Ratio: {design['geometry']['aspect_ratio']:.2f}")
+    print(f"  - Wing Area: {design['geometry']['wing_area_mm2']/1000:.1f} cm²")
+    return True
+
+
+def test_backward_swept_wing():
+    """Test backward swept wing design function"""
+    print("\nTesting Backward Swept Wing Design...")
+    
+    design = backward_swept_wing_design(
+        wingspan=1200,
+        chord=200,
+        sweep_angle=25,
+        taper_ratio=0.6
+    )
+    
+    # Basic validation
+    assert design['type'] == 'Backward Swept Wing', "Type mismatch"
+    assert design['geometry']['sweep_angle_deg'] == 25, "Sweep angle mismatch"
+    assert design['aerodynamics']['required_washout_deg'] < 0, "Washout should be negative"
+    assert design['structure']['washout_required'] == True, "Washout required"
+    
+    print("  ✓ Backward swept wing design generation successful")
+    print(f"  - Aspect Ratio: {design['geometry']['aspect_ratio']:.2f}")
+    print(f"  - Required Washout: {design['aerodynamics']['required_washout_deg']:.1f}°")
+    return True
+
+
+def test_forward_swept_wing():
+    """Test forward swept wing design function"""
+    print("\nTesting Forward Swept Wing Design...")
+    
+    design = forward_swept_wing_design(
+        wingspan=1200,
+        chord=200,
+        sweep_angle=25,
+        taper_ratio=0.6
+    )
+    
+    # Basic validation
+    assert design['type'] == 'Forward Swept Wing', "Type mismatch"
+    assert design['geometry']['sweep_angle_deg'] == -25, "Sweep should be negative"
+    assert design['aerodynamics']['root_stall_first'] == True, "Root should stall first"
+    assert design['structure']['stiffness_requirement'] > 2, "Should require high stiffness"
+    
+    print("  ✓ Forward swept wing design generation successful")
+    print(f"  - Aspect Ratio: {design['geometry']['aspect_ratio']:.2f}")
+    print(f"  - Stiffness Requirement: {design['structure']['stiffness_requirement']:.1f}×")
+    return True
 
 
 def test_delta_wing():
@@ -158,7 +230,7 @@ def test_comparison():
         assert 'recommendation' in comparison, "Missing recommendation"
         assert 'all_comparisons' in comparison, "Missing comparisons"
         assert 'primary' in comparison['recommendation'], "Missing primary recommendation"
-        assert len(comparison['all_comparisons']) == 5, "Should have 5 wing types"
+        assert len(comparison['all_comparisons']) == 8, "Should have 8 wing types (3 traditional + 5 advanced)"
     
     print("  ✓ Wing type comparison successful")
     print("  - Tested purposes: general, speed, efficiency, aerobatic, fun")
@@ -168,6 +240,15 @@ def test_comparison():
 def test_edge_cases():
     """Test edge cases and parameter validation"""
     print("\nTesting Edge Cases...")
+    
+    # Test straight wing with rectangular planform (taper=1.0)
+    design = straight_wing_design(
+        wingspan=1000,
+        chord=180,
+        taper_ratio=1.0,
+        dihedral=0
+    )
+    assert design['geometry']['tip_chord_mm'] == design['geometry']['root_chord_mm'], "Rectangular wing"
     
     # Test with minimum values
     design = delta_wing_design(
@@ -207,6 +288,9 @@ def main():
     print("=" * 70 + "\n")
     
     tests = [
+        ("Straight Wing", test_straight_wing),
+        ("Backward Swept Wing", test_backward_swept_wing),
+        ("Forward Swept Wing", test_forward_swept_wing),
         ("Delta Wing", test_delta_wing),
         ("Flying Wing", test_flying_wing),
         ("Canard", test_canard),

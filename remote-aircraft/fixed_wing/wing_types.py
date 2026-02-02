@@ -2,7 +2,14 @@
 Advanced Wing Type Designs and Analysis
 
 This module provides detailed designs, theoretical analysis, and construction
-principles for various advanced wing configurations:
+principles for various wing configurations:
+
+Traditional Wing Types:
+- Straight-wing (rectangular/tapered)
+- Backward swept wing
+- Forward swept wing
+
+Advanced Wing Types:
 - Delta-wing
 - Flying-wing
 - Canard
@@ -879,6 +886,492 @@ def generate_flying_pancake_ribs(
 
 
 # ============================================================================
+# TRADITIONAL WING TYPES
+# ============================================================================
+
+def straight_wing_design(
+    wingspan=1200,
+    chord=200,
+    taper_ratio=0.7,
+    dihedral=3,
+    thickness_ratio=0.12
+):
+    """
+    Straight wing (rectangular or tapered) design and analysis.
+    
+    Straight wings are the most common and traditional wing configuration,
+    used in most general aviation aircraft, trainers, and sport planes.
+    
+    Args:
+        wingspan: Total wingspan in mm (default: 1200mm)
+        chord: Root chord length in mm (default: 200mm)
+        taper_ratio: Tip chord / root chord ratio (default: 0.7, 1.0 = rectangular)
+        dihedral: Dihedral angle in degrees (default: 3°)
+        thickness_ratio: Airfoil thickness ratio (default: 0.12)
+    
+    Returns:
+        Dictionary with design parameters and analysis
+    
+    Theoretical Background:
+        - Zero sweep angle (perpendicular to fuselage)
+        - Most efficient at subsonic speeds
+        - Simple to design and build
+        - Excellent low-speed characteristics
+        - Standard configuration for trainers
+        
+    Aerodynamic Characteristics:
+        - Maximum lift coefficient at low speeds
+        - Linear lift curve (predictable behavior)
+        - Efficient wing loading distribution
+        - Simple stall characteristics
+        - Moderate induced drag
+        
+    Stability Considerations:
+        - Dihedral provides roll stability
+        - Conventional CG location (25-30% MAC)
+        - Standard tail required for pitch control
+        - Predictable and stable flight
+        - Wide CG range (forgiving)
+        
+    Construction Principles:
+        1. Wing Structure:
+           - Main spar at 25-30% chord
+           - Rear spar at 60-70% chord
+           - Ribs perpendicular to span
+           - Torsion box between spars
+           
+        2. Taper Options:
+           - Rectangular (taper=1.0): Simplest, easier to build
+           - Tapered (taper=0.6-0.8): More efficient, less tip loading
+           - Elliptical (complex): Most efficient but hard to build
+           
+        3. Construction Methods:
+           - Foam core with composite skin
+           - Balsa/plywood built-up structure
+           - 3D printed ribs with spar
+           - Foam board for simple models
+           
+        4. Dihedral:
+           - 2-4° typical for trainers
+           - Increases roll stability
+           - Too much = dutch roll tendency
+    """
+    
+    # Calculate tip chord
+    tip_chord = chord * taper_ratio
+    
+    # Mean chord (for tapered wing)
+    mean_chord = (chord + tip_chord) / 2
+    
+    # Wing area
+    wing_area = wingspan * mean_chord
+    
+    # Aspect ratio
+    aspect_ratio = (wingspan ** 2) / wing_area
+    
+    # Mean aerodynamic chord (MAC)
+    mac = (2/3) * chord * ((1 + taper_ratio + taper_ratio**2) / (1 + taper_ratio))
+    
+    # CG location (standard)
+    cg_position = 0.275 * mac  # 25-30% MAC typical
+    
+    # Control surfaces
+    aileron_chord = 0.25 * mean_chord
+    aileron_span = wingspan * 0.35  # 35% of span per side
+    
+    elevator_chord = 0.30 * mac  # Horizontal tail sizing
+    rudder_area = wing_area * 0.08  # 8% of wing area
+    
+    # Structural sizing
+    max_thickness = chord * thickness_ratio
+    spar_depth = max_thickness * 0.65
+    
+    # Dihedral effect
+    dihedral_rad = math.radians(dihedral)
+    effective_span_vertical = wingspan * math.sin(dihedral_rad)
+    
+    # Performance characteristics
+    stall_speed_factor = 1.0  # Baseline (best low-speed performance)
+    cruise_efficiency = 1.0   # Baseline efficiency
+    
+    return {
+        "type": "Straight Wing",
+        "geometry": {
+            "wingspan_mm": wingspan,
+            "root_chord_mm": chord,
+            "tip_chord_mm": tip_chord,
+            "mean_chord_mm": mean_chord,
+            "mac_mm": mac,
+            "wing_area_mm2": wing_area,
+            "aspect_ratio": aspect_ratio,
+            "taper_ratio": taper_ratio,
+            "dihedral_deg": dihedral,
+            "dihedral_height_mm": effective_span_vertical,
+        },
+        "aerodynamics": {
+            "cg_position_mm": cg_position,
+            "cg_range_percent_mac": "25-35%",
+            "stall_speed_factor": stall_speed_factor,
+            "cruise_efficiency": cruise_efficiency,
+            "lift_distribution": "Relatively uniform (tapered) or tip-heavy (rectangular)",
+        },
+        "control_surfaces": {
+            "aileron_chord_mm": aileron_chord,
+            "aileron_span_mm": aileron_span,
+            "elevator_chord_mm": elevator_chord,
+            "rudder_area_mm2": rudder_area,
+        },
+        "structure": {
+            "main_spar_location": "25-30% chord",
+            "rear_spar_location": "60-70% chord",
+            "max_thickness_mm": max_thickness,
+            "spar_depth_mm": spar_depth,
+            "construction_method": "Foam core, balsa build-up, or 3D printed ribs with spar",
+        },
+        "notes": [
+            "Most common and traditional wing type",
+            "Excellent low-speed characteristics",
+            "Simple to design and build",
+            "Predictable and stable flight",
+            "Wide CG range (forgiving)",
+            "Requires conventional tail surfaces",
+            "Best for trainers and sport aircraft",
+        ]
+    }
+
+
+def backward_swept_wing_design(
+    wingspan=1200,
+    chord=200,
+    sweep_angle=25,
+    taper_ratio=0.6,
+    thickness_ratio=0.10
+):
+    """
+    Backward swept wing design and analysis.
+    
+    Backward (aft) swept wings have leading edges angled backward from root to tip.
+    Used in high-speed aircraft to delay shock wave formation and reduce drag.
+    
+    Args:
+        wingspan: Total wingspan in mm (default: 1200mm)
+        chord: Root chord length in mm (default: 200mm)
+        sweep_angle: Sweep angle in degrees (default: 25°)
+        taper_ratio: Tip chord / root chord ratio (default: 0.6)
+        thickness_ratio: Airfoil thickness ratio (default: 0.10)
+    
+    Returns:
+        Dictionary with design parameters and analysis
+    
+    Theoretical Background:
+        - Leading edge swept backward (toward tail)
+        - Delays shock wave formation at high speeds
+        - Reduces effective Mach number on wing
+        - Common in jets and high-speed aircraft
+        - Sweep angle typically 20-45°
+        
+    Aerodynamic Characteristics:
+        - Reduced drag at high speeds
+        - Lower critical Mach number impact
+        - Spanwise flow component
+        - Tendency for tip stalling
+        - Reduced lift curve slope
+        
+    Stability Considerations:
+        - Natural pitch-up tendency at stall
+        - Tip stalling tendency (dangerous)
+        - Dutch roll mode possible
+        - Requires washout to prevent tip stall
+        - CG typically at 30-35% MAC
+        
+    Construction Principles:
+        1. Wing Structure:
+           - Spar perpendicular to fuselage (not wing)
+           - Strong root attachment
+           - Washout essential (-2° to -3°)
+           - Torsion box critical for stiffness
+           
+        2. Stall Prevention:
+           - MUST have washout (geometric twist)
+           - Wing fences or vortex generators
+           - Leading edge slots at tips
+           - Root stall before tip essential
+           
+        3. Control Surfaces:
+           - Outboard ailerons for roll
+           - All-moving tail or large elevator
+           - Yaw damper helpful
+           
+        4. Build Considerations:
+           - More complex than straight wing
+           - Requires accurate alignment
+           - Washout must be built in
+           - Strong wing-fuselage joint
+    """
+    
+    sweep_rad = math.radians(sweep_angle)
+    tip_chord = chord * taper_ratio
+    
+    # Effective span (perpendicular to flow)
+    effective_span = wingspan * math.cos(sweep_rad)
+    
+    # Wing area (trapezoidal approximation)
+    wing_area = ((chord + tip_chord) / 2) * wingspan
+    
+    # Aspect ratio (based on actual span)
+    aspect_ratio = (wingspan ** 2) / wing_area
+    
+    # Effective aspect ratio (based on sweep)
+    effective_ar = aspect_ratio * (math.cos(sweep_rad) ** 2)
+    
+    # Mean aerodynamic chord
+    mac = (2/3) * chord * ((1 + taper_ratio + taper_ratio**2) / (1 + taper_ratio))
+    
+    # CG location (aft of straight wing due to sweep)
+    cg_position = 0.32 * mac  # 30-35% MAC for swept wings
+    
+    # Quarter-chord sweep (aerodynamic reference)
+    quarter_chord_sweep = math.degrees(math.atan(
+        math.tan(sweep_rad) - (1 - taper_ratio) / (aspect_ratio * (1 + taper_ratio))
+    ))
+    
+    # Control surfaces
+    aileron_chord = 0.25 * tip_chord  # Outboard, smaller chord
+    aileron_span = wingspan * 0.30  # 30% span per side (outboard)
+    
+    # Required washout
+    washout_angle = -2.5  # degrees (negative = tips at lower angle)
+    
+    # Structural considerations
+    max_thickness = chord * thickness_ratio
+    spar_depth = max_thickness * 0.60
+    
+    # Performance characteristics
+    high_speed_advantage = 1.15  # 15% speed increase vs straight wing
+    low_speed_penalty = 0.92     # 8% higher stall speed
+    
+    return {
+        "type": "Backward Swept Wing",
+        "geometry": {
+            "wingspan_mm": wingspan,
+            "root_chord_mm": chord,
+            "tip_chord_mm": tip_chord,
+            "sweep_angle_deg": sweep_angle,
+            "quarter_chord_sweep_deg": quarter_chord_sweep,
+            "wing_area_mm2": wing_area,
+            "aspect_ratio": aspect_ratio,
+            "effective_aspect_ratio": effective_ar,
+            "taper_ratio": taper_ratio,
+            "mac_mm": mac,
+        },
+        "aerodynamics": {
+            "cg_position_mm": cg_position,
+            "required_washout_deg": washout_angle,
+            "spanwise_flow": "Present - toward tips",
+            "tip_stall_tendency": "HIGH - washout essential",
+            "high_speed_advantage": high_speed_advantage,
+            "low_speed_penalty": low_speed_penalty,
+        },
+        "control_surfaces": {
+            "aileron_chord_mm": aileron_chord,
+            "aileron_span_mm": aileron_span,
+            "aileron_position": "Outboard (60-90% span)",
+            "tail_required": "Yes - conventional or T-tail",
+        },
+        "structure": {
+            "main_spar_orientation": "Perpendicular to fuselage centerline",
+            "washout_required": True,
+            "washout_amount_deg": washout_angle,
+            "max_thickness_mm": max_thickness,
+            "spar_depth_mm": spar_depth,
+            "construction_method": "Foam core with twist jig, or CNC cut ribs at different angles",
+        },
+        "stability": {
+            "pitch_up_tendency": "Present at stall",
+            "dutch_roll_susceptibility": "Moderate to high",
+            "stall_characteristics": "Must prevent tip stall with washout",
+            "wing_fences_recommended": True,
+        },
+        "notes": [
+            "CRITICAL: Must have washout to prevent tip stalling",
+            "Excellent high-speed performance",
+            "More complex to build than straight wing",
+            "Requires accurate alignment and twist",
+            "Wing fences or vortex generators recommended",
+            "Best for high-speed sport and scale jets",
+            "Not recommended for beginners",
+        ]
+    }
+
+
+def forward_swept_wing_design(
+    wingspan=1200,
+    chord=200,
+    sweep_angle=25,
+    taper_ratio=0.6,
+    thickness_ratio=0.10
+):
+    """
+    Forward swept wing design and analysis.
+    
+    Forward swept wings have leading edges angled forward from root to tip.
+    Unusual configuration with unique advantages but challenging to build.
+    
+    Args:
+        wingspan: Total wingspan in mm (default: 1200mm)
+        chord: Root chord length in mm (default: 200mm)
+        sweep_angle: Forward sweep angle in degrees (default: 25°)
+        taper_ratio: Tip chord / root chord ratio (default: 0.6)
+        thickness_ratio: Airfoil thickness ratio (default: 0.10)
+    
+    Returns:
+        Dictionary with design parameters and analysis
+    
+    Theoretical Background:
+        - Leading edge swept forward (toward nose)
+        - Promotes root stalling (safer than tip stall)
+        - Superior maneuverability
+        - Structural divergence tendency
+        - Requires very stiff wing structure
+        
+    Aerodynamic Characteristics:
+        - Natural root stall (safer than backward sweep)
+        - Spanwise flow toward root
+        - Excellent maneuverability
+        - Good low-speed handling
+        - Vortex lift at high angles
+        
+    Stability Considerations:
+        - Root stalls first (SAFE stall behavior)
+        - Natural washout effect from geometry
+        - Better stall characteristics than backward sweep
+        - Aeroelastic divergence risk (requires stiff structure)
+        - CG typically at 28-32% MAC
+        
+    Construction Principles:
+        1. Structural Requirements:
+           - CRITICAL: Very stiff wing required
+           - Torsional rigidity essential
+           - Carbon fiber spar mandatory (no aluminum/wood)
+           - Double spar or D-box torsion structure
+           - Failure mode is catastrophic divergence
+           
+        2. Stiffness Requirements:
+           - 2-3× stiffer than backward swept wing
+           - Torsion box from LE to 70% chord
+           - Carbon fiber skin recommended
+           - No flexible construction methods
+           
+        3. Advantages:
+           - Safe stall (root first)
+           - Excellent maneuverability
+           - Superior roll rate
+           - Unique appearance
+           
+        4. Challenges:
+           - Difficult to build stiff enough
+           - Expensive materials required
+           - Structural testing essential
+           - Not for beginners!
+    """
+    
+    sweep_rad = math.radians(sweep_angle)
+    tip_chord = chord * taper_ratio
+    
+    # Effective span
+    effective_span = wingspan * math.cos(sweep_rad)
+    
+    # Wing area
+    wing_area = ((chord + tip_chord) / 2) * wingspan
+    
+    # Aspect ratio
+    aspect_ratio = (wingspan ** 2) / wing_area
+    effective_ar = aspect_ratio * (math.cos(sweep_rad) ** 2)
+    
+    # Mean aerodynamic chord
+    mac = (2/3) * chord * ((1 + taper_ratio + taper_ratio**2) / (1 + taper_ratio))
+    
+    # CG location
+    cg_position = 0.30 * mac  # 28-32% MAC
+    
+    # Quarter-chord sweep (negative for forward sweep)
+    quarter_chord_sweep = -math.degrees(math.atan(
+        math.tan(sweep_rad) + (1 - taper_ratio) / (aspect_ratio * (1 + taper_ratio))
+    ))
+    
+    # Control surfaces
+    aileron_chord = 0.25 * chord  # Inboard, larger chord
+    aileron_span = wingspan * 0.35  # 35% span per side
+    
+    # Structural requirements (much stiffer than backward sweep)
+    stiffness_requirement = 2.5  # 2.5× normal requirement
+    max_thickness = chord * thickness_ratio
+    spar_depth = max_thickness * 0.70  # Deeper spar needed
+    
+    # Torsion box requirement
+    torsion_box_extent = 0.70  # 70% of chord (vs 60% for other wings)
+    
+    # Performance characteristics
+    maneuverability_gain = 1.25  # 25% better roll rate
+    stall_safety = "Excellent"   # Root stalls first
+    
+    return {
+        "type": "Forward Swept Wing",
+        "geometry": {
+            "wingspan_mm": wingspan,
+            "root_chord_mm": chord,
+            "tip_chord_mm": tip_chord,
+            "sweep_angle_deg": -sweep_angle,  # Negative indicates forward
+            "quarter_chord_sweep_deg": quarter_chord_sweep,
+            "wing_area_mm2": wing_area,
+            "aspect_ratio": aspect_ratio,
+            "effective_aspect_ratio": effective_ar,
+            "taper_ratio": taper_ratio,
+            "mac_mm": mac,
+        },
+        "aerodynamics": {
+            "cg_position_mm": cg_position,
+            "spanwise_flow": "Toward root (beneficial)",
+            "stall_behavior": stall_safety,
+            "root_stall_first": True,
+            "maneuverability_gain": maneuverability_gain,
+            "vortex_lift_available": True,
+        },
+        "control_surfaces": {
+            "aileron_chord_mm": aileron_chord,
+            "aileron_span_mm": aileron_span,
+            "aileron_position": "Inboard (30-65% span)",
+            "tail_required": "Yes - conventional",
+        },
+        "structure": {
+            "stiffness_requirement": stiffness_requirement,
+            "spar_material": "Carbon fiber REQUIRED (no aluminum or wood)",
+            "torsion_box_extent": f"{torsion_box_extent:.0%} of chord",
+            "skin_material": "Carbon fiber or carbon/glass hybrid",
+            "max_thickness_mm": max_thickness,
+            "spar_depth_mm": spar_depth,
+            "construction_method": "Composite layup with carbon spar - very stiff construction only",
+        },
+        "stability": {
+            "aeroelastic_divergence_risk": "HIGH - requires extreme stiffness",
+            "stall_safety": "Excellent - root stalls first",
+            "roll_rate": "Superior to backward sweep",
+            "dutch_roll": "Low susceptibility",
+        },
+        "notes": [
+            "ADVANCED DESIGN - Not for beginners!",
+            "CRITICAL: Requires extremely stiff structure (carbon fiber)",
+            "Root stalls first (safer than backward sweep)",
+            "Excellent maneuverability and roll rate",
+            "Expensive to build (carbon fiber required)",
+            "Structural testing essential before flight",
+            "Aeroelastic divergence can cause catastrophic failure",
+            "Famous example: Grumman X-29, Su-47",
+        ]
+    }
+
+
+# ============================================================================
 # Comparison and Selection Helper
 # ============================================================================
 
@@ -897,33 +1390,62 @@ def compare_wing_types(weight=1400, target_speed=15, purpose="general"):
     
     recommendations = {
         "general": {
-            "primary": "Standard wing (conventional tail)",
+            "primary": "Straight Wing",
             "alternative": "Canard",
             "reason": "Versatile, stable, easy to build and fly"
         },
+        "beginner": {
+            "primary": "Straight Wing",
+            "alternative": "Straight Wing (rectangular)",
+            "reason": "Most forgiving, simple construction, wide CG range"
+        },
         "speed": {
-            "primary": "Delta Wing",
-            "alternative": "Oblique Wing (advanced)",
-            "reason": "Low drag, high-speed capability"
+            "primary": "Backward Swept Wing",
+            "alternative": "Delta Wing",
+            "reason": "High-speed capability, reduced drag"
         },
         "efficiency": {
             "primary": "Flying Wing",
-            "alternative": "Canard",
-            "reason": "Maximum L/D ratio, all surfaces generate lift"
+            "alternative": "Straight Wing (tapered)",
+            "reason": "Maximum L/D ratio, efficient lift generation"
         },
         "aerobatic": {
             "primary": "Delta Wing",
-            "alternative": "Canard",
+            "alternative": "Forward Swept Wing",
             "reason": "High maneuverability, strong structure"
         },
         "fun": {
             "primary": "Flying Pancake",
-            "alternative": "Delta Wing",
+            "alternative": "Forward Swept Wing",
             "reason": "Unique appearance, docile handling, conversation starter"
         }
     }
     
     comparison = {
+        "Straight Wing": {
+            "complexity": "Low",
+            "stability": "Excellent",
+            "speed": "Medium",
+            "efficiency": "Good",
+            "build_difficulty": "Easy",
+            "best_for": "Trainers, sport aircraft, general flying"
+        },
+        "Backward Swept Wing": {
+            "complexity": "Medium",
+            "stability": "Good (requires washout)",
+            "speed": "High",
+            "efficiency": "Medium-Good",
+            "build_difficulty": "Medium",
+            "best_for": "High-speed sport, scale jets"
+        },
+        "Forward Swept Wing": {
+            "complexity": "High",
+            "stability": "Excellent (root stall)",
+            "speed": "Medium-High",
+            "efficiency": "Good",
+            "build_difficulty": "Very High",
+            "best_for": "Advanced aerobatics, experimentation"
+        },
         "Delta Wing": {
             "complexity": "Medium",
             "stability": "Good (tailless)",

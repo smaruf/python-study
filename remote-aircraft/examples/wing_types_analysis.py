@@ -1,8 +1,15 @@
 """
-Advanced Wing Types Analysis Example
+Wing Types Analysis Example
 
-This script demonstrates the analysis and design of various advanced wing
+This script demonstrates the analysis and design of various wing
 configurations including:
+
+Traditional Wing Types:
+- Straight wings (rectangular/tapered)
+- Backward swept wings
+- Forward swept wings
+
+Advanced Wing Types:
 - Delta wings
 - Flying wings
 - Canard configurations
@@ -19,6 +26,9 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 from fixed_wing.wing_types import (
+    straight_wing_design,
+    backward_swept_wing_design,
+    forward_swept_wing_design,
     delta_wing_design,
     flying_wing_design,
     canard_design,
@@ -49,6 +59,78 @@ def print_dict(data, indent=0):
             print("  " * indent + f"{key}: {value:.2f}")
         else:
             print("  " * indent + f"{key}: {value}")
+
+
+def analyze_straight_wing():
+    """Analyze straight wing design."""
+    print_section("STRAIGHT WING ANALYSIS")
+    
+    # Design parameters for a classic trainer
+    design = straight_wing_design(
+        wingspan=1200,
+        chord=200,
+        taper_ratio=0.7,
+        dihedral=3,
+        thickness_ratio=0.12
+    )
+    
+    print_dict(design)
+    
+    print("\n🎯 KEY TAKEAWAYS:")
+    print("   - Most common and traditional wing type")
+    print("   - Excellent low-speed characteristics")
+    print("   - Simple to design and build")
+    print("   - Predictable and stable flight")
+    print("   - Wide CG range (forgiving)")
+    print("   - Best for trainers and sport aircraft")
+
+
+def analyze_backward_swept_wing():
+    """Analyze backward swept wing design."""
+    print_section("BACKWARD SWEPT WING ANALYSIS")
+    
+    # Design parameters for a high-speed sport plane
+    design = backward_swept_wing_design(
+        wingspan=1200,
+        chord=200,
+        sweep_angle=25,
+        taper_ratio=0.6,
+        thickness_ratio=0.10
+    )
+    
+    print_dict(design)
+    
+    print("\n🎯 KEY TAKEAWAYS:")
+    print("   - Excellent high-speed performance")
+    print("   - CRITICAL: Must have washout to prevent tip stalling")
+    print("   - 15% speed increase vs straight wing")
+    print("   - More complex to build (requires accurate twist)")
+    print("   - Wing fences or vortex generators recommended")
+    print("   - Best for high-speed sport and scale jets")
+
+
+def analyze_forward_swept_wing():
+    """Analyze forward swept wing design."""
+    print_section("FORWARD SWEPT WING ANALYSIS")
+    
+    # Design parameters for an advanced experimental design
+    design = forward_swept_wing_design(
+        wingspan=1200,
+        chord=200,
+        sweep_angle=25,
+        taper_ratio=0.6,
+        thickness_ratio=0.10
+    )
+    
+    print_dict(design)
+    
+    print("\n🎯 KEY TAKEAWAYS:")
+    print("   - ADVANCED DESIGN - Not for beginners!")
+    print("   - Excellent stall safety (root stalls first)")
+    print("   - 25% better maneuverability than backward sweep")
+    print("   - CRITICAL: Requires carbon fiber structure (very stiff)")
+    print("   - Expensive to build, structural testing essential")
+    print("   - Famous examples: Grumman X-29, Su-47")
 
 
 def analyze_delta_wing():
@@ -222,11 +304,22 @@ def compare_all_wings():
 def main():
     """Run all wing type analyses."""
     print("\n" + "=" * 80)
-    print("  ADVANCED WING TYPES - DESIGN & ANALYSIS")
-    print("  Comprehensive study of unconventional wing configurations")
+    print("  WING TYPES - DESIGN & ANALYSIS")
+    print("  Traditional and advanced wing configurations")
     print("=" * 80)
     
-    # Analyze each wing type
+    # Analyze traditional wing types first
+    print("\n" + "█" * 80)
+    print("  TRADITIONAL WING TYPES")
+    print("█" * 80)
+    analyze_straight_wing()
+    analyze_backward_swept_wing()
+    analyze_forward_swept_wing()
+    
+    # Analyze advanced wing types
+    print("\n" + "█" * 80)
+    print("  ADVANCED WING TYPES")
+    print("█" * 80)
     analyze_delta_wing()
     analyze_flying_wing()
     analyze_canard()
@@ -241,10 +334,11 @@ def main():
     print("=" * 80)
     print("\n📚 NEXT STEPS:")
     print("   1. Choose a wing type based on your goals and skill level")
-    print("   2. Review the theoretical background and notes")
-    print("   3. Start with simpler designs (Canard or Delta)")
-    print("   4. Use the construction principles as a guide")
-    print("   5. Consider hybrid construction (3D print + traditional materials)")
+    print("   2. BEGINNERS: Start with Straight Wing (easiest)")
+    print("   3. INTERMEDIATE: Try Backward Swept or Delta Wing")
+    print("   4. ADVANCED: Experiment with Forward Swept or Flying Wing")
+    print("   5. Review the theoretical background and notes")
+    print("   6. Use the construction principles as a guide")
     print("\n💻 GENERATE MODELS:")
     print("   - Modify examples/generate_fixed_wing.py to add wing type ribs")
     print("   - Use generate_delta_wing_ribs() or generate_flying_pancake_ribs()")
