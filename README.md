@@ -3,7 +3,9 @@
 This repository contains a variety of Python modules and scripts for testing and learning purposes.
 
 ## 📁 Repository Structure
-
+<details>
+    <summary>+</summary>
+    
 ```
 python-study/
 ├── fast-api-fintech/          # FastAPI-based fintech application
@@ -47,6 +49,7 @@ python-study/
     ├── xiaomi-n1-cooker/      # Xiaomi device integration
     └── zz-personal-sample/    # Personal code samples
 ```
+</details>
 
 ## 🚀 Featured Projects
 
