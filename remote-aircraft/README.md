@@ -488,7 +488,7 @@ All course materials are included:
 - **[3D Printing Guide](course/3d-printing-guide.md)**: Materials, settings, troubleshooting
 - **[Electronics Wiring](course/electronics-wiring-guide.md)**: Complete wiring diagrams
 - **[Fixed-Wing Design](course/fixed-wing-design.md)**: Complete fixed-wing UAV design guide
-- **[Advanced Wing Types](course/advanced-wing-types.md)**: Delta, flying-wing, canard, oblique, and pancake designs (NEW! ✈️)
+- **[Wing Types Guide](course/wing-types-guide.md)**: Traditional and advanced wing designs (straight, swept, delta, flying-wing, canard, oblique, pancake) (NEW! ✈️)
 
 ---
 

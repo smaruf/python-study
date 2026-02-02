@@ -135,7 +135,9 @@ PYTHONPATH=. python examples/verify_wing_types.py
 
 **Result**: All 7 tests passing ✓
 
-### Documentation: `course/advanced-wing-types.md`
+### Documentation: `course/wing-types-guide.md`
+
+Comprehensive guide covering traditional and advanced wing types:
 
 Comprehensive 26KB guide covering:
 
@@ -289,7 +291,7 @@ PYTHONPATH=. python examples/wing_types_analysis.py
 1. `fixed_wing/wing_types.py` - Main module (1,020 lines)
 2. `examples/wing_types_analysis.py` - Analysis example (245 lines)
 3. `examples/verify_wing_types.py` - Verification tests (245 lines)
-4. `course/advanced-wing-types.md` - Documentation (26KB)
+4. `course/wing-types-guide.md` - Complete documentation (traditional + advanced wing types)
 
 ## Files Modified
 

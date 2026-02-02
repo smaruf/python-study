@@ -323,7 +323,7 @@ def main():
         print("\nYou can now:")
         print("  1. Run analysis: PYTHONPATH=. python examples/wing_types_analysis.py")
         print("  2. Use in code: from fixed_wing.wing_types import delta_wing_design")
-        print("  3. Read docs: course/advanced-wing-types.md")
+        print("  3. Read docs: course/wing-types-guide.md")
         return 0
     else:
         print(f"\n✗ {failed} test(s) failed!")
