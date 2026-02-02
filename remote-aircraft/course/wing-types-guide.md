@@ -1247,29 +1247,22 @@ design = flying_pancake_design(
 - Best low-speed characteristics
 - Simple construction
 
-### Intermediate - Traditional
-**Try**: Backward Swept Wing or Tapered Straight Wing
-- Inherently stable
-- Forgiving flight characteristics
-- Good learning platforms
+### Intermediate - Traditional Wings
+**Try**: Backward Swept Wing or Well-Tapered Straight Wing
+- More efficient than rectangular
+- Moderate complexity
+- Good performance
 - Conventional control
 
-### Intermediate - Advanced
+### Intermediate - Advanced Configurations  
 **Try**: Delta Wing or Canard
-- Inherently stable
-- Forgiving flight characteristics
-- Good learning platforms
-- Conventional control
-
-### Intermediate
-**Try**: Flying Wing or Delta Wing
 - Requires more precision
 - Rewarding performance
 - Moderate complexity
 - Unique flight experience
 
 ### Advanced
-**Experiment with**: Oblique Wing or complex Flying Wing
+**Experiment with**: Forward Swept Wing, Flying Wing, or Oblique Wing
 - High complexity
 - Requires advanced skills
 - Educational value
