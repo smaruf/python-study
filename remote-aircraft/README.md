@@ -52,6 +52,9 @@ PYTHONPATH=. python examples/stress_analysis.py
 
 # Fixed-wing aircraft analysis
 PYTHONPATH=. python examples/fixed_wing_analysis.py
+
+# Advanced wing types analysis (NEW! ✈️)
+PYTHONPATH=. python examples/wing_types_analysis.py
 ```
 
 ### 4. Start the Course
@@ -140,6 +143,15 @@ remote-aircraft/
 - **Tail Components**: Horizontal & vertical stabilizers
 - **Tail Boom Mounts**: Carbon tube integration
 - **Complete UAV Design**: 1200mm wingspan electric aircraft
+
+#### Advanced Wing Types (NEW! ✈️)
+- **Delta Wings**: Triangular wings for high-speed flight and aerobatics
+- **Flying Wings**: Tailless design with maximum efficiency
+- **Canard Configurations**: Forward wing design with inherent stall resistance
+- **Oblique Wings**: Variable sweep for speed range optimization
+- **Flying Pancake**: Circular wing design for fun and demonstrations
+- **Comprehensive Analysis**: Theoretical background and performance calculations
+- **Construction Guides**: Detailed building principles for each type
 
 ### Engineering Analysis
 
@@ -322,6 +334,46 @@ print(f"Recommended: {spar['type']}")
 # Output: "Carbon tube (6-8mm OD)"
 ```
 
+### Example 7: Advanced Wing Types (NEW! ✈️)
+
+```python
+from fixed_wing.wing_types import (
+    delta_wing_design,
+    flying_wing_design,
+    canard_design,
+    flying_pancake_design
+)
+
+# Analyze a delta wing for high-speed flight
+delta = delta_wing_design(
+    root_chord=400,
+    wingspan=1000,
+    sweep_angle=45
+)
+print(f"Delta wing aspect ratio: {delta['geometry']['aspect_ratio']:.2f}")
+
+# Design a flying wing for efficiency
+flying = flying_wing_design(
+    center_chord=350,
+    wingspan=1200,
+    sweep_angle=25
+)
+print(f"Flying wing L/D gain: {flying['aerodynamics']['efficiency_gain']:.0%}")
+
+# Analyze a canard configuration
+canard = canard_design(
+    main_wing_chord=200,
+    main_wingspan=1000,
+    canard_chord=80,
+    canard_span=400
+)
+print(f"Canard stall safety: {canard['aerodynamics']['stall_safety']}")
+
+# Design a fun flying pancake
+pancake = flying_pancake_design(diameter=600)
+print(f"Pancake stability: {pancake['aerodynamics']['flight_characteristics']}")
+```
+
 See [USAGE.md](USAGE.md) for more examples.
 
 ---
@@ -357,7 +409,11 @@ See [USAGE.md](USAGE.md) for more examples.
 - **Long-Range Explorer**: GPS navigation, extended range
 
 #### Advanced
-- **Flying Wing**: High-speed FPV platform
+- **Delta Wing**: High-speed aerobatic platform
+- **Flying Wing**: Maximum efficiency FPV platform
+- **Canard Configuration**: Stall-resistant design
+- **Oblique Wing**: Variable sweep experimental
+- **Flying Pancake**: Fun circular wing design
 - **Custom Airframes**: Fully parametric designs
 - **Competition Models**: Optimized for performance
 
@@ -432,6 +488,7 @@ All course materials are included:
 - **[3D Printing Guide](course/3d-printing-guide.md)**: Materials, settings, troubleshooting
 - **[Electronics Wiring](course/electronics-wiring-guide.md)**: Complete wiring diagrams
 - **[Fixed-Wing Design](course/fixed-wing-design.md)**: Complete fixed-wing UAV design guide
+- **[Advanced Wing Types](course/advanced-wing-types.md)**: Delta, flying-wing, canard, oblique, and pancake designs (NEW! ✈️)
 
 ---
 
