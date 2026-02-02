@@ -18,6 +18,10 @@ python-study/
 │   ├── learning-phases/       # Phased learning approach
 │   └── prod-app/              # Production-ready application
 │
+├── pdf-generator/             # PDF generation tool with CLI and GUI
+│
+├── remote-aircraft/           # FPV drone & fixed-wing design system
+│
 └── src/                       # Learning modules and experiments
     ├── aws/                   # AWS services (DAG, Lambda)
     ├── books/                 # eBooks collection
@@ -41,7 +45,6 @@ python-study/
     ├── learning-english/      # English learning flashcards
     ├── learning-shell-automation/ # Shell scripting and DevOps learning
     ├── micro/                 # Microcontroller projects
-    ├── nasdaq/                # NASDAQ-related scripts
     ├── nlp/                   # Natural Language Processing
     ├── openai/                # OpenAI API examples
     ├── rsharp/                # R# integration
@@ -60,6 +63,12 @@ A comprehensive FastAPI-based fintech application supporting banking operations 
 Complete NASDAQ stock market simulator with two implementations:
 - **[Learning Phases](./nasdaq/learning-phases/README.md)**: Step-by-step educational approach across 4 phases
 - **[Production App](./nasdaq/prod-app/README.md)**: Fully integrated, production-ready implementation
+
+### [PDF Generator Tool](./pdf-generator/README.md)
+Comprehensive CLI and GUI tool for generating customizable PDF documents with logos, titles, body text, and footers. Supports Markdown formatting, rich-text HTML markup, inline images, and copy-paste from editors like Google Docs.
+
+### [Remote Aircraft Design System](./remote-aircraft/README.md)
+Professional parametric CAD system for designing, building, and flying FPV drones and fixed-wing aircraft. Includes Python-based parametric CAD (CadQuery), hands-on courses, engineering analysis tools, and flight-ready designs.
 
 ## 📚 Learning Modules
 
