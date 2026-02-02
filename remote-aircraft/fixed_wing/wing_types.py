@@ -691,7 +691,9 @@ def flying_pancake_design(
     wingspan = diameter
     
     # Aspect ratio (very low for circular wing)
-    # AR = b² / S, for circle: AR ≈ 4/π ≈ 1.27 (theoretical)
+    # AR = b² / S
+    # Note: For a solid circle, AR ≈ 4/π ≈ 1.27 (theoretical)
+    # With center cutout, the actual AR will be slightly higher
     aspect_ratio = (wingspan ** 2) / wing_area
     
     # Mean chord (approximate)
