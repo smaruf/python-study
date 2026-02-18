@@ -24,6 +24,7 @@ python-study/
 │
 └── src/                       # Learning modules and experiments
     ├── aws/                   # AWS services (DAG, Lambda)
+    ├── binary-tree/           # Binary trees, AVL, Red-Black trees, traversals
     ├── books/                 # eBooks collection
     ├── brython/               # Python in browser
     ├── cockroachdb/           # CockroachDB examples
@@ -100,8 +101,11 @@ Professional parametric CAD system for designing, building, and flying FPV drone
 - **[AWS](./src/aws/)**: AWS services including Lambda and DAG
 - **[Kubernetes](./src/k8s/README.md)**: Kubernetes configurations and examples
 
-### Development Tools
+### Data Structures & Algorithms
 - **[Code Run](./src/code-run/README.md)**: Algorithm problems, sorting, and search implementations
+- **[Binary Tree](./src/binary-tree/README.md)**: Comprehensive binary tree implementations including balanced trees (AVL, Red-Black), tree traversals, and performance analysis
+
+### Development Tools
 - **[Diagram](./src/diagram/README.md)**: Diagram generation tools
 - **[Brython](./src/brython/)**: Python in the browser, scientific calculators
 
