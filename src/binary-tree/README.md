@@ -241,8 +241,8 @@ print("Is balanced:", avl.is_balanced())  # Always True for AVL
 
 - `binary_tree.py` - Basic binary tree implementation with traversals
 - `balanced_tree.py` - AVL Tree and Red-Black Tree implementations
-- `tree_visualizer.py` - Helper to visualize trees (optional)
 - `examples.py` - Demonstration examples
+- `test_binary_tree.py` - Comprehensive unit tests
 - `README.md` - This file
 
 ---

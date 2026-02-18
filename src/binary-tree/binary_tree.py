@@ -105,17 +105,10 @@ class BinaryTree:
         
         Time Complexity: O(n)
         """
-        # Only use root if node is explicitly None (not passed)
-        if node is None and not hasattr(self, '_calculating_height'):
+        if node is None:
             node = self.root
         
-        if node is None:
-            return 0
-        
-        left_height = self._height_helper(node.left)
-        right_height = self._height_helper(node.right)
-        
-        return max(left_height, right_height) + 1
+        return self._height_helper(node)
     
     def _height_helper(self, node):
         """Helper method to calculate height without default root behavior."""

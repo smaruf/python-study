@@ -7,7 +7,6 @@ This file demonstrates practical applications and comparisons.
 
 from binary_tree import BinaryTree, TreeNode
 from balanced_tree import AVLTree, RedBlackTree
-import time
 
 
 def example_basic_operations():
