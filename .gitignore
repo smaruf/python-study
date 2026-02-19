@@ -53,3 +53,6 @@ src/learning-shell-automation/**/*.log
 src/diagram/da3_output/
 src/diagram/output/
 src/diagram/*.png
+src/diagram/*.stl
+src/diagram/stl_*/
+src/diagram/combined_output/

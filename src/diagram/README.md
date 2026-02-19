@@ -113,6 +113,31 @@ da3.wireframe_plot()
 da3.print_summary()
 ```
 
+#### Export to 3D Printer Format (STL)
+
+**NEW**: Convert diagrams to STL format for 3D printing!
+
+```python
+from da3 import DA3
+
+da3 = DA3(output_dir='./my_models')
+
+# Export individual shapes
+da3.export_surface_stl('surface.stl')
+da3.export_torus_stl('torus.stl')
+da3.export_sphere_stl('sphere.stl')
+da3.export_helix_stl('helix.stl')
+
+# Or export all at once
+da3.export_all_stl()
+```
+
+The STL files can be imported into 3D printing software like:
+- **Cura** (free, beginner-friendly)
+- **PrusaSlicer** (free, advanced features)
+- **Simplify3D** (paid, professional)
+- **MeshLab** (free, for viewing/editing)
+
 #### Create All Plots at Once
 
 ```python
@@ -138,6 +163,7 @@ Each plot type is also available as a standalone module:
 - **[3d_scatter_plot.py](3d_scatter_plot.py)** - Scatter and cluster scatter plots  
 - **[3d_wireframe_plot.py](3d_wireframe_plot.py)** - Wireframe and sphere plots
 - **[3d_line_plot.py](3d_line_plot.py)** - Line, spiral, and Lissajous curves
+- **[3d_printer_export.py](3d_printer_export.py)** - STL export for 3D printing
 
 #### Example: Using Individual Modules
 
@@ -148,10 +174,23 @@ from 3d_surface_plot import create_3d_surface_plot
 create_3d_surface_plot(save_to_file=True, filename='my_surface.png')
 ```
 
+#### Example: 3D Printer Export Module
+
+```python
+from 3d_printer_export import create_surface_mesh_stl, create_torus_stl
+
+# Export meshes with custom parameters
+create_surface_mesh_stl(filename='custom_surface.stl')
+create_torus_stl(filename='custom_torus.stl', R=4, r=1.5)
+```
+
+For complete examples, see **[3d_printer_examples.py](3d_printer_examples.py)**
+
 ### Features
 
 ✅ **Multiple Plot Types** - 9 different 3D visualization types  
 ✅ **Save to File** - Export plots as PNG images (300 DPI)  
+✅ **3D Printer Export** - Convert to STL format for 3D printing  
 ✅ **Customizable Output** - Specify custom output directory and filenames  
 ✅ **Print Summary** - Track all created plots with timestamps  
 ✅ **Batch Generation** - Create all plots with a single command  
@@ -220,7 +259,137 @@ python 3d_surface_plot.py
 python 3d_scatter_plot.py
 python 3d_wireframe_plot.py
 python 3d_line_plot.py
+
+# Test 3D printer export
+python 3d_printer_export.py
+
+# Run comprehensive examples
+python 3d_printer_examples.py
 ```
+
+---
+
+## 3D Printer Export
+
+### Overview
+
+The DA3 library now includes **STL export functionality** to convert 3D diagrams into formats compatible with 3D printers. This feature allows you to physically print mathematical surfaces, geometric shapes, and parametric curves.
+
+### Installation for 3D Printing
+
+```bash
+pip install numpy-stl
+```
+
+Or install all dependencies at once:
+
+```bash
+pip install -r requirements_3d.txt
+```
+
+### Supported Shapes for 3D Printing
+
+| Shape               | Description                           | Method                  |
+| ------------------- | ------------------------------------- | ----------------------- |
+| Surface Mesh        | Mathematical function surfaces        | `export_surface_stl()`  |
+| Torus               | Donut shape (parametric surface)      | `export_torus_stl()`    |
+| Sphere              | Geometric sphere                      | `export_sphere_stl()`   |
+| Helix Tube          | Spring/coil shape                     | `export_helix_stl()`    |
+
+### Quick Start - 3D Printing
+
+```python
+from da3 import DA3
+
+da3 = DA3(output_dir='./3d_prints')
+
+# Export individual shapes
+da3.export_surface_stl('wave_surface.stl')
+da3.export_torus_stl('donut.stl')
+da3.export_sphere_stl('ball.stl')
+da3.export_helix_stl('spring.stl')
+
+# Or export all shapes at once
+da3.export_all_stl()
+```
+
+### 3D Printing Workflow
+
+1. **Generate STL Files**
+   ```python
+   from da3 import DA3
+   da3 = DA3(output_dir='./models')
+   da3.export_all_stl()
+   ```
+
+2. **Open in Slicing Software**
+   - Cura (free, recommended for beginners)
+   - PrusaSlicer (free, advanced features)
+   - Simplify3D (paid, professional)
+
+3. **Configure Print Settings**
+   - Layer height: 0.1-0.2mm
+   - Infill: 10-20%
+   - Support: Auto-generate if needed
+   - Print speed: 50-60 mm/s
+
+4. **Slice and Print**
+   - Generate G-code
+   - Transfer to printer (SD card or USB)
+   - Start printing!
+
+### File Format Details
+
+- **Format**: STL (Stereolithography)
+- **Units**: Centimeters (cm)
+- **Mesh Type**: Manifold (watertight, printable)
+- **Resolution**: Configurable triangle count
+
+### Customizing Print Parameters
+
+```python
+from 3d_printer_export import create_torus_stl, create_sphere_stl
+
+# Custom torus (R=major radius, r=minor radius in cm)
+create_torus_stl(filename='large_torus.stl', R=5, r=2)
+
+# Custom sphere (radius in cm)
+create_sphere_stl(filename='small_sphere.stl', radius=1.5)
+
+# Custom helix tube
+from 3d_printer_export import create_helix_tube_stl
+create_helix_tube_stl(
+    filename='custom_spring.stl',
+    tube_radius=0.3,    # Tube thickness (cm)
+    helix_radius=2.5,   # Spring diameter (cm)
+    height=10           # Spring height (cm)
+)
+```
+
+### Example Files
+
+See **[3d_printer_examples.py](3d_printer_examples.py)** for comprehensive examples including:
+- Basic STL export
+- Batch export
+- Combined visualization + STL workflow
+- Custom parameter usage
+- 3D printing instructions
+
+### Printing Tips
+
+✓ **Scale models** in your slicer if they're too large/small  
+✓ **Add supports** for overhangs greater than 45 degrees  
+✓ **Use PLA filament** for beginners (easy to print)  
+✓ **Test small prints** first before large models  
+✓ **Check mesh integrity** with repair tools in slicer  
+
+### Viewing STL Files
+
+Before printing, you can view/edit STL files in:
+- **MeshLab** (free, cross-platform)
+- **Blender** (free, powerful)
+- **Windows 3D Viewer** (built into Windows 10/11)
+- **Online**: viewstl.com, 3dviewer.net
 
 ### Related Libraries
 

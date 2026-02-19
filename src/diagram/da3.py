@@ -33,6 +33,19 @@ wireframe_module = load_module('wireframe_plot_3d',
 line_module = load_module('line_plot_3d', 
                           os.path.join(current_dir, '3d_line_plot.py'))
 
+# Load 3D printer export module
+try:
+    printer_module = load_module('printer_export_3d',
+                                  os.path.join(current_dir, '3d_printer_export.py'))
+    create_surface_mesh_stl = printer_module.create_surface_mesh_stl
+    create_torus_stl = printer_module.create_torus_stl
+    create_sphere_stl = printer_module.create_sphere_stl
+    create_helix_tube_stl = printer_module.create_helix_tube_stl
+    PRINTER_EXPORT_AVAILABLE = True
+except Exception as e:
+    PRINTER_EXPORT_AVAILABLE = False
+    print(f"Warning: 3D printer export not available. Install numpy-stl: pip install numpy-stl")
+
 # Import functions from loaded modules
 create_3d_surface_plot = surface_module.create_3d_surface_plot
 create_3d_parametric_surface = surface_module.create_3d_parametric_surface
@@ -186,6 +199,103 @@ class DA3:
             create_3d_lissajous_curve(save_to_file=False)
             return None
     
+    # 3D Printer Export methods
+    def export_surface_stl(self, filename='surface_mesh.stl'):
+        """
+        Export a 3D surface mesh to STL format for 3D printing.
+        
+        Args:
+            filename (str): Name of the STL file to save
+            
+        Returns:
+            str: Path to the saved STL file or None if export not available
+        """
+        if not PRINTER_EXPORT_AVAILABLE:
+            print("3D printer export not available. Install: pip install numpy-stl")
+            return None
+        
+        output_path = self._get_output_path(filename)
+        create_surface_mesh_stl(save_to_file=True, filename=output_path)
+        self._log_plot('stl_surface', output_path)
+        return output_path
+    
+    def export_torus_stl(self, filename='torus.stl'):
+        """
+        Export a torus mesh to STL format for 3D printing.
+        
+        Args:
+            filename (str): Name of the STL file to save
+            
+        Returns:
+            str: Path to the saved STL file or None if export not available
+        """
+        if not PRINTER_EXPORT_AVAILABLE:
+            print("3D printer export not available. Install: pip install numpy-stl")
+            return None
+        
+        output_path = self._get_output_path(filename)
+        create_torus_stl(save_to_file=True, filename=output_path)
+        self._log_plot('stl_torus', output_path)
+        return output_path
+    
+    def export_sphere_stl(self, filename='sphere.stl'):
+        """
+        Export a sphere mesh to STL format for 3D printing.
+        
+        Args:
+            filename (str): Name of the STL file to save
+            
+        Returns:
+            str: Path to the saved STL file or None if export not available
+        """
+        if not PRINTER_EXPORT_AVAILABLE:
+            print("3D printer export not available. Install: pip install numpy-stl")
+            return None
+        
+        output_path = self._get_output_path(filename)
+        create_sphere_stl(save_to_file=True, filename=output_path)
+        self._log_plot('stl_sphere', output_path)
+        return output_path
+    
+    def export_helix_stl(self, filename='helix_tube.stl'):
+        """
+        Export a helix tube (spring) to STL format for 3D printing.
+        
+        Args:
+            filename (str): Name of the STL file to save
+            
+        Returns:
+            str: Path to the saved STL file or None if export not available
+        """
+        if not PRINTER_EXPORT_AVAILABLE:
+            print("3D printer export not available. Install: pip install numpy-stl")
+            return None
+        
+        output_path = self._get_output_path(filename)
+        create_helix_tube_stl(save_to_file=True, filename=output_path)
+        self._log_plot('stl_helix', output_path)
+        return output_path
+    
+    def export_all_stl(self):
+        """Export all available shapes to STL format for 3D printing."""
+        if not PRINTER_EXPORT_AVAILABLE:
+            print("3D printer export not available. Install: pip install numpy-stl")
+            return
+        
+        print("Exporting all meshes to STL format for 3D printing...")
+        print("-" * 50)
+        
+        self.export_surface_stl(filename='print_01_surface.stl')
+        self.export_torus_stl(filename='print_02_torus.stl')
+        self.export_sphere_stl(filename='print_03_sphere.stl')
+        self.export_helix_stl(filename='print_04_helix.stl')
+        
+        print("-" * 50)
+        print("All STL files created successfully!")
+        print("These files can be imported into 3D printing software:")
+        print("  • Cura, PrusaSlicer, Simplify3D")
+        print("  • MeshLab (for viewing)")
+    
     # Utility methods
     def create_all_plots(self):
         """Create all available 3D plots."""
@@ -245,12 +355,31 @@ class DA3:
         for method, description in plot_types:
             print(f"• {method:20s} - {description}")
         
+        if PRINTER_EXPORT_AVAILABLE:
+            print("\n" + "=" * 50)
+            print("3D Printer Export (STL Format)")
+            print("=" * 50)
+            
+            stl_methods = [
+                ("export_surface_stl", "Export surface mesh to STL"),
+                ("export_torus_stl", "Export torus to STL"),
+                ("export_sphere_stl", "Export sphere to STL"),
+                ("export_helix_stl", "Export helix tube to STL"),
+                ("export_all_stl", "Export all shapes to STL"),
+            ]
+            
+            for method, description in stl_methods:
+                print(f"• {method:20s} - {description}")
+        
         print("=" * 50)
         print("\nUsage example:")
         print("  from da3 import DA3")
         print("  da3 = DA3(output_dir='./my_plots')")
         print("  da3.surface_plot()")
         print("  da3.create_all_plots()")
+        if PRINTER_EXPORT_AVAILABLE:
+            print("  da3.export_surface_stl()")
+            print("  da3.export_all_stl()")
         print("=" * 50)
 
 
