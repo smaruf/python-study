@@ -48,3 +48,8 @@ src/learning-shell-automation/**/*.json
 src/learning-shell-automation/**/*.yaml
 src/learning-shell-automation/**/*.log
 !src/learning-shell-automation/**/github-actions/*.yml
+
+# 3D diagram output directories
+src/diagram/da3_output/
+src/diagram/output/
+src/diagram/*.png
