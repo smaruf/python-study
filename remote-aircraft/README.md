@@ -87,23 +87,6 @@ PYTHONPATH=. python examples/fixed_wing_analysis.py
 PYTHONPATH=. python examples/wing_types_analysis.py
 ```
 
-### 4. Generate Parts Programmatically
-
-```bash
-# Generate all default parts (if CadQuery installed)
-python export_all.py
-
-# Or run analysis examples (no CadQuery required)
-PYTHONPATH=. python examples/weight_calc.py
-PYTHONPATH=. python examples/stress_analysis.py
-
-# Fixed-wing aircraft analysis
-PYTHONPATH=. python examples/fixed_wing_analysis.py
-
-# Advanced wing types analysis (NEW! ✈️)
-PYTHONPATH=. python examples/wing_types_analysis.py
-```
-
 ### 5. Start the Course
 
 See [`course/README.md`](course/README.md) for the complete 1-week practical course.

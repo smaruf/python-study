@@ -504,7 +504,7 @@ class FixedWingDesigner:
                 'wingspan': params['wing_span'],
                 'chord': params['wing_chord'],
                 'wing_area': params['wing_span'] * params['wing_chord'],
-                'weight': params.get('wing_span', 1000) * 1.2,  # Estimate weight based on size
+                'weight': params['wing_span'] * 1.2,  # Estimate weight based on size
                 'airfoil_type': 'clark_y',
                 'fuselage_length': params['fuse_length'],
                 'fuselage_diameter': (params['fuse_width'] + params['fuse_height']) / 2
@@ -913,8 +913,6 @@ class GliderDesigner:
             f.write("\nNOTE: STL files would be generated here if CadQuery is installed.\n")
             f.write("To generate actual STL files, ensure CadQuery is properly installed.\n\n")
     
-    def go_back(self):
-    
     def open_wind_tunnel(self):
         """Open wind tunnel simulation window"""
         try:
@@ -929,11 +927,11 @@ class GliderDesigner:
             
             # Prepare design parameters for wind tunnel
             design_params = {
-                "'wingspan"': params["'wing_span"'],
-                "'chord"': (params["'root_chord"'] + params["'tip_chord"']) / 2,
-                "'wing_area"': params["'wing_span"'] * (params["'root_chord"'] + params["'tip_chord"']) / 2,
-                "'weight"': params.get("'wing_span"', 1000) * 0.8,
-                "'airfoil_type"': "'clark_y"'
+                'wingspan': params['wing_span'],
+                'chord': (params['root_chord'] + params['tip_chord']) / 2,
+                'wing_area': params['wing_span'] * (params['root_chord'] + params['tip_chord']) / 2,
+                'weight': params['wing_span'] * 0.8,
+                'airfoil_type': 'clark_y'
             }
             
             # Open wind tunnel window
@@ -941,7 +939,8 @@ class GliderDesigner:
             
         except Exception as e:
             messagebox.showerror("Error", f"Could not open wind tunnel: {str(e)}")
-
+    
+    def go_back(self):
         """Return to main menu"""
         self.window.destroy()
 

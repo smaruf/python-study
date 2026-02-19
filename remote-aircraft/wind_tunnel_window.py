@@ -1,3 +1,10 @@
+"""
+Wind Tunnel Window GUI Module
+"""
+
+import tkinter as tk
+from tkinter import ttk, messagebox, filedialog
+from wind_tunnel import run_comprehensive_analysis
 
 
 class WindTunnelWindow:
