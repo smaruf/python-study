@@ -25,7 +25,36 @@ pip install -r requirements.txt
 
 **Note:** CadQuery installation can be tricky. See [USAGE.md](USAGE.md) for detailed installation instructions.
 
-### 2. Use the GUI Designer (New!)
+### 2. Wind Tunnel Simulation (NEW! 🌪️)
+
+Test and optimize your aircraft designs with comprehensive aerodynamic analysis:
+
+```bash
+# Interactive mode - guided design input
+python aircraft_designer_cli.py --interactive
+
+# Quick analysis - immediate results
+python aircraft_designer_cli.py -w 1000 -c 150 --weight 1000
+
+# Batch mode - process multiple designs
+python aircraft_designer_cli.py --batch design.json --output results.json
+
+# Or use the GUI wind tunnel
+python airframe_designer.py
+# Then click "🌪️ Wind Tunnel" button in any designer
+```
+
+**Features:**
+- Lift, drag, and moment calculations
+- Stall speed analysis
+- Stability evaluation
+- Performance optimization (best L/D)
+- Angle of attack sweep analysis
+- Trim condition calculation
+
+See [WIND_TUNNEL_GUIDE.md](WIND_TUNNEL_GUIDE.md) for complete documentation.
+
+### 3. Use the GUI Designer
 
 ```bash
 # Launch the Airframe Designer GUI
@@ -35,12 +64,13 @@ python airframe_designer.py
 This opens a graphical interface where you can:
 - Design Fixed Wing Aircraft or Gliders
 - Enter custom parameters
+- **Run wind tunnel simulations** (NEW! 🌪️)
 - Generate foamboard cutting templates
 - Create 3D print specifications
 
 See [AIRFRAME_DESIGNER_README.md](AIRFRAME_DESIGNER_README.md) for complete GUI documentation.
 
-### 3. Generate Parts Programmatically
+### 4. Generate Parts Programmatically
 
 ```bash
 # Generate all default parts (if CadQuery installed)
@@ -57,7 +87,24 @@ PYTHONPATH=. python examples/fixed_wing_analysis.py
 PYTHONPATH=. python examples/wing_types_analysis.py
 ```
 
-### 4. Start the Course
+### 4. Generate Parts Programmatically
+
+```bash
+# Generate all default parts (if CadQuery installed)
+python export_all.py
+
+# Or run analysis examples (no CadQuery required)
+PYTHONPATH=. python examples/weight_calc.py
+PYTHONPATH=. python examples/stress_analysis.py
+
+# Fixed-wing aircraft analysis
+PYTHONPATH=. python examples/fixed_wing_analysis.py
+
+# Advanced wing types analysis (NEW! ✈️)
+PYTHONPATH=. python examples/wing_types_analysis.py
+```
+
+### 5. Start the Course
 
 See [`course/README.md`](course/README.md) for the complete 1-week practical course.
 
@@ -70,7 +117,11 @@ remote-aircraft/
 ├── README.md                    # This file
 ├── USAGE.md                     # Detailed usage examples
 ├── AIRFRAME_DESIGNER_README.md  # GUI Designer documentation
+├── WIND_TUNNEL_GUIDE.md         # Wind tunnel simulation guide (NEW! 🌪️)
 ├── airframe_designer.py         # GUI application for aircraft design
+├── aircraft_designer_cli.py     # CLI tool for design & simulation (NEW! 🌪️)
+├── wind_tunnel.py               # Wind tunnel simulation engine (NEW! 🌪️)
+├── wind_tunnel_window.py        # Wind tunnel GUI window (NEW! 🌪️)
 ├── requirements.txt             # Python dependencies
 ├── materials.py                 # Material properties database
 ├── export_all.py               # Generate all default parts
@@ -118,10 +169,21 @@ remote-aircraft/
 
 ## ✨ Features
 
-### 🖥️ GUI Airframe Designer (New!)
+### 🌪️ Wind Tunnel Simulation (NEW!)
+- **Comprehensive Aerodynamic Analysis**: Lift, drag, moment calculations
+- **Performance Prediction**: Stall speed, cruise speed, best glide ratio
+- **Stability Evaluation**: Longitudinal static stability analysis
+- **Pressure Distribution**: Visualize airflow over wing surfaces
+- **CLI & GUI Interfaces**: Command-line tool and integrated GUI
+- **Batch Processing**: Analyze multiple designs automatically
+- **Design Optimization**: Automatic recommendations based on analysis
+- **Export Results**: Save simulation data for documentation
+
+### 🖥️ GUI Airframe Designer
 - **Interactive Design**: User-friendly graphical interface
 - **Fixed Wing Aircraft**: Complete parametric design with motor
 - **Gliders**: Optimized for unpowered flight performance
+- **Wind Tunnel Integration**: Run simulations directly from GUI (NEW! 🌪️)
 - **Dual Output**: Generate both foamboard templates and 3D print specs
 - **Material Selection**: Choose from PLA, PETG, Nylon, or CF-Nylon
 - **Design Summary**: Automatic performance calculations and recommendations
