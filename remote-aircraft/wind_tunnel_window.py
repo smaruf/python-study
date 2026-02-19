@@ -305,7 +305,6 @@ class WindTunnelWindow:
         """Save simulation results to file"""
         try:
             import json
-            from tkinter import filedialog
             
             filename = filedialog.asksaveasfilename(
                 defaultextension=".json",

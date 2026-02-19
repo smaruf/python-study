@@ -22,6 +22,10 @@ TYPICAL_FIXED_WING_WEIGHT_G = 200  # Typical weight for small fixed wing aircraf
 TYPICAL_GLIDER_WEIGHT_G = 150      # Typical weight for small glider in grams
 GLIDE_RATIO_EFFICIENCY = 0.8       # Aerodynamic efficiency factor for glide ratio calculation
 
+# Weight estimation factors for wind tunnel simulation (weight in grams ≈ wingspan in mm × factor)
+FIXED_WING_WEIGHT_FACTOR = 1.2     # Fixed wing aircraft tend to be heavier (motor, battery, etc.)
+GLIDER_WEIGHT_FACTOR = 0.8         # Gliders are lighter (no motor, smaller battery)
+
 
 class AirframeDesignerApp:
     """Main application for airframe design"""
@@ -504,7 +508,7 @@ class FixedWingDesigner:
                 'wingspan': params['wing_span'],
                 'chord': params['wing_chord'],
                 'wing_area': params['wing_span'] * params['wing_chord'],
-                'weight': params['wing_span'] * 1.2,  # Estimate weight based on size
+                'weight': params['wing_span'] * FIXED_WING_WEIGHT_FACTOR,  # Estimate weight based on size
                 'airfoil_type': 'clark_y',
                 'fuselage_length': params['fuse_length'],
                 'fuselage_diameter': (params['fuse_width'] + params['fuse_height']) / 2
@@ -930,7 +934,7 @@ class GliderDesigner:
                 'wingspan': params['wing_span'],
                 'chord': (params['root_chord'] + params['tip_chord']) / 2,
                 'wing_area': params['wing_span'] * (params['root_chord'] + params['tip_chord']) / 2,
-                'weight': params['wing_span'] * 0.8,
+                'weight': params['wing_span'] * GLIDER_WEIGHT_FACTOR,
                 'airfoil_type': 'clark_y'
             }
             
