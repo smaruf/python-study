@@ -54,5 +54,8 @@ src/diagram/da3_output/
 src/diagram/output/
 src/diagram/*.png
 src/diagram/*.stl
+src/diagram/*.svg
 src/diagram/stl_*/
 src/diagram/combined_output/
+src/diagram/physical_output/
+src/diagram/plotter_*/

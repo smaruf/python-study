@@ -138,6 +138,52 @@ The STL files can be imported into 3D printing software like:
 - **Simplify3D** (paid, professional)
 - **MeshLab** (free, for viewing/editing)
 
+#### Export to 2D Plotter Format (SVG)
+
+**NEW**: Convert diagrams to SVG format for 2D plotting!
+
+```python
+from da3 import DA3
+
+da3 = DA3(output_dir='./my_plots')
+
+# Export 2D projections and patterns
+da3.export_contour_svg('contour.svg', plot_type='contour')
+da3.export_parametric_curve_svg('spiral.svg', curve_type='spiral')
+da3.export_pattern_svg('hexagon.svg', pattern_type='hexagon')
+da3.export_text_svg('text.svg', text='DA3', font_size=72)
+
+# Or export all 2D patterns at once
+da3.export_all_svg()
+```
+
+The SVG files can be imported into 2D plotting/cutting software like:
+- **Inkscape** (free vector editor)
+- **Adobe Illustrator** (professional vector editor)
+- **2D plotter control software**
+- **Vinyl cutter software** (Cricut, Silhouette)
+- **Laser cutter software** (for engraving)
+
+#### Complete Workflow: Visual -> Physical
+
+```python
+from da3 import DA3
+
+da3 = DA3(output_dir='./outputs')
+
+# 1. Create visualizations (PNG)
+da3.surface_plot('visual.png')
+
+# 2. Export to 2D plotter (SVG)
+da3.export_contour_svg('plotter.svg')
+
+# 3. Export to 3D printer (STL)
+da3.export_surface_stl('printer.stl')
+
+# Summary of all outputs
+da3.print_summary()
+```
+
 #### Create All Plots at Once
 
 ```python
@@ -390,6 +436,138 @@ Before printing, you can view/edit STL files in:
 - **Blender** (free, powerful)
 - **Windows 3D Viewer** (built into Windows 10/11)
 - **Online**: viewstl.com, 3dviewer.net
+
+### Related Libraries
+
+---
+
+## 2D Plotter Export
+
+### Overview
+
+The DA3 library includes **SVG export functionality** to convert diagrams into vector formats compatible with 2D plotters, vinyl cutters, and laser cutters. This enables creating physical 2D outputs from mathematical curves and patterns.
+
+### Supported 2D Outputs
+
+| Type                | Description                           | Method                           |
+| ------------------- | ------------------------------------- | -------------------------------- |
+| Contour Projection  | 2D projections of 3D surfaces         | `export_contour_svg()`          |
+| Parametric Curves   | Spirals, Lissajous, rose curves       | `export_parametric_curve_svg()` |
+| Geometric Patterns  | Grids, hexagons, concentric circles   | `export_pattern_svg()`          |
+| Text Output         | Text for engraving/plotting           | `export_text_svg()`             |
+
+### Quick Start - 2D Plotting
+
+```python
+from da3 import DA3
+
+da3 = DA3(output_dir='./2d_plots')
+
+# Export various 2D patterns
+da3.export_contour_svg('contour.svg', plot_type='contour')
+da3.export_parametric_curve_svg('spiral.svg', curve_type='spiral')
+da3.export_pattern_svg('hexagon.svg', pattern_type='hexagon')
+da3.export_text_svg('label.svg', text='MY TEXT', font_size=48)
+
+# Or export all patterns at once
+da3.export_all_svg()
+```
+
+### 2D Plotting Workflow
+
+1. **Generate SVG Files**
+   ```python
+   from da3 import DA3
+   da3 = DA3(output_dir='./plots')
+   da3.export_all_svg()
+   ```
+
+2. **Open in Vector Editor**
+   - Inkscape (free, recommended)
+   - Adobe Illustrator (professional)
+   - CorelDRAW
+
+3. **Configure Plot Settings**
+   - Scale to desired size
+   - Set pen/blade thickness
+   - Choose colors/layers
+   - Add registration marks if needed
+
+4. **Send to Plotter**
+   - Load material (paper, vinyl, etc.)
+   - Import SVG into plotter software
+   - Start plotting/cutting!
+
+### File Format Details
+
+- **Format**: SVG (Scalable Vector Graphics)
+- **Units**: Millimeters (mm) or as specified
+- **Type**: Vector paths (lines and curves)
+- **Scalability**: Infinite - no quality loss when resizing
+
+### Customizing Curve Parameters
+
+```python
+# Custom parametric curves
+da3.export_parametric_curve_svg('my_spiral.svg', curve_type='spiral')
+da3.export_parametric_curve_svg('lissajous.svg', curve_type='lissajous')
+da3.export_parametric_curve_svg('rose.svg', curve_type='rose')
+
+# Custom geometric patterns
+da3.export_pattern_svg('grid.svg', pattern_type='grid')
+da3.export_pattern_svg('hexagon.svg', pattern_type='hexagon')
+da3.export_pattern_svg('concentric.svg', pattern_type='concentric')
+
+# Custom text with specific font size
+da3.export_text_svg('label.svg', text='Custom Text', font_size=96)
+```
+
+### Use Cases
+
+#### Vinyl Cutting
+- Stickers and decals
+- Wall graphics
+- Vehicle wraps
+- Window graphics
+
+#### Laser Engraving
+- Wood/acrylic engraving
+- Metal etching
+- Glass engraving
+- Custom signage
+
+#### Pen Plotting
+- Art prints
+- Technical drawings
+- Calligraphy
+- Scientific diagrams
+
+### Compatible Devices
+
+✓ **Roland plotters** (DXY, PNC series)  
+✓ **HP plotters** (DesignJet series)  
+✓ **Silhouette** cutting machines  
+✓ **Cricut** cutting machines  
+✓ **AxiDraw** pen plotters  
+✓ **Laser cutters** (Epilog, Trotec, etc.)  
+
+### Viewing SVG Files
+
+SVG files can be viewed/edited in:
+- **Web browsers** (Chrome, Firefox, Safari)
+- **Inkscape** (free, cross-platform)
+- **Adobe Illustrator** (professional)
+- **SVG-edit** (online editor)
+
+### Example Files
+
+See **[physical_output_examples.py](physical_output_examples.py)** for complete workflow demonstrating:
+- Visual data creation (PNG)
+- 2D plotter export (SVG)
+- 3D printer export (STL)
+- Combined workflow
+
+---
 
 ### Related Libraries
 

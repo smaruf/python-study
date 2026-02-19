@@ -46,6 +46,19 @@ except Exception as e:
     PRINTER_EXPORT_AVAILABLE = False
     print(f"Warning: 3D printer export not available. Install numpy-stl: pip install numpy-stl")
 
+# Load 2D plotter export module
+try:
+    plotter_module = load_module('plotter_export_2d',
+                                  os.path.join(current_dir, '2d_plotter_export.py'))
+    create_2d_projection_svg = plotter_module.create_2d_projection_svg
+    create_parametric_curve_svg = plotter_module.create_parametric_curve_svg
+    create_geometric_pattern_svg = plotter_module.create_geometric_pattern_svg
+    create_text_for_plotter = plotter_module.create_text_for_plotter
+    PLOTTER_EXPORT_AVAILABLE = True
+except Exception as e:
+    PLOTTER_EXPORT_AVAILABLE = False
+    print(f"Warning: 2D plotter export not available: {e}")
+
 # Import functions from loaded modules
 create_3d_surface_plot = surface_module.create_3d_surface_plot
 create_3d_parametric_surface = surface_module.create_3d_parametric_surface
@@ -296,6 +309,111 @@ class DA3:
         print("  • Cura, PrusaSlicer, Simplify3D")
         print("  • MeshLab (for viewing)")
     
+    # 2D Plotter Export methods
+    def export_contour_svg(self, filename='contour_2d.svg', plot_type='contour'):
+        """
+        Export a 2D contour projection to SVG format for 2D plotting.
+        
+        Args:
+            filename (str): Name of the SVG file to save
+            plot_type (str): Type of plot - 'contour', 'filled_contour', 'scatter'
+            
+        Returns:
+            str: Path to the saved SVG file or None if export not available
+        """
+        if not PLOTTER_EXPORT_AVAILABLE:
+            print("2D plotter export not available.")
+            return None
+        
+        output_path = self._get_output_path(filename)
+        create_2d_projection_svg(save_to_file=True, filename=output_path, plot_type=plot_type)
+        self._log_plot('svg_contour', output_path)
+        return output_path
+    
+    def export_parametric_curve_svg(self, filename='curve_2d.svg', curve_type='spiral'):
+        """
+        Export a parametric curve to SVG format for 2D plotting.
+        
+        Args:
+            filename (str): Name of the SVG file to save
+            curve_type (str): Type of curve - 'spiral', 'lissajous', 'rose'
+            
+        Returns:
+            str: Path to the saved SVG file or None if export not available
+        """
+        if not PLOTTER_EXPORT_AVAILABLE:
+            print("2D plotter export not available.")
+            return None
+        
+        output_path = self._get_output_path(filename)
+        create_parametric_curve_svg(save_to_file=True, filename=output_path, curve_type=curve_type)
+        self._log_plot('svg_curve', output_path)
+        return output_path
+    
+    def export_pattern_svg(self, filename='pattern_2d.svg', pattern_type='grid'):
+        """
+        Export a geometric pattern to SVG format for 2D plotting.
+        
+        Args:
+            filename (str): Name of the SVG file to save
+            pattern_type (str): Type of pattern - 'grid', 'hexagon', 'concentric'
+            
+        Returns:
+            str: Path to the saved SVG file or None if export not available
+        """
+        if not PLOTTER_EXPORT_AVAILABLE:
+            print("2D plotter export not available.")
+            return None
+        
+        output_path = self._get_output_path(filename)
+        create_geometric_pattern_svg(save_to_file=True, filename=output_path, pattern_type=pattern_type)
+        self._log_plot('svg_pattern', output_path)
+        return output_path
+    
+    def export_text_svg(self, filename='text_2d.svg', text='DA3', font_size=72):
+        """
+        Export text to SVG format for 2D plotting/engraving.
+        
+        Args:
+            filename (str): Name of the SVG file to save
+            text (str): Text to plot
+            font_size (int): Font size
+            
+        Returns:
+            str: Path to the saved SVG file or None if export not available
+        """
+        if not PLOTTER_EXPORT_AVAILABLE:
+            print("2D plotter export not available.")
+            return None
+        
+        output_path = self._get_output_path(filename)
+        create_text_for_plotter(save_to_file=True, filename=output_path, text=text, font_size=font_size)
+        self._log_plot('svg_text', output_path)
+        return output_path
+    
+    def export_all_svg(self):
+        """Export all available 2D patterns to SVG format for 2D plotting."""
+        if not PLOTTER_EXPORT_AVAILABLE:
+            print("2D plotter export not available.")
+            return
+        
+        print("Exporting all 2D patterns to SVG format for 2D plotting...")
+        print("-" * 50)
+        
+        self.export_contour_svg(filename='plot2d_01_contour.svg', plot_type='contour')
+        self.export_parametric_curve_svg(filename='plot2d_02_spiral.svg', curve_type='spiral')
+        self.export_parametric_curve_svg(filename='plot2d_03_lissajous.svg', curve_type='lissajous')
+        self.export_pattern_svg(filename='plot2d_04_grid.svg', pattern_type='grid')
+        self.export_pattern_svg(filename='plot2d_05_hexagon.svg', pattern_type='hexagon')
+        self.export_text_svg(filename='plot2d_06_text.svg', text='DA3')
+        
+        print("-" * 50)
+        print("All SVG files created successfully!")
+        print("These files can be imported into 2D plotting software:")
+        print("  • Inkscape, Adobe Illustrator")
+        print("  • 2D plotter control software")
+        print("  • Vinyl cutter, laser cutter software")
+    
     # Utility methods
     def create_all_plots(self):
         """Create all available 3D plots."""
@@ -371,6 +489,22 @@ class DA3:
             for method, description in stl_methods:
                 print(f"• {method:20s} - {description}")
         
+        if PLOTTER_EXPORT_AVAILABLE:
+            print("\n" + "=" * 50)
+            print("2D Plotter Export (SVG Format)")
+            print("=" * 50)
+            
+            svg_methods = [
+                ("export_contour_svg", "Export 2D contour to SVG"),
+                ("export_parametric_curve_svg", "Export parametric curve to SVG"),
+                ("export_pattern_svg", "Export geometric pattern to SVG"),
+                ("export_text_svg", "Export text to SVG"),
+                ("export_all_svg", "Export all 2D patterns to SVG"),
+            ]
+            
+            for method, description in svg_methods:
+                print(f"• {method:20s} - {description}")
+        
         print("=" * 50)
         print("\nUsage example:")
         print("  from da3 import DA3")
@@ -380,6 +514,9 @@ class DA3:
         if PRINTER_EXPORT_AVAILABLE:
             print("  da3.export_surface_stl()")
             print("  da3.export_all_stl()")
+        if PLOTTER_EXPORT_AVAILABLE:
+            print("  da3.export_contour_svg()")
+            print("  da3.export_all_svg()")
         print("=" * 50)
 
 
