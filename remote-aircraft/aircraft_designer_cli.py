@@ -12,6 +12,16 @@ import sys
 from typing import Dict, Optional
 from wind_tunnel import WindTunnelSimulation, run_comprehensive_analysis
 
+# Display formatting constants
+COL_WIDTH_AOA = 8       # Column width for angle of attack
+COL_WIDTH_COEF = 8      # Column width for coefficients (CL, CD, L/D)
+COL_WIDTH_FORCE = 10    # Column width for forces (lift, drag)
+COL_WIDTH_STATUS = 10   # Column width for status
+DECIMALS_CL = 3         # Decimal places for CL
+DECIMALS_CD = 4         # Decimal places for CD
+DECIMALS_LD = 1         # Decimal places for L/D ratio
+DECIMALS_FORCE = 1      # Decimal places for forces
+
 
 def print_header(title: str):
     """Print a formatted header."""
@@ -92,13 +102,23 @@ def display_aoa_sweep_table(results: Dict):
     """Display angle of attack sweep in table format."""
     print_header("Angle of Attack Sweep")
     
-    print(f"  {'AoA (°)':>8} {'CL':>8} {'CD':>8} {'L/D':>8} {'Lift (g)':>10} {'Drag (g)':>10} {'Status':>10}")
+    # Use formatting constants for consistent display
+    headers = f"  {'AoA (°)':>{COL_WIDTH_AOA}} {'CL':>{COL_WIDTH_COEF}} {'CD':>{COL_WIDTH_COEF}} "
+    headers += f"{'L/D':>{COL_WIDTH_COEF}} {'Lift (g)':>{COL_WIDTH_FORCE}} "
+    headers += f"{'Drag (g)':>{COL_WIDTH_FORCE}} {'Status':>{COL_WIDTH_STATUS}}"
+    print(headers)
     print("  " + "-" * 72)
     
     for data in results['aoa_sweep_data']:
         status = "STALLED" if data['stalled'] else "OK"
-        print(f"  {data['angle_of_attack']:>8.1f} {data['cl']:>8.3f} {data['cd']:>8.4f} "
-              f"{data['ld_ratio']:>8.1f} {data['lift_g']:>10.1f} {data['drag_g']:>10.2f} {status:>10}")
+        row = f"  {data['angle_of_attack']:>{COL_WIDTH_AOA}.{DECIMALS_LD}f} "
+        row += f"{data['cl']:>{COL_WIDTH_COEF}.{DECIMALS_CL}f} "
+        row += f"{data['cd']:>{COL_WIDTH_COEF}.{DECIMALS_CD}f} "
+        row += f"{data['ld_ratio']:>{COL_WIDTH_COEF}.{DECIMALS_LD}f} "
+        row += f"{data['lift_g']:>{COL_WIDTH_FORCE}.{DECIMALS_FORCE}f} "
+        row += f"{data['drag_g']:>{COL_WIDTH_FORCE}.{DECIMALS_FORCE+1}f} "
+        row += f"{status:>{COL_WIDTH_STATUS}}"
+        print(row)
     
     print()
 

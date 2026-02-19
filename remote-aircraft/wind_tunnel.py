@@ -40,6 +40,9 @@ class WindTunnelSimulation:
         self.weight = design_params.get('weight', 1000)
         self.airfoil_type = design_params.get('airfoil_type', 'clark_y')
         
+        # Airfoil-specific stall angles (degrees)
+        self.stall_angle = 15 if self.airfoil_type == 'clark_y' else 12
+        
         # Calculate aspect ratio
         self.aspect_ratio = (self.wingspan ** 2) / self.wing_area
         
@@ -72,10 +75,9 @@ class WindTunnelSimulation:
         cl = cl_0 + cl_alpha_corrected * aoa_rad
         
         # Stall modeling (simplified)
-        stall_angle = 15 if self.airfoil_type == 'clark_y' else 12
-        if angle_of_attack > stall_angle:
+        if angle_of_attack > self.stall_angle:
             # Post-stall CL drops significantly
-            stall_factor = math.cos(math.radians(angle_of_attack - stall_angle))
+            stall_factor = math.cos(math.radians(angle_of_attack - self.stall_angle))
             cl = cl * max(0.3, stall_factor)
         
         return cl
@@ -173,7 +175,7 @@ class WindTunnelSimulation:
             'ld_ratio': ld_ratio,
             'moment_nm': moment_nm,
             'dynamic_pressure_pa': q,
-            'stalled': angle_of_attack > 15
+            'stalled': angle_of_attack > self.stall_angle
         }
         
         return results

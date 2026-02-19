@@ -508,7 +508,9 @@ class FixedWingDesigner:
                 'wingspan': params['wing_span'],
                 'chord': params['wing_chord'],
                 'wing_area': params['wing_span'] * params['wing_chord'],
-                'weight': params['wing_span'] * FIXED_WING_WEIGHT_FACTOR,  # Estimate weight based on size
+                # Simplified weight estimation based on wingspan (users should verify actual weight)
+                # Real weight depends on construction method, materials, and components
+                'weight': params['wing_span'] * FIXED_WING_WEIGHT_FACTOR,
                 'airfoil_type': 'clark_y',
                 'fuselage_length': params['fuse_length'],
                 'fuselage_diameter': (params['fuse_width'] + params['fuse_height']) / 2
@@ -934,6 +936,8 @@ class GliderDesigner:
                 'wingspan': params['wing_span'],
                 'chord': (params['root_chord'] + params['tip_chord']) / 2,
                 'wing_area': params['wing_span'] * (params['root_chord'] + params['tip_chord']) / 2,
+                # Simplified weight estimation for glider (lighter than powered aircraft)
+                # Real weight depends on construction method - users should verify
                 'weight': params['wing_span'] * GLIDER_WEIGHT_FACTOR,
                 'airfoil_type': 'clark_y'
             }
