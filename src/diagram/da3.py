@@ -86,78 +86,105 @@ class DA3:
     # Surface plots
     def surface_plot(self, save=True, filename='surface.png'):
         """Create a 3D surface plot."""
-        output_path = self._get_output_path(filename) if save else filename
-        create_3d_surface_plot(save_to_file=save, filename=output_path)
         if save:
+            output_path = self._get_output_path(filename)
+            create_3d_surface_plot(save_to_file=True, filename=output_path)
             self._log_plot('surface', output_path)
-        return output_path if save else None
+            return output_path
+        else:
+            create_3d_surface_plot(save_to_file=False)
+            return None
     
     def parametric_surface(self, save=True, filename='parametric_surface.png'):
         """Create a 3D parametric surface (torus)."""
-        output_path = self._get_output_path(filename) if save else filename
-        create_3d_parametric_surface(save_to_file=save, filename=output_path)
         if save:
+            output_path = self._get_output_path(filename)
+            create_3d_parametric_surface(save_to_file=True, filename=output_path)
             self._log_plot('parametric_surface', output_path)
-        return output_path if save else None
+            return output_path
+        else:
+            create_3d_parametric_surface(save_to_file=False)
+            return None
     
     # Scatter plots
     def scatter_plot(self, save=True, filename='scatter.png'):
         """Create a 3D scatter plot."""
-        output_path = self._get_output_path(filename) if save else filename
-        create_3d_scatter_plot(save_to_file=save, filename=output_path)
         if save:
+            output_path = self._get_output_path(filename)
+            create_3d_scatter_plot(save_to_file=True, filename=output_path)
             self._log_plot('scatter', output_path)
-        return output_path if save else None
+            return output_path
+        else:
+            create_3d_scatter_plot(save_to_file=False)
+            return None
     
     def cluster_scatter(self, save=True, filename='cluster_scatter.png'):
         """Create a 3D scatter plot with multiple clusters."""
-        output_path = self._get_output_path(filename) if save else filename
-        create_3d_cluster_scatter(save_to_file=save, filename=output_path)
         if save:
+            output_path = self._get_output_path(filename)
+            create_3d_cluster_scatter(save_to_file=True, filename=output_path)
             self._log_plot('cluster_scatter', output_path)
-        return output_path if save else None
+            return output_path
+        else:
+            create_3d_cluster_scatter(save_to_file=False)
+            return None
     
     # Wireframe plots
     def wireframe_plot(self, save=True, filename='wireframe.png'):
         """Create a 3D wireframe plot."""
-        output_path = self._get_output_path(filename) if save else filename
-        create_3d_wireframe_plot(save_to_file=save, filename=output_path)
         if save:
+            output_path = self._get_output_path(filename)
+            create_3d_wireframe_plot(save_to_file=True, filename=output_path)
             self._log_plot('wireframe', output_path)
-        return output_path if save else None
+            return output_path
+        else:
+            create_3d_wireframe_plot(save_to_file=False)
+            return None
     
     def sphere_wireframe(self, save=True, filename='sphere.png'):
         """Create a 3D wireframe sphere."""
-        output_path = self._get_output_path(filename) if save else filename
-        create_3d_sphere_wireframe(save_to_file=save, filename=output_path)
         if save:
+            output_path = self._get_output_path(filename)
+            create_3d_sphere_wireframe(save_to_file=True, filename=output_path)
             self._log_plot('sphere_wireframe', output_path)
-        return output_path if save else None
+            return output_path
+        else:
+            create_3d_sphere_wireframe(save_to_file=False)
+            return None
     
     # Line plots
     def line_plot(self, save=True, filename='line.png'):
         """Create a 3D line plot (helix)."""
-        output_path = self._get_output_path(filename) if save else filename
-        create_3d_line_plot(save_to_file=save, filename=output_path)
         if save:
+            output_path = self._get_output_path(filename)
+            create_3d_line_plot(save_to_file=True, filename=output_path)
             self._log_plot('line', output_path)
-        return output_path if save else None
+            return output_path
+        else:
+            create_3d_line_plot(save_to_file=False)
+            return None
     
     def spiral_plot(self, save=True, filename='spiral.png'):
         """Create a 3D spiral plot."""
-        output_path = self._get_output_path(filename) if save else filename
-        create_3d_spiral_plot(save_to_file=save, filename=output_path)
         if save:
+            output_path = self._get_output_path(filename)
+            create_3d_spiral_plot(save_to_file=True, filename=output_path)
             self._log_plot('spiral', output_path)
-        return output_path if save else None
+            return output_path
+        else:
+            create_3d_spiral_plot(save_to_file=False)
+            return None
     
     def lissajous_curve(self, save=True, filename='lissajous.png'):
         """Create a 3D Lissajous curve."""
-        output_path = self._get_output_path(filename) if save else filename
-        create_3d_lissajous_curve(save_to_file=save, filename=output_path)
         if save:
+            output_path = self._get_output_path(filename)
+            create_3d_lissajous_curve(save_to_file=True, filename=output_path)
             self._log_plot('lissajous', output_path)
-        return output_path if save else None
+            return output_path
+        else:
+            create_3d_lissajous_curve(save_to_file=False)
+            return None
     
     # Utility methods
     def create_all_plots(self):

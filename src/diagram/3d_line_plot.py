@@ -5,7 +5,6 @@ This module demonstrates creating 3D line plots using matplotlib.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 
 def create_3d_line_plot(save_to_file=False, filename='3d_line.png'):
@@ -39,8 +38,10 @@ def create_3d_line_plot(save_to_file=False, filename='3d_line.png'):
     if save_to_file:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
         print(f"Plot saved to {filename}")
+        plt.close(fig)
+    else:
+        plt.show()
     
-    plt.show()
     return fig, ax
 
 
@@ -81,8 +82,10 @@ def create_3d_spiral_plot(save_to_file=False, filename='3d_spiral.png'):
     if save_to_file:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
         print(f"Plot saved to {filename}")
+        plt.close(fig)
+    else:
+        plt.show()
     
-    plt.show()
     return fig, ax
 
 
@@ -124,8 +127,10 @@ def create_3d_lissajous_curve(save_to_file=False, filename='3d_lissajous.png'):
     if save_to_file:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
         print(f"Plot saved to {filename}")
+        plt.close(fig)
+    else:
+        plt.show()
     
-    plt.show()
     return fig, ax
 
 

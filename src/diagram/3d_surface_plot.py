@@ -5,7 +5,6 @@ This module demonstrates creating 3D surface plots using matplotlib.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 
 def create_3d_surface_plot(save_to_file=False, filename='3d_surface.png'):
@@ -85,8 +84,10 @@ def create_3d_parametric_surface(save_to_file=False, filename='3d_parametric.png
     if save_to_file:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
         print(f"Plot saved to {filename}")
+        plt.close(fig)
+    else:
+        plt.show()
     
-    plt.show()
     return fig, ax
 
 

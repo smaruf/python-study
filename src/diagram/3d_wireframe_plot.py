@@ -5,7 +5,6 @@ This module demonstrates creating 3D wireframe plots using matplotlib.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 
 def create_3d_wireframe_plot(save_to_file=False, filename='3d_wireframe.png'):
@@ -40,8 +39,10 @@ def create_3d_wireframe_plot(save_to_file=False, filename='3d_wireframe.png'):
     if save_to_file:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
         print(f"Plot saved to {filename}")
+        plt.close(fig)
+    else:
+        plt.show()
     
-    plt.show()
     return fig, ax
 
 
@@ -77,8 +78,10 @@ def create_3d_sphere_wireframe(save_to_file=False, filename='3d_sphere.png'):
     if save_to_file:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
         print(f"Plot saved to {filename}")
+        plt.close(fig)
+    else:
+        plt.show()
     
-    plt.show()
     return fig, ax
 
 

@@ -5,7 +5,6 @@ This module demonstrates creating 3D scatter plots using matplotlib.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 
 def create_3d_scatter_plot(save_to_file=False, filename='3d_scatter.png'):
@@ -45,8 +44,10 @@ def create_3d_scatter_plot(save_to_file=False, filename='3d_scatter.png'):
     if save_to_file:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
         print(f"Plot saved to {filename}")
+        plt.close(fig)
+    else:
+        plt.show()
     
-    plt.show()
     return fig, ax
 
 
@@ -93,8 +94,10 @@ def create_3d_cluster_scatter(save_to_file=False, filename='3d_clusters.png'):
     if save_to_file:
         plt.savefig(filename, dpi=300, bbox_inches='tight')
         print(f"Plot saved to {filename}")
+        plt.close(fig)
+    else:
+        plt.show()
     
-    plt.show()
     return fig, ax
 
 
