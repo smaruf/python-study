@@ -64,6 +64,63 @@ For creating diagrams with PlantUML, you can refer to the following link:
 
 There is **no standard Python library named `DA3`** in the ecosystem. This custom implementation provides comprehensive 3D visualization capabilities using matplotlib's `mplot3d` toolkit.
 
+### 🎯 Three Ways to Use DA3
+
+DA3 provides **three complete interfaces** for maximum flexibility:
+
+#### 1. 📝 Script-Based (Python API)
+Direct Python programming for maximum control and automation.
+
+```python
+from da3 import DA3
+da3 = DA3(output_dir='./outputs')
+da3.surface_plot()
+da3.export_contour_svg()
+da3.export_surface_stl()
+```
+
+#### 2. 💻 CLI-Based (Command-Line Interface)
+Perfect for automation, scripting, and quick operations.
+
+```bash
+# Create all visualizations
+python da3_cli.py --all --output plots/
+
+# Complete workflow
+python da3_cli.py --complete-workflow --output complete/
+
+# Export to 2D plotter
+python da3_cli.py --export-svg --contour --output plotter/
+```
+
+#### 3. 🖥️ GUI-Based (Graphical Interface)
+User-friendly graphical interface with point-and-click simplicity.
+
+```bash
+# Launch GUI
+python da3_gui.py
+```
+
+**Features:**
+- Tabbed interface for different export types
+- One-click plot generation
+- Real-time output log
+- Parameter controls
+- Settings and summary viewer
+
+📖 **Complete documentation**: See [DA3_USER_GUIDE.md](DA3_USER_GUIDE.md) for detailed usage of all three interfaces.
+
+#### Interface Comparison
+
+| Feature | Script | CLI | GUI |
+|---------|--------|-----|-----|
+| **Ease of Use** | Programming knowledge required | Terminal commands | Point and click |
+| **Automation** | ✅ Excellent | ✅ Excellent | ❌ Manual |
+| **Customization** | ✅✅ Maximum | ✅ High | ✅ Medium |
+| **Learning Curve** | Medium | Low | Very Low |
+| **Batch Operations** | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Best For** | Developers, Automation | Power users, Scripts | Beginners, Quick tasks |
+
 ### What DA3 Provides
 
 The DA3 module offers various types of 3D visualizations:
@@ -92,11 +149,12 @@ Or install individually:
 
 ```bash
 pip install matplotlib numpy
+pip install numpy-stl  # For 3D printer export
 ```
 
 ### Quick Start
 
-#### Basic Usage
+#### Script-Based Usage
 
 ```python
 from da3 import DA3
