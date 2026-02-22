@@ -1,0 +1,11 @@
+{
+  "design_params": {
+    "wingspan": 1200,
+    "chord": 180,
+    "weight": 1400,
+    "airfoil_type": "clark_y",
+    "fuselage_length": 800,
+    "fuselage_diameter": 80
+  },
+  "cruise_speed": 18.0
+}

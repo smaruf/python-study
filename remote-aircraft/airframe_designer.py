@@ -14,11 +14,17 @@ import os
 sys.path.insert(0, os.path.dirname(__file__))
 
 from materials import PLA, PETG, NYLON, CF_NYLON
+from wind_tunnel import run_comprehensive_analysis
+from wind_tunnel_window import WindTunnelWindow
 
 # Design constants for calculations
 TYPICAL_FIXED_WING_WEIGHT_G = 200  # Typical weight for small fixed wing aircraft in grams
 TYPICAL_GLIDER_WEIGHT_G = 150      # Typical weight for small glider in grams
 GLIDE_RATIO_EFFICIENCY = 0.8       # Aerodynamic efficiency factor for glide ratio calculation
+
+# Weight estimation factors for wind tunnel simulation (weight in grams ≈ wingspan in mm × factor)
+FIXED_WING_WEIGHT_FACTOR = 1.2     # Fixed wing aircraft tend to be heavier (motor, battery, etc.)
+GLIDER_WEIGHT_FACTOR = 0.8         # Gliders are lighter (no motor, smaller battery)
 
 
 class AirframeDesignerApp:
@@ -485,6 +491,37 @@ class FixedWingDesigner:
             f.write("\nNOTE: STL files would be generated here if CadQuery is installed.\n")
             f.write("To generate actual STL files, ensure CadQuery is properly installed.\n\n")
     
+    def open_wind_tunnel(self):
+        """Open wind tunnel simulation window"""
+        try:
+            # Collect parameters
+            params = {}
+            for name, entry in self.params.items():
+                try:
+                    params[name] = float(entry.get())
+                except ValueError:
+                    messagebox.showerror("Invalid Input", f"Please enter a valid number for {name}")
+                    return
+            
+            # Prepare design parameters for wind tunnel
+            design_params = {
+                'wingspan': params['wing_span'],
+                'chord': params['wing_chord'],
+                'wing_area': params['wing_span'] * params['wing_chord'],
+                # Simplified weight estimation based on wingspan (users should verify actual weight)
+                # Real weight depends on construction method, materials, and components
+                'weight': params['wing_span'] * FIXED_WING_WEIGHT_FACTOR,
+                'airfoil_type': 'clark_y',
+                'fuselage_length': params['fuse_length'],
+                'fuselage_diameter': (params['fuse_width'] + params['fuse_height']) / 2
+            }
+            
+            # Open wind tunnel window
+            WindTunnelWindow(self.window, design_params)
+            
+        except Exception as e:
+            messagebox.showerror("Error", f"Could not open wind tunnel: {str(e)}")
+    
     def go_back(self):
         """Return to main menu"""
         self.window.destroy()
@@ -597,6 +634,18 @@ class GliderDesigner:
             command=self.generate_design
         )
         generate_btn.pack(side=tk.LEFT, padx=10)
+        
+        wind_tunnel_btn = tk.Button(
+            button_frame,
+            text="🌪️ Wind Tunnel",
+            font=("Arial", 12, "bold"),
+            bg="#e74c3c",
+            fg="white",
+            width=18,
+            height=2,
+            command=self.open_wind_tunnel
+        )
+        wind_tunnel_btn.pack(side=tk.LEFT, padx=10)
         
         back_btn = tk.Button(
             button_frame,
@@ -869,6 +918,35 @@ class GliderDesigner:
             
             f.write("\nNOTE: STL files would be generated here if CadQuery is installed.\n")
             f.write("To generate actual STL files, ensure CadQuery is properly installed.\n\n")
+    
+    def open_wind_tunnel(self):
+        """Open wind tunnel simulation window"""
+        try:
+            # Collect parameters
+            params = {}
+            for name, entry in self.params.items():
+                try:
+                    params[name] = float(entry.get())
+                except ValueError:
+                    messagebox.showerror("Invalid Input", f"Please enter a valid number for {name}")
+                    return
+            
+            # Prepare design parameters for wind tunnel
+            design_params = {
+                'wingspan': params['wing_span'],
+                'chord': (params['root_chord'] + params['tip_chord']) / 2,
+                'wing_area': params['wing_span'] * (params['root_chord'] + params['tip_chord']) / 2,
+                # Simplified weight estimation for glider (lighter than powered aircraft)
+                # Real weight depends on construction method - users should verify
+                'weight': params['wing_span'] * GLIDER_WEIGHT_FACTOR,
+                'airfoil_type': 'clark_y'
+            }
+            
+            # Open wind tunnel window
+            WindTunnelWindow(self.window, design_params)
+            
+        except Exception as e:
+            messagebox.showerror("Error", f"Could not open wind tunnel: {str(e)}")
     
     def go_back(self):
         """Return to main menu"""
