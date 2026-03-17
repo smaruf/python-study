@@ -87,7 +87,29 @@ PYTHONPATH=. python examples/fixed_wing_analysis.py
 PYTHONPATH=. python examples/wing_types_analysis.py
 ```
 
-### 5. Start the Course
+### 5. Community Builds (NEW! 🛸)
+
+Replicate three real YouTube RC builds with full Python analysis, PID control system, foamboard/3D-print plans, and Arduino C++ sketches:
+
+```bash
+# Full analysis: Flying-Wing RC + DC Stick Plane + Shahed study
+PYTHONPATH=. python examples/community_builds_analysis.py
+```
+
+```python
+from fixed_wing.community_builds import (
+    flying_wing_rc_design,        # RCMakerLab Oct 2025
+    stick_plane_dc_design,        # 3JWings Jan 2025
+    shahed_drone_design,          # educational study
+    flying_wing_rc_arduino_sketch,
+    flying_wing_rc_foamboard_plan,
+    elevon_mix,
+    PIDController,
+    simulate_step_response,
+)
+```
+
+### 6. Start the Course
 
 See [`course/README.md`](course/README.md) for the complete 1-week practical course.
 
@@ -459,8 +481,11 @@ See [USAGE.md](USAGE.md) for more examples.
 - **Canard Configuration**: Stall-resistant design
 - **Oblique Wing**: Variable sweep experimental
 - **Flying Pancake**: Fun circular wing design
+- **RCMakerLab Flying-Wing**: Full foam build with Arduino NRF24L01 RC 🆕
+- **3JWings DC Stick Plane**: 3D-printed beginner plane (609 mm, 116 g) 🆕
+- **Shahed / Lucas Study Model**: 55° delta scaled to RC (educational) 🆕
 - **Custom Airframes**: Fully parametric designs
-- **Competition Models**: Optimized for performance
+- **Competition Models**: Optimised for performance
 
 ---
 
@@ -695,6 +720,31 @@ print(f"Aspect ratio : {shahed_approx['geometry']['aspect_ratio']:.2f}")
 print(f"Wing area    : {shahed_approx['geometry']['wing_area_mm2']:.0f} mm²")
 ```
 
+**Full implementation** — geometry, aerodynamics, PID control system, foamboard cut plan, and STL generation:
+
+```python
+from fixed_wing.community_builds import (
+    shahed_drone_design,
+    generate_shahed_study_stl,   # requires CadQuery
+)
+
+study = shahed_drone_design(scale_factor=0.20)
+rc    = study["rc_study_model"]
+ctrl  = study["control_system"]
+
+print(f"RC model span  : {rc['wingspan_mm']} mm")
+print(f"RC model AUW   : {rc['auw_grams']} g")
+print(f"CG from LE     : {rc['cg_from_le_mm']} mm")
+print(f"Cruise speed   : {rc['cruise_speed_ms']} m/s")
+print(f"Elevon chord   : {ctrl['elevon_chord_mm']} mm")
+print(f"PID Pitch Kp   : {ctrl['pid_pitch']['kp']}")
+
+# Same elevon-mixing Arduino sketch as the flying-wing (change address string)
+from fixed_wing.community_builds import flying_wing_rc_arduino_sketch
+sketches = flying_wing_rc_arduino_sketch()
+print(sketches["receiver_sketch"])
+```
+
 > ⚠️ **Note**: This reference is provided purely for educational aerodynamics study. Always comply with local laws and regulations when building and flying any UAV.
 
 ---
@@ -749,6 +799,44 @@ Demonstrates how to build a delta-wing type RC model airplane and a handmade rem
 - Gerber files, dimensions & code: https://www.rcpano.net/2025/09/30/making-delta-wing-rc-plane/
 - Full flight video: *Handmade RC Flying-Wing FULL Flight 1*
 
+**Python implementation:**
+
+```python
+# Full design + aerodynamics + control system + foamboard plan + Arduino sketch
+from fixed_wing.community_builds import (
+    flying_wing_rc_design,
+    flying_wing_rc_arduino_sketch,
+    flying_wing_rc_foamboard_plan,
+    generate_flying_wing_rc_stl,   # requires CadQuery
+    elevon_mix,
+    PIDController,
+    simulate_step_response,
+)
+
+design = flying_wing_rc_design()
+print(f"Cruise speed : {design['aerodynamics']['cruise_speed_ms']} m/s")
+print(f"CG from LE   : {design['aerodynamics']['cg_from_le_mm']} mm")
+print(f"Stall speed  : {design['aerodynamics']['stall_speed_ms']} m/s")
+
+# Get full Arduino TX + RX sketch as strings
+sketches = flying_wing_rc_arduino_sketch()
+print(sketches["transmitter_sketch"])   # copy to .ino and flash
+
+# Foamboard cutting plan with ASCII layout
+plan = flying_wing_rc_foamboard_plan()
+print(plan["ascii_layout"])
+
+# Simulate PID step response before flying
+pid = PIDController(kp=1.80, ki=0.05, kd=0.12)
+history = simulate_step_response(pid, target=30)   # 30° bank target
+```
+
+Run the full analysis:
+
+```bash
+PYTHONPATH=. python examples/community_builds_analysis.py
+```
+
 ### 2. Make RC Plane With DC Motor — DIY RC Stick Plane
 
 > **Channel**: 3JWings (235K subscribers)  
@@ -772,6 +860,33 @@ A beginner-friendly 3D-printed RC plane build. The simplest 3D-printed plane you
 - STL files / Plans: https://shorturl.at/ZFULq
 - Electronics setup guide: *DIY Electronics Setup For Mini RC Plane*
 - 3D Printer used: Creality Ender 3 V3 Plus — https://shorturl.at/XMSSY
+
+**Python implementation:**
+
+```python
+# Full design + aerodynamics + 3-channel control system + 3D print specs + Arduino sketch
+from fixed_wing.community_builds import (
+    stick_plane_dc_design,
+    stick_plane_dc_arduino_sketch,
+    generate_stick_plane_stl,   # requires CadQuery
+)
+
+design = stick_plane_dc_design()
+print(f"Wingspan     : {design['geometry']['wingspan_mm']} mm")
+print(f"AUW          : {design['aerodynamics']['auw_grams']} g")
+print(f"CG from LE   : {design['aerodynamics']['cg_from_le_mm']} mm  "
+      f"({design['aerodynamics']['cg_pct_mac']} % MAC)")
+print(f"Cruise speed : {design['aerodynamics']['cruise_speed_ms']} m/s")
+print(f"Stability    : {design['aerodynamics']['stability_assessment']}")
+
+# 3D print specs for every part
+for part, info in design["build_specification"]["print_specs"].items():
+    print(part, info)
+
+# Arduino sketch for 3-channel DC motor control
+sketches = stick_plane_dc_arduino_sketch()
+print(sketches["transmitter_sketch"])   # copy to .ino and flash
+```
 
 ---
 
