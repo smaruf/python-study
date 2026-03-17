@@ -667,6 +667,38 @@ Happy building! ✈️
 
 ---
 
+## 🛸 Notable Aircraft References
+
+### Shahed / Lucas Drone
+
+The **Shahed** (also referred to as **Lucas** or **Geranium** in some operational contexts) is a delta-wing loitering munition / kamikaze UAV. It is widely studied in the aeromodelling community for its simple yet effective flying-wing aerodynamics.
+
+**Key characteristics:**
+- **Wing type**: Delta / Flying-Wing (tailless)
+- **Propulsion**: Pusher propeller driven by a small internal-combustion or electric engine
+- **Navigation**: GPS-waypoint guidance with IR/optical terminal homing
+- **Construction**: Largely plywood/composite frame — translates well to foam-board DIY builds
+- **Relevance to this repo**: Its planform is essentially a swept delta wing and can be modelled using the `delta_wing_design()` and `flying_wing_design()` functions already present in `fixed_wing/wing_types.py`
+
+**DIY / study approximation with this toolkit:**
+
+```python
+from fixed_wing.wing_types import delta_wing_design
+
+# Approximate Shahed-136 planform (scaled down for RC)
+shahed_approx = delta_wing_design(
+    root_chord=400,    # mm — scaled-down centre chord
+    wingspan=900,      # mm — scaled-down span
+    sweep_angle=55     # degrees — characteristic high-sweep delta
+)
+print(f"Aspect ratio : {shahed_approx['geometry']['aspect_ratio']:.2f}")
+print(f"Wing area    : {shahed_approx['geometry']['wing_area_mm2']:.0f} mm²")
+```
+
+> ⚠️ **Note**: This reference is provided purely for educational aerodynamics study. Always comply with local laws and regulations when building and flying any UAV.
+
+---
+
 ## 📞 Resources
 
 - **CadQuery Docs**: https://cadquery.readthedocs.io/
