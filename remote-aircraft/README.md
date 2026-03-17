@@ -699,6 +699,58 @@ print(f"Wing area    : {shahed_approx['geometry']['wing_area_mm2']:.0f} mm²")
 
 ---
 
+## 🎬 Recommended Build Videos
+
+### 1. Build a Flying-Wing with Simple Materials — DIY RC Plane & Remote Control
+
+> **Channel**: RCMakerLab (491K subscribers)  
+> **Published**: Oct 9, 2025  
+> **Views**: 118,594  
+> **YouTube**: [Watch on YouTube](https://www.youtube.com/watch?v=) *(search: "RCMakerLab Build Flying-Wing Simple Materials")*
+
+**Description:**  
+Demonstrates how to build a delta-wing type RC model airplane and a handmade remote control using Arduino. Uses the most basic materials possible. Delta-wing (flying-wing) models are preferred for their simple construction and excellent stability.
+
+**Build tags:** `#rcplane` `#diyrc` `#homemadercplane`
+
+**Chapter timestamps:**
+| Time  | Topic |
+|-------|-------|
+| 00:00 | RC Flight-Wing overview |
+| 00:06 | Material selection for RC Flying-Wing |
+| 00:26 | Building the flying-wing |
+| 05:25 | RC Servo assembly |
+| 07:52 | Making the Remote Control Circuit (Arduino) |
+| 10:57 | Cardboard motor mount |
+| 11:14 | Brushless motor assembly |
+| 12:08 | ESC and Radio setup |
+| 14:50 | Center of Gravity (CG) |
+| 14:52 | First flight of RC Delta-Wing |
+
+**Electronics / Parts list:**
+| Component | Notes |
+|-----------|-------|
+| 2205 2300KV Motor (CW) | Brushless motor |
+| 30A BL ESC | Electronic Speed Controller |
+| 5050 or 5045 3-Blade Propeller | |
+| MG90S Servo | |
+| NRF24L01+PA+LNA 100mW (E01-ML01DP5) | Receiver module |
+| Arduino Nano V3 (Micro connector) | Flight / RC controller |
+| GT-24 NRF24L01+PA+LNA (With Antenna) | Transmitter module |
+| 2× PS4 Analogue Joystick (10K) | Transmitter sticks |
+| 2× Toggle switch | |
+| LM1117 3.3V voltage regulator | |
+| Capacitors 10µF (×2), 100µF (×3), 100nF (×5) | Filtering |
+| JST 2-Pin connector | |
+| 6 mm insulation styrofoam (×2 plates) | Airframe body |
+| 3 mm kraft foamboard (×1 plate) | Airframe structure |
+
+**Reference links:**
+- Gerber files, dimensions & code: https://www.rcpano.net/2025/09/30/mak...
+- Full flight video: *Handmade RC Flying-Wing FULL Flight 1*
+
+---
+
 ## 📞 Resources
 
 - **CadQuery Docs**: https://cadquery.readthedocs.io/
