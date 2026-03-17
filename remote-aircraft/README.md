@@ -749,6 +749,30 @@ Demonstrates how to build a delta-wing type RC model airplane and a handmade rem
 - Gerber files, dimensions & code: https://www.rcpano.net/2025/09/30/mak...
 - Full flight video: *Handmade RC Flying-Wing FULL Flight 1*
 
+### 2. Make RC Plane With DC Motor — DIY RC Stick Plane
+
+> **Channel**: 3JWings (235K subscribers)  
+> **Published**: Jan 10, 2025  
+> **Views**: 278,098  
+> **YouTube**: [Watch on YouTube](https://www.youtube.com/watch?v=) *(search: "3JWings Make Rc Plane With dc Motor DIY Rc Stick Plane")*  
+> **Tags:** `#rcplane` `#3dprinting`
+
+**Description:**  
+A beginner-friendly 3D-printed RC plane build. The simplest 3D-printed plane you can build at home — flight control is straightforward, making it ideal for newcomers to aeromodelling.
+
+**Plane Specifications:**
+| Parameter | Value |
+|-----------|-------|
+| Wingspan | 609 mm |
+| All-up weight | 116 g (including battery) |
+| CG position | 33 mm from leading edge |
+| Propulsion | DC motor |
+
+**Files & Resources:**
+- STL files / Plans: https://shorturl.at/ZFULq
+- Electronics setup guide: *DIY Electronics Setup For Mini RC Plane*
+- 3D Printer used: Creality Ender 3 V3 Plus — https://shorturl.at/XMSSY
+
 ---
 
 ## 📞 Resources
