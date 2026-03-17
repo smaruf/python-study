@@ -706,7 +706,7 @@ print(f"Wing area    : {shahed_approx['geometry']['wing_area_mm2']:.0f} mm²")
 > **Channel**: RCMakerLab (491K subscribers)  
 > **Published**: Oct 9, 2025  
 > **Views**: 118,594  
-> **YouTube**: [Watch on YouTube](https://www.youtube.com/watch?v=) *(search: "RCMakerLab Build Flying-Wing Simple Materials")*
+> **YouTube**: Search *"RCMakerLab Build Flying-Wing Simple Materials"* on YouTube
 
 **Description:**  
 Demonstrates how to build a delta-wing type RC model airplane and a handmade remote control using Arduino. Uses the most basic materials possible. Delta-wing (flying-wing) models are preferred for their simple construction and excellent stability.
@@ -746,7 +746,7 @@ Demonstrates how to build a delta-wing type RC model airplane and a handmade rem
 | 3 mm kraft foamboard (×1 plate) | Airframe structure |
 
 **Reference links:**
-- Gerber files, dimensions & code: https://www.rcpano.net/2025/09/30/mak...
+- Gerber files, dimensions & code: https://www.rcpano.net/2025/09/30/making-delta-wing-rc-plane/
 - Full flight video: *Handmade RC Flying-Wing FULL Flight 1*
 
 ### 2. Make RC Plane With DC Motor — DIY RC Stick Plane
@@ -754,7 +754,7 @@ Demonstrates how to build a delta-wing type RC model airplane and a handmade rem
 > **Channel**: 3JWings (235K subscribers)  
 > **Published**: Jan 10, 2025  
 > **Views**: 278,098  
-> **YouTube**: [Watch on YouTube](https://www.youtube.com/watch?v=) *(search: "3JWings Make Rc Plane With dc Motor DIY Rc Stick Plane")*  
+> **YouTube**: Search *"3JWings Make Rc Plane With dc Motor DIY Rc Stick Plane"* on YouTube  
 > **Tags:** `#rcplane` `#3dprinting`
 
 **Description:**  
