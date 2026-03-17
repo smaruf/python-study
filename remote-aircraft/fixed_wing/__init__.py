@@ -14,4 +14,6 @@ Modules for designing fixed-wing aircraft structures:
     Shahed/Lucas Drone aerodynamic study.
   Each build includes: geometry, aerodynamics, PID control system,
   foamboard/3D-print build specs, electronics BOM, and Arduino C++ sketches.
+- microcontroller_firmware: Raspberry Pi Pico (MicroPython) and Arduino (C++) firmware
+    for all three builds, plus component-level BOMs and ASCII wiring diagrams.
 """

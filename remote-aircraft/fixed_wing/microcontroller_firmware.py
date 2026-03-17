@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Microcontroller Firmware & Component-Level Hardware Design
 
@@ -625,7 +626,7 @@ def pico_flying_wing_firmware():
         Dict with ``transmitter_firmware``, ``receiver_firmware``,
         ``micropython_library``, and ``flash_instructions``.
     """
-    tx = r"""
+    tx = r'''
 # ============================================================
 # FLYING-WING RC — TRANSMITTER (Raspberry Pi Pico)
 # MicroPython firmware — flash with Thonny or mpremote
@@ -682,9 +683,9 @@ while True:
         pass   # ignore occasional TX timeout
 
     time.sleep_ms(20)   # 50 Hz
-"""
+'''
 
-    rx = r"""
+    rx = r'''
 # ============================================================
 # FLYING-WING RC — RECEIVER (Raspberry Pi Pico)
 # MicroPython firmware — flash with Thonny or mpremote
@@ -805,7 +806,7 @@ while True:
     remaining = 20 - elapsed
     if remaining > 0:
         time.sleep_ms(remaining)
-"""
+'''
 
     return {
         "platform": "Raspberry Pi Pico (RP2040, MicroPython)",
@@ -836,7 +837,7 @@ def pico_stick_plane_firmware():
         Dict with ``transmitter_firmware``, ``receiver_firmware``,
         and ``flash_instructions``.
     """
-    tx = r"""
+    tx = r'''
 # ============================================================
 # DC STICK PLANE — TRANSMITTER (Raspberry Pi Pico, 3-channel)
 # Throttle + Elevator + Rudder
@@ -878,9 +879,9 @@ while True:
     except OSError:
         pass
     time.sleep_ms(20)
-"""
+'''
 
-    rx = r"""
+    rx = r'''
 # ============================================================
 # DC STICK PLANE — RECEIVER (Raspberry Pi Pico, 3-channel)
 # DC motor via MOSFET PWM on GP2
@@ -959,7 +960,7 @@ while True:
     elapsed = time.ticks_diff(time.ticks_ms(), t0)
     if 20 - elapsed > 0:
         time.sleep_ms(20 - elapsed)
-"""
+'''
 
     return {
         "platform": "Raspberry Pi Pico (MicroPython)",
@@ -987,7 +988,7 @@ def pico_shahed_study_firmware():
         Dict with ``transmitter_firmware``, ``receiver_firmware``,
         and ``flash_instructions``.
     """
-    tx = r"""
+    tx = r'''
 # ============================================================
 # SHAHED STUDY MODEL — TRANSMITTER (Raspberry Pi Pico)
 # Same as flying-wing TX but radio address = b"SHD1\x00"
@@ -1034,9 +1035,9 @@ while True:
     except OSError:
         pass
     time.sleep_ms(20)
-"""
+'''
 
-    rx = r"""
+    rx = r'''
 # ============================================================
 # SHAHED STUDY MODEL — RECEIVER (Raspberry Pi Pico)
 # Pusher ESC on GP2 | Left elevon GP3 | Right elevon GP4
@@ -1153,7 +1154,7 @@ while True:
     elapsed = time.ticks_diff(time.ticks_ms(), t0)
     if 20 - elapsed > 0:
         time.sleep_ms(20 - elapsed)
-"""
+'''
 
     return {
         "platform": "Raspberry Pi Pico (MicroPython)",
@@ -1185,7 +1186,7 @@ def arduino_flying_wing_full():
         Dict with ``transmitter_sketch``, ``receiver_sketch``,
         ``libraries_required``, and ``flash_instructions``.
     """
-    tx = r"""
+    tx = r'''
 // ================================================================
 // FLYING-WING RC — TRANSMITTER (Arduino Nano V3 + NRF24L01)
 // Full implementation with arm switch and aux mode
@@ -1234,9 +1235,9 @@ void loop() {
     radio.write(&tx_data, sizeof(tx_data));
     delay(20);   // 50 Hz
 }
-"""
+'''
 
-    rx = r"""
+    rx = r'''
 // ================================================================
 // FLYING-WING RC — RECEIVER (Arduino Nano V3)
 // Includes MPU-6050 IMU for pitch + roll rate stabilisation
@@ -1336,7 +1337,7 @@ void loop() {
     rightElevon.writeMicroseconds(rightUs);
     delay(20);
 }
-"""
+'''
 
     return {
         "language": "C++ (Arduino IDE 2.x)",
@@ -1370,7 +1371,7 @@ def arduino_stick_plane_full():
         Dict with ``transmitter_sketch``, ``receiver_sketch``,
         ``libraries_required``, and ``flash_instructions``.
     """
-    tx = r"""
+    tx = r'''
 // ================================================================
 // DC STICK PLANE — TRANSMITTER (Arduino Nano V3, 3-channel)
 // ================================================================
@@ -1404,9 +1405,9 @@ void loop() {
     radio.write(&tx_data, sizeof(tx_data));
     delay(20);
 }
-"""
+'''
 
-    rx = r"""
+    rx = r'''
 // ================================================================
 // DC STICK PLANE — RECEIVER (Arduino Nano V3)
 // DC motor MOSFET (IRLZ44N) on D3 via PWM
@@ -1491,7 +1492,7 @@ void loop() {
     servoRudd.write(constrain(90 + (int)(ruddOut/500.0*35), 55, 125));
     delay(20);
 }
-"""
+'''
 
     return {
         "language": "C++ (Arduino IDE 2.x)",
@@ -1525,7 +1526,7 @@ def arduino_shahed_study_full():
         Dict with ``transmitter_sketch``, ``receiver_sketch``,
         ``libraries_required``, and ``flash_instructions``.
     """
-    tx = r"""
+    tx = r'''
 // ================================================================
 // SHAHED STUDY MODEL — TRANSMITTER (Arduino Nano V3)
 // ⚠ FOR EDUCATIONAL / AERODYNAMIC STUDY ONLY
@@ -1566,9 +1567,9 @@ void loop() {
     radio.write(&tx_data, sizeof(tx_data));
     delay(20);
 }
-"""
+'''
 
-    rx = r"""
+    rx = r'''
 // ================================================================
 // SHAHED STUDY MODEL — RECEIVER (Arduino Nano V3)
 // Pusher ESC D3 | Left elevon D5 | Right elevon D6
@@ -1675,7 +1676,7 @@ void loop() {
     }
     delay(20);
 }
-"""
+'''
 
     return {
         "language": "C++ (Arduino IDE 2.x)",

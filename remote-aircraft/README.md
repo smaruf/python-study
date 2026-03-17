@@ -109,6 +109,48 @@ from fixed_wing.community_builds import (
 )
 ```
 
+### 5b. Microcontroller Firmware & Component Hardware (NEW! 🔌)
+
+Full Raspberry Pi Pico (MicroPython) and Arduino Nano (C++) firmware for all three builds, plus component-level BOMs and ASCII wiring diagrams:
+
+```bash
+# Full hardware + firmware analysis
+PYTHONPATH=. python examples/microcontroller_analysis.py
+```
+
+```python
+from fixed_wing.microcontroller_firmware import (
+    # Component BOMs (every individual part with value + notes)
+    component_bom_flying_wing,
+    component_bom_stick_plane,
+    component_bom_shahed_study,
+
+    # ASCII wiring diagrams (Arduino and RPi Pico)
+    wiring_diagram_arduino,
+    wiring_diagram_pico,
+
+    # Raspberry Pi Pico MicroPython firmware (TX + RX, ready to flash)
+    pico_flying_wing_firmware,
+    pico_stick_plane_firmware,
+    pico_shahed_study_firmware,
+
+    # Arduino C++ firmware with MPU-6050 IMU (TX + RX, ready to flash)
+    arduino_flying_wing_full,
+    arduino_stick_plane_full,
+    arduino_shahed_study_full,
+)
+
+# Get Pico firmware and print (copy to main.py → flash with Thonny)
+fw = pico_flying_wing_firmware()
+print(fw["transmitter_firmware"])   # TX Pico
+print(fw["receiver_firmware"])       # RX Pico
+
+# Get Arduino firmware and print (copy to .ino → flash with Arduino IDE)
+fw = arduino_flying_wing_full()
+print(fw["transmitter_sketch"])     # TX Nano
+print(fw["receiver_sketch"])        # RX Nano
+```
+
 ### 6. Start the Course
 
 See [`course/README.md`](course/README.md) for the complete 1-week practical course.
