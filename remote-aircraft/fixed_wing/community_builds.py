@@ -524,9 +524,16 @@ void loop() {
     int thrUs = armed ? map(rx.throttle, 0, 1000, 1000, 2000) : 1000;
     escMotor.writeMicroseconds(thrUs);
 
-    float pitchOut = pidStep(rx.pitch, rx.pitch,
+    // NOTE: Replace measuredPitch / measuredRoll with actual IMU readings
+    // (e.g., from an MPU-6050 via I2C) for genuine stabilisation.
+    // Here rx.pitch/rx.roll pass through directly as a pass-through fallback
+    // so the aircraft responds to stick input even without an IMU attached.
+    float measuredPitch = rx.pitch;  // TODO: replace with IMU pitch rate (°/s)
+    float measuredRoll  = rx.roll;   // TODO: replace with IMU roll  rate (°/s)
+
+    float pitchOut = pidStep(rx.pitch, measuredPitch,
                              KP_P, KI_P, KD_P, pitchIntg, pitchPrev);
-    float rollOut  = pidStep(rx.roll,  rx.roll,
+    float rollOut  = pidStep(rx.roll,  measuredRoll,
                              KP_R, KI_R, KD_R, rollIntg,  rollPrev);
 
     // Elevon mixing: left = neutral + pitch + roll
@@ -1110,9 +1117,15 @@ void loop() {
     // DC motor: map 0–1000 → PWM 0–255
     analogWrite(MOTOR_PIN, map(rx.throttle, 0, 1000, 0, 255));
 
-    float elevOut = pidStep(rx.elevator, rx.elevator,
+    // NOTE: Replace measuredElev / measuredRudd with actual IMU readings
+    // (e.g., pitch rate from MPU-6050) for genuine stabilisation.
+    // Pass-through values mean the plane responds to stick input without an IMU.
+    float measuredElev = rx.elevator;  // TODO: replace with IMU pitch rate (°/s)
+    float measuredRudd = rx.rudder;    // TODO: replace with IMU yaw   rate (°/s)
+
+    float elevOut = pidStep(rx.elevator, measuredElev,
                             KP_E, KI_E, KD_E, elevIntg, elevPrev);
-    float ruddOut = pidStep(rx.rudder,   rx.rudder,
+    float ruddOut = pidStep(rx.rudder,   measuredRudd,
                             KP_R, KI_R, KD_R, ruddIntg, ruddPrev);
 
     // Map PID output ±500 to servo angle 60°–120° (elevator ±30°)
@@ -1287,6 +1300,9 @@ def shahed_drone_design(
     sc_mac = fs_mac * scale_factor
 
     if auw_scale_grams is None:
+        # Cube-law scaling from ~200 kg full-scale Shahed-136.
+        # Mass scales with the cube of the linear scale factor.
+        # 180 g minimum ensures sufficient mass for RC electronics (servo + ESC + battery).
         auw_scale_grams = max(200_000 * (scale_factor ** 3), 180)
 
     weight_n = auw_scale_grams * 0.00981
