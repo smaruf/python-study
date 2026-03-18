@@ -59,3 +59,6 @@ src/diagram/stl_*/
 src/diagram/combined_output/
 src/diagram/physical_output/
 src/diagram/plotter_*/
+
+# Go module cache (accidentally created by CodeQL runner)
+root/
