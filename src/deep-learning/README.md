@@ -1,3 +1,5 @@
+[← Back to Python Study Repository](../../README.md)
+
 # Deep Learning in Python - Zero to Expert
 
 A comprehensive learning path for mastering deep learning from fundamentals to advanced production-ready systems. This project provides hands-on examples, detailed explanations, and real-world applications using PyTorch, TensorFlow, and other popular frameworks.
@@ -22,12 +24,12 @@ This project offers a structured learning path from zero to expert level in deep
 
 The learning path is divided into 6 progressive levels:
 
-1. **Level 0 - Beginner**: Python basics for ML, NumPy, tensors, and basic math
-2. **Level 1 - Basic**: Perceptron, linear/logistic regression, simple neural networks
-3. **Level 2 - Intermediate**: Deep neural networks, CNNs, activation functions, backpropagation
-4. **Level 3 - Advanced**: Advanced CNNs, RNNs, LSTMs, GRUs, transfer learning
-5. **Level 4 - Expert**: GANs, Transformers, attention mechanisms, advanced architectures
-6. **Level 5 - Master**: Production deployment, optimization, distributed training, MLOps
+1. **[Level 0 - Beginner](level-0-beginner/README.md)**: Python basics for ML, NumPy, tensors, and basic math
+2. **[Level 1 - Basic](level-1-basic/README.md)**: Perceptron, linear/logistic regression, simple neural networks
+3. **[Level 2 - Intermediate](level-2-intermediate/README.md)**: Deep neural networks, CNNs, activation functions, backpropagation
+4. **[Level 3 - Advanced](level-3-advanced/README.md)**: Advanced CNNs, RNNs, LSTMs, GRUs, transfer learning
+5. **[Level 4 - Expert](level-4-expert/README.md)**: GANs, Transformers, attention mechanisms, advanced architectures
+6. **[Level 5 - Master](level-5-master/README.md)**: Production deployment, optimization, distributed training, MLOps
 
 ## Technologies Covered
 
@@ -144,7 +146,7 @@ deep-learning/
 
 ## Learning Levels
 
-### Level 0 - Beginner
+### [Level 0 - Beginner](level-0-beginner/README.md)
 **Focus**: Fundamentals of numerical computing and data handling
 
 Topics covered:
@@ -156,7 +158,7 @@ Topics covered:
 
 **Time estimate**: 1-2 weeks
 
-### Level 1 - Basic
+### [Level 1 - Basic](level-1-basic/README.md)
 **Focus**: Introduction to neural networks
 
 Topics covered:
@@ -169,7 +171,7 @@ Topics covered:
 
 **Time estimate**: 2-3 weeks
 
-### Level 2 - Intermediate
+### [Level 2 - Intermediate](level-2-intermediate/README.md)
 **Focus**: Deep learning fundamentals
 
 Topics covered:
@@ -183,7 +185,7 @@ Topics covered:
 
 **Time estimate**: 4-6 weeks
 
-### Level 3 - Advanced
+### [Level 3 - Advanced](level-3-advanced/README.md)
 **Focus**: Advanced architectures and techniques
 
 Topics covered:
@@ -198,7 +200,7 @@ Topics covered:
 
 **Time estimate**: 6-8 weeks
 
-### Level 4 - Expert
+### [Level 4 - Expert](level-4-expert/README.md)
 **Focus**: State-of-the-art models and research topics
 
 Topics covered:
@@ -213,7 +215,7 @@ Topics covered:
 
 **Time estimate**: 8-12 weeks
 
-### Level 5 - Master
+### [Level 5 - Master](level-5-master/README.md)
 **Focus**: Production deployment and MLOps
 
 Topics covered:

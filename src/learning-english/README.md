@@ -1,3 +1,5 @@
+[← Back to Python Study Repository](../../README.md)
+
 # Learning English Flashcards App
 
 A Python script-based flashcard generator for learning English vocabulary.

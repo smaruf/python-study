@@ -1,3 +1,5 @@
+[← Back to Production App](../README.md) | [← Previous: Phase 2 — Protocol Integration](../phase_2/README.md) | [→ Next: Phase 4 — Advanced Features](../phase_4/README.md)
+
 # NASDAQ Stock Market Simulator - Phase 3: Market Data and Risk
 
 ## Overview
@@ -96,7 +98,7 @@ Phase 3 Architecture:
 
 ## Next Steps
 After completing Phase 3, proceed to:
-- **Phase 4**: Advanced Features and Analytics
+- **[Phase 4: Advanced Features and Analytics](../phase_4/README.md)**
 
 ## Testing
 ```bash

@@ -1,3 +1,5 @@
+[← Back to Shell Automation Learning](../README.md) | [← Previous: Level 2 — Intermediate](../level-2-intermediate/README.md) | [→ Next: Level 4 — Expert](../level-4-expert/README.md)
+
 # Level 3 - Advanced
 
 Master DevOps practices with CI/CD pipelines, Docker, and infrastructure automation.

@@ -1,3 +1,5 @@
+[← Back to Shell Automation Learning](../README.md) | [← Previous: Level 3 — Advanced](../level-3-advanced/README.md) | [→ Next: Level 5 — Master](../level-5-master/README.md)
+
 # Level 4 - Expert
 
 Master advanced DevOps patterns with multi-cloud deployments, Kubernetes orchestration, and production-grade automation.

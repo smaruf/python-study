@@ -1,3 +1,5 @@
+[← Back to Python Study Repository](../../README.md)
+
 # Shell Automation Learning - Zero to Expert
 
 A comprehensive learning path for mastering shell scripting, automation, DevOps, and CI/CD across multiple platforms (Bash, PowerShell, Batch, and Python).
@@ -21,12 +23,12 @@ This project provides a structured learning path from zero to expert level in sh
 
 The learning path is divided into 6 progressive levels:
 
-1. **Level 0 - Beginner**: Basic syntax, commands, and simple scripts
-2. **Level 1 - Basic**: Variables, conditionals, loops, and functions
-3. **Level 2 - Intermediate**: File operations, error handling, and automation tasks
-4. **Level 3 - Advanced**: CI/CD pipelines, Docker, configuration management
-5. **Level 4 - Expert**: Advanced DevOps patterns, orchestration, multi-platform automation
-6. **Level 5 - Master**: Production-ready systems, security, monitoring, and best practices
+1. **[Level 0 - Beginner](level-0-beginner/README.md)**: Basic syntax, commands, and simple scripts
+2. **[Level 1 - Basic](level-1-basic/README.md)**: Variables, conditionals, loops, and functions
+3. **[Level 2 - Intermediate](level-2-intermediate/README.md)**: File operations, error handling, and automation tasks
+4. **[Level 3 - Advanced](level-3-advanced/README.md)**: CI/CD pipelines, Docker, configuration management
+5. **[Level 4 - Expert](level-4-expert/README.md)**: Advanced DevOps patterns, orchestration, multi-platform automation
+6. **[Level 5 - Master](level-5-master/README.md)**: Production-ready systems, security, monitoring, and best practices
 
 ## Technologies Covered
 
@@ -146,20 +148,20 @@ learning-shell-automation/
 
 ## Learning Levels
 
-### Level 0 - Beginner
+### [Level 0 - Beginner](level-0-beginner/README.md)
 - Hello World scripts
 - Basic command execution
 - Simple output and input
 - Running your first automation
 
-### Level 1 - Basic
+### [Level 1 - Basic](level-1-basic/README.md)
 - Variables and data types
 - Conditionals (if/else)
 - Loops (for, while)
 - Functions and parameters
 - Basic string manipulation
 
-### Level 2 - Intermediate
+### [Level 2 - Intermediate](level-2-intermediate/README.md)
 - File operations (read, write, copy, move)
 - Error handling and debugging
 - Regular expressions
@@ -167,7 +169,7 @@ learning-shell-automation/
 - Scheduled tasks and cron jobs
 - Environment variables
 
-### Level 3 - Advanced
+### [Level 3 - Advanced](level-3-advanced/README.md)
 - CI/CD pipeline scripts
 - Docker integration
 - Configuration management (Ansible, Terraform basics)
@@ -175,7 +177,7 @@ learning-shell-automation/
 - Database operations
 - Log parsing and analysis
 
-### Level 4 - Expert
+### [Level 4 - Expert](level-4-expert/README.md)
 - Multi-platform automation
 - Advanced orchestration
 - Kubernetes automation
@@ -183,7 +185,7 @@ learning-shell-automation/
 - Custom CI/CD tools
 - Performance optimization
 
-### Level 5 - Master
+### [Level 5 - Master](level-5-master/README.md)
 - Production-ready deployment systems
 - Advanced security practices
 - Monitoring and alerting systems
