@@ -49,3 +49,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 1. [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
 2. [Python venv Documentation](https://docs.python.org/3/library/venv.html)
+
+## Sub-directories
+
+- **[Dockerize](dokerise/README.md)**: Docker Compose setup for Flask
