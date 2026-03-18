@@ -279,6 +279,10 @@ fn uartWrite(data: []const u8) void { _ = data; }
 
 // ---------------------------------------------------------------------------
 // Delay stub (SysTick in real firmware)
+// NOTE: This stub approximates 84 cycles/µs at 84 MHz (STM32F4).
+// Compiler optimisations and pipeline effects make raw nop-counts unreliable.
+// Replace with SysTick-based delay or hardware timer CCR compare in
+// production firmware.
 // ---------------------------------------------------------------------------
 fn delayUs(us: u32) void {
     var i: u32 = 0;

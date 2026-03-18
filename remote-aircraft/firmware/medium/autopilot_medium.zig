@@ -214,6 +214,10 @@ fn uartWrite(data: []const u8) void {
 
 // ---------------------------------------------------------------------------
 // Busy-wait delay stub
+// NOTE: This stub uses an approximate nop-count (84 cycles/µs at 84 MHz).
+// Compiler optimisations and pipeline effects make raw nop-counts unreliable.
+// Replace with SysTick (g_tick_ms) or a hardware timer CCR compare in
+// production firmware.
 // ---------------------------------------------------------------------------
 fn delayUs(us: u32) void {
     var i: u32 = 0;

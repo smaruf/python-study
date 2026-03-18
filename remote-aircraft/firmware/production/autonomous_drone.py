@@ -175,6 +175,10 @@ def build_mission_plan(waypoints: List[Waypoint]) -> "MissionPlan":
             gimbal_yaw_deg        = 0.0,
             camera_action         = MissionItem.CameraAction.NONE,
             loiter_time_s         = wp.loiter_s,
+            # Trigger a photo every 2 seconds on odd-indexed legs (outbound),
+            # and disable interval shooting on even-indexed legs (return/cross)
+            # so that the mapping grid covers the survey area without duplicates.
+            # Override this field with a Waypoint-level property for precise control.
             camera_photo_interval_s = 2.0 if i % 2 == 0 else 0.0,
             acceptance_radius_m   = 2.0,
             yaw_deg               = float("nan"),

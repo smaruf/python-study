@@ -70,12 +70,17 @@ fn pwmInit(slice: u32) void {
     regs.csr = 1; // enable slice
 }
 
+/// Bitmask helpers for the RP2040 PWM CC register.
+/// Channel A occupies bits [15:0]; Channel B occupies bits [31:16].
+const CHANNEL_A_MASK: u32 = 0x0000_FFFF;
+const CHANNEL_B_MASK: u32 = 0xFFFF_0000;
+
 /// Set pulse width in microseconds on channel A (low 16 bits of CC).
 fn setPulseA(slice: u32, pulse_us: u32) void {
     const clamped = std.math.clamp(pulse_us, PWM_MIN_US, PWM_MAX_US);
     const regs = pwmSlice(slice);
     // Preserve channel B (high 16 bits), update channel A (low 16 bits)
-    regs.cc = (regs.cc & 0xFFFF_0000) | clamped;
+    regs.cc = (regs.cc & CHANNEL_B_MASK) | (clamped & CHANNEL_A_MASK);
 }
 
 /// Set pulse width in microseconds on channel B (high 16 bits of CC).
@@ -110,7 +115,10 @@ fn readRC() RcChannels {
 // ---------------------------------------------------------------------------
 
 fn delayMs(ms: u32) void {
-    // Approximate: 125 MHz / 4 cycles per loop iteration ≈ 31 250 000 loops/sec
+    // NOTE: This busy-wait is a skeleton stub only.
+    // The nop count is approximate (125 MHz / ~4 cycles per iteration).
+    // On real hardware use a SysTick-based delay or a hardware timer;
+    // compiler optimisations and pipeline effects make raw nop-counts unreliable.
     var i: u32 = 0;
     while (i < ms * 31_250) : (i += 1) {
         asm volatile ("nop");
