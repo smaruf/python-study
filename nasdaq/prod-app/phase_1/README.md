@@ -1,3 +1,5 @@
+[← Back to Production App](../README.md) | [→ Next: Phase 2 — Protocol Integration](../phase_2/README.md)
+
 # NASDAQ Stock Market Simulator - Phase 1: Foundation
 
 ## Overview
@@ -82,9 +84,9 @@ Phase 1 Architecture:
 
 ## Next Steps
 After completing Phase 1, proceed to:
-- **Phase 2**: Protocol Integration (FIX, FAST, ITCH)
-- **Phase 3**: Market Data and Risk Management
-- **Phase 4**: Advanced Features and Analytics
+- **[Phase 2: Protocol Integration (FIX, FAST, ITCH)](../phase_2/README.md)**
+- [Phase 3: Market Data and Risk Management](../phase_3/README.md)
+- [Phase 4: Advanced Features and Analytics](../phase_4/README.md)
 
 ## Development Guidelines
 1. All code should include proper error handling

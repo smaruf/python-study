@@ -1,3 +1,5 @@
+[← Back to Shell Automation Learning](../README.md) | [← Previous: Level 4 — Expert](../level-4-expert/README.md)
+
 # Level 5 - Master
 
 Achieve mastery in production-ready systems with advanced monitoring, security, high availability, and enterprise-grade automation.

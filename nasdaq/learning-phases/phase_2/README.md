@@ -1,3 +1,5 @@
+[← Back to Learning Phases](../README.md) | [← Previous: Phase 1 — Foundation](../phase_1/README.md)
+
 # NASDAQ Stock Market Simulator - Phase 2: Protocol Integration
 
 ## Overview
@@ -70,5 +72,5 @@ Phase 2 Architecture:
 
 ## Next Steps
 After completing Phase 2, proceed to:
-- **Phase 3**: Market Data and Risk Management
-- **Phase 4**: Advanced Features and Analytics
+- Phase 3: Market Data and Risk Management
+- Phase 4: Advanced Features and Analytics

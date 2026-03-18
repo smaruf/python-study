@@ -1,3 +1,5 @@
+[← Back to Shell Automation Learning](../README.md) | [← Previous: Level 1 — Basic](../level-1-basic/README.md) | [→ Next: Level 3 — Advanced](../level-3-advanced/README.md)
+
 # Level 2 - Intermediate
 
 Advance your automation skills with file operations, process management, and real-world automation tasks.

@@ -1,3 +1,5 @@
+[← Back to Shell Automation Learning](../README.md) | [→ Next: Level 1 — Basic](../level-1-basic/README.md)
+
 # Level 0 - Beginner
 
 Welcome to Level 0! This is where your automation journey begins.

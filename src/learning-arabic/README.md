@@ -1,3 +1,5 @@
+[← Back to Python Study Repository](../../README.md)
+
 # Learning Arabic to understand the Quran
 
 ```

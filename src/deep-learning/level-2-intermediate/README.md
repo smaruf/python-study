@@ -1,3 +1,5 @@
+[← Back to Deep Learning](../README.md) | [← Previous: Level 1 — Basic](../level-1-basic/README.md) | [→ Next: Level 3 — Advanced](../level-3-advanced/README.md)
+
 # Level 2 - Intermediate: Deep Learning Fundamentals
 
 Welcome to Level 2! This level covers deep neural networks and convolutional neural networks.

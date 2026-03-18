@@ -1,3 +1,5 @@
+[← Back to Shell Automation Learning](../README.md) | [← Previous: Level 0 — Beginner](../level-0-beginner/README.md) | [→ Next: Level 2 — Intermediate](../level-2-intermediate/README.md)
+
 # Level 1 - Basic
 
 Master the fundamentals of shell scripting with variables, conditionals, loops, and functions.

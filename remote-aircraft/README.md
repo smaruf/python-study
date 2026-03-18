@@ -1,3 +1,5 @@
+[← Back to Python Study Repository](../README.md)
+
 # Remote Aircraft: FPV Drone & Fixed-Wing Design System
 
 **Professional parametric CAD system + comprehensive course for designing, building, and flying FPV drones and fixed-wing aircraft.**
@@ -208,9 +210,17 @@ remote-aircraft/
 │   ├── fixed_wing_analysis.py  # Fixed-wing load analysis
 │   └── generate_fixed_wing.py  # Generate fixed-wing STLs
 │
+├── guidelines/                 # Engineering & Build Guidelines
+│
 └── output/                     # Generated STL files
     └── *.stl
 ```
+
+### Sub-directory Documentation
+
+- **[Course](course/README.md)**: Complete 7-day FPV and fixed-wing curriculum
+- **[Examples](examples/README.md)**: Runnable example scripts and analysis tools
+- **[Guidelines](guidelines/README.md)**: Engineering and build guidelines for RC aircraft
 
 ---
 

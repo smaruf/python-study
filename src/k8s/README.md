@@ -1,3 +1,5 @@
+[← Back to Python Study Repository](../../README.md)
+
 # Kubernetes Initial Scripts for Generating a Project by Python
 
 The `k8s` folder contains scripts and configurations for deploying and managing Kubernetes resources for the project. Below is an overview of the contents and their purposes:
@@ -9,7 +11,7 @@ The `k8s` folder contains scripts and configurations for deploying and managing 
 - `setup_k8s.py`: Script for setting up Kubernetes resources including Jenkins, Istio, and Horizontal Pod Autoscaler.
 - `k8s_management.py`: Script for managing Kubernetes resources and configurations, including monitoring and predictive scaling.
 - `springboot_generator.py`: Script for generating Spring Boot project structure with Kubernetes configurations.
-- `terraform/py_generate_tr.py`: Script for generating Terraform configuration files.
+- `terraform/py_generate_tr.py`: Script for generating Terraform configuration files — see [Terraform README](terraform/README.md)
 - `setup_google_pay_spring_lambda.py`: Script for setting up backend Spring Boot application with Kafka integration.
 - `initial_scripts_for_project.py`: Script to automate the creation of necessary YAML files and provides instructions for manual tasks.
 
