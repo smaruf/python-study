@@ -153,7 +153,17 @@ print(fw["transmitter_sketch"])     # TX Nano
 print(fw["receiver_sketch"])        # RX Nano
 ```
 
-### 6. Start the Course
+### 6. Community Projects (NEW! 🛸)
+
+Real-world maker projects from the community — full documentation, BOM, and firmware skeletons:
+
+| Project | Type | Speed / Weight |
+|---------|------|---------------|
+| [ESP-BLAST Rocket Drone](projects/esp-blast-rocket-drone/README.md) | Micro quad | 100+ km/h, ~136 g |
+
+See [`projects/README.md`](projects/README.md) for the full project index.
+
+### 7. Start the Course
 
 See [`course/README.md`](course/README.md) for the complete 1-week practical course.
 
@@ -212,6 +222,13 @@ remote-aircraft/
 │
 ├── guidelines/                 # Engineering & Build Guidelines
 │
+├── projects/                   # Community Projects (NEW! 🛸)
+│   ├── README.md               # Project index
+│   └── esp-blast-rocket-drone/ # ESP32 100 km/h rocket drone
+│       ├── README.md           # Overview, specs, build guide
+│       ├── bom.md              # Full Bill of Materials
+│       └── firmware/           # Firmware skeletons (MicroPython + C)
+│
 └── output/                     # Generated STL files
     └── *.stl
 ```
@@ -221,6 +238,7 @@ remote-aircraft/
 - **[Course](course/README.md)**: Complete 7-day FPV and fixed-wing curriculum
 - **[Examples](examples/README.md)**: Runnable example scripts and analysis tools
 - **[Guidelines](guidelines/README.md)**: Engineering and build guidelines for RC aircraft
+- **[Projects](projects/README.md)**: Real-world community project builds
 
 ---
 
