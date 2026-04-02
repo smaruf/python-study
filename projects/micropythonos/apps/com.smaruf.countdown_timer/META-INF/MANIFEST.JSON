@@ -1,0 +1,10 @@
+{
+  "package": "com.smaruf.countdown_timer",
+  "name": "Countdown Timer",
+  "version": "1.0.0",
+  "description": "A simple LVGL countdown timer built for MicroPythonOS. Demonstrates the mpos.Activity lifecycle, arc widget, label, and button touch callbacks.",
+  "author": "smaruf",
+  "entry": "assets/main.py",
+  "min_os_version": "1.0.0",
+  "permissions": []
+}
