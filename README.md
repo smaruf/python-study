@@ -20,6 +20,9 @@ python-study/
 │
 ├── pdf-generator/             # PDF generation tool with CLI and GUI
 │
+├── projects/                  # Self-contained mini-projects
+│   └── micropythonos/         # MicroPythonOS zero-to-expert guide & example apps
+│
 ├── remote-aircraft/           # FPV drone & fixed-wing design system
 │
 └── src/                       # Learning modules and experiments
@@ -67,6 +70,9 @@ Complete NASDAQ stock market simulator with two implementations:
 
 ### [PDF Generator Tool](./pdf-generator/README.md)
 Comprehensive CLI and GUI tool for generating customizable PDF documents with logos, titles, body text, and footers. Supports Markdown formatting, rich-text HTML markup, inline images, and copy-paste from editors like Google Docs.
+
+### [MicroPythonOS — Zero to Expert](./projects/micropythonos/README.md)
+An Android-inspired, touch-UI operating environment for ESP32-S3 boards, testable on Linux desktop. Covers installation (desktop + hardware), app development with LVGL and the `mpos.Activity` lifecycle, deployment via `mpremote`, and a fully-annotated Countdown Timer example app.
 
 ### [Remote Aircraft Design System](./remote-aircraft/README.md)
 Professional parametric CAD system for designing, building, and flying FPV drones and fixed-wing aircraft. Includes Python-based parametric CAD (CadQuery), hands-on courses, engineering analysis tools, and flight-ready designs.
