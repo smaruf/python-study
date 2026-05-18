@@ -849,9 +849,9 @@ def run_gui():
             
             # Title
             ttk.Label(frame, text="Title (Rich Text, Multiline):").grid(row=1, column=0, sticky='nw', pady=5)
-            self.title_text = scrolledtext.ScrolledText(frame, width=45, height=4)
-            self.title_text.insert('1.0', self.config.title)
-            self.title_text.grid(row=1, column=1, columnspan=2, pady=5, padx=5, sticky='ew')
+            self.title_text_widget = scrolledtext.ScrolledText(frame, width=45, height=4)
+            self.title_text_widget.insert('1.0', self.config.title)
+            self.title_text_widget.grid(row=1, column=1, columnspan=2, pady=5, padx=5, sticky='ew')
             
             # Title font size
             ttk.Label(frame, text="Title Font Size:").grid(row=2, column=0, sticky='w', pady=5)
@@ -932,9 +932,9 @@ def run_gui():
                 font=('Arial', 7), foreground='#555555', wraplength=600)
             help_text.pack(anchor='w', padx=5)
             
-            self.body_text = scrolledtext.ScrolledText(frame, width=60, height=15)
-            self.body_text.insert('1.0', self.config.body_text)
-            self.body_text.pack(fill='both', expand=True, pady=5)
+            self.body_text_widget = scrolledtext.ScrolledText(frame, width=60, height=15)
+            self.body_text_widget.insert('1.0', self.config.body_text)
+            self.body_text_widget.pack(fill='both', expand=True, pady=5)
             
             # Body settings
             settings_frame = ttk.Frame(frame)
@@ -953,9 +953,9 @@ def run_gui():
             
             # Footer
             ttk.Label(frame, text="Footer Text (Rich Text, Multiline):").pack(anchor='w', pady=(10, 5))
-            self.footer_text = scrolledtext.ScrolledText(frame, width=60, height=4)
-            self.footer_text.insert('1.0', self.config.footer_text)
-            self.footer_text.pack(fill='x', pady=5)
+            self.footer_text_widget = scrolledtext.ScrolledText(frame, width=60, height=4)
+            self.footer_text_widget.insert('1.0', self.config.footer_text)
+            self.footer_text_widget.pack(fill='x', pady=5)
             
             footer_settings_frame = ttk.Frame(frame)
             footer_settings_frame.pack(fill='x', pady=5)
@@ -1051,17 +1051,17 @@ def run_gui():
             self.config.logo_height = self.logo_height_var.get()
             self.config.logo_position = self.logo_pos_var.get()
             
-            self.config.title = self.title_text.get('1.0', 'end-1c')
+            self.config.title = self.title_text_widget.get('1.0', 'end-1c')
             self.config.title_font_size = self.title_size_var.get()
             self.config.title_alignment = self.title_align_var.get()
             self.config.include_header = self.include_header_var.get()
             self.config.include_footer = self.include_footer_var.get()
             
-            self.config.body_text = self.body_text.get('1.0', 'end-1c')
+            self.config.body_text = self.body_text_widget.get('1.0', 'end-1c')
             self.config.body_font_size = self.body_size_var.get()
             self.config.body_alignment = self.body_align_var.get()
             
-            self.config.footer_text = self.footer_text.get('1.0', 'end-1c')
+            self.config.footer_text = self.footer_text_widget.get('1.0', 'end-1c')
             self.config.footer_font_size = self.footer_size_var.get()
             self.config.footer_alignment = self.footer_align_var.get()
             
@@ -1182,20 +1182,20 @@ def run_gui():
                     self.logo_height_var.set(self.config.logo_height)
                     self.logo_pos_var.set(self.config.logo_position)
                     
-                    self.title_text.delete('1.0', tk.END)
-                    self.title_text.insert('1.0', self.config.title)
+                    self.title_text_widget.delete('1.0', tk.END)
+                    self.title_text_widget.insert('1.0', self.config.title)
                     self.title_size_var.set(self.config.title_font_size)
                     self.title_align_var.set(self.config.title_alignment)
                     self.include_header_var.set(self.config.include_header)
                     self.include_footer_var.set(self.config.include_footer)
                     
-                    self.body_text.delete('1.0', tk.END)
-                    self.body_text.insert('1.0', self.config.body_text)
+                    self.body_text_widget.delete('1.0', tk.END)
+                    self.body_text_widget.insert('1.0', self.config.body_text)
                     self.body_size_var.set(self.config.body_font_size)
                     self.body_align_var.set(self.config.body_alignment)
                     
-                    self.footer_text.delete('1.0', tk.END)
-                    self.footer_text.insert('1.0', self.config.footer_text)
+                    self.footer_text_widget.delete('1.0', tk.END)
+                    self.footer_text_widget.insert('1.0', self.config.footer_text)
                     self.footer_size_var.set(self.config.footer_font_size)
                     self.footer_align_var.set(self.config.footer_alignment)
                     
