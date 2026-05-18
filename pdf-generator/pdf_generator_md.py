@@ -15,6 +15,7 @@ import os
 import re
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
+from urllib.parse import urlparse
 
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY, TA_LEFT, TA_RIGHT
@@ -42,8 +43,11 @@ DEJAVU_PATHS = [
     os.path.join(os.environ.get("WINDIR", "C:\\Windows"), "Fonts"),
 ]
 
+HEADING_SIZE_MAP = {1: 20, 2: 17, 3: 15, 4: 13, 5: 12, 6: 11}
+MIN_CODE_FONT_SIZE = 8
 
-def register_unicode_fonts() -> None:
+
+def register_unicode_fonts() -> bool:
     """Register DejaVu fonts when available."""
     fonts_to_register = [
         ("DejaVuSans", "DejaVuSans.ttf"),
@@ -61,12 +65,17 @@ def register_unicode_fonts() -> None:
                 font_path = os.path.join(dejavu_path, font_file)
                 if os.path.exists(font_path):
                     pdfmetrics.registerFont(TTFont(font_name, font_path))
-            return
+            return True
         except Exception:
             continue
+    return False
 
 
-register_unicode_fonts()
+HAS_DEJAVU_FONTS = register_unicode_fonts()
+DEFAULT_FONT = "DejaVuSans" if HAS_DEJAVU_FONTS else "Helvetica"
+DEFAULT_BOLD_FONT = "DejaVuSans-Bold" if HAS_DEJAVU_FONTS else "Helvetica-Bold"
+DEFAULT_ITALIC_FONT = "DejaVuSans-Oblique" if HAS_DEJAVU_FONTS else "Helvetica-Oblique"
+DEFAULT_MONO_FONT = "DejaVuSansMono" if HAS_DEJAVU_FONTS else "Courier"
 
 
 @dataclass
@@ -138,18 +147,27 @@ def convert_inline_markdown(text: str) -> str:
 
     def stash_code(match: re.Match) -> str:
         token = f"@@CODE{len(code_map)}@@"
-        code_map[token] = f'<font name="DejaVuSansMono">{escape_markup(match.group(1))}</font>'
+        code_map[token] = f'<font name="{DEFAULT_MONO_FONT}">{match.group(1)}</font>'
         return token
 
     escaped = re.sub(r"`([^`]+)`", stash_code, escaped)
 
-    escaped = re.sub(r"\[(.+?)\]\((https?://[^\s)]+)\)", r'<a href="\2"><u><font color="blue">\1</font></u></a>', escaped)
+    def link_replacement(match: re.Match) -> str:
+        label = match.group(1)
+        url = match.group(2)
+        parsed = urlparse(url)
+        if parsed.scheme not in ("http", "https"):
+            return label
+        safe_url = escape_markup(url)
+        return f'<a href="{safe_url}"><u><font color="blue">{label}</font></u></a>'
+
+    escaped = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link_replacement, escaped)
     escaped = re.sub(r"\*\*\*(.+?)\*\*\*", r"<b><i>\1</i></b>", escaped)
     escaped = re.sub(r"___(.+?)___", r"<b><i>\1</i></b>", escaped)
     escaped = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", escaped)
     escaped = re.sub(r"__(.+?)__", r"<b>\1</b>", escaped)
-    escaped = re.sub(r"(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)", r"<i>\1</i>", escaped)
-    escaped = re.sub(r"(?<!_)_(?!_)(.+?)(?<!_)_(?!_)", r"<i>\1</i>", escaped)
+    escaped = re.sub(r"(?<!\*)\*([^*\n]+)\*(?!\*)", r"<i>\1</i>", escaped)
+    escaped = re.sub(r"(?<!_)_([^_\n]+)_(?!_)", r"<i>\1</i>", escaped)
     escaped = re.sub(r"~~(.+?)~~", r"<strike>\1</strike>", escaped)
 
     for token, value in code_map.items():
@@ -160,7 +178,7 @@ def convert_inline_markdown(text: str) -> str:
 
 def parse_list_block(lines: List[str], start_index: int) -> Tuple[ListFlowable, int]:
     def helper(idx: int, base_indent: int, ordered: bool) -> Tuple[List[ListItem], int]:
-        items: List[ListItem] = []
+        item_records = []
         while idx < len(lines):
             raw = lines[idx]
             if not raw.strip():
@@ -185,7 +203,7 @@ def parse_list_block(lines: List[str], start_index: int) -> Tuple[ListFlowable, 
             if indent < base_indent:
                 break
 
-            if indent > base_indent and items:
+            if indent > base_indent and item_records:
                 nested_items, idx = helper(idx, indent, current_ordered)
                 nested_flow = ListFlowable(
                     nested_items,
@@ -193,19 +211,17 @@ def parse_list_block(lines: List[str], start_index: int) -> Tuple[ListFlowable, 
                     start="1",
                     leftIndent=18,
                 )
-                last = items[-1]
-                flowables = list(getattr(last, "_flowables", []))
-                flowables.append(nested_flow)
-                last._flowables = flowables
+                item_records[-1]["flowables"].append(nested_flow)
                 continue
 
             para = Paragraph(convert_inline_markdown(text), getSampleStyleSheet()["BodyText"])
-            items.append(ListItem(para, leftIndent=0))
+            item_records.append({"flowables": [para]})
             idx += 1
 
+        items = [ListItem(record["flowables"], leftIndent=0) for record in item_records]
         return items, idx
 
-    first_ordered = bool(re.match(r"^\s*\d+\.\s+", lines[start_index]))
+    first_ordered = re.match(r"^\s*\d+\.\s+", lines[start_index]) is not None
     base_indent = len(re.match(r"^(\s*)", lines[start_index]).group(1).replace("\t", "    "))
     list_items, end_idx = helper(start_index, base_indent, first_ordered)
 
@@ -225,8 +241,8 @@ def parse_markdown_to_story(markdown_text: str, config: PDFConfig, body_style: P
     code_style = ParagraphStyle(
         "CodeBlockStyle",
         parent=body_style,
-        fontName="DejaVuSansMono",
-        fontSize=max(8, config.body_font_size - 1),
+        fontName=DEFAULT_MONO_FONT,
+        fontSize=max(MIN_CODE_FONT_SIZE, config.body_font_size - 1),
         leading=max(10, config.body_font_size + 1),
         backColor=colors.HexColor("#f5f5f5"),
         borderColor=colors.HexColor("#dddddd"),
@@ -243,7 +259,7 @@ def parse_markdown_to_story(markdown_text: str, config: PDFConfig, body_style: P
         leftIndent=16,
         rightIndent=8,
         textColor=colors.HexColor("#444444"),
-        fontName="DejaVuSans-Oblique",
+        fontName=DEFAULT_ITALIC_FONT,
         borderColor=colors.HexColor("#cccccc"),
         borderWidth=0.6,
         borderPadding=8,
@@ -258,6 +274,16 @@ def parse_markdown_to_story(markdown_text: str, config: PDFConfig, body_style: P
                 story.append(Paragraph(convert_inline_markdown(joined), body_style))
                 story.append(Spacer(1, 0.08 * inch))
             paragraph_buffer.clear()
+
+    def is_indented_code_line(line_text: str) -> bool:
+        return line_text.startswith("    ") or line_text.startswith("\t")
+
+    def strip_code_indent(line_text: str) -> str:
+        if line_text.startswith("\t"):
+            return line_text[1:]
+        if line_text.startswith("    "):
+            return line_text[4:]
+        return line_text
 
     i = 0
     while i < len(lines):
@@ -283,12 +309,12 @@ def parse_markdown_to_story(markdown_text: str, config: PDFConfig, body_style: P
             story.append(Spacer(1, 0.08 * inch))
             continue
 
-        if re.match(r"^\s{4,}\S", line):
+        if is_indented_code_line(line):
             flush_paragraph()
-            code_lines = [line[4:]]
+            code_lines = [strip_code_indent(line)]
             i += 1
-            while i < len(lines) and (re.match(r"^\s{4,}\S", lines[i]) or not lines[i].strip()):
-                code_lines.append(lines[i][4:] if lines[i].startswith("    ") else "")
+            while i < len(lines) and (is_indented_code_line(lines[i]) or not lines[i].strip()):
+                code_lines.append(strip_code_indent(lines[i]) if is_indented_code_line(lines[i]) else "")
                 i += 1
             story.append(Preformatted("\n".join(code_lines).rstrip(), style=code_style))
             story.append(Spacer(1, 0.08 * inch))
@@ -299,13 +325,12 @@ def parse_markdown_to_story(markdown_text: str, config: PDFConfig, body_style: P
             flush_paragraph()
             level = len(heading_match.group(1))
             heading_text = convert_inline_markdown(heading_match.group(2).strip())
-            size_map = {1: 20, 2: 17, 3: 15, 4: 13, 5: 12, 6: 11}
             heading_style = ParagraphStyle(
                 f"Heading{level}",
                 parent=body_style,
-                fontName="DejaVuSans-Bold",
-                fontSize=max(config.body_font_size + 1, size_map[level]),
-                leading=max(config.body_font_size + 2, size_map[level] + 2),
+                fontName=DEFAULT_BOLD_FONT,
+                fontSize=max(config.body_font_size + 1, HEADING_SIZE_MAP[level]),
+                leading=max(config.body_font_size + 2, HEADING_SIZE_MAP[level] + 2),
                 spaceBefore=6,
                 spaceAfter=6,
             )
@@ -355,10 +380,10 @@ def parse_markdown_to_story(markdown_text: str, config: PDFConfig, body_style: P
             story.append(Spacer(1, 0.08 * inch))
             continue
 
-        table_header_match = "|" in stripped and stripped.startswith("|") and stripped.endswith("|")
-        if table_header_match and i + 1 < len(lines):
+        looks_like_table_header = "|" in stripped and stripped.startswith("|") and stripped.endswith("|")
+        if looks_like_table_header and i + 1 < len(lines):
             separator = lines[i + 1].strip()
-            if re.match(r"^\|(?:\s*:?-{2,}:?\s*\|)+$", separator):
+            if re.match(r"^\|(?:\s*:?-{1,}:?\s*\|)+$", separator):
                 flush_paragraph()
                 table_lines = [lines[i]]
                 i += 1
@@ -428,7 +453,7 @@ def generate_pdf(config: PDFConfig) -> None:
 
     body_style = ParagraphStyle(
         "BodyStyle",
-        fontName="DejaVuSans",
+        fontName=DEFAULT_FONT,
         fontSize=config.body_font_size,
         leading=config.body_font_size * 1.45,
         alignment=get_alignment(config.body_alignment),
@@ -437,7 +462,7 @@ def generate_pdf(config: PDFConfig) -> None:
     )
     title_style = ParagraphStyle(
         "TitleStyle",
-        fontName="DejaVuSans-Bold",
+        fontName=DEFAULT_BOLD_FONT,
         fontSize=config.title_font_size,
         leading=config.title_font_size * 1.2,
         alignment=get_alignment(config.title_alignment),
@@ -451,7 +476,7 @@ def generate_pdf(config: PDFConfig) -> None:
         if not (config.include_footer and config.footer_text):
             return
         canvas.saveState()
-        canvas.setFont("DejaVuSans", config.footer_font_size)
+        canvas.setFont(DEFAULT_FONT, config.footer_font_size)
         canvas.setFillColor(colors.HexColor("#666666"))
         y_pos = 0.5 * inch
         footer_alignment = get_alignment(config.footer_alignment)
