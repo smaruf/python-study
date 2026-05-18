@@ -7,6 +7,7 @@ A comprehensive CLI and GUI tool for generating customizable PDF documents with 
 ## Features
 
 - **Dual Interface**: Both Command-Line (CLI) and Graphical User Interface (GUI)
+- **Markdown-focused CLI Variant**: `pdf_generator_md.py` for Markdown-first PDF generation
 - **Logo Support**: Add logos with customizable size and position (side-by-side or top-center)
 - **Markdown Support**: Format body text with Markdown (*.md) style syntax (bold, italic, headings, lists, code, links)
 - **Rich-Text Support**: Format body text with HTML-like markup (bold, italic, underline, colors, font sizes)
@@ -167,6 +168,24 @@ The GUI provides an intuitive interface with four tabs:
 ```bash
 python3 pdf_generator.py --cli [options]
 ```
+
+### Markdown-Focused CLI Mode
+
+Use the Markdown-first generator when you want body content treated as Markdown (without rich HTML/pasted editor conversion behavior):
+
+```bash
+python3 pdf_generator_md.py [options]
+```
+
+It keeps the same core configuration style (title/logo/footer/margins/config JSON) while expanding Markdown handling for:
+- Headings (`#` to `######`)
+- Ordered and unordered lists (including nested list indentation)
+- Blockquotes (`>`)
+- Fenced and indented code blocks
+- Horizontal rules (`---`, `***`, `___`)
+- Tables (pipe table format)
+- Inline formatting (`**bold**`, `*italic*`, `` `code` ``, links, strikethrough)
+- Markdown image lines (`![alt](path)`)
 
 #### CLI Options
 
