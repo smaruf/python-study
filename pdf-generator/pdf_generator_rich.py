@@ -579,16 +579,18 @@ def generate_pdf(config):
             footer_paragraphs = create_rich_paragraphs(config.footer_text, footer_style)
             if footer_paragraphs:
                 x_pos = doc.leftMargin
-                max_footer_height = max(doc.bottomMargin - 0.1 * inch, 0.25 * inch)
-                current_y = 0.25 * inch + max_footer_height
+                footer_base_y = 0.1 * inch
+                max_footer_height = max(doc.bottomMargin - footer_base_y, 0)
+                current_y = footer_base_y + max_footer_height
 
-                used_height = 0
-                for para in footer_paragraphs:
-                    _, para_height = para.wrap(doc.width, max_footer_height)
-                    if used_height + para_height > max_footer_height:
-                        break
-                    used_height += para_height
-                    para.drawOn(canvas, x_pos, current_y - used_height)
+                if max_footer_height > 0:
+                    used_height = 0
+                    for para in footer_paragraphs:
+                        _, para_height = para.wrap(doc.width, max_footer_height)
+                        if used_height + para_height > max_footer_height:
+                            break
+                        used_height += para_height
+                        para.drawOn(canvas, x_pos, current_y - used_height)
 
             canvas.restoreState()
     
