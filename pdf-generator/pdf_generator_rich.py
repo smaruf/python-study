@@ -579,16 +579,16 @@ def generate_pdf(config):
             footer_paragraphs = create_rich_paragraphs(config.footer_text, footer_style)
             if footer_paragraphs:
                 x_pos = doc.leftMargin
-                current_y = 0.25 * inch
                 max_footer_height = max(doc.bottomMargin - 0.1 * inch, 0.25 * inch)
+                current_y = 0.25 * inch + max_footer_height
 
                 used_height = 0
                 for para in footer_paragraphs:
                     _, para_height = para.wrap(doc.width, max_footer_height)
                     if used_height + para_height > max_footer_height:
                         break
-                    para.drawOn(canvas, x_pos, current_y + used_height)
                     used_height += para_height
+                    para.drawOn(canvas, x_pos, current_y - used_height)
 
             canvas.restoreState()
     
@@ -616,7 +616,12 @@ def generate_pdf(config):
     
     # Add logo and title (header)
     title_paragraphs = create_rich_paragraphs(config.title, title_style)
-    title_content = title_paragraphs if len(title_paragraphs) > 1 else (title_paragraphs[0] if title_paragraphs else Paragraph("", title_style))
+    if len(title_paragraphs) > 1:
+        title_content = title_paragraphs
+    elif title_paragraphs:
+        title_content = title_paragraphs[0]
+    else:
+        title_content = Paragraph("", title_style)
 
     if config.include_header:
         if config.logo_path and os.path.exists(config.logo_path):
