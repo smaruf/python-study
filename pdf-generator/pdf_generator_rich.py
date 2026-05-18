@@ -501,7 +501,7 @@ def preprocess_rich_text(text):
     processed_text = text.replace('\r\n', '\n').replace('\r', '\n')
 
     # Improved HTML detection: check for common HTML tag patterns (opening and closing)
-    has_html = bool(re.search(r'<(b|i|u|font|p|div|span|strong|em|br)[\s/>]', processed_text, re.IGNORECASE))
+    has_html = bool(re.search(r'</?(?:b|i|u|font|p|div|span|strong|em|br)(?:\s|>|/)', processed_text, re.IGNORECASE))
     has_markdown = bool(re.search(r'(\*\*|__|^#{1,6}\s|\*(?!\*)|_(?!_)|`|\[.+?\]\(.+?\)|^[\-\*\+]\s|^\d+\.\s)', processed_text, re.MULTILINE))
 
     # Convert markdown to HTML if markdown is detected and no HTML tags present
@@ -580,14 +580,14 @@ def generate_pdf(config):
             if footer_paragraphs:
                 x_pos = doc.leftMargin
                 footer_base_y = 0.1 * inch
-                max_footer_height = max(doc.bottomMargin - footer_base_y, 0)
-                current_y = footer_base_y + max_footer_height
+                available_footer_height = max(doc.bottomMargin - footer_base_y, 0)
+                current_y = footer_base_y + available_footer_height
 
-                if max_footer_height > 0:
+                if available_footer_height > 0:
                     used_height = 0
                     for para in footer_paragraphs:
-                        _, para_height = para.wrap(doc.width, max_footer_height)
-                        if used_height + para_height > max_footer_height:
+                        _, para_height = para.wrap(doc.width, available_footer_height)
+                        if used_height + para_height > available_footer_height:
                             break
                         used_height += para_height
                         para.drawOn(canvas, x_pos, current_y - used_height)
