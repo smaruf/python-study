@@ -1164,6 +1164,8 @@ def generate_stick_plane_stl(
     Parts generated:
     - Wing half (flat-bottom airfoil with spar slot)
     - Fuselage nose section with motor shaft hole
+    - Fuselage mid section (hollow rectangular body)
+    - Fuselage tail section (tapered hollow tail boom)
     - Horizontal stabilizer (flat plate)
     - Vertical fin (flat plate)
 
@@ -1225,7 +1227,50 @@ def generate_stick_plane_stl(
     cq.exporters.export(nose, p)
     generated.append(p)
 
-    # 3. Horizontal stabilizer
+    # 3. Fuselage mid section (42 x 38, 200 mm long, 1.2 mm walls)
+    mid_outer_w = 42
+    mid_outer_h = 38
+    mid_len = 200
+    wall = 1.2
+    fuselage_mid = (
+        cq.Workplane("XY")
+        .rect(mid_outer_w, mid_outer_h)
+        .extrude(mid_len)
+        .faces(">Z").workplane()
+        .rect(mid_outer_w - 2 * wall, mid_outer_h - 2 * wall)
+        .cutBlind(-(mid_len - wall))
+    )
+    p = f"{output_dir}/fuselage_mid.stl"
+    cq.exporters.export(fuselage_mid, p)
+    generated.append(p)
+
+    # 4. Fuselage tail section (18 x 18 tapered to 12 x 12, 200 mm long)
+    tail_outer_start = 18
+    tail_outer_end = 12
+    tail_len = 200
+    tail_inner_start = tail_outer_start - 2 * wall
+    tail_inner_end = tail_outer_end - 2 * wall
+    tail_outer = (
+        cq.Workplane("XY")
+        .rect(tail_outer_start, tail_outer_start)
+        .workplane(offset=tail_len)
+        .rect(tail_outer_end, tail_outer_end)
+        .loft(combine=True)
+    )
+    tail_inner = (
+        cq.Workplane("XY")
+        .workplane(offset=wall)
+        .rect(tail_inner_start, tail_inner_start)
+        .workplane(offset=tail_len - 2 * wall)
+        .rect(tail_inner_end, tail_inner_end)
+        .loft(combine=True)
+    )
+    fuselage_tail = tail_outer.cut(tail_inner)
+    p = f"{output_dir}/fuselage_tail.stl"
+    cq.exporters.export(fuselage_tail, p)
+    generated.append(p)
+
+    # 5. Horizontal stabilizer
     h_stab_area = wingspan_mm * chord_mm * 0.20
     h_stab_chord = 70
     h_stab_span = int(h_stab_area / h_stab_chord)
@@ -1238,7 +1283,7 @@ def generate_stick_plane_stl(
     cq.exporters.export(h_stab, p)
     generated.append(p)
 
-    # 4. Vertical fin
+    # 6. Vertical fin
     v_area = wingspan_mm * chord_mm * 0.10
     v_h = 80
     v_c = int(v_area / v_h)

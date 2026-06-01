@@ -27,6 +27,12 @@ python examples/generate_motor_mounts.py
 echo ""
 echo ""
 
+echo "4. 3D-Printed Stick Plane Generator"
+echo "=========================================="
+python examples/generate_3d_printed_stick_plane.py
+echo ""
+echo ""
+
 echo "=========================================="
 echo "All examples completed!"
 echo "=========================================="
