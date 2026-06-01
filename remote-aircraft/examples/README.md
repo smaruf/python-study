@@ -53,6 +53,20 @@ PYTHONPATH=. python examples/generate_motor_mounts.py
 
 **Note:** This example requires CadQuery to generate STL files. Without CadQuery, it will show what would be generated.
 
+### 3D-Printed Stick Plane Generator
+
+Generate printable parts and print specifications for the 3JWings DC motor stick plane:
+
+```bash
+PYTHONPATH=. python examples/generate_3d_printed_stick_plane.py
+```
+
+**Output:**
+- complete airframe print specification
+- material and infill guidance per part
+- STL files for the wing, fuselage sections, and tail surfaces when CadQuery is installed
+- next-step assembly guidance
+
 ## Installation
 
 To run examples that generate STL files, install CadQuery:
