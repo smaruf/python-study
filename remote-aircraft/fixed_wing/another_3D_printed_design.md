@@ -45,8 +45,8 @@ The repository includes:
 | All-up weight | 116 g |
 | CG from leading edge | 33 mm |
 | CG as % MAC | 27.5% |
-| Estimated cruise speed | 5.4 m/s |
-| Estimated stall speed | 3.7 m/s |
+| Estimated cruise speed | 6.8 m/s |
+| Estimated stall speed | 4.6 m/s |
 | Fuselage length | 480 mm |
 | Stability class | VERY STABLE (trainer) |
 
@@ -110,8 +110,8 @@ This is a light-loading aircraft, which supports:
 
 ### Speed Estimates
 
-- **Cruise:** ~5.4 m/s
-- **Stall:** ~3.7 m/s
+- **Cruise:** ~6.8 m/s
+- **Stall:** ~4.6 m/s
 
 These values are theoretical estimates from the repository model and are suitable for build planning and
 initial trimming.

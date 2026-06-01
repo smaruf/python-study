@@ -1232,14 +1232,18 @@ def generate_stick_plane_stl(
     mid_outer_h = 38
     mid_len = 200
     wall = 1.2
-    fuselage_mid = (
+    fuselage_mid_outer = (
         cq.Workplane("XY")
         .rect(mid_outer_w, mid_outer_h)
         .extrude(mid_len)
-        .faces(">Z").workplane()
-        .rect(mid_outer_w - 2 * wall, mid_outer_h - 2 * wall)
-        .cutBlind(-(mid_len - wall))
     )
+    fuselage_mid_inner = (
+        cq.Workplane("XY")
+        .rect(mid_outer_w - 2 * wall, mid_outer_h - 2 * wall)
+        .extrude(mid_len + 2)
+        .translate((0, 0, -1))
+    )
+    fuselage_mid = fuselage_mid_outer.cut(fuselage_mid_inner)
     p = f"{output_dir}/fuselage_mid.stl"
     cq.exporters.export(fuselage_mid, p)
     generated.append(p)
@@ -1259,9 +1263,9 @@ def generate_stick_plane_stl(
     )
     tail_inner = (
         cq.Workplane("XY")
-        .workplane(offset=wall)
+        .workplane(offset=-1)
         .rect(tail_inner_start, tail_inner_start)
-        .workplane(offset=tail_len - 2 * wall)
+        .workplane(offset=tail_len + 2)
         .rect(tail_inner_end, tail_inner_end)
         .loft(combine=True)
     )
