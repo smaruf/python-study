@@ -1,6 +1,7 @@
 # Planning Ideas:
 # Tools:
  - [Monitoring Options](https://github.com/smaruf/python-study/blob/main/home-power/Monitoring.md)
+ - [Active and Passive Instruments](https://github.com/smaruf/python-study/blob/main/home-power/Items.md)
 # Idea 1:
 
 For Bangladesh, if your goal is **maximum self-sufficiency with minimum dependence on grid power, gas, and external supplies**, the best all-natural integrated system is:
