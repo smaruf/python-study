@@ -1,5 +1,7 @@
 [← Back to Python Study Repository](../../README.md)
 
+[← Halaka Gdansku](https://github.com/smaruf/halaka-gdansku/blob/main/README.md)
+
 # Learning Arabic to understand the Quran
 
 ```
